@@ -526,6 +526,7 @@
             margin-bottom: var(--space-3);
             line-height: 1.1;
             animation: fadeInUp 0.6s ease-out 0.4s both;
+            color: var(--color-white);
         }
         
         .hero__description {
@@ -841,6 +842,7 @@
         .contact__map {
             height: 300px;
             width: 100%;
+            max-height: 400px; /* Added max-height to control map size */
         }
         
         .form-group {
@@ -928,11 +930,14 @@
             
             .contact__map {
                 height: 100%;
-                min-height: 400px;
+                min-height: 350px;
+                max-height: 450px; /* Control maximum height on desktop */
             }
         }
         
         /* Footer */
+        .footer {
+            background-color: var/* Footer */
         .footer {
             background-color: var(--color-primary-dark);
             color: var(--color-white);
@@ -1284,7 +1289,7 @@
                 <div class="grid three-column">
                     <div class="service-card" data-animate="fade-up">
                         <div class="service-card__icon">
-                            <i class="fas fa-spine"></i>
+                            <i class="fas fa-user-md"></i>
                         </div>
                         <h3 class="service-card__title">Spinal Adjustment</h3>
                         <p class="service-card__description">Precise, gentle adjustments to correct misalignments, restore proper function, and alleviate pain throughout the spine and nervous system.</p>
@@ -1298,9 +1303,7 @@
                         <h3 class="service-card__title">Diagnostic Assessment</h3>
                         <p class="service-card__description">Comprehensive evaluation including postural analysis, range of motion testing, and when necessary, advanced imaging to identify the root cause of your condition.</p>
                         <a href="#contact" class="service-card__link">Learn More <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                    
-                    <div class="service-card" data-animate="fade-up">
+                    </div><div class="service-card" data-animate="fade-up">
                         <div class="service-card__icon">
                             <i class="fas fa-hands"></i>
                         </div>
@@ -1343,7 +1346,7 @@
         <section id="about" class="about section">
             <div class="container about__container">
                 <div class="about__image" data-animate="fade-right">
-                    <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=928&q=80" alt="Dr. Aaron Schoneberger, Chiropractor">
+                    <img src="images/dr-aaron-office.jpg" alt="Dr. Aaron Schoneberger, Chiropractor">
                 </div>
                 
                 <div class="about__content" data-animate="fade-left">
@@ -1457,9 +1460,7 @@
                     <p class="subtitle">Get In Touch</p>
                     <h2>Schedule Your Appointment</h2>
                 </div>
-                <p class="section-subtitle" data-animate="fade-up">Take the first step toward optimal health and wellness. Contact us today to schedule your comprehensive consultation with Dr. Aaron Schoneberger.</p>
-                
-                <div class="contact__container">
+                <p class="section-subtitle" data-animate="fade-up">Take the first step toward optimal health and wellness. Contact us today to schedule your comprehensive consultation with Dr. Aaron Schoneberger.</p><div class="contact__container">
                     <div class="contact__form-container" data-animate="fade-right">
                         <form id="contactForm" class="contact__form">
                             <div class="form-group">
@@ -1598,7 +1599,7 @@
                 
                 <div>
                     <h3 class="footer__heading">Contact Us</h3>
-                    <div class="footer__contact-item">
+                    <div class="footer__contact-item"><div class="footer__contact-item">
                         <i class="fas fa-map-marker-alt"></i>
                         <p>7901 Santa Monica Blvd, Suite 207<br>West Hollywood, CA 90046</p>
                     </div>
