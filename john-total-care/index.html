@@ -1,0 +1,1620 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Dr. John Emerzian - Professional Chiropractic Care in Fresno CA. Relief from hip pain, lower back pain, neck pain, and more.">
+    <title>Total Care Chiropractic | Dr. John Emerzian | Fresno CA</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            /* Healthcare color system - calming blues and healing greens */
+            --color-primary: #1f78b4;
+            --color-primary-light: #3a97d4;
+            --color-primary-dark: #0c5a8e;
+            --color-secondary: #57a18f;
+            --color-secondary-light: #78c7b5;
+            --color-secondary-dark: #3a7d6d;
+            --color-accent: #e1f2fb;
+            --color-dark: #2c3e50;
+            --color-light: #f9fcff;
+            --color-gray: #7d8a96;
+            --color-success: #48bb78;
+            --color-warning: #e2b93b;
+            --color-error: #e53e3e;
+            
+            /* Spacing system (8px grid) */
+            --space-1: 0.5rem;   /* 8px */
+            --space-2: 1rem;     /* 16px */
+            --space-3: 1.5rem;   /* 24px */
+            --space-4: 2rem;     /* 32px */
+            --space-5: 3rem;     /* 48px */
+            --space-6: 4rem;     /* 64px */
+            
+            /* Typography */
+            --font-heading: 'Playfair Display', serif;
+            --font-body: 'Montserrat', sans-serif;
+            
+            /* Border radius */
+            --radius-sm: 0.25rem;
+            --radius-md: 0.5rem;
+            --radius-lg: 1rem;
+            
+            /* Animation */
+            --transition-fast: 0.2s ease-in-out;
+            --transition-normal: 0.3s ease-in-out;
+            --transition-slow: 0.5s ease-in-out;
+            
+            /* Shadow */
+            --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Reset and base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+        
+        body {
+            font-family: var(--font-body);
+            line-height: 1.6;
+            color: var(--color-dark);
+            background-color: var(--color-light);
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-heading);
+            font-weight: 600;
+            line-height: 1.3;
+            margin-bottom: var(--space-2);
+            color: var(--color-primary-dark);
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+        
+        h2 {
+            font-size: 2rem;
+            position: relative;
+            margin-bottom: var(--space-4);
+        }
+        
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: -0.75rem;
+            left: 0;
+            height: 3px;
+            width: 60px;
+            background-color: var(--color-secondary);
+        }
+        
+        h3 {
+            font-size: 1.5rem;
+        }
+        
+        p {
+            margin-bottom: var(--space-2);
+        }
+        
+        a {
+            color: var(--color-primary);
+            text-decoration: none;
+            transition: color var(--transition-normal);
+        }
+        
+        a:hover {
+            color: var(--color-primary-light);
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        .section {
+            padding: var(--space-5) 0;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--space-2);
+        }
+        
+        .text-center {
+            text-align: center;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: var(--space-1) var(--space-3);
+            border-radius: var(--radius-sm);
+            font-weight: 500;
+            text-align: center;
+            cursor: pointer;
+            transition: all var(--transition-normal);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            font-size: 0.9rem;
+            border: none;
+        }
+        
+        .btn-primary {
+            background-color: var(--color-primary);
+            color: white;
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .btn-primary:hover {
+            background-color: var(--color-primary-dark);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .btn-secondary {
+            background-color: var(--color-secondary);
+            color: white;
+        }
+        
+        .btn-secondary:hover {
+            background-color: var(--color-secondary-dark);
+            color: white;
+        }
+        
+        .btn-lg {
+            padding: var(--space-2) var(--space-4);
+            font-size: 1rem;
+        }
+        
+        /* Header */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.95);
+            box-shadow: var(--shadow-sm);
+            z-index: 1000;
+            padding: var(--space-1) 0;
+            transition: all var(--transition-normal);
+        }
+        
+        .header.scrolled {
+            padding: var(--space-1) 0;
+            background-color: rgba(255, 255, 255, 0.98);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .header__container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo__text {
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--color-primary-dark);
+            margin: 0;
+        }
+        
+        .nav {
+            display: none;
+        }
+        
+        .nav__list {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .nav__item {
+            margin-left: var(--space-3);
+        }
+        
+        .nav__link {
+            color: var(--color-dark);
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color var(--transition-normal);
+            position: relative;
+        }
+        
+        .nav__link::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--color-primary);
+            transition: width var(--transition-normal);
+        }
+        
+        .nav__link:hover {
+            color: var(--color-primary);
+        }
+        
+        .nav__link:hover::after {
+            width: 100%;
+        }
+        
+        .header__cta {
+            display: none;
+        }
+        
+        .mobile-toggle {
+            background: none;
+            border: none;
+            color: var(--color-primary);
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: color var(--transition-normal);
+        }
+        
+        .mobile-toggle:hover {
+            color: var(--color-primary-dark);
+        }
+        
+        .mobile-nav {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 80%;
+            height: 100vh;
+            background-color: white;
+            z-index: 1001;
+            padding: var(--space-4);
+            transition: right var(--transition-normal);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .mobile-nav.active {
+            right: 0;
+        }
+        
+        .mobile-nav__close {
+            position: absolute;
+            top: var(--space-2);
+            right: var(--space-2);
+            background: none;
+            border: none;
+            color: var(--color-dark);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        
+        .mobile-nav__list {
+            list-style: none;
+            margin-top: var(--space-5);
+        }
+        
+        .mobile-nav__item {
+            margin-bottom: var(--space-2);
+        }
+        
+        .mobile-nav__link {
+            color: var(--color-dark);
+            font-size: 1.2rem;
+            font-weight: 500;
+        }
+        
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+            opacity: 0;
+            visibility: hidden;
+            transition: all var(--transition-normal);
+        }
+        
+        .overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        /* Hero section */
+        .hero {
+            padding-top: 100px;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(135deg, var(--color-primary-light) 0%, var(--color-primary) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxkZWZzPjxwYXR0ZXJuIGlkPSJwYXR0ZXJuIiB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgdmlld0JveD0iMCAwIDQwLDQwIiBwYXR0ZXJuVW5pdHM9InVzZXJTcGFjZU9uVXNlIiBwYXR0ZXJuVHJhbnNmb3JtPSJyb3RhdGUoMCkiPjxyZWN0IGlkPSJwYXR0ZXJuLWJhY2tncm91bmQiIHdpZHRoPSI0MDAiIGhlaWdodD0iNDAwIiBmaWxsPSJyZ2JhKDI1NSwgMjU1LCAyNTUsIDAuMDIpIj48L3JlY3Q+IDxjaXJjbGUgZmlsbD0icmdiYSgyNTUsIDI1NSwgMjU1LCAwLjA1KSIgY3g9IjIwIiBjeT0iMjAiIHI9IjEiPjwvY2lyY2xlPjwvcGF0dGVybj48L2RlZnM+PHJlY3QgZmlsbD0idXJsKCNwYXR0ZXJuKSIgaGVpZ2h0PSIxMDAlIiB3aWR0aD0iMTAwJSI+PC9yZWN0Pjwvc3ZnPg==');
+            opacity: 0.5;
+        }
+        
+        .hero__content {
+            position: relative;
+            z-index: 1;
+            color: white;
+            max-width: 600px;
+            animation: fadeInUp 1s ease-out;
+        }
+        
+        .hero__title {
+            font-size: 2.5rem;
+            color: white;
+            margin-bottom: var(--space-2);
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        .hero__subtitle {
+            font-size: 1.2rem;
+            margin-bottom: var(--space-3);
+            font-weight: 400;
+            color: rgba(255, 255, 255, 0.9);
+        }
+        
+        .hero__image-container {
+            position: relative;
+            z-index: 1;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+            display: none;
+        }
+        
+        .hero__image {
+            border-radius: var(--radius-lg);
+            transition: transform var(--transition-slow);
+        }
+        
+        /* Services section */
+        .services {
+            background-color: white;
+            position: relative;
+        }
+        
+        .services__container {
+            position: relative;
+        }
+        
+        .services__grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: var(--space-3);
+            margin-top: var(--space-4);
+        }
+        
+        .service-card {
+            background-color: white;
+            border-radius: var(--radius-md);
+            padding: var(--space-3);
+            box-shadow: var(--shadow-sm);
+            transition: all var(--transition-normal);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+            border-color: var(--color-primary-light);
+        }
+        
+        .service-card__icon {
+            color: var(--color-primary);
+            font-size: 2.5rem;
+            margin-bottom: var(--space-2);
+            transition: all var(--transition-normal);
+        }
+        
+        .service-card:hover .service-card__icon {
+            color: var(--color-secondary);
+            transform: scale(1.1);
+        }
+        
+        .service-card__title {
+            font-size: 1.3rem;
+            margin-bottom: var(--space-1);
+            color: var(--color-primary-dark);
+        }
+        
+        .service-card__description {
+            color: var(--color-gray);
+            font-size: 0.95rem;
+            margin-bottom: var(--space-2);
+            flex-grow: 1;
+        }
+        
+        /* About section */
+        .about {
+            background-color: var(--color-accent);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .about__container {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .about__content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .about__image-container {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-bottom: var(--space-3);
+            border: 3px solid white;
+            box-shadow: var(--shadow-md);
+        }
+        
+        .about__image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform var(--transition-normal);
+        }
+        
+        .about__image:hover {
+            transform: scale(1.05);
+        }
+        
+        .about__text {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .about__title {
+            text-align: center;
+            margin-bottom: var(--space-3);
+        }
+        
+        .about__title::after {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .about__description {
+            margin-bottom: var(--space-3);
+            text-align: center;
+        }
+        
+        .about__credentials {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: var(--space-2);
+            margin-top: var(--space-3);
+        }
+        
+        .credential {
+            background-color: white;
+            border-radius: var(--radius-sm);
+            padding: var(--space-1) var(--space-2);
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: var(--color-primary);
+            box-shadow: var(--shadow-sm);
+            display: flex;
+            align-items: center;
+        }
+        
+        .credential i {
+            margin-right: var(--space-1);
+        }
+        
+        /* Testimonials section */
+        .testimonials {
+            background-color: white;
+            position: relative;
+        }
+        
+        .testimonials__container {
+            position: relative;
+        }
+        
+        .testimonials__slider {
+            position: relative;
+            margin-top: var(--space-4);
+            overflow: hidden;
+            padding-bottom: var(--space-3);
+        }
+        
+        .testimonials__slides {
+            display: flex;
+            transition: transform var(--transition-normal);
+        }
+        
+        .testimonial {
+            background-color: white;
+            border-radius: var(--radius-md);
+            padding: var(--space-3);
+            box-shadow: var(--shadow-sm);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            flex: 0 0 100%;
+            opacity: 0.5;
+            transform: scale(0.9);
+            transition: all var(--transition-normal);
+        }
+        
+        .testimonial.active {
+            opacity: 1;
+            transform: scale(1);
+        }
+        
+        .testimonial__content {
+            position: relative;
+            padding-left: var(--space-3);
+            border-left: 2px solid var(--color-primary-light);
+            margin-bottom: var(--space-2);
+        }
+        
+        .testimonial__content::before {
+            content: '\201C';
+            position: absolute;
+            top: -0.5rem;
+            left: -0.5rem;
+            font-size: 3rem;
+            color: var(--color-primary-light);
+            font-family: serif;
+            opacity: 0.3;
+        }
+        
+        .testimonial__text {
+            font-style: italic;
+            color: var(--color-dark);
+        }
+        
+        .testimonial__author {
+            font-weight: 600;
+            color: var(--color-primary-dark);
+            display: block;
+            margin-top: var(--space-1);
+        }
+        
+        .testimonial__rating {
+            color: var(--color-warning);
+            margin-bottom: var(--space-1);
+        }
+        
+        .testimonials__nav {
+            display: flex;
+            justify-content: center;
+            margin-top: var(--space-2);
+        }
+        
+        .testimonials__nav-button {
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--color-primary);
+            cursor: pointer;
+            transition: color var(--transition-normal);
+            margin: 0 var(--space-1);
+        }
+        
+        .testimonials__nav-button:hover {
+            color: var(--color-primary-dark);
+        }
+        
+        .testimonials__indicators {
+            display: flex;
+            justify-content: center;
+            margin-top: var(--space-2);
+        }
+        
+        .testimonials__indicator {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: rgba(0, 0, 0, 0.1);
+            margin: 0 var(--space-1);
+            cursor: pointer;
+            transition: all var(--transition-normal);
+        }
+        
+        .testimonials__indicator.active {
+            background-color: var(--color-primary);
+            transform: scale(1.2);
+        }
+        
+        /* Contact section */
+        .contact {
+            background-color: var(--color-light);
+            position: relative;
+        }
+        
+        .contact__container {
+            position: relative;
+        }
+        
+        .contact__content {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-4);
+        }
+        
+        .contact__info {
+            background-color: white;
+            border-radius: var(--radius-md);
+            padding: var(--space-3);
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .contact__info-title {
+            margin-bottom: var(--space-2);
+            font-size: 1.3rem;
+        }
+        
+        .contact__info-item {
+            display: flex;
+            margin-bottom: var(--space-2);
+            align-items: flex-start;
+        }
+        
+        .contact__info-icon {
+            color: var(--color-primary);
+            font-size: 1.2rem;
+            margin-right: var(--space-2);
+            margin-top: 0.25rem;
+        }
+        
+        .contact__info-text {
+            color: var(--color-dark);
+        }
+        
+        .contact__info-label {
+            font-weight: 600;
+            display: block;
+            margin-bottom: 0.25rem;
+        }
+        
+        .contact__form {
+            background-color: white;
+            border-radius: var(--radius-md);
+            padding: var(--space-3);
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .form__group {
+            margin-bottom: var(--space-2);
+        }
+        
+        .form__label {
+            display: block;
+            margin-bottom: var(--space-1);
+            font-weight: 500;
+            color: var(--color-dark);
+        }
+        
+        .form__input {
+            width: 100%;
+            padding: var(--space-1) var(--space-2);
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            border-radius: var(--radius-sm);
+            font-family: var(--font-body);
+            font-size: 1rem;
+            transition: border-color var(--transition-normal);
+        }
+        
+        .form__input:focus {
+            outline: none;
+            border-color: var(--color-primary);
+        }
+        
+        .form__input--textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+        
+        .form__button {
+            width: 100%;
+            margin-top: var(--space-2);
+        }
+        
+        .insurance-accepted {
+            margin-top: var(--space-3);
+            padding: var(--space-2);
+            background-color: rgba(31, 120, 180, 0.05);
+            border-radius: var(--radius-sm);
+            border-left: 3px solid var(--color-primary);
+        }
+        
+        .insurance-accepted__title {
+            font-size: 1rem;
+            margin-bottom: var(--space-1);
+            color: var(--color-primary-dark);
+        }
+        
+        .insurance-accepted__list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--space-1) var(--space-2);
+        }
+        
+        .insurance-accepted__item {
+            font-size: 0.9rem;
+            color: var(--color-gray);
+        }
+        
+        .map {
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            height: 250px;
+            box-shadow: var(--shadow-sm);
+        }
+        
+        /* Footer */
+        .footer {
+            background-color: var(--color-primary-dark);
+            color: white;
+            padding: var(--space-4) 0;
+        }
+        
+        .footer__container {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-3);
+        }
+        
+        .footer__logo {
+            color: white;
+            font-size: 1.5rem;
+            font-weight: 700;
+            font-family: var(--font-heading);
+            margin-bottom: var(--space-1);
+        }
+        
+        .footer__description {
+            max-width: 400px;
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.95rem;
+            margin-bottom: var(--space-2);
+        }
+        
+        .footer__nav-title {
+            color: white;
+            font-size: 1.1rem;
+            margin-bottom: var(--space-2);
+            font-weight: 600;
+        }
+        
+        .footer__nav-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .footer__nav-item {
+            margin-bottom: var(--space-1);
+        }
+        
+        .footer__nav-link {
+            color: rgba(255, 255, 255, 0.8);
+            transition: color var(--transition-normal);
+            font-size: 0.95rem;
+        }
+        
+        .footer__nav-link:hover {
+            color: white;
+        }
+        
+        .footer__social {
+            display: flex;
+            gap: var(--space-1);
+            margin-top: var(--space-2);
+        }
+        
+        .footer__social-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: white;
+            transition: all var(--transition-normal);
+        }
+        
+        .footer__social-link:hover {
+            background-color: var(--color-secondary);
+            color: white;
+            transform: translateY(-3px);
+        }
+        
+        .footer__bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: var(--space-2);
+            margin-top: var(--space-3);
+            text-align: center;
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.7);
+        }
+        
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        
+        .animate-fadeIn {
+            animation: fadeIn 1s ease-out;
+        }
+        
+        .animate-fadeInUp {
+            animation: fadeInUp 1s ease-out;
+        }
+        
+        /* Media queries */
+        @media (min-width: 640px) {
+            h1 {
+                font-size: 3rem;
+            }
+            
+            h2 {
+                font-size: 2.25rem;
+            }
+            
+            .hero__title {
+                font-size: 3rem;
+            }
+            
+            .hero__subtitle {
+                font-size: 1.3rem;
+            }
+            
+            .services__grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .testimonial__content {
+                font-size: 1.1rem;
+            }
+            
+            .contact__content {
+                flex-direction: row;
+            }
+            
+            .contact__info, .contact__form {
+                width: 50%;
+            }
+            
+            .footer__container {
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: space-between;
+            }
+            
+            .footer__info, .footer__nav, .footer__contact {
+                flex: 0 0 48%;
+            }
+        }
+        
+        @media (min-width: 1024px) {
+            h1 {
+                font-size: 3.5rem;
+            }
+            
+            .header__container {
+                padding: var(--space-1) 0;
+            }
+            
+            .nav {
+                display: block;
+            }
+            
+            .header__cta {
+                display: block;
+            }
+            
+            .mobile-toggle {
+                display: none;
+            }
+            
+            .hero {
+                min-height: 80vh;
+            }
+            
+            .hero__container {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: var(--space-4);
+            }
+            
+            .hero__content {
+                width: 50%;
+            }
+            
+            .hero__image-container {
+                display: block;
+                width: 40%;
+            }
+            
+            .services__grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            
+            .about__content {
+                flex-direction: row;
+                align-items: flex-start;
+                gap: var(--space-4);
+            }
+            
+            .about__image-container {
+                flex: 0 0 300px;
+                height: 300px;
+                margin-bottom: 0;
+            }
+            
+            .about__text {
+                text-align: left;
+                flex: 1;
+            }
+            
+            .about__title {
+                text-align: left;
+            }
+            
+            .about__title::after {
+                left: 0;
+                transform: none;
+            }
+            
+            .about__description {
+                text-align: left;
+            }
+            
+            .about__credentials {
+                justify-content: flex-start;
+            }
+            
+            .testimonial {
+                padding: var(--space-4);
+            }
+            
+            .footer__info, .footer__nav, .footer__contact {
+                flex: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container header__container">
+            <div class="logo">
+                <h1 class="logo__text">Total Care</h1>
+            </div>
+            
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="#home" class="nav__link">Home</a></li>
+                    <li class="nav__item"><a href="#services" class="nav__link">Services</a></li>
+                    <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+                    <li class="nav__item"><a href="#testimonials" class="nav__link">Testimonials</a></li>
+                    <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+                </ul>
+            </nav>
+            
+            <a href="#contact" class="btn btn-primary header__cta">Book a Consultation</a>
+            
+            <button class="mobile-toggle" id="mobile-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+    
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav" id="mobile-nav">
+        <button class="mobile-nav__close" id="mobile-nav-close">
+            <i class="fas fa-times"></i>
+        </button>
+        <ul class="mobile-nav__list">
+            <li class="mobile-nav__item"><a href="#home" class="mobile-nav__link">Home</a></li>
+            <li class="mobile-nav__item"><a href="#services" class="mobile-nav__link">Services</a></li>
+            <li class="mobile-nav__item"><a href="#about" class="mobile-nav__link">About</a></li>
+            <li class="mobile-nav__item"><a href="#testimonials" class="mobile-nav__link">Testimonials</a></li>
+            <li class="mobile-nav__item"><a href="#contact" class="mobile-nav__link">Contact</a></li>
+            <li class="mobile-nav__item"><a href="#contact" class="btn btn-primary">Book a Consultation</a></li>
+        </ul>
+    </div>
+    
+    <div class="overlay" id="overlay"></div>
+    
+    <!-- Hero Section -->
+    <section class="hero section" id="home">
+        <div class="container hero__container">
+            <div class="hero__content">
+                <h1 class="hero__title">Trusted Chiropractic Care in Fresno CA</h1>
+                <p class="hero__subtitle">Relieving pain and restoring movement — now accepting new patients.</p>
+                <a href="#contact" class="btn btn-secondary btn-lg">Book a Consultation</a>
+            </div>
+            
+            <div class="hero__image-container">
+                <img src="https://media.licdn.com/dms/image/v2/C4D03AQFgmzZncp1ggg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1516622824261?e=1750291200&v=beta&t=4idyFlgwuAQhd8-gp3YSBoIZgxRyFnM4XD0CDDC04VI" alt="Dr. John Emerzian" class="hero__image">
+            </div>
+        </div>
+    </section>
+    
+    <!-- Services Section -->
+    <section class="services section" id="services">
+        <div class="container services__container">
+            <h2 class="text-center">Our Services</h2>
+            <p class="text-center">Comprehensive chiropractic care customized to your specific needs</p>
+            
+            <div class="services__grid">
+                <div class="service-card">
+                    <i class="fas fa-spine service-card__icon"></i>
+                    <h3 class="service-card__title">Chiropractic Adjustments</h3>
+                    <p class="service-card__description">Precise spinal manipulations to restore alignment, improve joint mobility, and relieve pain throughout your body.</p>
+                </div>
+                
+                <div class="service-card">
+                    <i class="fas fa-bone service-card__icon"></i>
+                    <h3 class="service-card__title">Hip Pain Treatment</h3>
+                    <p class="service-card__description">Targeted therapies to address hip joint dysfunction, reduce inflammation, and restore proper movement patterns.</p>
+                </div>
+                
+                <div class="service-card">
+                    <i class="fas fa-user-injured service-card__icon"></i>
+                    <h3 class="service-card__title">Lower Back Pain Relief</h3>
+                    <p class="service-card__description">Effective treatments for acute and chronic lower back pain, including herniated discs and sciatica conditions.</p>
+                </div>
+                
+                <div class="service-card">
+                    <i class="fas fa-head-side service-card__icon"></i>
+                    <h3 class="service-card__title">Neck Pain Relief</h3>
+                    <p class="service-card__description">Specialized care for neck pain, whiplash injuries, and cervical spine conditions causing discomfort or limited mobility.</p>
+                </div>
+                
+                <div class="service-card">
+                    <i class="fas fa-child service-card__icon"></i>
+                    <h3 class="service-card__title">Posture Correction</h3>
+                    <p class="service-card__description">Comprehensive posture assessment and personalized treatment plans to address alignment issues and prevent future problems.</p>
+                </div>
+                
+                <div class="service-card">
+                    <i class="fas fa-heartbeat service-card__icon"></i>
+                    <h3 class="service-card__title">Spinal Health</h3>
+                    <p class="service-card__description">Holistic approach to spinal health, focusing on long-term wellness and preventative care beyond symptom relief.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- About Section -->
+    <section class="about section" id="about">
+        <div class="container about__container">
+            <div class="about__content">
+                <div class="about__image-container">
+                    <img src="https://media.licdn.com/dms/image/v2/C4D03AQFgmzZncp1ggg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1516622824261?e=1750291200&v=beta&t=4idyFlgwuAQhd8-gp3YSBoIZgxRyFnM4XD0CDDC04VI" alt="Dr. John Emerzian" class="about__image">
+                </div>
+                
+                <div class="about__text">
+                    <h2 class="about__title">About Dr. John Emerzian</h2>
+                    <p class="about__description">Dr. Emerzian is a bilingual chiropractor helping patients find long-term relief through personalized care, spinal alignment, and posture-focused treatment. With extensive training from Cleveland Chiropractic College, he combines clinical expertise with a compassionate approach to healing.</p>
+                    <p class="about__description">His comprehensive treatment methods address the root causes of pain rather than just managing symptoms, enabling patients to return to their active lifestyles with confidence.</p>
+                    
+                    <div class="about__credentials">
+                        <div class="credential">
+                            <i class="fas fa-graduation-cap"></i>
+                            Cleveland Chiropractic College
+                        </div>
+                        <div class="credential">
+                            <i class="fas fa-language"></i>
+                            English & Spanish
+                        </div>
+                        <div class="credential">
+                            <i class="fas fa-check-circle"></i>
+                            Accepting New Patients
+                        </div>
+                        <div class="credential">
+                            <i class="fas fa-certificate"></i>
+                            Spine Specialist
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Testimonials Section -->
+    <section class="testimonials section" id="testimonials">
+        <div class="container testimonials__container">
+            <h2 class="text-center">Patient Success Stories</h2>
+            <p class="text-center">Read what our patients have to say about their experience with Dr. Emerzian</p>
+            
+            <div class="testimonials__slider" id="testimonials-slider">
+                <div class="testimonials__slides" id="testimonials-slides">
+                    <div class="testimonial active">
+                        <div class="testimonial__rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="testimonial__content">
+                            <p class="testimonial__text">I couldn't walk without pain — now I'm back to running! Dr. Emerzian took the time to understand my specific issues and developed a treatment plan that actually worked.</p>
+                        </div>
+                        <span class="testimonial__author">- Maria G.</span>
+                    </div>
+                    
+                    <div class="testimonial">
+                        <div class="testimonial__rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="testimonial__content">
+                            <p class="testimonial__text">After years of lower back pain, I finally found relief with Dr. Emerzian. His approach is thorough and effective. I appreciate how he explains everything and gives me exercises to do at home.</p>
+                        </div>
+                        <span class="testimonial__author">- Robert J.</span>
+                    </div>
+                    
+                    <div class="testimonial">
+                        <div class="testimonial__rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <div class="testimonial__content">
+                            <p class="testimonial__text">My neck pain from long hours at the computer is finally gone! I appreciate that Dr. Emerzian speaks Spanish, which made it much easier for me to explain my symptoms. Highly recommended!</p>
+                        </div>
+                        <span class="testimonial__author">- Elena M.</span>
+                    </div>
+                </div>
+                
+                <div class="testimonials__indicators" id="testimonials-indicators">
+                    <span class="testimonials__indicator active" data-index="0"></span>
+                    <span class="testimonials__indicator" data-index="1"></span>
+                    <span class="testimonials__indicator" data-index="2"></span>
+                </div>
+                
+                <div class="testimonials__nav">
+                    <button class="testimonials__nav-button" id="testimonials-prev">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="testimonials__nav-button" id="testimonials-next">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section class="contact section" id="contact">
+        <div class="container contact__container">
+            <h2 class="text-center">Get in Touch</h2>
+            <p class="text-center">Schedule your consultation today and take the first step towards pain-free living</p>
+            
+            <div class="contact__content">
+                <div class="contact__info">
+                    <h3 class="contact__info-title">Contact Information</h3>
+                    
+                    <div class="contact__info-item">
+                        <i class="fas fa-map-marker-alt contact__info-icon"></i>
+                        <div class="contact__info-text">
+                            <span class="contact__info-label">Location</span>
+                            Fresno, CA
+                        </div>
+                    </div>
+                    
+                    <div class="contact__info-item">
+                        <i class="fas fa-phone contact__info-icon"></i>
+                        <div class="contact__info-text">
+                            <span class="contact__info-label">Phone</span>
+                            (555) 123-4567
+                        </div>
+                    </div>
+                    
+                    <div class="contact__info-item">
+                        <i class="fas fa-envelope contact__info-icon"></i>
+                        <div class="contact__info-text">
+                            <span class="contact__info-label">Email</span>
+                            info@totalcare.com
+                        </div>
+                    </div>
+                    
+                    <div class="contact__info-item">
+                        <i class="fas fa-clock contact__info-icon"></i>
+                        <div class="contact__info-text">
+                            <span class="contact__info-label">Hours</span>
+                            Monday - Friday: 8am - 6pm<br>
+                            Saturday: 9am - 1pm<br>
+                            Sunday: Closed
+                        </div>
+                    </div>
+                    
+                    <div class="insurance-accepted">
+                        <h4 class="insurance-accepted__title">Insurance Plans Accepted</h4>
+                        <div class="insurance-accepted__list">
+                            <span class="insurance-accepted__item">Aetna</span>
+                            <span class="insurance-accepted__item">Blue Cross of California</span>
+                            <span class="insurance-accepted__item">Blue Shield of California</span>
+                            <span class="insurance-accepted__item">And other major plans</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact__form">
+                    <h3 class="contact__form-title">Book a Consultation</h3>
+                    
+                    <form id="contact-form" class="form">
+                        <div class="form__group">
+                            <label for="name" class="form__label">Name</label>
+                            <input type="text" id="name" name="name" class="form__input" required>
+                        </div>
+                        
+                        <div class="form__group">
+                            <label for="email" class="form__label">Email</label>
+                            <input type="email" id="email" name="email" class="form__input" required>
+                        </div>
+                        
+                        <div class="form__group">
+                            <label for="phone" class="form__label">Phone</label>
+                            <input type="tel" id="phone" name="phone" class="form__input" required>
+                        </div>
+                        
+                        <div class="form__group">
+                            <label for="message" class="form__label">Message</label>
+                            <textarea id="message" name="message" class="form__input form__input--textarea" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary form__button">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer__container">
+            <div class="footer__info">
+                <h3 class="footer__logo">Total Care</h3>
+                <p class="footer__description">Professional chiropractic care serving Fresno and Clovis communities with personalized treatment plans for pain relief and wellness.</p>
+                
+                <div class="footer__social">
+                    <a href="#" class="footer__social-link"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="footer__social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="footer__social-link"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="footer__social-link"><i class="fab fa-yelp"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer__nav">
+                <h4 class="footer__nav-title">Quick Links</h4>
+                <ul class="footer__nav-list">
+                    <li class="footer__nav-item"><a href="#home" class="footer__nav-link">Home</a></li>
+                    <li class="footer__nav-item"><a href="#services" class="footer__nav-link">Services</a></li>
+                    <li class="footer__nav-item"><a href="#about" class="footer__nav-link">About Dr. Emerzian</a></li>
+                    <li class="footer__nav-item"><a href="#testimonials" class="footer__nav-link">Testimonials</a></li>
+                    <li class="footer__nav-item"><a href="#contact" class="footer__nav-link">Contact Us</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer__contact">
+                <h4 class="footer__nav-title">Services</h4>
+                <ul class="footer__nav-list">
+                    <li class="footer__nav-item"><a href="#services" class="footer__nav-link">Chiropractic Adjustments</a></li>
+                    <li class="footer__nav-item"><a href="#services" class="footer__nav-link">Hip Pain Treatment</a></li>
+                    <li class="footer__nav-item"><a href="#services" class="footer__nav-link">Lower Back Pain Relief</a></li>
+                    <li class="footer__nav-item"><a href="#services" class="footer__nav-link">Neck Pain Relief</a></li>
+                    <li class="footer__nav-item"><a href="#services" class="footer__nav-link">Posture Correction</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="container">
+            <div class="footer__bottom">
+                <p>&copy; <span id="current-year">2023</span> Total Care Chiropractic. All Rights Reserved. Dr. John Harry Emerzian MD.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        // Mobile navigation
+        const mobileToggle = document.getElementById('mobile-toggle');
+        const mobileNav = document.getElementById('mobile-nav');
+        const mobileNavClose = document.getElementById('mobile-nav-close');
+        const overlay = document.getElementById('overlay');
+        const mobileNavLinks = document.querySelectorAll('.mobile-nav__link');
+        
+        mobileToggle.addEventListener('click', () => {
+            mobileNav.classList.add('active');
+            overlay.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+        
+        function closeMobileNav() {
+            mobileNav.classList.remove('active');
+            overlay.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+        
+        mobileNavClose.addEventListener('click', closeMobileNav);
+        overlay.addEventListener('click', closeMobileNav);
+        
+        mobileNavLinks.forEach(link => {
+            link.addEventListener('click', closeMobileNav);
+        });
+        
+        // Header scroll
+        const header = document.getElementById('header');
+        
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+        
+        // Testimonials slider
+        const testimonialsSlides = document.getElementById('testimonials-slides');
+        const testimonials = document.querySelectorAll('.testimonial');
+        const testimonialsPrev = document.getElementById('testimonials-prev');
+        const testimonialsNext = document.getElementById('testimonials-next');
+        const testimonialsIndicators = document.querySelectorAll('.testimonials__indicator');
+        
+        let currentTestimonial = 0;
+        const testimonialWidth = 100; // 100%
+        
+        function updateTestimonialSlider() {
+            testimonialsSlides.style.transform = `translateX(-${currentTestimonial * testimonialWidth}%)`;
+            
+            testimonials.forEach((testimonial, index) => {
+                testimonial.classList.remove('active');
+                if (index === currentTestimonial) {
+                    testimonial.classList.add('active');
+                }
+            });
+            
+            testimonialsIndicators.forEach((indicator, index) => {
+                indicator.classList.remove('active');
+                if (index === currentTestimonial) {
+                    indicator.classList.add('active');
+                }
+            });
+        }
+        
+        testimonialsNext.addEventListener('click', () => {
+            currentTestimonial = (currentTestimonial + 1) % testimonials.length;
+            updateTestimonialSlider();
+        });
+        
+        testimonialsPrev.addEventListener('click', () => {
+            currentTestimonial = (currentTestimonial - 1 + testimonials.length) % testimonials.length;
+            updateTestimonialSlider();
+        });
+        
+        testimonialsIndicators.forEach((indicator, index) => {
+            indicator.addEventListener('click', () => {
+                currentTestimonial = index;
+                updateTestimonialSlider();
+            });
+        });
+        
+        // Auto advance testimonials
+        let testimonialInterval = setInterval(() => {
+            currentTestimonial = (currentTestimonial + 1) % testimonials.length;
+            updateTestimonialSlider();
+        }, 5000);
+        
+        const testimonialsSlider = document.getElementById('testimonials-slider');
+        
+        testimonialsSlider.addEventListener('mouseenter', () => {
+            clearInterval(testimonialInterval);
+        });
+        
+        testimonialsSlider.addEventListener('mouseleave', () => {
+            testimonialInterval = setInterval(() => {
+                currentTestimonial = (currentTestimonial + 1) % testimonials.length;
+                updateTestimonialSlider();
+            }, 5000);
+        });
+        
+        // Form validation
+        const contactForm = document.getElementById('contact-form');
+        const nameInput = document.getElementById('name');
+        const emailInput = document.getElementById('email');
+        const phoneInput = document.getElementById('phone');
+        const messageInput = document.getElementById('message');
+        
+        function validateEmail(email) {
+            const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+            return re.test(String(email).toLowerCase());
+        }
+        
+        function showError(input, message) {
+            const formGroup = input.parentElement;
+            
+            const errorElement = document.createElement('div');
+            errorElement.className = 'error-message';
+            errorElement.style.color = 'var(--color-error)';
+            errorElement.style.fontSize = '0.85rem';
+            errorElement.style.marginTop = '0.25rem';
+            errorElement.innerText = message;
+            
+            // Remove any existing error message
+            const existingError = formGroup.querySelector('.error-message');
+            if (existingError) {
+                formGroup.removeChild(existingError);
+            }
+            
+            formGroup.appendChild(errorElement);
+            input.style.borderColor = 'var(--color-error)';
+        }
+        
+        function clearError(input) {
+            const formGroup = input.parentElement;
+            const existingError = formGroup.querySelector('.error-message');
+            
+            if (existingError) {
+                formGroup.removeChild(existingError);
+            }
+            
+            input.style.borderColor = '';
+        }
+        
+        nameInput.addEventListener('blur', () => {
+            if (nameInput.value.trim() === '') {
+                showError(nameInput, 'Name is required');
+            } else {
+                clearError(nameInput);
+            }
+        });
+        
+        emailInput.addEventListener('blur', () => {
+            if (emailInput.value.trim() === '') {
+                showError(emailInput, 'Email is required');
+            } else if (!validateEmail(emailInput.value)) {
+                showError(emailInput, 'Please enter a valid email');
+            } else {
+                clearError(emailInput);
+            }
+        });
+        
+        phoneInput.addEventListener('blur', () => {
+            if (phoneInput.value.trim() === '') {
+                showError(phoneInput, 'Phone number is required');
+            } else {
+                clearError(phoneInput);
+            }
+        });
+        
+        messageInput.addEventListener('blur', () => {
+            if (messageInput.value.trim() === '') {
+                showError(messageInput, 'Message is required');
+            } else {
+                clearError(messageInput);
+            }
+        });
+        
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            let isValid = true;
+            
+            if (nameInput.value.trim() === '') {
+                showError(nameInput, 'Name is required');
+                isValid = false;
+            }
+            
+            if (emailInput.value.trim() === '') {
+                showError(emailInput, 'Email is required');
+                isValid = false;
+            } else if (!validateEmail(emailInput.value)) {
+                showError(emailInput, 'Please enter a valid email');
+                isValid = false;
+            }
+            
+            if (phoneInput.value.trim() === '') {
+                showError(phoneInput, 'Phone number is required');
+                isValid = false;
+            }
+            
+            if (messageInput.value.trim() === '') {
+                showError(messageInput, 'Message is required');
+                isValid = false;
+            }
+            
+            if (isValid) {
+                // In a real implementation, you'd submit the form data to a server
+                alert('Thank you for your message! We will contact you shortly.');
+                contactForm.reset();
+            }
+        });
+        
+        // Update current year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+        
+        // Animate elements on scroll
+        const animateElements = document.querySelectorAll('.service-card, .about__image-container, .about__text, .testimonial, .contact__info, .contact__form');
+        
+        function checkIfInView() {
+            const windowHeight = window.innerHeight;
+            const windowTopPosition = window.scrollY;
+            const windowBottomPosition = windowTopPosition + windowHeight;
+            
+            animateElements.forEach(element => {
+                const elementHeight = element.offsetHeight;
+                const elementTopPosition = element.offsetTop;
+                const elementBottomPosition = elementTopPosition + elementHeight;
+                
+                if (
+                    (elementBottomPosition >= windowTopPosition) &&
+                    (elementTopPosition <= windowBottomPosition)
+                ) {
+                    element.classList.add('animate-fadeInUp');
+                }
+            });
+        }
+        
+        window.addEventListener('scroll', checkIfInView);
+        window.addEventListener('load', checkIfInView);
+    </script>
+</body>
+</html>
