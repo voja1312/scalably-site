@@ -1,0 +1,1982 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amen Chiropractic Center | Dr. Steve Hudgins DC | San Antonio</title>
+    <meta name="description" content="Restore function, relieve pain, and reach optimal health with Dr. Steve Hudgins DC at Amen Chiropractic Center in San Antonio. Safe, personalized chiropractic care.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* CSS Variables System */
+        :root {
+            /* Color Palette - Healthcare/Wellness: Calming blues and healing greens */
+            --color-primary: #2a7d8b; /* Healing teal */
+            --color-primary-light: #3a9eaf;
+            --color-primary-dark: #1a5e6c;
+            --color-secondary: #4fb080; /* Rejuvenating green */
+            --color-secondary-light: #67c293;
+            --color-secondary-dark: #3a8962;
+            --color-accent: #f7f0e0; /* Warm cream */
+            --color-text: #2c3e50; /* Deep blue-gray */
+            --color-text-light: #546e7a;
+            --color-surface: #ffffff;
+            --color-surface-alt: #f9f9f9;
+            --color-overlay: rgba(42, 125, 139, 0.85);
+            
+            /* Spacing System (based on 8px grid) */
+            --space-xs: 8px;
+            --space-sm: 16px;
+            --space-md: 24px;
+            --space-lg: 32px;
+            --space-xl: 48px;
+            --space-xxl: 64px;
+            
+            /* Typography */
+            --font-heading: 'Playfair Display', serif;
+            --font-body: 'Montserrat', sans-serif;
+            
+            /* Animation System */
+            --transition-fast: 0.2s ease;
+            --transition-standard: 0.3s ease;
+            --transition-slow: 0.5s ease;
+            
+            /* Elevations (shadow system) */
+            --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
+            --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.12);
+            
+            /* Border Radius */
+            --radius-sm: 4px;
+            --radius-md: 8px;
+            --radius-lg: 16px;
+            --radius-full: 999px;
+            
+            /* Container Widths */
+            --container-sm: 640px;
+            --container-md: 768px;
+            --container-lg: 1024px;
+            --container-xl: 1280px;
+        }
+        
+        /* Base Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: var(--font-body);
+            color: var(--color-text);
+            font-size: 16px;
+            line-height: 1.6;
+            overflow-x: hidden;
+            background-color: var(--color-surface);
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-heading);
+            margin-bottom: var(--space-md);
+            font-weight: 600;
+            line-height: 1.3;
+            color: var(--color-primary-dark);
+        }
+        
+        h1 {
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            font-weight: 700;
+        }
+        
+        h2 {
+            font-size: clamp(2rem, 4vw, 2.8rem);
+            position: relative;
+            padding-bottom: var(--space-sm);
+        }
+        
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background-color: var(--color-secondary);
+            border-radius: var(--radius-full);
+        }
+        
+        h3 {
+            font-size: clamp(1.5rem, 3vw, 2rem);
+        }
+        
+        p {
+            margin-bottom: var(--space-sm);
+            color: var(--color-text);
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        a {
+            text-decoration: none;
+            color: var(--color-primary);
+            transition: color var(--transition-standard);
+        }
+        
+        a:hover, a:focus {
+            color: var(--color-primary-light);
+        }
+        
+        ul {
+            list-style: none;
+        }
+        
+        .container {
+            width: 92%;
+            max-width: var(--container-xl);
+            margin: 0 auto;
+            padding: 0 var(--space-sm);
+        }
+        
+        section {
+            padding: var(--space-xl) 0;
+            position: relative;
+        }
+        
+        /* Header & Navigation */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background-color: rgba(255, 255, 255, 0.97);
+            padding: var(--space-sm) 0;
+            box-shadow: var(--shadow-sm);
+            transition: all var(--transition-standard);
+        }
+        
+        .header--scrolled {
+            padding: var(--space-xs) 0;
+            box-shadow: var(--shadow-md);
+        }
+        
+        .header__container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: var(--space-xs);
+        }
+        
+        .logo__text {
+            font-family: var(--font-heading);
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: var(--color-primary);
+            line-height: 1.1;
+        }
+        
+        .logo__text span {
+            display: block;
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: var(--color-text-light);
+            font-family: var(--font-body);
+        }
+        
+        .nav {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 280px;
+            height: 100vh;
+            background-color: var(--color-primary);
+            padding: var(--space-xl) var(--space-md);
+            transition: right var(--transition-standard);
+            z-index: 1001;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        .nav--active {
+            right: 0;
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .nav__list {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-md);
+            margin-bottom: var(--space-xl);
+        }
+        
+        .nav__link {
+            color: white;
+            font-weight: 500;
+            position: relative;
+            padding-bottom: var(--space-xs);
+            font-size: 1.1rem;
+        }
+        
+        .nav__link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--color-accent);
+            transition: width var(--transition-standard);
+        }
+        
+        .nav__link:hover::after,
+        .nav__link:focus::after {
+            width: 30px;
+        }
+        
+        .nav__btn {
+            display: inline-block;
+            background-color: var(--color-accent);
+            color: var(--color-primary-dark);
+            padding: var(--space-xs) var(--space-md);
+            border-radius: var(--radius-full);
+            font-weight: 600;
+            text-align: center;
+            transition: all var(--transition-standard);
+            border: 2px solid transparent;
+            margin-top: var(--space-md);
+        }
+        
+        .nav__btn:hover,
+        .nav__btn:focus {
+            background-color: transparent;
+            border-color: var(--color-accent);
+            color: var(--color-accent);
+            transform: translateY(-2px);
+        }
+        
+        .nav-toggle {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 28px;
+            height: 20px;
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            z-index: 1002;
+            position: relative;
+        }
+        
+        .nav-toggle__line {
+            width: 100%;
+            height: 2px;
+            background-color: var(--color-primary);
+            transition: all var(--transition-standard);
+        }
+        
+        .nav-toggle--active .nav-toggle__line:nth-child(1) {
+            transform: translateY(9px) rotate(45deg);
+            background-color: white;
+        }
+        
+        .nav-toggle--active .nav-toggle__line:nth-child(2) {
+            opacity: 0;
+        }
+        
+        .nav-toggle--active .nav-toggle__line:nth-child(3) {
+            transform: translateY(-9px) rotate(-45deg);
+            background-color: white;
+        }
+        
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.7);
+            opacity: 0;
+            visibility: hidden;
+            transition: all var(--transition-standard);
+            z-index: 999;
+        }
+        
+        .overlay--active {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        /* Hero Section */
+        .hero {
+            padding: calc(80px + var(--space-xl)) 0 var(--space-xl);
+            background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-primary) 100%);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCIgdmlld0JveD0iMCAwIDQwIDQwIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wNSI+PHBhdGggZD0iTTAgMGg0MHY0MEgwVjB6TTIwIDIwaDIwdjIwSDIwVjIweiIvPjwvZz48L2c+PC9zdmc+');
+            opacity: 0.1;
+        }
+        
+        .hero__container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: var(--space-lg);
+            position: relative;
+            z-index: 2;
+        }
+        
+        .hero__content {
+            max-width: 780px;
+        }
+        
+        .hero__title {
+            color: white;
+            margin-bottom: var(--space-md);
+            position: relative;
+            padding-bottom: var(--space-md);
+        }
+        
+        .hero__title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: var(--color-accent);
+            border-radius: var(--radius-full);
+        }
+        
+        .hero__subtitle {
+            font-size: clamp(1.1rem, 2vw, 1.3rem);
+            font-weight: 400;
+            margin-bottom: var(--space-lg);
+            color: rgba(255, 255, 255, 0.9);
+        }
+        
+        .hero__cta {
+            display: inline-block;
+            background-color: var(--color-secondary);
+            color: white;
+            padding: var(--space-sm) var(--space-lg);
+            border-radius: var(--radius-full);
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all var(--transition-standard);
+            box-shadow: var(--shadow-md);
+            border: 2px solid transparent;
+        }
+        
+        .hero__cta:hover,
+        .hero__cta:focus {
+            background-color: var(--color-secondary-light);
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .hero__secondary-cta {
+            display: inline-block;
+            background-color: transparent;
+            color: white;
+            padding: var(--space-sm) var(--space-lg);
+            border-radius: var(--radius-full);
+            font-weight: 500;
+            transition: all var(--transition-standard);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            margin-left: var(--space-sm);
+        }
+        
+        .hero__secondary-cta:hover,
+        .hero__secondary-cta:focus {
+            border-color: white;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: white;
+        }
+        
+        .hero__scroll {
+            position: absolute;
+            bottom: var(--space-lg);
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 1.5rem;
+            color: rgba(255, 255, 255, 0.7);
+            animation: bounce 2s infinite;
+            cursor: pointer;
+            transition: color var(--transition-standard);
+        }
+        
+        .hero__scroll:hover,
+        .hero__scroll:focus {
+            color: white;
+        }
+        
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0) translateX(-50%); }
+            40% { transform: translateY(-10px) translateX(-50%); }
+            60% { transform: translateY(-5px) translateX(-50%); }
+        }
+        
+        /* Services Section */
+        .services {
+            background-color: var(--color-surface);
+        }
+        
+        .section__header {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto var(--space-xl);
+        }
+        
+        .services__grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: var(--space-lg);
+        }
+        
+        .service-card {
+            background-color: var(--color-surface);
+            border-radius: var(--radius-md);
+            padding: var(--space-lg);
+            box-shadow: var(--shadow-sm);
+            transition: all var(--transition-standard);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            height: 100%;
+        }
+        
+        .service-card:hover,
+        .service-card:focus-within {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+            border-color: var(--color-primary-light);
+        }
+        
+        .service-card__icon {
+            width: 70px;
+            height: 70px;
+            background-color: rgba(79, 176, 128, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: var(--space-md);
+            color: var(--color-secondary);
+            font-size: 1.75rem;
+            transition: all var(--transition-standard);
+        }
+        
+        .service-card:hover .service-card__icon {
+            background-color: var(--color-secondary);
+            color: white;
+            transform: scale(1.1);
+        }
+        
+        .service-card__title {
+            font-size: 1.3rem;
+            margin-bottom: var(--space-sm);
+            color: var(--color-primary-dark);
+            position: relative;
+            padding-bottom: var(--space-xs);
+        }
+        
+        .service-card__title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 40px;
+            height: 2px;
+            background-color: var(--color-secondary-light);
+            transition: width var(--transition-standard);
+        }
+        
+        .service-card:hover .service-card__title::after {
+            width: 60px;
+        }
+        
+        .service-card__description {
+            color: var(--color-text-light);
+            margin-bottom: var(--space-md);
+            font-size: 0.95rem;
+        }
+        
+        .service-card__link {
+            margin-top: auto;
+            font-weight: 500;
+            color: var(--color-primary);
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: var(--space-xs);
+            transition: all var(--transition-standard);
+        }
+        
+        .service-card__link i {
+            transition: transform var(--transition-standard);
+        }
+        
+        .service-card__link:hover,
+        .service-card__link:focus {
+            color: var(--color-primary-dark);
+        }
+        
+        .service-card__link:hover i,
+        .service-card__link:focus i {
+            transform: translateX(4px);
+        }
+        
+        /* About Section */
+        .about {
+            background-color: var(--color-surface-alt);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .about::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgdmlld0JveD0iMCAwIDYwIDYwIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiMwMDAwMDAiIGZpbGwtb3BhY2l0eT0iMC4wMiI+PHBhdGggZD0iTTM2IDM0aDR2MWgtNHYtMXptMC0yaDF2NWgtMXYtNXptLTE5LTRoMXYyaC0xdi0yem0wIDZoMXYyaC0xdi0yem0wLTR2MWgtMnYtMWgyem00MiAwaDF2MWgtMXYtMXptMCAzaDF2MWgtMXYtMXptLTQwLTNoMXYxaC0xdi0xem0zOSA2aDF2Mkg1NnYtMnptLTQwIDBoMXYyaC0xdi0yem00NCAyaDF2MWgtMXYtMXptLTQzIDVoMXYxaC0xdi0xem00MSAwaDF2MmgtMXYtMnptLTQyIDEwaDR2MWgtNHYtMXptNC0yaDF2MmgtMXYtMnptLTIgMWgxdjFoLTF2LTF6Ii8+PC9nPjwvZz48L3N2Zz4=');
+            opacity: 1;
+            z-index: 0;
+        }
+        
+        .about__container {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-xl);
+        }
+        
+        .about__content {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-xl);
+        }
+        
+        .about__image-wrapper {
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            position: relative;
+            max-width: 480px;
+            margin: 0 auto;
+        }
+        
+        .about__image {
+            width: 100%;
+            height: auto;
+            transition: transform var(--transition-standard);
+            transform-origin: center;
+        }
+        
+        .about__image-wrapper:hover .about__image {
+            transform: scale(1.03);
+        }
+        
+        .about__image-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+            padding: var(--space-md) var(--space-md) var(--space-sm);
+            color: white;
+            font-size: 0.9rem;
+        }
+        
+        .about__text {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .about__title {
+            text-align: left;
+            margin-bottom: var(--space-md);
+        }
+        
+        .about__title::after {
+            left: 0;
+            transform: none;
+        }
+        
+        .about__subtitle {
+            font-size: 1.1rem;
+            color: var(--color-primary);
+            font-weight: 500;
+            margin-bottom: var(--space-sm);
+        }
+        
+        .about__description {
+            color: var(--color-text);
+            margin-bottom: var(--space-md);
+        }
+        
+        .about__credentials {
+            margin-top: var(--space-md);
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--space-sm);
+        }
+        
+        .credential {
+            background-color: rgba(42, 125, 139, 0.05);
+            border-radius: var(--radius-full);
+            padding: var(--space-xs) var(--space-sm);
+            font-size: 0.875rem;
+            color: var(--color-primary);
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: var(--space-xs);
+        }
+        
+        .credential i {
+            color: var(--color-secondary);
+        }
+        
+        /* Testimonials Section */
+        .testimonials {
+            background-color: var(--color-surface);
+            position: relative;
+        }
+        
+        .testimonials::before {
+            content: """;
+            position: absolute;
+            font-size: 20rem;
+            color: rgba(42, 125, 139, 0.03);
+            font-family: var(--font-heading);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 0;
+        }
+        
+        .testimonials__container {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .testimonials__slider {
+            max-width: 900px;
+            margin: 0 auto;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .testimonials__track {
+            display: flex;
+            transition: transform var(--transition-standard);
+        }
+        
+        .testimonial {
+            min-width: 100%;
+            padding: 0 var(--space-md);
+            opacity: 0;
+            transition: opacity var(--transition-standard);
+        }
+        
+        .testimonial--active {
+            opacity: 1;
+        }
+        
+        .testimonial__content {
+            background-color: white;
+            padding: var(--space-lg);
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-md);
+            text-align: center;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            position: relative;
+        }
+        
+        .testimonial__quote {
+            font-size: 1.1rem;
+            font-style: italic;
+            margin-bottom: var(--space-md);
+            color: var(--color-text);
+            line-height: 1.7;
+        }
+        
+        .testimonial__rating {
+            color: #FFC107;
+            font-size: 1.2rem;
+            margin-bottom: var(--space-sm);
+        }
+        
+        .testimonial__author {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: var(--space-md);
+        }
+        
+        .testimonial__name {
+            font-weight: 600;
+            color: var(--color-primary-dark);
+            font-size: 1.1rem;
+        }
+        
+        .testimonial__meta {
+            font-size: 0.875rem;
+            color: var(--color-text-light);
+            margin-top: var(--space-xs);
+        }
+        
+        .testimonials__controls {
+            display: flex;
+            justify-content: center;
+            margin-top: var(--space-lg);
+            gap: var(--space-sm);
+        }
+        
+        .testimonials__btn {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: white;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            color: var(--color-primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all var(--transition-standard);
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .testimonials__btn:hover,
+        .testimonials__btn:focus {
+            background-color: var(--color-primary);
+            color: white;
+            box-shadow: var(--shadow-md);
+        }
+        
+        .testimonials__indicators {
+            display: flex;
+            justify-content: center;
+            margin-top: var(--space-md);
+            gap: var(--space-xs);
+        }
+        
+        .testimonials__indicator {
+            width: 8px;
+            height: 8px;
+            border-radius: var(--radius-full);
+            background-color: rgba(42, 125, 139, 0.2);
+            transition: all var(--transition-standard);
+            cursor: pointer;
+        }
+        
+        .testimonials__indicator--active {
+            width: 24px;
+            background-color: var(--color-primary);
+        }
+        
+        /* Contact Section */
+        .contact {
+            background: linear-gradient(135deg, rgba(42, 125, 139, 0.05) 0%, rgba(79, 176, 128, 0.05) 100%);
+            position: relative;
+        }
+        
+        .contact__container {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .contact__content {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: var(--space-xl);
+        }
+        
+        .contact__info {
+            background-color: white;
+            padding: var(--space-lg);
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .contact__title {
+            text-align: left;
+            margin-bottom: var(--space-md);
+        }
+        
+        .contact__title::after {
+            left: 0;
+            transform: none;
+        }
+        
+        .contact__description {
+            margin-bottom: var(--space-lg);
+        }
+        
+        .contact__details {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-md);
+            margin-bottom: var(--space-lg);
+        }
+        
+        .contact__item {
+            display: flex;
+            align-items: flex-start;
+            gap: var(--space-sm);
+        }
+        
+        .contact__icon {
+            width: 40px;
+            height: 40px;
+            border-radius: var(--radius-full);
+            background-color: rgba(42, 125, 139, 0.1);
+            color: var(--color-primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        
+        .contact__text {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .contact__label {
+            font-weight: 600;
+            color: var(--color-primary-dark);
+            margin-bottom: 2px;
+        }
+        
+        .contact__value {
+            color: var(--color-text);
+        }
+        
+        .contact__value a {
+            color: var(--color-text);
+            transition: color var(--transition-standard);
+        }
+        
+        .contact__value a:hover,
+        .contact__value a:focus {
+            color: var(--color-primary);
+        }
+        
+        .contact__hours {
+            margin-top: var(--space-md);
+        }
+        
+        .hours__title {
+            font-weight: 600;
+            color: var(--color-primary-dark);
+            margin-bottom: var(--space-xs);
+            font-size: 1rem;
+        }
+        
+        .hours__list {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+        
+        .hours__item {
+            display: flex;
+            justify-content: space-between;
+            padding: 4px 0;
+            border-bottom: 1px dashed rgba(0, 0, 0, 0.05);
+        }
+        
+        .hours__day {
+            font-weight: 500;
+        }
+        
+        .hours__time {
+            color: var(--color-text-light);
+        }
+        
+        .contact__map {
+            height: 300px;
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            margin-top: var(--space-lg);
+            box-shadow: var(--shadow-sm);
+            border: 4px solid white;
+        }
+        
+        .contact__form {
+            background-color: white;
+            padding: var(--space-lg);
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .form__group {
+            margin-bottom: var(--space-md);
+        }
+        
+        .form__label {
+            display: block;
+            margin-bottom: var(--space-xs);
+            color: var(--color-text);
+            font-weight: 500;
+        }
+        
+        .form__input,
+        .form__textarea {
+            width: 100%;
+            padding: var(--space-sm);
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            border-radius: var(--radius-sm);
+            font-family: var(--font-body);
+            font-size: 1rem;
+            color: var(--color-text);
+            transition: all var(--transition-standard);
+            background-color: rgba(0, 0, 0, 0.02);
+        }
+        
+        .form__input:focus,
+        .form__textarea:focus {
+            outline: none;
+            border-color: var(--color-primary-light);
+            box-shadow: 0 0 0 3px rgba(42, 125, 139, 0.1);
+            background-color: white;
+        }
+        
+        .form__textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+        
+        .form__button {
+            display: inline-block;
+            background-color: var(--color-primary);
+            color: white;
+            padding: var(--space-sm) var(--space-lg);
+            border-radius: var(--radius-full);
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all var(--transition-standard);
+            border: none;
+            cursor: pointer;
+            box-shadow: var(--shadow-sm);
+            width: 100%;
+        }
+        
+        .form__button:hover,
+        .form__button:focus {
+            background-color: var(--color-primary-dark);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .form__error {
+            color: #e53935;
+            font-size: 0.875rem;
+            margin-top: 4px;
+            display: none;
+        }
+        
+        .form__input--error,
+        .form__textarea--error {
+            border-color: #e53935;
+            background-color: rgba(229, 57, 53, 0.05);
+        }
+        
+        .form__input--error + .form__error,
+        .form__textarea--error + .form__error {
+            display: block;
+        }
+        
+        /* Footer */
+        .footer {
+            background-color: var(--color-primary-dark);
+            color: rgba(255, 255, 255, 0.7);
+            padding: var(--space-xl) 0 var(--space-md);
+            position: relative;
+        }
+        
+        .footer__container {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .footer__content {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: var(--space-lg);
+            margin-bottom: var(--space-xl);
+        }
+        
+        .footer__brand {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-md);
+        }
+        
+        .footer__logo {
+            font-family: var(--font-heading);
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: white;
+            margin-bottom: var(--space-xs);
+        }
+        
+        .footer__description {
+            margin-bottom: var(--space-md);
+            line-height: 1.6;
+            font-size: 0.95rem;
+        }
+        
+        .footer__social {
+            display: flex;
+            gap: var(--space-sm);
+        }
+        
+        .footer__social-link {
+            width: 36px;
+            height: 36px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: var(--radius-full);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            transition: all var(--transition-standard);
+        }
+        
+        .footer__social-link:hover,
+        .footer__social-link:focus {
+            background-color: var(--color-secondary);
+            color: white;
+            transform: translateY(-3px);
+        }
+        
+        .footer__links {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .footer__heading {
+            color: white;
+            font-size: 1.2rem;
+            margin-bottom: var(--space-md);
+            position: relative;
+            padding-bottom: var(--space-xs);
+        }
+        
+        .footer__heading::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 30px;
+            height: 2px;
+            background-color: var(--color-secondary);
+        }
+        
+        .footer__nav {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-xs);
+        }
+        
+        .footer__nav-link {
+            color: rgba(255, 255, 255, 0.7);
+            transition: all var(--transition-standard);
+            display: flex;
+            align-items: center;
+            gap: var(--space-xs);
+        }
+        
+        .footer__nav-link:hover,
+        .footer__nav-link:focus {
+            color: white;
+            transform: translateX(3px);
+        }
+        
+        .footer__bottom {
+            padding-top: var(--space-md);
+            text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.5);
+        }
+        
+        .footer__copyright a {
+            color: rgba(255, 255, 255, 0.7);
+            transition: color var(--transition-standard);
+        }
+        
+        .footer__copyright a:hover,
+        .footer__copyright a:focus {
+            color: white;
+        }
+        
+        /* Scroll to Top */
+        .scroll-top {
+            position: fixed;
+            right: var(--space-md);
+            bottom: var(--space-md);
+            width: 45px;
+            height: 45px;
+            background-color: var(--color-primary);
+            color: white;
+            border-radius: var(--radius-full);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: all var(--transition-standard);
+            z-index: 900;
+            box-shadow: var(--shadow-md);
+        }
+        
+        .scroll-top--active {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .scroll-top:hover,
+        .scroll-top:focus {
+            background-color: var(--color-primary-dark);
+            transform: translateY(-3px);
+        }
+        
+        /* Success Message */
+        .success-message {
+            background-color: #4caf50;
+            color: white;
+            padding: var(--space-md);
+            border-radius: var(--radius-md);
+            text-align: center;
+            display: none;
+            margin-top: var(--space-md);
+        }
+        
+        .success-message--active {
+            display: block;
+            animation: fadeIn var(--transition-standard);
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        /* Animations */
+        .fade-in {
+            animation: fadeIn var(--transition-slow) forwards;
+        }
+        
+        .slide-up {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all var(--transition-standard);
+        }
+        
+        .slide-up.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Media Queries */
+        @media (min-width: 640px) {
+            .hero__cta-group {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: var(--space-sm);
+            }
+            
+            .hero__secondary-cta {
+                margin-left: 0;
+            }
+            
+            .testimonial__content {
+                padding: var(--space-xl);
+            }
+            
+            .contact__map {
+                height: 350px;
+            }
+            
+            .footer__content {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (min-width: 768px) {
+            .about__content {
+                flex-direction: row;
+                align-items: center;
+            }
+            
+            .about__image-wrapper,
+            .about__text {
+                flex: 1;
+            }
+            
+            .contact__content {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (min-width: 1024px) {
+            .nav {
+                position: static;
+                width: auto;
+                height: auto;
+                background-color: transparent;
+                padding: 0;
+                flex-direction: row;
+                align-items: center;
+            }
+            
+            .nav__list {
+                flex-direction: row;
+                gap: var(--space-lg);
+                margin-bottom: 0;
+            }
+            
+            .nav__link {
+                color: var(--color-text);
+                font-size: 1rem;
+            }
+            
+            .nav__link::after {
+                background-color: var(--color-primary);
+            }
+            
+            .nav__btn {
+                background-color: var(--color-primary);
+                color: white;
+                margin-top: 0;
+                margin-left: var(--space-md);
+            }
+            
+            .nav__btn:hover,
+            .nav__btn:focus {
+                background-color: var(--color-primary-dark);
+                border-color: var(--color-primary-dark);
+                color: white;
+            }
+            
+            .nav-toggle {
+                display: none;
+            }
+            
+            .footer__content {
+                grid-template-columns: 2fr 1fr 1fr 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container header__container">
+            <a href="#" class="logo">
+                <div class="logo__text">
+                    Amen Chiropractic Center
+                    <span>Dr. Steve Hudgins, DC</span>
+                </div>
+            </a>
+            
+            <nav class="nav" id="nav">
+                <ul class="nav__list">
+                    <li><a href="#home" class="nav__link">Home</a></li>
+                    <li><a href="#services" class="nav__link">Services</a></li>
+                    <li><a href="#about" class="nav__link">About</a></li>
+                    <li><a href="#testimonials" class="nav__link">Testimonials</a></li>
+                    <li><a href="#contact" class="nav__link">Contact</a></li>
+                </ul>
+                <a href="#contact" class="nav__btn">Book Appointment</a>
+            </nav>
+            
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle Navigation">
+                <span class="nav-toggle__line"></span>
+                <span class="nav-toggle__line"></span>
+                <span class="nav-toggle__line"></span>
+            </button>
+        </div>
+    </header>
+    
+    <div class="overlay" id="overlay"></div>
+    
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container hero__container">
+            <div class="hero__content">
+                <h1 class="hero__title">Restore Function, Relieve Pain, Renew Life</h1>
+                <p class="hero__subtitle">Experience personalized chiropractic care focused on long-term health and natural pain relief with Dr. Steve Hudgins at Amen Chiropractic Center in San Antonio.</p>
+                <div class="hero__cta-group">
+                    <a href="#contact" class="hero__cta">Schedule a Consultation</a>
+                    <a href="#services" class="hero__secondary-cta">Explore Services</a>
+                </div>
+            </div>
+        </div>
+        <a href="#services" class="hero__scroll" aria-label="Scroll to Services">
+            <i class="fas fa-chevron-down"></i>
+        </a>
+    </section>
+    
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section__header">
+                <h2>Specialized Care Services</h2>
+                <p>At Amen Chiropractic Center, we offer comprehensive chiropractic services designed to address your specific health concerns and help you achieve optimal wellness.</p>
+            </div>
+            
+            <div class="services__grid">
+                <div class="service-card">
+                    <div class="service-card__icon">
+                        <i class="fas fa-spine"></i>
+                    </div>
+                    <h3 class="service-card__title">Spinal Adjustments</h3>
+                    <p class="service-card__description">Precise manual adjustments to improve spinal alignment, relieve pressure, and reduce pain while restoring proper function to your nervous system.</p>
+                    <a href="#contact" class="service-card__link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-card__icon">
+                        <i class="fas fa-head-side"></i>
+                    </div>
+                    <h3 class="service-card__title">Headache Relief</h3>
+                    <p class="service-card__description">Effective treatment for tension headaches and migraines by addressing cervical spine issues, muscle tension, and trigger points that contribute to head pain.</p>
+                    <a href="#contact" class="service-card__link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-card__icon">
+                        <i class="fas fa-diagnoses"></i>
+                    </div>
+                    <h3 class="service-card__title">Sciatica Treatment</h3>
+                    <p class="service-card__description">Specialized care to relieve sciatic nerve pain, addressing lumbar disc issues and reducing inflammation to restore comfort and mobility.</p>
+                    <a href="#contact" class="service-card__link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-card__icon">
+                        <i class="fas fa-user-injured"></i>
+                    </div>
+                    <h3 class="service-card__title">Back & Neck Pain</h3>
+                    <p class="service-card__description">Comprehensive treatment for acute and chronic pain conditions, focusing on root causes rather than just symptom management.</p>
+                    <a href="#contact" class="service-card__link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-card__icon">
+                        <i class="fas fa-child"></i>
+                    </div>
+                    <h3 class="service-card__title">Posture Correction</h3>
+                    <p class="service-card__description">Targeted therapies and exercises to address postural imbalances that lead to pain, discomfort, and potential long-term health issues.</p>
+                    <a href="#contact" class="service-card__link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-card__icon">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <h3 class="service-card__title">Wellness Care</h3>
+                    <p class="service-card__description">Ongoing maintenance programs designed to support optimal health, prevent injuries, and enhance your overall quality of life.</p>
+                    <a href="#contact" class="service-card__link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container about__container">
+            <div class="section__header">
+                <h2>Meet Dr. Steve Hudgins</h2>
+                <p>Dedicated to helping patients achieve optimal health through natural chiropractic care</p>
+            </div>
+            
+            <div class="about__content">
+                <div class="about__image-wrapper">
+                    <img src="https://media.licdn.com/dms/image/v2/C4D03AQEAEBCsY5NMKg/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1516849737663?e=1750291200&v=beta&t=cKihwU0zyW6_E4CZNq8z2zMh4l7abW4Bqmn7DpTFNNg" alt="Dr. Steve Hudgins, Chiropractor at Amen Chiropractic Center" class="about__image">
+                    <div class="about__image-caption">Dr. Steve Hudgins, DC</div>
+                </div>
+                
+                <div class="about__text">
+                    <h3 class="about__title">Experienced Care You Can Trust</h3>
+                    <p class="about__subtitle">Dedicated to holistic healing and personalized patient care</p>
+                    <p class="about__description">Dr. Steve Hudgins is a licensed chiropractor committed to restoring function, relieving pain, and helping patients reach their optimal health potential through safe, noninvasive treatment methods.</p>
+                    <p class="about__description">With years of experience and advanced training, Dr. Hudgins specializes in treating conditions such as back pain, neck pain, headaches, sciatica, and postural imbalances using personalized care plans and precise manual adjustments.</p>
+                    <p class="about__description">His philosophy centers on holistic healing and long-term wellness, with a goal of helping patients feel stronger, healthier, and more mobile in their everyday lives.</p>
+                    
+                    <div class="about__credentials">
+                        <div class="credential">
+                            <i class="fas fa-graduation-cap"></i>
+                            <span>Doctor of Chiropractic</span>
+                        </div>
+                        <div class="credential">
+                            <i class="fas fa-certificate"></i>
+                            <span>Board Certified</span>
+                        </div>
+                        <div class="credential">
+                            <i class="fas fa-user-md"></i>
+                            <span>Advanced Spinal Techniques</span>
+                        </div>
+                        <div class="credential">
+                            <i class="fas fa-heart"></i>
+                            <span>Holistic Approach</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+        <div class="container testimonials__container">
+            <div class="section__header">
+                <h2>Patient Success Stories</h2>
+                <p>Hear from our patients who have experienced remarkable improvements in their health and wellbeing</p>
+            </div>
+            
+            <div class="testimonials__slider" id="testimonials-slider">
+                <div class="testimonials__track" id="testimonials-track">
+                    <div class="testimonial testimonial--active">
+                        <div class="testimonial__content">
+                            <div class="testimonial__rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p class="testimonial__quote">"After suffering from chronic back pain for years, I finally found relief with Dr. Hudgins. His approach is thorough and personalized, and he genuinely cares about his patients. I'm now pain-free and can enjoy activities I thought were lost to me forever."</p>
+                            <div class="testimonial__author">
+                                <div class="testimonial__name">Sarah Johnson</div>
+                                <div class="testimonial__meta">Patient for 2 years • Back Pain</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial">
+                        <div class="testimonial__content">
+                            <div class="testimonial__rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p class="testimonial__quote">"I had debilitating migraines that medication couldn't fully control. Since beginning treatment with Dr. Hudgins, the frequency and intensity have dramatically decreased. His holistic approach addressed issues I didn't even realize were connected to my headaches. I'm so grateful for his expertise."</p>
+                            <div class="testimonial__author">
+                                <div class="testimonial__name">Michael Rodriguez</div>
+                                <div class="testimonial__meta">Patient for 1 year • Migraine Relief</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial">
+                        <div class="testimonial__content">
+                            <div class="testimonial__rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <p class="testimonial__quote">"The sciatica pain I experienced after my pregnancy was unbearable. I couldn't even pick up my baby without wincing. Dr. Hudgins developed a treatment plan that not only relieved my pain but helped me understand how to prevent future issues. I recommend him to all my friends and family."</p>
+                            <div class="testimonial__author">
+                                <div class="testimonial__name">Jennifer Davis</div>
+                                <div class="testimonial__meta">Patient for 6 months • Sciatica Treatment</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial">
+                        <div class="testimonial__content">
+                            <div class="testimonial__rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p class="testimonial__quote">"As someone who works at a desk all day, my posture and neck pain were becoming serious issues. Dr. Hudgins identified the root causes and created a comprehensive treatment plan. His knowledge, skill, and caring approach have made a tremendous difference in my quality of life."</p>
+                            <div class="testimonial__author">
+                                <div class="testimonial__name">Robert Thompson</div>
+                                <div class="testimonial__meta">Patient for 1.5 years • Neck Pain & Posture</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonials__controls">
+                    <button class="testimonials__btn" id="prev-testimonial" aria-label="Previous testimonial">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="testimonials__btn" id="next-testimonial" aria-label="Next testimonial">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+                
+                <div class="testimonials__indicators" id="testimonials-indicators">
+                    <span class="testimonials__indicator testimonials__indicator--active" data-index="0"></span>
+                    <span class="testimonials__indicator" data-index="1"></span>
+                    <span class="testimonials__indicator" data-index="2"></span>
+                    <span class="testimonials__indicator" data-index="3"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container contact__container">
+            <div class="section__header">
+                <h2>Get in Touch</h2>
+                <p>Schedule your consultation with Dr. Hudgins and take the first step toward better health</p>
+            </div>
+            
+            <div class="contact__content">
+                <div class="contact__info">
+                    <h3 class="contact__title">Contact Information</h3>
+                    <p class="contact__description">If you're experiencing pain or discomfort, don't wait to get help. Reach out today to schedule your appointment with Dr. Steve Hudgins at Amen Chiropractic Center.</p>
+                    
+                    <div class="contact__details">
+                        <div class="contact__item">
+                            <div class="contact__icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact__text">
+                                <span class="contact__label">Location</span>
+                                <address class="contact__value">123 Wellness Blvd, San Antonio, TX 78205</address>
+                            </div>
+                        </div>
+                        
+                        <div class="contact__item">
+                            <div class="contact__icon">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div class="contact__text">
+                                <span class="contact__label">Phone</span>
+                                <span class="contact__value"><a href="tel:+12105551234">(210) 555-1234</a></span>
+                            </div>
+                        </div>
+                        
+                        <div class="contact__item">
+                            <div class="contact__icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact__text">
+                                <span class="contact__label">Email</span>
+                                <span class="contact__value"><a href="mailto:info@amenchiropractic.com">info@amenchiropractic.com</a></span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact__hours">
+                        <h4 class="hours__title">Office Hours</h4>
+                        <div class="hours__list">
+                            <div class="hours__item">
+                                <span class="hours__day">Monday - Friday</span>
+                                <span class="hours__time">9:00 AM - 6:00 PM</span>
+                            </div>
+                            <div class="hours__item">
+                                <span class="hours__day">Saturday</span>
+                                <span class="hours__time">9:00 AM - 1:00 PM</span>
+                            </div>
+                            <div class="hours__item">
+                                <span class="hours__day">Sunday</span>
+                                <span class="hours__time">Closed</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact__map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d111048.15072237359!2d-98.58990205771236!3d29.48115648899104!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x865c58af04d00eaf%3A0x856e13b10a016bc!2sSan%20Antonio%2C%20TX!5e0!3m2!1sen!2sus!4v1624303011266!5m2!1sen!2sus" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" title="Google Maps location of Amen Chiropractic Center"></iframe>
+                    </div>
+                </div>
+                
+                <div class="contact__form">
+                    <h3 class="contact__title">Request an Appointment</h3>
+                    <form id="contact-form" class="form">
+                        <div class="form__group">
+                            <label for="name" class="form__label">Full Name*</label>
+                            <input type="text" id="name" name="name" class="form__input" required>
+                            <span class="form__error">Please enter your full name</span>
+                        </div>
+                        
+                        <div class="form__group">
+                            <label for="email" class="form__label">Email Address*</label>
+                            <input type="email" id="email" name="email" class="form__input" required>
+                            <span class="form__error">Please enter a valid email address</span>
+                        </div>
+                        
+                        <div class="form__group">
+                            <label for="phone" class="form__label">Phone Number*</label>
+                            <input type="tel" id="phone" name="phone" class="form__input" required>
+                            <span class="form__error">Please enter a valid phone number</span>
+                        </div>
+                        
+                        <div class="form__group">
+                            <label for="service" class="form__label">Service of Interest</label>
+                            <select id="service" name="service" class="form__input">
+                                <option value="">Select a service</option>
+                                <option value="Spinal Adjustments">Spinal Adjustments</option>
+                                <option value="Headache Relief">Headache Relief</option>
+                                <option value="Sciatica Treatment">Sciatica Treatment</option>
+                                <option value="Back & Neck Pain">Back & Neck Pain</option>
+                                <option value="Posture Correction">Posture Correction</option>
+                                <option value="Wellness Care">Wellness Care</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form__group">
+                            <label for="message" class="form__label">Your Message</label>
+                            <textarea id="message" name="message" class="form__textarea" placeholder="Please describe your current condition or concerns..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="form__button">Request Appointment</button>
+                    </form>
+                    
+                    <div id="success-message" class="success-message">
+                        Thank you for contacting us! We'll be in touch soon to confirm your appointment.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer__container">
+            <div class="footer__content">
+                <div class="footer__brand">
+                    <div class="footer__logo">Amen Chiropractic Center</div>
+                    <p class="footer__description">Dedicated to restoring function, relieving pain, and helping patients reach optimal health through safe, noninvasive treatment methods.</p>
+                    <div class="footer__social">
+                        <a href="#" class="footer__social-link" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="footer__social-link" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="footer__social-link" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="footer__social-link" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer__links">
+                    <h4 class="footer__heading">Quick Links</h4>
+                    <nav class="footer__nav">
+                        <a href="#home" class="footer__nav-link"><i class="fas fa-chevron-right"></i> Home</a>
+                        <a href="#services" class="footer__nav-link"><i class="fas fa-chevron-right"></i> Services</a>
+                        <a href="#about" class="footer__nav-link"><i class="fas fa-chevron-right"></i> About Dr. Hudgins</a>
+                        <a href="#testimonials" class="footer__nav-link"><i class="fas fa-chevron-right"></i> Testimonials</a>
+                        <a href="#contact" class="footer__nav-link"><i class="fas fa-chevron-right"></i> Contact Us</a>
+                    </nav>
+                </div>
+                
+                <div class="footer__links">
+                    <h4 class="footer__heading">Services</h4>
+                    <nav class="footer__nav">
+                        <a href="#services" class="footer__nav-link"><i class="fas fa-chevron-right"></i> Spinal Adjustments</a>
+                        <a href="#services" class="footer__nav-link"><i class="fas fa-chevron-right"></i> Headache Relief</a>
+                        <a href="#services" class="footer__nav-link"><i class="fas fa-chevron-right"></i> Sciatica Treatment</a>
+                        <a href="#services" class="footer__nav-link"><i class="fas fa-chevron-right"></i> Back & Neck Pain</a>
+                        <a href="#services" class="footer__nav-link"><i class="fas fa-chevron-right"></i> Posture Correction</a>
+                    </nav>
+                </div>
+                
+                <div class="footer__links">
+                    <h4 class="footer__heading">Contact</h4>
+                    <nav class="footer__nav">
+                        <a href="tel:+12105551234" class="footer__nav-link"><i class="fas fa-phone-alt"></i> (210) 555-1234</a>
+                        <a href="mailto:info@amenchiropractic.com" class="footer__nav-link"><i class="fas fa-envelope"></i> info@amenchiropractic.com</a>
+                        <a href="https://goo.gl/maps/123" class="footer__nav-link"><i class="fas fa-map-marker-alt"></i> 123 Wellness Blvd, San Antonio, TX</a>
+                        <a href="#contact" class="footer__nav-link"><i class="fas fa-calendar-check"></i> Book an Appointment</a>
+                    </nav>
+                </div>
+            </div>
+            
+            <div class="footer__bottom">
+                <p class="footer__copyright">© <span id="current-year"></span> Amen Chiropractic Center. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Scroll to Top Button -->
+    <button class="scroll-top" id="scroll-top" aria-label="Scroll to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    
+    <!-- JavaScript -->
+    <script>
+        // Set current year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+        
+        // Navigation toggle
+        const navToggle = document.getElementById('nav-toggle');
+        const nav = document.getElementById('nav');
+        const overlay = document.getElementById('overlay');
+        
+        navToggle.addEventListener('click', function() {
+            navToggle.classList.toggle('nav-toggle--active');
+            nav.classList.toggle('nav--active');
+            overlay.classList.toggle('overlay--active');
+            document.body.style.overflow = nav.classList.contains('nav--active') ? 'hidden' : '';
+        });
+        
+        // Close navigation when clicking overlay
+        overlay.addEventListener('click', function() {
+            navToggle.classList.remove('nav-toggle--active');
+            nav.classList.remove('nav--active');
+            overlay.classList.remove('overlay--active');
+            document.body.style.overflow = '';
+        });
+        
+        // Close navigation on nav links click (mobile)
+        const navLinks = document.querySelectorAll('.nav__link, .nav__btn');
+        navLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                if (window.innerWidth < 1024) {
+                    navToggle.classList.remove('nav-toggle--active');
+                    nav.classList.remove('nav--active');
+                    overlay.classList.remove('overlay--active');
+                    document.body.style.overflow = '';
+                }
+            });
+        });
+        
+        // Header scroll effect
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 50) {
+                header.classList.add('header--scrolled');
+            } else {
+                header.classList.remove('header--scrolled');
+            }
+        });
+        
+        // Scroll to top button
+        const scrollTopBtn = document.getElementById('scroll-top');
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 300) {
+                scrollTopBtn.classList.add('scroll-top--active');
+            } else {
+                scrollTopBtn.classList.remove('scroll-top--active');
+            }
+        });
+        
+        scrollTopBtn.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    const headerHeight = document.getElementById('header').offsetHeight;
+                    const targetPosition = targetElement.offsetTop - headerHeight;
+                    
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Testimonials slider
+        const testimonialsTrack = document.getElementById('testimonials-track');
+        const testimonials = document.querySelectorAll('.testimonial');
+        const prevButton = document.getElementById('prev-testimonial');
+        const nextButton = document.getElementById('next-testimonial');
+        const indicators = document.querySelectorAll('.testimonials__indicator');
+        
+        let currentIndex = 0;
+        let testimonialInterval;
+        
+        function goToTestimonial(index) {
+            if (index < 0) index = testimonials.length - 1;
+            if (index >= testimonials.length) index = 0;
+            
+            testimonials.forEach(testimonial => {
+                testimonial.classList.remove('testimonial--active');
+            });
+            
+            indicators.forEach(indicator => {
+                indicator.classList.remove('testimonials__indicator--active');
+            });
+            
+            testimonials[index].classList.add('testimonial--active');
+            indicators[index].classList.add('testimonials__indicator--active');
+            
+            currentIndex = index;
+        }
+        
+        function startTestimonialInterval() {
+            testimonialInterval = setInterval(() => {
+                goToTestimonial(currentIndex + 1);
+            }, 5000);
+        }
+        
+        function resetTestimonialInterval() {
+            clearInterval(testimonialInterval);
+            startTestimonialInterval();
+        }
+        
+        prevButton.addEventListener('click', () => {
+            goToTestimonial(currentIndex - 1);
+            resetTestimonialInterval();
+        });
+        
+        nextButton.addEventListener('click', () => {
+            goToTestimonial(currentIndex + 1);
+            resetTestimonialInterval();
+        });
+        
+        indicators.forEach((indicator, index) => {
+            indicator.addEventListener('click', () => {
+                goToTestimonial(index);
+                resetTestimonialInterval();
+            });
+        });
+        
+        startTestimonialInterval();
+        
+        // Form validation
+        const contactForm = document.getElementById('contact-form');
+        const successMessage = document.getElementById('success-message');
+        
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const nameInput = document.getElementById('name');
+            const emailInput = document.getElementById('email');
+            const phoneInput = document.getElementById('phone');
+            
+            let isValid = true;
+            
+            // Simple validation
+            if (!nameInput.value.trim()) {
+                nameInput.classList.add('form__input--error');
+                isValid = false;
+            } else {
+                nameInput.classList.remove('form__input--error');
+            }
+            
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(emailInput.value.trim())) {
+                emailInput.classList.add('form__input--error');
+                isValid = false;
+            } else {
+                emailInput.classList.remove('form__input--error');
+            }
+            
+            const phoneRegex = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
+            if (!phoneRegex.test(phoneInput.value.trim())) {
+                phoneInput.classList.add('form__input--error');
+                isValid = false;
+            } else {
+                phoneInput.classList.remove('form__input--error');
+            }
+            
+            if (isValid) {
+                // Simulate form submission
+                contactForm.reset();
+                successMessage.classList.add('success-message--active');
+                
+                setTimeout(() => {
+                    successMessage.classList.remove('success-message--active');
+                }, 5000);
+            }
+        });
+        
+        // Scroll animation for elements
+        const scrollElements = document.querySelectorAll('.slide-up');
+        
+        function checkInView() {
+            const windowHeight = window.innerHeight;
+            const windowTop = window.scrollY;
+            const windowBottom = windowTop + windowHeight;
+            
+            scrollElements.forEach(element => {
+                const elementTop = element.offsetTop;
+                const elementHeight = element.offsetHeight;
+                const elementBottom = elementTop + elementHeight;
+                
+                // Check if element is in viewport
+                if (elementBottom > windowTop && elementTop < windowBottom) {
+                    element.classList.add('active');
+                }
+            });
+        }
+        
+        // Add slide-up class to elements
+        const serviceTitles = document.querySelectorAll('.section__header h2');
+        const serviceCards = document.querySelectorAll('.service-card');
+        const aboutSections = document.querySelectorAll('.about__content > div');
+        
+        serviceTitles.forEach(title => title.classList.add('slide-up'));
+        serviceCards.forEach(card => card.classList.add('slide-up'));
+        aboutSections.forEach(section => section.classList.add('slide-up'));
+        
+        window.addEventListener('scroll', checkInView);
+        window.addEventListener('resize', checkInView);
+        window.addEventListener('load', checkInView);
+        
+        // Delay initial check to ensure content is loaded
+        setTimeout(checkInView, 100);
+    </script>
+</body>
+</html>
