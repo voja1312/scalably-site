@@ -1,0 +1,1427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kuwamoto Chiropractic | Dr. Russell Kuwamoto | Fresno, CA</title>
+    <meta name="description" content="Experience 40+ years of exceptional chiropractic care with Dr. Russell Kuwamoto in Fresno, CA. Specializing in pain management, spinal adjustments, and non-surgical decompression.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Color Variables - Healthcare/Wellness Palette */
+        :root {
+            --primary-blue: #3a7ca5; /* Trustworthy, calming blue */
+            --secondary-blue: #2f6690; /* Deeper blue for contrast */
+            --accent-teal: #16c2d5; /* Healing, energetic teal */
+            --light-blue: #d4f0fc; /* Soft background blue */
+            --neutral-light: #f7f9fb; /* Off-white for backgrounds */
+            --neutral-medium: #e6ecf2; /* Light gray for dividers */
+            --neutral-dark: #2c3e50; /* Dark blue-gray for text */
+            --success-green: #4caf50; /* Healing green */
+            
+            /* Spacing System (8px grid) */
+            --space-xs: 0.5rem; /* 8px */
+            --space-sm: 1rem;   /* 16px */
+            --space-md: 1.5rem; /* 24px */
+            --space-lg: 2rem;   /* 32px */
+            --space-xl: 3rem;   /* 48px */
+            --space-xxl: 4rem;  /* 64px */
+            
+            /* Transition Timing */
+            --transition-fast: 0.2s;
+            --transition-standard: 0.3s;
+            --transition-slow: 0.5s;
+            
+            /* Shadows */
+            --shadow-small: 0 2px 4px rgba(44, 62, 80, 0.1);
+            --shadow-medium: 0 4px 8px rgba(44, 62, 80, 0.12);
+            --shadow-large: 0 8px 16px rgba(44, 62, 80, 0.14);
+            
+            /* Border Radius */
+            --radius-sm: 4px;
+            --radius-md: 8px;
+            --radius-lg: 12px;
+            --radius-xl: 24px;
+        }
+        
+        /* Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--neutral-dark);
+            line-height: 1.6;
+            background-color: var(--neutral-light);
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+            line-height: 1.2;
+            color: var(--secondary-blue);
+            margin-bottom: var(--space-sm);
+        }
+        
+        h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+        }
+        
+        h2 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            position: relative;
+            display: inline-block;
+        }
+        
+        h2::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -10px;
+            width: 80px;
+            height: 3px;
+            background-color: var(--accent-teal);
+            transition: width var(--transition-standard);
+        }
+        
+        h2:hover::after {
+            width: 100%;
+        }
+        
+        h3 {
+            font-size: clamp(1.5rem, 3vw, 2rem);
+        }
+        
+        p {
+            margin-bottom: var(--space-md);
+            font-weight: 400;
+        }
+        
+        a {
+            color: var(--primary-blue);
+            text-decoration: none;
+            transition: all var(--transition-standard);
+        }
+        
+        a:hover {
+            color: var(--accent-teal);
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: var(--radius-md);
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--space-md);
+        }
+        
+        .section {
+            padding: var(--space-xl) 0;
+            position: relative;
+        }
+        
+        .section--alt {
+            background-color: var(--neutral-medium);
+        }
+        
+        .text-center {
+            text-align: center;
+        }
+        
+        /* Button Styles */
+        .btn {
+            display: inline-block;
+            padding: var(--space-xs) var(--space-md);
+            background-color: var(--primary-blue);
+            color: white;
+            border: none;
+            border-radius: var(--radius-md);
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all var(--transition-standard);
+            text-align: center;
+            box-shadow: var(--shadow-small);
+        }
+        
+        .btn:hover {
+            background-color: var(--secondary-blue);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-medium);
+            color: white;
+        }
+        
+        .btn--primary {
+            background-color: var(--accent-teal);
+        }
+        
+        .btn--primary:hover {
+            background-color: #14a7b8;
+        }
+        
+        .btn--large {
+            padding: var(--space-sm) var(--space-lg);
+            font-size: 1.1rem;
+        }
+        
+        .btn--outline {
+            background-color: transparent;
+            border: 2px solid var(--primary-blue);
+            color: var(--primary-blue);
+        }
+        
+        .btn--outline:hover {
+            background-color: var(--primary-blue);
+            color: white;
+        }
+        
+        /* Header */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.95);
+            z-index: 1000;
+            padding: var(--space-xs) 0;
+            box-shadow: var(--shadow-small);
+            transition: all var(--transition-standard);
+        }
+        
+        .header--scrolled {
+            padding: var(--space-xs) 0;
+            background-color: white;
+            box-shadow: var(--shadow-medium);
+        }
+        
+        .header__container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            color: var(--primary-blue);
+            font-size: 1.5rem;
+            line-height: 1;
+        }
+        
+        .logo__img {
+            width: 40px;
+            height: 40px;
+            margin-right: var(--space-xs);
+            object-fit: contain;
+        }
+        
+        .logo__text {
+            display: inline-block;
+        }
+        
+        .logo__text span {
+            display: block;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.8rem;
+            font-weight: 400;
+            color: var(--neutral-dark);
+            margin-top: 2px;
+        }
+        
+        .nav {
+            display: flex;
+            align-items: center;
+        }
+        
+        .nav__list {
+            display: flex;
+            list-style: none;
+            margin-right: var(--space-md);
+        }
+        
+        .nav__item {
+            margin-left: var(--space-md);
+        }
+        
+        .nav__link {
+            font-weight: 500;
+            position: relative;
+            padding: var(--space-xs) 0;
+        }
+        
+        .nav__link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--accent-teal);
+            transition: width var(--transition-standard);
+        }
+        
+        .nav__link:hover::after,
+        .nav__link.active::after {
+            width: 100%;
+        }
+        
+        .nav__toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--primary-blue);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        
+        /* Hero Section */
+        .hero {
+            padding: calc(4rem + var(--space-xl)) 0 var(--space-xl);
+            background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23ffffff' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
+            opacity: 0.7;
+        }
+        
+        .hero__content {
+            position: relative;
+            z-index: 1;
+            max-width: 700px;
+            margin: 0 auto;
+            text-align: center;
+            padding: var(--space-xl) 0;
+        }
+        
+        .hero__title {
+            color: white;
+            margin-bottom: var(--space-md);
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        
+        .hero__subtitle {
+            font-size: 1.25rem;
+            font-weight: 400;
+            margin-bottom: var(--space-lg);
+            color: rgba(255, 255, 255, 0.9);
+        }
+        
+        .hero__cta {
+            margin-top: var(--space-md);
+        }
+        
+        /* Services Section */
+        .services {
+            background-color: white;
+        }
+        
+        .services__intro {
+            max-width: 700px;
+            margin: 0 auto var(--space-lg);
+            text-align: center;
+        }
+        
+        .services__grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--space-md);
+            margin-top: var(--space-lg);
+        }
+        
+        .service-card {
+            background-color: white;
+            border-radius: var(--radius-md);
+            padding: var(--space-lg);
+            box-shadow: var(--shadow-small);
+            transition: all var(--transition-standard);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            height: 100%;
+            border-bottom: 3px solid transparent;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-medium);
+            border-bottom: 3px solid var(--accent-teal);
+        }
+        
+        .service-card__icon {
+            font-size: 2.5rem;
+            color: var(--primary-blue);
+            margin-bottom: var(--space-sm);
+            transition: transform var(--transition-standard);
+        }
+        
+        .service-card:hover .service-card__icon {
+            transform: scale(1.1);
+            color: var(--accent-teal);
+        }
+        
+        .service-card__title {
+            margin-bottom: var(--space-sm);
+            font-size: 1.25rem;
+        }
+        
+        .service-card__text {
+            font-size: 0.95rem;
+            color: #666;
+        }
+        
+        /* About Section */
+        .about {
+            background-color: var(--neutral-light);
+        }
+        
+        .about__container {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-lg);
+        }
+        
+        @media (min-width: 768px) {
+            .about__container {
+                flex-direction: row;
+                align-items: center;
+            }
+        }
+        
+        .about__image {
+            flex: 1;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-medium);
+            position: relative;
+        }
+        
+        .about__image img {
+            transition: transform var(--transition-standard);
+            display: block;
+            width: 100%;
+        }
+        
+        .about__image:hover img {
+            transform: scale(1.03);
+        }
+        
+        .about__content {
+            flex: 1;
+        }
+        
+        .about__title {
+            margin-bottom: var(--space-md);
+        }
+        
+        .about__text {
+            margin-bottom: var(--space-md);
+        }
+        
+        .credentials {
+            margin-top: var(--space-md);
+        }
+        
+        .credentials__title {
+            font-size: 1.2rem;
+            margin-bottom: var(--space-sm);
+            color: var(--secondary-blue);
+        }
+        
+        .credentials__list {
+            list-style: none;
+        }
+        
+        .credentials__item {
+            margin-bottom: var(--space-xs);
+            display: flex;
+            align-items: center;
+        }
+        
+        .credentials__item i {
+            color: var(--accent-teal);
+            margin-right: var(--space-xs);
+        }
+        
+        /* Testimonials Section */
+        .testimonials {
+            background-color: white;
+            overflow: hidden;
+        }
+        
+        .testimonials__intro {
+            max-width: 700px;
+            margin: 0 auto var(--space-lg);
+            text-align: center;
+        }
+        
+        .testimonials__slider {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+        
+        .testimonials__list {
+            display: flex;
+            transition: transform var(--transition-slow) ease;
+        }
+        
+        .testimonial {
+            flex: 0 0 100%;
+            padding: var(--space-md);
+        }
+        
+        .testimonial__card {
+            background-color: var(--neutral-light);
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-small);
+            padding: var(--space-lg);
+            text-align: center;
+            height: 100%;
+            position: relative;
+        }
+        
+        .testimonial__card::before {
+            content: '\201C';
+            font-family: 'Playfair Display', serif;
+            font-size: 5rem;
+            color: var(--primary-blue);
+            opacity: 0.1;
+            position: absolute;
+            top: -20px;
+            left: 20px;
+        }
+        
+        .testimonial__text {
+            font-style: italic;
+            margin-bottom: var(--space-md);
+        }
+        
+        .testimonial__author {
+            font-weight: 600;
+            margin-bottom: var(--space-xs);
+        }
+        
+        .testimonial__role {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: var(--space-sm);
+        }
+        
+        .testimonial__rating {
+            color: #FFD700;
+            font-size: 1.2rem;
+            margin-bottom: var(--space-sm);
+        }
+        
+        .testimonials__nav {
+            display: flex;
+            justify-content: center;
+            margin-top: var(--space-md);
+        }
+        
+        .testimonials__dots {
+            display: flex;
+            gap: 8px;
+        }
+        
+        .testimonials__dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: var(--neutral-medium);
+            cursor: pointer;
+            transition: all var(--transition-standard);
+        }
+        
+        .testimonials__dot.active {
+            background-color: var(--primary-blue);
+            transform: scale(1.2);
+        }
+        
+        /* Contact Section */
+        .contact {
+            background-color: var(--neutral-light);
+        }
+        
+        .contact__container {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-lg);
+        }
+        
+        @media (min-width: 768px) {
+            .contact__container {
+                flex-direction: row;
+            }
+        }
+        
+        .contact__info {
+            flex: 1;
+        }
+        
+        .contact__info-list {
+            list-style: none;
+            margin-bottom: var(--space-lg);
+        }
+        
+        .contact__info-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: var(--space-md);
+        }
+        
+        .contact__info-icon {
+            font-size: 1.2rem;
+            color: var(--primary-blue);
+            margin-right: var(--space-sm);
+            margin-top: 4px;
+        }
+        
+        .contact__info-content {
+            flex: 1;
+        }
+        
+        .contact__info-title {
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+        
+        .contact__info-text {
+            margin-bottom: 0;
+            color: #555;
+        }
+        
+        .contact__map {
+            width: 100%;
+            height: 250px;
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            margin-top: var(--space-md);
+        }
+        
+        .contact__map iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        
+        .contact__form {
+            flex: 1;
+            background-color: white;
+            padding: var(--space-lg);
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-small);
+        }
+        
+        .form__group {
+            margin-bottom: var(--space-md);
+        }
+        
+        .form__label {
+            display: block;
+            margin-bottom: var(--space-xs);
+            font-weight: 500;
+        }
+        
+        .form__input,
+        .form__textarea {
+            width: 100%;
+            padding: var(--space-sm);
+            border: 1px solid var(--neutral-medium);
+            border-radius: var(--radius-sm);
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1rem;
+            transition: border-color var(--transition-standard);
+        }
+        
+        .form__input:focus,
+        .form__textarea:focus {
+            outline: none;
+            border-color: var(--primary-blue);
+        }
+        
+        .form__textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+        
+        .form__error {
+            color: #d9534f;
+            font-size: 0.85rem;
+            margin-top: 5px;
+            display: none;
+        }
+        
+        .form__input.error,
+        .form__textarea.error {
+            border-color: #d9534f;
+        }
+        
+        .form__input.error + .form__error,
+        .form__textarea.error + .form__error {
+            display: block;
+        }
+        
+        .form__submit {
+            width: 100%;
+        }
+        
+        /* Footer */
+        .footer {
+            background-color: var(--secondary-blue);
+            color: white;
+            padding: var(--space-lg) 0;
+        }
+        
+        .footer__container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: var(--space-lg);
+        }
+        
+        .footer__logo {
+            color: white;
+            font-size: 1.5rem;
+            margin-bottom: var(--space-sm);
+            display: inline-block;
+        }
+        
+        .footer__text {
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: var(--space-md);
+        }
+        
+        .footer__title {
+            color: white;
+            font-size: 1.2rem;
+            margin-bottom: var(--space-md);
+            position: relative;
+            display: inline-block;
+        }
+        
+        .footer__title::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -5px;
+            width: 40px;
+            height: 2px;
+            background-color: var(--accent-teal);
+        }
+        
+        .footer__links {
+            list-style: none;
+        }
+        
+        .footer__link-item {
+            margin-bottom: var(--space-xs);
+        }
+        
+        .footer__link {
+            color: rgba(255, 255, 255, 0.7);
+            transition: all var(--transition-standard);
+        }
+        
+        .footer__link:hover {
+            color: white;
+            padding-left: 5px;
+        }
+        
+        .footer__social {
+            display: flex;
+            gap: var(--space-sm);
+            margin-top: var(--space-sm);
+        }
+        
+        .footer__social-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: white;
+            border-radius: 50%;
+            transition: all var(--transition-standard);
+        }
+        
+        .footer__social-link:hover {
+            background-color: var(--accent-teal);
+            transform: translateY(-3px);
+            color: white;
+        }
+        
+        .footer__bottom {
+            margin-top: var(--space-lg);
+            padding-top: var(--space-md);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: center;
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.9rem;
+        }
+        
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 40px;
+            height: 40px;
+            background-color: var(--primary-blue);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all var(--transition-standard);
+            z-index: 99;
+            box-shadow: var(--shadow-medium);
+        }
+        
+        .back-to-top.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .back-to-top:hover {
+            background-color: var(--accent-teal);
+        }
+        
+        /* Media Queries */
+        @media (max-width: 1024px) {
+            .container {
+                padding: 0 var(--space-md);
+            }
+            
+            h1 {
+                font-size: clamp(2rem, 4vw, 3.5rem);
+            }
+            
+            h2 {
+                font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+            }
+            
+            .services__grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .nav__list {
+                position: fixed;
+                top: 0;
+                right: -300px;
+                width: 280px;
+                height: 100vh;
+                background-color: white;
+                flex-direction: column;
+                justify-content: flex-start;
+                padding: 80px var(--space-md) var(--space-md);
+                box-shadow: var(--shadow-large);
+                transition: right var(--transition-standard);
+                margin-right: 0;
+                z-index: 99;
+            }
+            
+            .nav__list.active {
+                right: 0;
+            }
+            
+            .nav__item {
+                margin: 0 0 var(--space-sm);
+            }
+            
+            .nav__toggle {
+                display: block;
+                z-index: 100;
+            }
+            
+            .services__grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .about__container,
+            .contact__container {
+                flex-direction: column;
+            }
+        }
+        
+        @media (max-width: 640px) {
+            html {
+                font-size: 14px;
+            }
+            
+            .section {
+                padding: var(--space-lg) 0;
+            }
+            
+            .hero {
+                padding-top: calc(3rem + var(--space-lg));
+            }
+            
+            .logo__text span {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container header__container">
+            <a href="#" class="logo">
+                <div class="logo__text">Kuwamoto Chiropractic<span>Fresno, California</span></div>
+            </a>
+            <nav class="nav">
+                <ul class="nav__list" id="navList">
+                    <li class="nav__item"><a href="#home" class="nav__link active">Home</a></li>
+                    <li class="nav__item"><a href="#services" class="nav__link">Services</a></li>
+                    <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+                    <li class="nav__item"><a href="#testimonials" class="nav__link">Testimonials</a></li>
+                    <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+                </ul>
+                <a href="#contact" class="btn">Book Appointment</a>
+                <button class="nav__toggle" id="navToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero section" id="home">
+        <div class="container hero__content">
+            <h1 class="hero__title">Experience Relief with Expert Chiropractic Care</h1>
+            <p class="hero__subtitle">Dr. Russell Kuwamoto brings over 40 years of experience to help you achieve optimal wellness through personalized, non-invasive care.</p>
+            <div class="hero__cta">
+                <a href="#contact" class="btn btn--primary btn--large">Schedule Your Consultation</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services section" id="services">
+        <div class="container">
+            <div class="services__intro">
+                <h2 class="text-center">Our Specialized Services</h2>
+                <p>At Kuwamoto Chiropractic, we offer comprehensive care designed to address pain, improve function, and enhance your overall quality of life through natural, non-invasive techniques.</p>
+            </div>
+            <div class="services__grid">
+                <div class="service-card">
+                    <i class="fas fa-spine service-card__icon"></i>
+                    <h3 class="service-card__title">Spinal Adjustments</h3>
+                    <p class="service-card__text">Precise, gentle adjustments to correct misalignments, reduce pain, and restore proper nervous system function.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-car-crash service-card__icon"></i>
+                    <h3 class="service-card__title">Auto Accident Care</h3>
+                    <p class="service-card__text">Specialized treatment for whiplash and other injuries resulting from automobile accidents, with complete documentation for insurance claims.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-user-md service-card__icon"></i>
+                    <h3 class="service-card__title">Pain Management</h3>
+                    <p class="service-card__text">Comprehensive approach to managing chronic and acute pain conditions without relying on medication or invasive procedures.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-bed service-card__icon"></i>
+                    <h3 class="service-card__title">Spinal Decompression</h3>
+                    <p class="service-card__text">Non-surgical spinal decompression therapy to relieve pressure on compressed discs and nerves, ideal for herniated discs and sciatica.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-dumbbell service-card__icon"></i>
+                    <h3 class="service-card__title">Rehabilitative Exercises</h3>
+                    <p class="service-card__text">Customized exercise programs to strengthen supporting muscles, improve flexibility, and prevent future injuries.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-book-medical service-card__icon"></i>
+                    <h3 class="service-card__title">Wellness Education</h3>
+                    <p class="service-card__text">Personalized guidance on ergonomics, nutrition, and lifestyle modifications to support long-term health and prevent recurring issues.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about section" id="about">
+        <div class="container about__container">
+            <div class="about__image">
+                <img src="https://media.licdn.com/dms/image/v2/C5603AQFanjkS-FpfGg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1517381872886?e=1750291200&v=beta&t=6E2ipZEbmULhH4ZHtd22pKOF4uUPdET_QyN5PUvVj48" alt="Dr. Russell Kuwamoto, Founder of Kuwamoto Chiropractic">
+            </div>
+            <div class="about__content">
+                <h2 class="about__title">Dr. Russell Kuwamoto</h2>
+                <p class="about__text">With over four decades of dedicated practice, Dr. Russell Kuwamoto has established himself as one of Fresno's most trusted chiropractic specialists. As founder of Kuwamoto Chiropractic Clinic, he has helped thousands of patients recover from injuries, manage chronic conditions, and improve their overall quality of life.</p>
+                <p class="about__text">Dr. Kuwamoto's approach combines traditional chiropractic techniques with modern methodologies, always focusing on personalized care that addresses each patient's unique needs. His extensive training and commitment to continuing education ensure that his patients receive the most effective, evidence-based treatments available.</p>
+                
+                <div class="credentials">
+                    <h3 class="credentials__title">Education & Credentials</h3>
+                    <ul class="credentials__list">
+                        <li class="credentials__item"><i class="fas fa-graduation-cap"></i> Biology degree from UCLA</li>
+                        <li class="credentials__item"><i class="fas fa-award"></i> Doctor of Chiropractic from Cleveland Chiropractic College</li>
+                        <li class="credentials__item"><i class="fas fa-certificate"></i> Training from International Sportsmedicine Institute in Los Angeles</li>
+                        <li class="credentials__item"><i class="fas fa-check-circle"></i> Certified in Industrial Disability Evaluation</li>
+                        <li class="credentials__item"><i class="fas fa-check-circle"></i> Qualified Medical Evaluator certification</li>
+                        <li class="credentials__item"><i class="fas fa-check-circle"></i> Certified in Whiplash & Brain Traumatology</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials section" id="testimonials">
+        <div class="container">
+            <div class="testimonials__intro">
+                <h2 class="text-center">Patient Success Stories</h2>
+                <p>Hear from our patients who have experienced significant improvements in their health and quality of life through our personalized chiropractic care.</p>
+            </div>
+            <div class="testimonials__slider" id="testimonialsSlider">
+                <div class="testimonials__list" id="testimonialsList">
+                    <div class="testimonial">
+                        <div class="testimonial__card">
+                            <p class="testimonial__text">"After my car accident, I was in constant pain and couldn't find relief. Dr. Kuwamoto created a personalized treatment plan that addressed my whiplash and back pain. Within a month, I was feeling like myself again. His expertise and genuine care made all the difference."</p>
+                            <div class="testimonial__rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <h4 class="testimonial__author">Sarah Johnson</h4>
+                            <p class="testimonial__role">Auto Accident Patient</p>
+                        </div>
+                    </div>
+                    <div class="testimonial">
+                        <div class="testimonial__card">
+                            <p class="testimonial__text">"I've suffered from chronic lower back pain for years, trying everything from medication to physical therapy. Dr. Kuwamoto's spinal decompression treatment gave me relief I hadn't experienced in over a decade. I can now enjoy activities with my grandchildren that were impossible before."</p>
+                            <div class="testimonial__rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <h4 class="testimonial__author">Robert Mendez</h4>
+                            <p class="testimonial__role">Chronic Pain Patient</p>
+                        </div>
+                    </div>
+                    <div class="testimonial">
+                        <div class="testimonial__card">
+                            <p class="testimonial__text">"As an athlete, I need my body to perform at its best. Dr. Kuwamoto not only helped me recover from a sports injury but also improved my overall performance through regular adjustments and personalized exercise recommendations. His knowledge of sports medicine is exceptional."</p>
+                            <div class="testimonial__rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <h4 class="testimonial__author">Michael Torres</h4>
+                            <p class="testimonial__role">Local Triathlete</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonials__nav">
+                    <div class="testimonials__dots" id="testimonialsDots">
+                        <span class="testimonials__dot active" data-index="0"></span>
+                        <span class="testimonials__dot" data-index="1"></span>
+                        <span class="testimonials__dot" data-index="2"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact section" id="contact">
+        <div class="container contact__container">
+            <div class="contact__info">
+                <h2>Contact Us</h2>
+                <p>Reach out to schedule your appointment or ask any questions about our services. We're here to help you on your journey to better health.</p>
+                
+                <ul class="contact__info-list">
+                    <li class="contact__info-item">
+                        <i class="fas fa-map-marker-alt contact__info-icon"></i>
+                        <div class="contact__info-content">
+                            <h4 class="contact__info-title">Office Location</h4>
+                            <p class="contact__info-text">1234 Shaw Avenue, Suite 101<br>Fresno, CA 93711</p>
+                        </div>
+                    </li>
+                    <li class="contact__info-item">
+                        <i class="fas fa-phone-alt contact__info-icon"></i>
+                        <div class="contact__info-content">
+                            <h4 class="contact__info-title">Phone</h4>
+                            <p class="contact__info-text">(559) 555-1212</p>
+                        </div>
+                    </li>
+                    <li class="contact__info-item">
+                        <i class="fas fa-envelope contact__info-icon"></i>
+                        <div class="contact__info-content">
+                            <h4 class="contact__info-title">Email</h4>
+                            <p class="contact__info-text">info@kuwamotochiropractic.com</p>
+                        </div>
+                    </li>
+                    <li class="contact__info-item">
+                        <i class="fas fa-clock contact__info-icon"></i>
+                        <div class="contact__info-content">
+                            <h4 class="contact__info-title">Office Hours</h4>
+                            <p class="contact__info-text">
+                                Monday - Friday: 9:00 AM - 6:00 PM<br>
+                                Saturday: 9:00 AM - 1:00 PM<br>
+                                Sunday: Closed
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+                
+                <div class="contact__map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d51530.11553414047!2d-119.84095755136716!3d36.80799390000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80946782a573551f%3A0xa2ce43b35a0e1d8!2sFresno%2C%20CA!5e0!3m2!1sen!2sus!4v1660000000000!5m2!1sen!2sus" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+            
+            <div class="contact__form">
+                <h3>Request an Appointment</h3>
+                <form id="appointmentForm" class="form">
+                    <div class="form__group">
+                        <label for="name" class="form__label">Full Name</label>
+                        <input type="text" id="name" name="name" class="form__input" required>
+                        <div class="form__error">Please enter your name</div>
+                    </div>
+                    
+                    <div class="form__group">
+                        <label for="phone" class="form__label">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" class="form__input" required>
+                        <div class="form__error">Please enter a valid phone number</div>
+                    </div>
+                    
+                    <div class="form__group">
+                        <label for="email" class="form__label">Email Address</label>
+                        <input type="email" id="email" name="email" class="form__input" required>
+                        <div class="form__error">Please enter a valid email address</div>
+                    </div>
+                    
+                    <div class="form__group">
+                        <label for="service" class="form__label">Service Needed</label>
+                        <select id="service" name="service" class="form__input" required>
+                            <option value="">Select a Service</option>
+                            <option value="Spinal Adjustments">Spinal Adjustments</option>
+                            <option value="Auto Accident Care">Auto Accident Care</option>
+                            <option value="Pain Management">Pain Management</option>
+                            <option value="Spinal Decompression">Spinal Decompression</option>
+                            <option value="Rehabilitative Exercises">Rehabilitative Exercises</option>
+                            <option value="Wellness Consultation">Wellness Consultation</option>
+                        </select>
+                        <div class="form__error">Please select a service</div>
+                    </div>
+                    
+                    <div class="form__group">
+                        <label for="message" class="form__label">Additional Information</label>
+                        <textarea id="message" name="message" class="form__textarea" rows="5"></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn btn--primary form__submit">Request Appointment</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer__container">
+            <div class="footer__col">
+                <a href="#" class="footer__logo">Kuwamoto Chiropractic</a>
+                <p class="footer__text">Providing exceptional chiropractic care to the Fresno community for over 40 years. Our mission is to help patients achieve optimal health through natural, non-invasive treatments.</p>
+                <div class="footer__social">
+                    <a href="#" class="footer__social-link"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="footer__social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="footer__social-link"><i class="fab fa-youtube"></i></a>
+                    <a href="#" class="footer__social-link"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer__col">
+                <h4 class="footer__title">Quick Links</h4>
+                <ul class="footer__links">
+                    <li class="footer__link-item"><a href="#home" class="footer__link">Home</a></li>
+                    <li class="footer__link-item"><a href="#services" class="footer__link">Services</a></li>
+                    <li class="footer__link-item"><a href="#about" class="footer__link">About Dr. Kuwamoto</a></li>
+                    <li class="footer__link-item"><a href="#testimonials" class="footer__link">Testimonials</a></li>
+                    <li class="footer__link-item"><a href="#contact" class="footer__link">Contact Us</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer__col">
+                <h4 class="footer__title">Services</h4>
+                <ul class="footer__links">
+                    <li class="footer__link-item"><a href="#services" class="footer__link">Spinal Adjustments</a></li>
+                    <li class="footer__link-item"><a href="#services" class="footer__link">Auto Accident Care</a></li>
+                    <li class="footer__link-item"><a href="#services" class="footer__link">Pain Management</a></li>
+                    <li class="footer__link-item"><a href="#services" class="footer__link">Spinal Decompression</a></li>
+                    <li class="footer__link-item"><a href="#services" class="footer__link">Rehabilitative Exercises</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer__col">
+                <h4 class="footer__title">Contact Us</h4>
+                <ul class="footer__links">
+                    <li class="footer__link-item"><a href="tel:5595551212" class="footer__link"><i class="fas fa-phone-alt"></i> (559) 555-1212</a></li>
+                    <li class="footer__link-item"><a href="mailto:info@kuwamotochiropractic.com" class="footer__link"><i class="fas fa-envelope"></i> info@kuwamotochiropractic.com</a></li>
+                    <li class="footer__link-item"><a href="#" class="footer__link"><i class="fas fa-map-marker-alt"></i> 1234 Shaw Avenue, Suite 101<br>Fresno, CA 93711</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer__bottom container">
+            <p>&copy; <span id="currentYear">2023</span> Kuwamoto Chiropractic. All Rights Reserved. | <a href="#" class="footer__link">Privacy Policy</a> | <a href="#" class="footer__link">Terms of Service</a></p>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#home" class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- JavaScript -->
+    <script>
+        // Set current year in footer
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+        
+        // Mobile Navigation Toggle
+        const navToggle = document.getElementById('navToggle');
+        const navList = document.getElementById('navList');
+        
+        navToggle.addEventListener('click', function() {
+            navList.classList.toggle('active');
+            
+            // Change icon based on menu state
+            const icon = navToggle.querySelector('i');
+            if (navList.classList.contains('active')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            } else {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        });
+        
+        // Close mobile menu when clicking on a link
+        const navLinks = document.querySelectorAll('.nav__link');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                navList.classList.remove('active');
+                const icon = navToggle.querySelector('i');
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            });
+        });
+        
+        // Active Navigation Link on Scroll
+        const sections = document.querySelectorAll('section');
+        
+        function setActiveLink() {
+            let scrollPosition = window.scrollY;
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 100;
+                const sectionHeight = section.offsetHeight;
+                const sectionId = section.getAttribute('id');
+                
+                if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                    navLinks.forEach(link => {
+                        link.classList.remove('active');
+                        if (link.getAttribute('href') === `#${sectionId}`) {
+                            link.classList.add('active');
+                        }
+                    });
+                }
+            });
+        }
+        
+        // Header Scroll Effect
+        const header = document.getElementById('header');
+        
+        function headerScroll() {
+            if (window.scrollY > 50) {
+                header.classList.add('header--scrolled');
+            } else {
+                header.classList.remove('header--scrolled');
+            }
+        }
+        
+        // Back to Top Button Visibility
+        const backToTopBtn = document.getElementById('backToTop');
+        
+        function showBackToTop() {
+            if (window.scrollY > 300) {
+                backToTopBtn.classList.add('visible');
+            } else {
+                backToTopBtn.classList.remove('visible');
+            }
+        }
+        
+        // Testimonials Slider
+        const testimonialsList = document.getElementById('testimonialsList');
+        const testimonialDots = document.querySelectorAll('.testimonials__dot');
+        let currentTestimonial = 0;
+        const testimonialCount = document.querySelectorAll('.testimonial').length;
+        
+        function showTestimonial(index) {
+            if (index >= testimonialCount) index = 0;
+            if (index < 0) index = testimonialCount - 1;
+            
+            testimonialsList.style.transform = `translateX(-${index * 100}%)`;
+            
+            // Update dots
+            testimonialDots.forEach(dot => dot.classList.remove('active'));
+            document.querySelector(`.testimonials__dot[data-index="${index}"]`).classList.add('active');
+            
+            currentTestimonial = index;
+        }
+        
+        // Set up testimonial dot clicks
+        testimonialDots.forEach(dot => {
+            dot.addEventListener('click', () => {
+                const index = parseInt(dot.getAttribute('data-index'));
+                showTestimonial(index);
+            });
+        });
+        
+        // Auto advance testimonials
+        let testimonialInterval = setInterval(() => {
+            showTestimonial(currentTestimonial + 1);
+        }, 5000);
+        
+        // Pause auto-advance on hover
+        const testimonialSlider = document.getElementById('testimonialsSlider');
+        testimonialSlider.addEventListener('mouseenter', () => {
+            clearInterval(testimonialInterval);
+        });
+        
+        testimonialSlider.addEventListener('mouseleave', () => {
+            testimonialInterval = setInterval(() => {
+                showTestimonial(currentTestimonial + 1);
+            }, 5000);
+        });
+        
+        // Form Validation
+        const appointmentForm = document.getElementById('appointmentForm');
+        
+        appointmentForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            let valid = true;
+            
+            // Validate name
+            const nameInput = document.getElementById('name');
+            if (!nameInput.value.trim()) {
+                nameInput.classList.add('error');
+                valid = false;
+            } else {
+                nameInput.classList.remove('error');
+            }
+            
+            // Validate phone
+            const phoneInput = document.getElementById('phone');
+            const phonePattern = /^[\d\s\-\(\)]+$/;
+            if (!phonePattern.test(phoneInput.value.trim())) {
+                phoneInput.classList.add('error');
+                valid = false;
+            } else {
+                phoneInput.classList.remove('error');
+            }
+            
+            // Validate email
+            const emailInput = document.getElementById('email');
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailPattern.test(emailInput.value.trim())) {
+                emailInput.classList.add('error');
+                valid = false;
+            } else {
+                emailInput.classList.remove('error');
+            }
+            
+            // Validate service
+            const serviceInput = document.getElementById('service');
+            if (!serviceInput.value) {
+                serviceInput.classList.add('error');
+                valid = false;
+            } else {
+                serviceInput.classList.remove('error');
+            }
+            
+            if (valid) {
+                // Form is valid, show success message
+                appointmentForm.innerHTML = `
+                    <div style="text-align: center; padding: var(--space-lg);">
+                        <i class="fas fa-check-circle" style="font-size: 3rem; color: var(--success-green); margin-bottom: var(--space-md);"></i>
+                        <h3>Appointment Request Received!</h3>
+                        <p>Thank you for contacting Kuwamoto Chiropractic. We will get back to you within 24 hours to confirm your appointment.</p>
+                    </div>
+                `;
+            }
+        });
+        
+        // Add event listeners
+        window.addEventListener('scroll', function() {
+            headerScroll();
+            setActiveLink();
+            showBackToTop();
+        });
+        
+        // Initialize functions on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            headerScroll();
+            setActiveLink();
+            showBackToTop();
+        });
+        
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
