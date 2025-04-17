@@ -1,0 +1,1529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ABC Consulting - Expert business consulting services including business strategy, market analysis, financial planning, and risk management. Contact us today!">
+    <title>ABC Consulting | Expert Business Advisory Services</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            /* Color Palette - Financial/Professional Services */
+            --color-primary: #0a3d62; /* Trustworthy navy */
+            --color-secondary: #3c6382; /* Softer complementary blue */
+            --color-accent: #b71540; /* Confident maroon accent */
+            --color-light: #f5f6fa; /* Clean background */
+            --color-dark: #1e272e; /* Text color */
+            --color-muted: #718093; /* Secondary text */
+            --color-success: #44bd32; /* Positive indicators */
+            --color-warning: #e1b12c; /* Cautionary elements */
+            --color-white: #ffffff;
+            --color-black: #000000;
+            --color-gradient-start: rgba(10, 61, 98, 0.95);
+            --color-gradient-end: rgba(60, 99, 130, 0.9);
+            
+            /* Spacing System */
+            --space-xs: 8px;
+            --space-sm: 16px;
+            --space-md: 24px;
+            --space-lg: 32px;
+            --space-xl: 48px;
+            --space-xxl: 64px;
+            
+            /* Transitions */
+            --transition-fast: 0.2s ease;
+            --transition-default: 0.3s ease;
+            --transition-slow: 0.5s ease;
+            
+            /* Shadows */
+            --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+            --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.12);
+            --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.15);
+            
+            /* Border Radius */
+            --radius-sm: 4px;
+            --radius-md: 8px;
+            --radius-lg: 16px;
+            
+            /* Typography */
+            --font-heading: 'Playfair Display', serif;
+            --font-body: 'Montserrat', sans-serif;
+            --line-height-tight: 1.2;
+            --line-height-normal: 1.5;
+            --line-height-loose: 1.8;
+        }
+        
+        /* Reset & Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+            scroll-padding-top: 80px;
+        }
+        
+        body {
+            font-family: var(--font-body);
+            line-height: var(--line-height-normal);
+            color: var(--color-dark);
+            background-color: var(--color-light);
+            overflow-x: hidden;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        a {
+            text-decoration: none;
+            color: var(--color-primary);
+            transition: color var(--transition-default);
+        }
+        
+        a:hover {
+            color: var(--color-accent);
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-heading);
+            line-height: var(--line-height-tight);
+            margin-bottom: var(--space-md);
+            font-weight: 600;
+            color: var(--color-primary);
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+        
+        h2 {
+            font-size: 2rem;
+            position: relative;
+            display: inline-block;
+        }
+        
+        h2::after {
+            content: '';
+            position: absolute;
+            width: 60px;
+            height: 3px;
+            background-color: var(--color-accent);
+            bottom: -10px;
+            left: 0;
+        }
+        
+        h3 {
+            font-size: 1.5rem;
+        }
+        
+        p {
+            margin-bottom: var(--space-md);
+            color: var(--color-muted);
+        }
+        
+        button, .btn {
+            background-color: var(--color-accent);
+            color: var(--color-white);
+            border: none;
+            padding: var(--space-sm) var(--space-md);
+            border-radius: var(--radius-sm);
+            font-family: var(--font-body);
+            font-weight: 600;
+            cursor: pointer;
+            transition: all var(--transition-default);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.875rem;
+        }
+        
+        button:hover, .btn:hover {
+            background-color: var(--color-primary);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+        
+        section {
+            padding: var(--space-xxl) var(--space-md);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--space-md);
+        }
+        
+        /* Header & Navigation */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: var(--color-white);
+            box-shadow: var(--shadow-sm);
+            z-index: 1000;
+            padding: var(--space-sm) 0;
+            transition: all var(--transition-default);
+        }
+        
+        .header.scrolled {
+            padding: var(--space-xs) 0;
+            box-shadow: var(--shadow-md);
+        }
+        
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--color-primary);
+        }
+        
+        .logo span {
+            color: var(--color-accent);
+        }
+        
+        .nav__links {
+            display: none;
+        }
+        
+        .nav__links a {
+            margin-left: var(--space-md);
+            font-weight: 500;
+            position: relative;
+        }
+        
+        .nav__links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--color-accent);
+            transition: width var(--transition-default);
+        }
+        
+        .nav__links a:hover::after {
+            width: 100%;
+        }
+        
+        .nav__cta {
+            margin-left: var(--space-md);
+        }
+        
+        .mobile-menu-toggle {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 30px;
+            height: 21px;
+            cursor: pointer;
+            z-index: 1001;
+        }
+        
+        .mobile-menu-toggle span {
+            display: block;
+            width: 100%;
+            height: 3px;
+            background-color: var(--color-primary);
+            transition: all var(--transition-default);
+        }
+        
+        .mobile-menu-toggle.active span:nth-child(1) {
+            transform: translateY(9px) rotate(45deg);
+        }
+        
+        .mobile-menu-toggle.active span:nth-child(2) {
+            opacity: 0;
+        }
+        
+        .mobile-menu-toggle.active span:nth-child(3) {
+            transform: translateY(-9px) rotate(-45deg);
+        }
+        
+        .mobile-menu {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 80%;
+            height: 100vh;
+            background-color: var(--color-white);
+            z-index: 999;
+            padding: 80px var(--space-md) var(--space-md);
+            transition: right var(--transition-default);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .mobile-menu.active {
+            right: 0;
+        }
+        
+        .mobile-menu a {
+            display: block;
+            margin-bottom: var(--space-md);
+            font-size: 1.25rem;
+            font-weight: 500;
+        }
+        
+        /* Hero Section */
+        .hero {
+            padding: calc(var(--space-xxl) * 2) 0 var(--space-xxl);
+            position: relative;
+            background: linear-gradient(135deg, var(--color-gradient-start), var(--color-gradient-end));
+            color: var(--color-white);
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQ0MCIgaGVpZ2h0PSI3OTAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj48cGF0aCBmaWxsPSIjMDAwIiBvcGFjaXR5PSIuMDUiIGQ9Ik0wIDBoMTQ0MHY3OTBIMHoiLz48Y2lyY2xlIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLXdpZHRoPSIxLjUiIG9wYWNpdHk9Ii4wOCIgY3g9IjcyMCIgY3k9IjM5NSIgcj0iMTcwIi8+PGNpcmNsZSBzdHJva2U9IiNmZmYiIHN0cm9rZS13aWR0aD0iMS41IiBvcGFjaXR5PSIuMDgiIGN4PSI3MjAiIGN5PSIzOTUiIHI9IjI3MCIvPjxjaXJjbGUgc3Ryb2tlPSIjZmZmIiBzdHJva2Utd2lkdGg9IjEuNSIgb3BhY2l0eT0iLjA4IiBjeD0iNzIwIiBjeT0iMzk1IiByPSIzNzAiLz48L2c+PC9zdmc+') no-repeat center center;
+            background-size: cover;
+            opacity: 0.1;
+        }
+        
+        .hero__content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .hero h1 {
+            color: var(--color-white);
+            margin-bottom: var(--space-lg);
+            font-size: 2.75rem;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        
+        .hero p {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.25rem;
+            margin-bottom: var(--space-xl);
+            line-height: var(--line-height-loose);
+        }
+        
+        .hero__cta {
+            background-color: var(--color-white);
+            color: var(--color-primary);
+            padding: var(--space-sm) var(--space-lg);
+            border-radius: var(--radius-md);
+            font-weight: 600;
+            margin-top: var(--space-md);
+            display: inline-block;
+            box-shadow: var(--shadow-md);
+        }
+        
+        .hero__cta:hover {
+            background-color: var(--color-accent);
+            color: var(--color-white);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        /* Services Section */
+        .services {
+            background-color: var(--color-white);
+            position: relative;
+        }
+        
+        .services__heading {
+            text-align: center;
+            margin-bottom: var(--space-xl);
+        }
+        
+        .services__heading h2 {
+            display: inline-block;
+        }
+        
+        .services__heading h2::after {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .services__heading p {
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .services__grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: var(--space-md);
+        }
+        
+        .service-card {
+            background-color: var(--color-white);
+            border-radius: var(--radius-md);
+            padding: var(--space-md);
+            box-shadow: var(--shadow-sm);
+            transition: all var(--transition-default);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            text-align: center;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+            border-color: var(--color-primary);
+        }
+        
+        .service-card__icon {
+            width: 70px;
+            height: 70px;
+            background-color: rgba(10, 61, 98, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto var(--space-md);
+            color: var(--color-primary);
+            font-size: 1.75rem;
+            transition: all var(--transition-default);
+        }
+        
+        .service-card:hover .service-card__icon {
+            background-color: var(--color-primary);
+            color: var(--color-white);
+            transform: scale(1.1);
+        }
+        
+        .service-card h3 {
+            margin-bottom: var(--space-sm);
+            font-size: 1.25rem;
+        }
+        
+        .service-card p {
+            font-size: 0.9rem;
+            margin-bottom: var(--space-sm);
+        }
+        
+        .service-card__link {
+            display: inline-block;
+            font-weight: 600;
+            font-size: 0.875rem;
+            color: var(--color-primary);
+            position: relative;
+        }
+        
+        .service-card__link::after {
+            content: '→';
+            margin-left: 5px;
+            transition: transform var(--transition-default);
+            display: inline-block;
+        }
+        
+        .service-card__link:hover::after {
+            transform: translateX(5px);
+        }
+        
+        /* About Section */
+        .about {
+            background-color: rgba(10, 61, 98, 0.03);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .about__content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .about__image {
+            width: 100%;
+            max-width: 400px;
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+            margin-bottom: var(--space-lg);
+        }
+        
+        .about__image img {
+            width: 100%;
+            height: auto;
+            transition: transform var(--transition-default);
+        }
+        
+        .about__image:hover img {
+            transform: scale(1.05);
+        }
+        
+        .about__text {
+            max-width: 600px;
+        }
+        
+        .about__text h2 {
+            margin-bottom: var(--space-md);
+        }
+        
+        .about__text p {
+            margin-bottom: var(--space-md);
+        }
+        
+        .about__stats {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-md);
+            margin-top: var(--space-lg);
+        }
+        
+        .about__stat {
+            text-align: center;
+            padding: var(--space-md);
+            background-color: var(--color-white);
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-sm);
+            transition: all var(--transition-default);
+        }
+        
+        .about__stat:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .about__stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--color-primary);
+            margin-bottom: var(--space-xs);
+            line-height: 1;
+        }
+        
+        .about__stat-label {
+            font-size: 0.875rem;
+            color: var(--color-muted);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        /* Testimonials */
+        .testimonials {
+            background-color: var(--color-white);
+            position: relative;
+        }
+        
+        .testimonials__heading {
+            text-align: center;
+            margin-bottom: var(--space-xl);
+        }
+        
+        .testimonials__heading h2 {
+            display: inline-block;
+        }
+        
+        .testimonials__heading h2::after {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .testimonials__slider {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+        
+        .testimonials__track {
+            display: flex;
+            transition: transform var(--transition-slow);
+        }
+        
+        .testimonial {
+            min-width: 100%;
+            padding: var(--space-md);
+            box-sizing: border-box;
+        }
+        
+        .testimonial__content {
+            background-color: var(--color-light);
+            border-radius: var(--radius-md);
+            padding: var(--space-lg);
+            position: relative;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+        
+        .testimonial__content::before {
+            content: '\201C';
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            font-size: 4rem;
+            color: var(--color-primary);
+            opacity: 0.1;
+            font-family: Georgia, serif;
+        }
+        
+        .testimonial__text {
+            font-style: italic;
+            margin-bottom: var(--space-md);
+            font-size: 1.1rem;
+            line-height: var(--line-height-loose);
+            color: var(--color-dark);
+        }
+        
+        .testimonial__rating {
+            color: #e1b12c;
+            margin-bottom: var(--space-sm);
+            font-size: 1.25rem;
+        }
+        
+        .testimonial__author {
+            display: flex;
+            align-items: center;
+        }
+        
+        .testimonial__author-image {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: var(--space-sm);
+            overflow: hidden;
+        }
+        
+        .testimonial__author-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .testimonial__author-info h4 {
+            margin-bottom: 0;
+            font-size: 1rem;
+        }
+        
+        .testimonial__author-info p {
+            margin-bottom: 0;
+            font-size: 0.875rem;
+            color: var(--color-muted);
+        }
+        
+        .testimonials__controls {
+            display: flex;
+            justify-content: center;
+            margin-top: var(--space-lg);
+        }
+        
+        .control-btn {
+            background-color: transparent;
+            border: 1px solid var(--color-primary);
+            color: var(--color-primary);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 var(--space-xs);
+            cursor: pointer;
+            transition: all var(--transition-default);
+        }
+        
+        .control-btn:hover {
+            background-color: var(--color-primary);
+            color: var(--color-white);
+        }
+        
+        .control-indicators {
+            display: flex;
+            justify-content: center;
+            margin-top: var(--space-md);
+        }
+        
+        .indicator {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: rgba(10, 61, 98, 0.2);
+            margin: 0 var(--space-xs);
+            cursor: pointer;
+            transition: all var(--transition-default);
+        }
+        
+        .indicator.active {
+            background-color: var(--color-primary);
+            transform: scale(1.2);
+        }
+        
+        /* Contact Section */
+        .contact {
+            background-color: rgba(10, 61, 98, 0.03);
+            position: relative;
+        }
+        
+        .contact__container {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .contact__content {
+            margin-bottom: var(--space-lg);
+        }
+        
+        .contact__content h2 {
+            margin-bottom: var(--space-md);
+        }
+        
+        .contact__form {
+            background-color: var(--color-white);
+            padding: var(--space-lg);
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .form__group {
+            margin-bottom: var(--space-md);
+        }
+        
+        .form__label {
+            display: block;
+            margin-bottom: var(--space-xs);
+            font-weight: 500;
+            color: var(--color-dark);
+        }
+        
+        .form__input, .form__textarea {
+            width: 100%;
+            padding: var(--space-sm);
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            border-radius: var(--radius-sm);
+            font-family: var(--font-body);
+            font-size: 1rem;
+            transition: border-color var(--transition-default);
+        }
+        
+        .form__input:focus, .form__textarea:focus {
+            outline: none;
+            border-color: var(--color-primary);
+        }
+        
+        .form__textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+        
+        .form__submit {
+            width: 100%;
+            padding: var(--space-sm);
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+        
+        .contact__info {
+            margin-top: var(--space-lg);
+        }
+        
+        .contact__info-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: var(--space-md);
+        }
+        
+        .contact__info-icon {
+            color: var(--color-primary);
+            font-size: 1.25rem;
+            margin-right: var(--space-sm);
+            min-width: 24px;
+        }
+        
+        .contact__info-content h4 {
+            margin-bottom: var(--space-xs);
+            font-size: 1rem;
+        }
+        
+        .contact__info-content p {
+            margin-bottom: var(--space-xs);
+            color: var(--color-muted);
+        }
+        
+        .contact__map {
+            width: 100%;
+            height: 300px;
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            margin-top: var(--space-lg);
+        }
+        
+        .contact__map iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+        
+        /* Footer */
+        .footer {
+            background-color: var(--color-primary);
+            color: var(--color-white);
+            padding: var(--space-xl) 0 var(--space-md);
+        }
+        
+        .footer__grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: var(--space-lg);
+            margin-bottom: var(--space-lg);
+        }
+        
+        .footer__col {
+            margin-bottom: var(--space-md);
+        }
+        
+        .footer__logo {
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--color-white);
+            margin-bottom: var(--space-md);
+            display: inline-block;
+        }
+        
+        .footer__logo span {
+            color: var(--color-accent);
+        }
+        
+        .footer__about {
+            margin-bottom: var(--space-md);
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.9rem;
+            line-height: var(--line-height-loose);
+        }
+        
+        .footer h4 {
+            color: var(--color-white);
+            font-size: 1.25rem;
+            margin-bottom: var(--space-md);
+            position: relative;
+            padding-bottom: var(--space-xs);
+        }
+        
+        .footer h4::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 2px;
+            background-color: var(--color-accent);
+        }
+        
+        .footer__links {
+            list-style: none;
+        }
+        
+        .footer__links li {
+            margin-bottom: var(--space-xs);
+        }
+        
+        .footer__links a {
+            color: rgba(255, 255, 255, 0.7);
+            transition: all var(--transition-default);
+            display: inline-block;
+        }
+        
+        .footer__links a:hover {
+            color: var(--color-white);
+            transform: translateX(5px);
+        }
+        
+        .footer__contact-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: var(--space-sm);
+            color: rgba(255, 255, 255, 0.7);
+        }
+        
+        .footer__contact-icon {
+            margin-right: var(--space-sm);
+            color: var(--color-accent);
+        }
+        
+        .footer__social {
+            display: flex;
+            margin-top: var(--space-md);
+        }
+        
+        .footer__social-link {
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: var(--space-sm);
+            color: var(--color-white);
+            transition: all var(--transition-default);
+        }
+        
+        .footer__social-link:hover {
+            background-color: var(--color-accent);
+            color: var(--color-white);
+            transform: translateY(-5px);
+        }
+        
+        .footer__bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: var(--space-md);
+            text-align: center;
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.875rem;
+        }
+        
+        /* Animation Classes */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s ease;
+        }
+        
+        .fade-in.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Utility Classes */
+        .text-center {
+            text-align: center;
+        }
+        
+        .text-accent {
+            color: var(--color-accent);
+        }
+        
+        /* Media Queries */
+        @media (min-width: 640px) {
+            h1 {
+                font-size: 3rem;
+            }
+            
+            .services__grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .about__stats {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+        
+        @media (min-width: 1024px) {
+            h1 {
+                font-size: 3.5rem;
+            }
+            
+            .nav__links {
+                display: flex;
+                align-items: center;
+            }
+            
+            .mobile-menu-toggle {
+                display: none;
+            }
+            
+            .services__grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+            
+            .about__content {
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+            }
+            
+            .about__image {
+                width: 45%;
+                margin-bottom: 0;
+                margin-right: var(--space-lg);
+            }
+            
+            .about__text {
+                width: 50%;
+            }
+            
+            .contact__container {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+            
+            .contact__form {
+                width: 58%;
+            }
+            
+            .contact__info {
+                width: 38%;
+                margin-top: 0;
+            }
+            
+            .footer__grid {
+                grid-template-columns: 2fr 1fr 1fr 1.5fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <a href="#" class="logo">ABC <span>Consulting</span></a>
+                <div class="nav__links">
+                    <a href="#services">Services</a>
+                    <a href="#about">About</a>
+                    <a href="#testimonials">Testimonials</a>
+                    <a href="#contact">Contact</a>
+                    <a href="#contact" class="btn nav__cta">Schedule Consultation</a>
+                </div>
+                <div class="mobile-menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#testimonials">Testimonials</a>
+        <a href="#contact">Contact</a>
+        <a href="#contact" class="btn">Schedule Consultation</a>
+    </div>
+    
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero__content">
+                <h1 class="fade-in">Strategic Business Solutions for Sustainable Growth</h1>
+                <p class="fade-in">ABC Consulting provides expert advice and tailored strategies to help businesses navigate challenges, identify opportunities, and achieve their full potential.</p>
+                <a href="#contact" class="hero__cta fade-in">Schedule a Free Consultation</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="services__heading">
+                <h2 class="fade-in">Our Services</h2>
+                <p class="fade-in">We offer comprehensive consulting solutions tailored to address your specific business challenges and help you achieve sustainable growth.</p>
+            </div>
+            <div class="services__grid">
+                <div class="service-card fade-in">
+                    <div class="service-card__icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Business Strategy</h3>
+                    <p>Develop robust business strategies that align with your vision and market opportunities to drive sustainable growth and competitive advantage.</p>
+                    <a href="#contact" class="service-card__link">Learn More</a>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-card__icon">
+                        <i class="fas fa-search-dollar"></i>
+                    </div>
+                    <h3>Market Analysis</h3>
+                    <p>Gain deep insights into market trends, customer behavior, and competitive landscapes to make informed business decisions.</p>
+                    <a href="#contact" class="service-card__link">Learn More</a>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-card__icon">
+                        <i class="fas fa-chart-pie"></i>
+                    </div>
+                    <h3>Financial Planning</h3>
+                    <p>Optimize your financial performance with comprehensive planning, budgeting, forecasting, and investment strategy development.</p>
+                    <a href="#contact" class="service-card__link">Learn More</a>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-card__icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Risk Management</h3>
+                    <p>Identify, assess, and mitigate potential risks to protect your business assets and ensure long-term sustainability.</p>
+                    <a href="#contact" class="service-card__link">Learn More</a>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-card__icon">
+                        <i class="fas fa-users-cog"></i>
+                    </div>
+                    <h3>Operational Excellence</h3>
+                    <p>Streamline your business processes, enhance efficiency, and implement best practices to maximize operational performance.</p>
+                    <a href="#contact" class="service-card__link">Learn More</a>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-card__icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3>Business Transformation</h3>
+                    <p>Navigate organizational change, digital transformation, and business model innovation to stay ahead in a competitive market.</p>
+                    <a href="#contact" class="service-card__link">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about__content">
+                <div class="about__image fade-in">
+                    <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1171&q=80" alt="ABC Consulting Team">
+                </div>
+                <div class="about__text">
+                    <h2 class="fade-in">About ABC Consulting</h2>
+                    <p class="fade-in">Established in 2005, ABC Consulting provides expert advice to help businesses grow and succeed. Our team of experienced consultants is dedicated to delivering customized solutions tailored to each client's unique needs.</p>
+                    <p class="fade-in">Led by Paul, our consulting team brings decades of combined experience in various industries. We pride ourselves on building long-term relationships with our clients, becoming trusted advisors who contribute to their ongoing success.</p>
+                    <div class="about__stats">
+                        <div class="about__stat fade-in">
+                            <div class="about__stat-number">18+</div>
+                            <div class="about__stat-label">Years Experience</div>
+                        </div>
+                        <div class="about__stat fade-in">
+                            <div class="about__stat-number">300+</div>
+                            <div class="about__stat-label">Clients Served</div>
+                        </div>
+                        <div class="about__stat fade-in">
+                            <div class="about__stat-number">92%</div>
+                            <div class="about__stat-label">Client Retention</div>
+                        </div>
+                        <div class="about__stat fade-in">
+                            <div class="about__stat-number">25+</div>
+                            <div class="about__stat-label">Industry Experts</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <div class="testimonials__heading">
+                <h2 class="fade-in">Client Success Stories</h2>
+                <p class="fade-in">Discover how our strategic consulting services have helped businesses overcome challenges and achieve remarkable growth.</p>
+            </div>
+            <div class="testimonials__slider fade-in">
+                <div class="testimonials__track">
+                    <div class="testimonial">
+                        <div class="testimonial__content">
+                            <div class="testimonial__rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p class="testimonial__text">"ABC Consulting transformed our business strategy, resulting in a 45% increase in revenue within the first year. Their market analysis and strategic planning were game-changers for our company."</p>
+                            <div class="testimonial__author">
+                                <div class="testimonial__author-image">
+                                    <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Sarah Johnson">
+                                </div>
+                                <div class="testimonial__author-info">
+                                    <h4>Sarah Johnson</h4>
+                                    <p>CEO, InnoTech Solutions</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial">
+                        <div class="testimonial__content">
+                            <div class="testimonial__rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p class="testimonial__text">"Working with Paul and his team at ABC Consulting gave us the clarity and direction we needed during a critical growth phase. Their financial planning expertise helped us secure funding and scale efficiently."</p>
+                            <div class="testimonial__author">
+                                <div class="testimonial__author-image">
+                                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Michael Thompson">
+                                </div>
+                                <div class="testimonial__author-info">
+                                    <h4>Michael Thompson</h4>
+                                    <p>Founder, Growth Ventures</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial">
+                        <div class="testimonial__content">
+                            <div class="testimonial__rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <p class="testimonial__text">"The risk management strategies implemented by ABC Consulting helped us navigate a challenging market environment and emerge stronger than our competitors. Their insights were invaluable to our success."</p>
+                            <div class="testimonial__author">
+                                <div class="testimonial__author-image">
+                                    <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Jennifer Clark">
+                                </div>
+                                <div class="testimonial__author-info">
+                                    <h4>Jennifer Clark</h4>
+                                    <p>Operations Director, Elevate Inc.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="control-indicators">
+                    <div class="indicator active" data-index="0"></div>
+                    <div class="indicator" data-index="1"></div>
+                    <div class="indicator" data-index="2"></div>
+                </div>
+                <div class="testimonials__controls">
+                    <button class="control-btn prev-btn">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="control-btn next-btn">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="contact__content">
+                <h2 class="fade-in">Get in Touch</h2>
+                <p class="fade-in">Ready to transform your business? Contact us today to schedule a consultation and discover how we can help you achieve your goals.</p>
+            </div>
+            <div class="contact__container">
+                <div class="contact__form fade-in">
+                    <form id="contactForm">
+                        <div class="form__group">
+                            <label for="name" class="form__label">Full Name</label>
+                            <input type="text" id="name" class="form__input" placeholder="Your full name" required>
+                        </div>
+                        <div class="form__group">
+                            <label for="email" class="form__label">Email Address</label>
+                            <input type="email" id="email" class="form__input" placeholder="Your email address" required>
+                        </div>
+                        <div class="form__group">
+                            <label for="phone" class="form__label">Phone Number</label>
+                            <input type="tel" id="phone" class="form__input" placeholder="Your phone number">
+                        </div>
+                        <div class="form__group">
+                            <label for="service" class="form__label">Service of Interest</label>
+                            <select id="service" class="form__input" required>
+                                <option value="" disabled selected>Select a service</option>
+                                <option value="Business Strategy">Business Strategy</option>
+                                <option value="Market Analysis">Market Analysis</option>
+                                <option value="Financial Planning">Financial Planning</option>
+                                <option value="Risk Management">Risk Management</option>
+                                <option value="Operational Excellence">Operational Excellence</option>
+                                <option value="Business Transformation">Business Transformation</option>
+                            </select>
+                        </div>
+                        <div class="form__group">
+                            <label for="message" class="form__label">Message</label>
+                            <textarea id="message" class="form__textarea" placeholder="Tell us about your business and how we can help" required></textarea>
+                        </div>
+                        <button type="submit" class="btn form__submit">Submit Inquiry</button>
+                    </form>
+                </div>
+                <div class="contact__info fade-in">
+                    <div class="contact__info-item">
+                        <div class="contact__info-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact__info-content">
+                            <h4>Our Location</h4>
+                            <p>123 Business Rd</p>
+                            <p>Business City, BC 12345</p>
+                        </div>
+                    </div>
+                    <div class="contact__info-item">
+                        <div class="contact__info-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div class="contact__info-content">
+                            <h4>Phone Number</h4>
+                            <p><a href="tel:123-456-7890">123-456-7890</a></p>
+                        </div>
+                    </div>
+                    <div class="contact__info-item">
+                        <div class="contact__info-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact__info-content">
+                            <h4>Email Address</h4>
+                            <p><a href="mailto:info@abcconsulting.com">info@abcconsulting.com</a></p>
+                        </div>
+                    </div>
+                    <div class="contact__info-item">
+                        <div class="contact__info-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="contact__info-content">
+                            <h4>Business Hours</h4>
+                            <p>Monday - Friday: 9 AM - 6 PM</p>
+                            <p>Saturday: 10 AM - 4 PM</p>
+                            <p>Sunday: Closed</p>
+                        </div>
+                    </div>
+                    <div class="contact__map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.9663095343008!2d-74.0066!3d40.7101!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDA2JzM2LjQiTiA3NMKwMDAnNDEuNiJX!5e0!3m2!1sen!2sus!4v1599671063458!5m2!1sen!2sus" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__col">
+                    <a href="#" class="footer__logo">ABC <span>Consulting</span></a>
+                    <p class="footer__about">Established in 2005, ABC Consulting provides expert advice to help businesses grow and succeed with customized solutions tailored to each client's unique needs.</p>
+                    <div class="footer__social">
+                        <a href="#" class="footer__social-link"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="footer__social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="footer__social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="footer__social-link"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer__col">
+                    <h4>Quick Links</h4>
+                    <ul class="footer__links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#testimonials">Testimonials</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer__col">
+                    <h4>Our Services</h4>
+                    <ul class="footer__links">
+                        <li><a href="#services">Business Strategy</a></li>
+                        <li><a href="#services">Market Analysis</a></li>
+                        <li><a href="#services">Financial Planning</a></li>
+                        <li><a href="#services">Risk Management</a></li>
+                        <li><a href="#services">Operational Excellence</a></li>
+                        <li><a href="#services">Business Transformation</a></li>
+                    </ul>
+                </div>
+                <div class="footer__col">
+                    <h4>Contact Information</h4>
+                    <div class="footer__contact-item">
+                        <div class="footer__contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div>123 Business Rd, Business City, BC 12345</div>
+                    </div>
+                    <div class="footer__contact-item">
+                        <div class="footer__contact-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div>123-456-7890</div>
+                    </div>
+                    <div class="footer__contact-item">
+                        <div class="footer__contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>info@abcconsulting.com</div>
+                    </div>
+                    <div class="footer__contact-item">
+                        <div class="footer__contact-icon">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <div>www.abcconsulting.com</div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>&copy; <span id="current-year">2023</span> ABC Consulting. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        // Mobile menu toggle
+        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+        const mobileMenu = document.querySelector('.mobile-menu');
+        
+        mobileMenuToggle.addEventListener('click', () => {
+            mobileMenuToggle.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+        });
+        
+        // Close mobile menu when clicking a link
+        const mobileLinks = document.querySelectorAll('.mobile-menu a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenuToggle.classList.remove('active');
+                mobileMenu.classList.remove('active');
+            });
+        });
+        
+        // Header scroll effect
+        const header = document.querySelector('.header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+        
+        // Testimonials slider
+        const track = document.querySelector('.testimonials__track');
+        const slides = document.querySelectorAll('.testimonial');
+        const indicators = document.querySelectorAll('.indicator');
+        const nextBtn = document.querySelector('.next-btn');
+        const prevBtn = document.querySelector('.prev-btn');
+        let currentIndex = 0;
+        
+        function updateSlider() {
+            track.style.transform = `translateX(-${currentIndex * 100}%)`;
+            indicators.forEach((indicator, index) => {
+                indicator.classList.toggle('active', index === currentIndex);
+            });
+        }
+        
+        nextBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % slides.length;
+            updateSlider();
+        });
+        
+        prevBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+            updateSlider();
+        });
+        
+        indicators.forEach((indicator, index) => {
+            indicator.addEventListener('click', () => {
+                currentIndex = index;
+                updateSlider();
+            });
+        });
+        
+        // Auto advance testimonials
+        let testimonialInterval = setInterval(() => {
+            currentIndex = (currentIndex + 1) % slides.length;
+            updateSlider();
+        }, 5000);
+        
+        // Pause auto advance on hover
+        const testimonialSlider = document.querySelector('.testimonials__slider');
+        testimonialSlider.addEventListener('mouseenter', () => {
+            clearInterval(testimonialInterval);
+        });
+        
+        testimonialSlider.addEventListener('mouseleave', () => {
+            testimonialInterval = setInterval(() => {
+                currentIndex = (currentIndex + 1) % slides.length;
+                updateSlider();
+            }, 5000);
+        });
+        
+        // Form validation
+        const contactForm = document.getElementById('contactForm');
+        
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // Simple validation
+            let valid = true;
+            const name = document.getElementById('name');
+            const email = document.getElementById('email');
+            const message = document.getElementById('message');
+            
+            if (name.value.trim() === '') {
+                name.style.borderColor = 'red';
+                valid = false;
+            } else {
+                name.style.borderColor = '';
+            }
+            
+            if (email.value.trim() === '' || !isValidEmail(email.value)) {
+                email.style.borderColor = 'red';
+                valid = false;
+            } else {
+                email.style.borderColor = '';
+            }
+            
+            if (message.value.trim() === '') {
+                message.style.borderColor = 'red';
+                valid = false;
+            } else {
+                message.style.borderColor = '';
+            }
+            
+            if (valid) {
+                // Form submission would go here - for now, just reset and show success
+                alert('Thank you for your inquiry! We will contact you shortly.');
+                contactForm.reset();
+            }
+        });
+        
+        function isValidEmail(email) {
+            const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+            return re.test(String(email).toLowerCase());
+        }
+        
+        // Input and textarea focus effects
+        const formInputs = document.querySelectorAll('.form__input, .form__textarea');
+        
+        formInputs.forEach(input => {
+            input.addEventListener('focus', () => {
+                input.parentElement.classList.add('focused');
+            });
+            
+            input.addEventListener('blur', () => {
+                input.parentElement.classList.remove('focused');
+            });
+        });
+        
+        // Scroll reveal animation
+        const fadeElements = document.querySelectorAll('.fade-in');
+        
+        function checkFade() {
+            const triggerBottom = window.innerHeight * 0.85;
+            
+            fadeElements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                
+                if (elementTop < triggerBottom) {
+                    element.classList.add('active');
+                }
+            });
+        }
+        
+        window.addEventListener('scroll', checkFade);
+        window.addEventListener('load', checkFade);
+        
+        // Update current year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
