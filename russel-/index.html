@@ -1,0 +1,1591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABC Consulting - Strategic Business Solutions</title>
+    <meta name="description" content="ABC Consulting provides expert business strategy, market analysis, financial planning, and risk management services. Located in Metropolis State.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* CSS Variables - Financial/Business Color Palette */
+        :root {
+            --color-primary: #0b3866; /* Trustworthy navy */
+            --color-secondary: #802a3d; /* Confident maroon */
+            --color-accent: #e8b53a; /* Premium gold accent */
+            --color-light: #f8f9fa; /* Clean white */
+            --color-light-accent: #e6e8ec; /* Soft light gray */
+            --color-dark: #1a1a2e; /* Deep navy-black */
+            --color-text: #333844; /* Main text color */
+            --color-text-light: #6c757d; /* Secondary text color */
+            
+            /* Spacing variables based on 8px grid */
+            --space-xs: 8px;
+            --space-sm: 16px;
+            --space-md: 24px;
+            --space-lg: 32px;
+            --space-xl: 48px;
+            --space-xxl: 64px;
+            
+            /* Animation variables */
+            --transition-fast: 0.2s ease;
+            --transition-default: 0.3s ease;
+            --transition-slow: 0.5s ease;
+        }
+
+        /* Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 62.5%; /* 10px base for easier rem calculation */
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.6rem;
+            line-height: 1.7;
+            color: var(--color-text);
+            background-color: var(--color-light);
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+            color: var(--color-dark);
+            line-height: 1.3;
+            margin-bottom: var(--space-md);
+        }
+
+        h1 {
+            font-size: 3.6rem;
+        }
+
+        h2 {
+            font-size: 3.2rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background-color: var(--color-accent);
+        }
+
+        h3 {
+            font-size: 2.4rem;
+        }
+
+        p {
+            margin-bottom: var(--space-md);
+        }
+
+        a {
+            color: var(--color-primary);
+            text-decoration: none;
+            transition: all var(--transition-default);
+        }
+
+        a:hover {
+            color: var(--color-secondary);
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        section {
+            padding: var(--space-xl) 0;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--space-sm);
+        }
+
+        /* Utility Classes */
+        .text-center {
+            text-align: center;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: var(--space-xl);
+        }
+
+        .section-title h2 {
+            margin-bottom: var(--space-xs);
+        }
+
+        .section-title h2::after {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .section-title p {
+            color: var(--color-text-light);
+            max-width: 700px;
+            margin: 0 auto var(--space-md);
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 1.2rem 2.4rem;
+            border-radius: 4px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all var(--transition-default);
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background-color: var(--color-primary);
+            color: white;
+            border: 2px solid var(--color-primary);
+        }
+
+        .btn-primary:hover {
+            background-color: transparent;
+            color: var(--color-primary);
+        }
+
+        .btn-secondary {
+            background-color: var(--color-secondary);
+            color: white;
+            border: 2px solid var(--color-secondary);
+        }
+
+        .btn-secondary:hover {
+            background-color: transparent;
+            color: var(--color-secondary);
+        }
+
+        .accent-text {
+            color: var(--color-accent);
+        }
+
+        /* Header Styles */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background-color: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: var(--space-sm) 0;
+            transition: all var(--transition-default);
+        }
+
+        .header.scrolled {
+            padding: var(--space-xs) 0;
+            background-color: rgba(255, 255, 255, 0.98);
+        }
+
+        .header__container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.4rem;
+            font-weight: 700;
+            color: var(--color-primary);
+            display: flex;
+            align-items: center;
+        }
+
+        .logo span {
+            color: var(--color-secondary);
+        }
+
+        .nav {
+            display: none;
+        }
+
+        .nav__list {
+            list-style: none;
+            display: flex;
+            gap: var(--space-md);
+        }
+
+        .nav__link {
+            font-weight: 500;
+            position: relative;
+        }
+
+        .nav__link::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--color-accent);
+            transition: width var(--transition-default);
+        }
+
+        .nav__link:hover::after {
+            width: 100%;
+        }
+
+        .header__cta {
+            display: none;
+        }
+
+        .mobile-toggle {
+            display: block;
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 2.4rem;
+            color: var(--color-primary);
+        }
+
+        /* Mobile Menu */
+        .mobile-menu {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 80%;
+            height: 100vh;
+            background-color: var(--color-primary);
+            padding: var(--space-lg);
+            z-index: 1001;
+            transition: right var(--transition-default);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .mobile-menu.active {
+            right: 0;
+        }
+
+        .mobile-menu__close {
+            align-self: flex-end;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 2.4rem;
+            cursor: pointer;
+            margin-bottom: var(--space-lg);
+        }
+
+        .mobile-menu__list {
+            list-style: none;
+        }
+
+        .mobile-menu__item {
+            margin-bottom: var(--space-md);
+        }
+
+        .mobile-menu__link {
+            color: white;
+            font-size: 1.8rem;
+            font-weight: 500;
+        }
+
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: 1000;
+            opacity: 0;
+            visibility: hidden;
+            transition: all var(--transition-default);
+        }
+
+        .overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding-top: 120px;
+            padding-bottom: var(--space-xl);
+            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB2aWV3Qm94PSIwIDAgMTI4MCAxNDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgZmlsbD0iI2ZmZmZmZiI+PHBhdGggZD0iTTAgMTQwbDEyODAtMTI3djEyN0gweiIvPjwvZz48L3N2Zz4=');
+            background-size: 100% 140px;
+            background-position: bottom;
+            background-repeat: no-repeat;
+            z-index: 1;
+            opacity: 0.1;
+        }
+
+        .hero__container {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: var(--space-lg);
+        }
+
+        .hero__content {
+            max-width: 600px;
+        }
+
+        .hero__title {
+            font-size: 3.6rem;
+            color: white;
+            margin-bottom: var(--space-sm);
+        }
+
+        .hero__subtitle {
+            font-size: 1.8rem;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: var(--space-md);
+        }
+
+        .hero__btn {
+            background-color: var(--color-accent);
+            color: var(--color-dark);
+            border: 2px solid var(--color-accent);
+            font-weight: 700;
+        }
+
+        .hero__btn:hover {
+            background-color: transparent;
+            color: var(--color-accent);
+        }
+
+        /* Services Section */
+        .services {
+            background-color: white;
+            padding: var(--space-xxl) 0;
+        }
+
+        .services__grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: var(--space-lg);
+        }
+
+        .service-card {
+            background-color: white;
+            padding: var(--space-lg);
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: all var(--transition-default);
+            border-bottom: 3px solid transparent;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            border-bottom: 3px solid var(--color-accent);
+        }
+
+        .service-card__icon {
+            font-size: 3.6rem;
+            color: var(--color-primary);
+            margin-bottom: var(--space-md);
+        }
+
+        .service-card__title {
+            font-size: 2rem;
+            margin-bottom: var(--space-sm);
+        }
+
+        .service-card__description {
+            color: var(--color-text-light);
+            margin-bottom: var(--space-md);
+        }
+
+        /* About Section */
+        .about {
+            background-color: var(--color-light-accent);
+            padding: var(--space-xxl) 0;
+        }
+
+        .about__container {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-xl);
+        }
+
+        .about__image {
+            flex: 1;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .about__image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .about__content {
+            flex: 1;
+        }
+
+        .about__title {
+            margin-bottom: var(--space-md);
+        }
+
+        .about__subtitle {
+            color: var(--color-secondary);
+            font-size: 1.8rem;
+            margin-bottom: var(--space-md);
+        }
+
+        .about__text {
+            margin-bottom: var(--space-md);
+        }
+
+        .about__expertise {
+            margin-top: var(--space-lg);
+        }
+
+        .expertise-item {
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+            margin-bottom: var(--space-sm);
+        }
+
+        .expertise-item i {
+            color: var(--color-accent);
+        }
+
+        /* Testimonials Section */
+        .testimonials {
+            background-color: white;
+            padding: var(--space-xxl) 0;
+        }
+
+        .testimonials__slider {
+            overflow: hidden;
+            position: relative;
+        }
+
+        .testimonials__slides {
+            display: flex;
+            transition: transform var(--transition-slow);
+        }
+
+        .testimonial-card {
+            flex: 0 0 100%;
+            padding: var(--space-lg);
+            background-color: var(--color-light);
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            margin: 0 var(--space-sm);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .testimonial-card__top {
+            display: flex;
+            align-items: center;
+            gap: var(--space-md);
+            margin-bottom: var(--space-md);
+        }
+
+        .testimonial-card__avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            overflow: hidden;
+            flex-shrink: 0;
+        }
+
+        .testimonial-card__avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .testimonial-card__info {
+            flex: 1;
+        }
+
+        .testimonial-card__name {
+            font-weight: 600;
+            font-size: 1.8rem;
+            margin-bottom: 5px;
+        }
+
+        .testimonial-card__position {
+            color: var(--color-text-light);
+            font-size: 1.4rem;
+        }
+
+        .testimonial-card__rating {
+            color: var(--color-accent);
+            margin-bottom: var(--space-sm);
+        }
+
+        .testimonial-card__text {
+            font-style: italic;
+            position: relative;
+            padding: 0 var(--space-sm);
+        }
+
+        .testimonial-card__text::before,
+        .testimonial-card__text::after {
+            content: '"';
+            font-size: 4rem;
+            font-family: 'Playfair Display', serif;
+            color: var(--color-accent);
+            opacity: 0.2;
+            position: absolute;
+        }
+
+        .testimonial-card__text::before {
+            top: -20px;
+            left: -10px;
+        }
+
+        .testimonial-card__text::after {
+            content: '"';
+            bottom: -40px;
+            right: -10px;
+        }
+
+        .testimonials__controls {
+            display: flex;
+            justify-content: center;
+            gap: var(--space-sm);
+            margin-top: var(--space-lg);
+        }
+
+        .testimonials__dots {
+            display: flex;
+            gap: var(--space-xs);
+        }
+
+        .testimonials__dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: var(--color-light-accent);
+            cursor: pointer;
+            transition: all var(--transition-default);
+        }
+
+        .testimonials__dot.active {
+            background-color: var(--color-accent);
+            transform: scale(1.2);
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: var(--space-xxl) 0;
+            background-color: var(--color-light);
+        }
+
+        .contact__container {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-xl);
+        }
+
+        .contact__form-container {
+            flex: 1;
+        }
+
+        .contact__form {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-md);
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-xs);
+        }
+
+        .form-group label {
+            font-weight: 500;
+            color: var(--color-dark);
+        }
+
+        .form-control {
+            padding: 12px;
+            border: 1px solid var(--color-light-accent);
+            border-radius: 4px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.6rem;
+            transition: all var(--transition-default);
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--color-primary);
+            box-shadow: 0 0 0 2px rgba(11, 56, 102, 0.1);
+        }
+
+        .form-control.error {
+            border-color: #dc3545;
+        }
+
+        .error-message {
+            color: #dc3545;
+            font-size: 1.2rem;
+            display: none;
+        }
+
+        textarea.form-control {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        .contact__info {
+            flex: 1;
+        }
+
+        .contact-info__title {
+            margin-bottom: var(--space-md);
+        }
+
+        .contact-info__items {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-md);
+        }
+
+        .contact-info__item {
+            display: flex;
+            gap: var(--space-sm);
+        }
+
+        .contact-info__icon {
+            flex-shrink: 0;
+            width: 40px;
+            height: 40px;
+            background-color: var(--color-primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .contact-info__content {
+            flex: 1;
+        }
+
+        .contact-info__title {
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .contact-info__detail {
+            color: var(--color-text-light);
+        }
+
+        .map-container {
+            margin-top: var(--space-lg);
+            height: 300px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        /* Footer */
+        .footer {
+            background-color: var(--color-dark);
+            color: white;
+            padding: var(--space-xl) 0 var(--space-lg);
+        }
+
+        .footer__container {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: var(--space-xl);
+        }
+
+        .footer__logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.4rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: var(--space-sm);
+        }
+
+        .footer__text {
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: var(--space-md);
+        }
+
+        .footer__social {
+            display: flex;
+            gap: var(--space-sm);
+            margin-bottom: var(--space-md);
+        }
+
+        .footer__social-link {
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all var(--transition-default);
+        }
+
+        .footer__social-link:hover {
+            background-color: var(--color-accent);
+            color: var(--color-dark);
+            transform: translateY(-3px);
+        }
+
+        .footer__title {
+            color: white;
+            font-size: 1.8rem;
+            margin-bottom: var(--space-md);
+            position: relative;
+            display: inline-block;
+        }
+
+        .footer__title::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 40px;
+            height: 2px;
+            background-color: var(--color-accent);
+        }
+
+        .footer__links {
+            list-style: none;
+        }
+
+        .footer__link-item {
+            margin-bottom: var(--space-xs);
+        }
+
+        .footer__link {
+            color: rgba(255, 255, 255, 0.7);
+            transition: all var(--transition-fast);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .footer__link:hover {
+            color: var(--color-accent);
+            padding-left: 5px;
+        }
+
+        .footer__link i {
+            font-size: 1.2rem;
+        }
+
+        .footer__bottom {
+            margin-top: var(--space-lg);
+            padding-top: var(--space-md);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: center;
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 1.4rem;
+        }
+
+        /* Back to Top Button */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background-color: var(--color-primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: all var(--transition-default);
+            z-index: 99;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .back-to-top.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            background-color: var(--color-secondary);
+            transform: translateY(-5px);
+        }
+
+        /* Animation classes */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+
+        .fade-in.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Responsive Styles */
+        @media (min-width: 640px) {
+            h1 {
+                font-size: 4.2rem;
+            }
+
+            h2 {
+                font-size: 3.6rem;
+            }
+
+            .hero__title {
+                font-size: 4.2rem;
+            }
+
+            .services__grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .footer__container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .testimonial-card {
+                flex: 0 0 calc(50% - var(--space-md));
+            }
+        }
+
+        @media (min-width: 1024px) {
+            h1 {
+                font-size: 5rem;
+            }
+
+            .mobile-toggle {
+                display: none;
+            }
+
+            .nav {
+                display: block;
+            }
+
+            .header__cta {
+                display: block;
+            }
+
+            .hero__title {
+                font-size: 5rem;
+            }
+
+            .services__grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .about__container {
+                flex-direction: row;
+            }
+
+            .contact__container {
+                flex-direction: row;
+            }
+
+            .footer__container {
+                grid-template-columns: 2fr 1fr 1fr 1fr;
+            }
+
+            .testimonial-card {
+                flex: 0 0 calc(33.333% - var(--space-md));
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container header__container">
+            <a href="#" class="logo">ABC<span>Consulting</span></a>
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="#home" class="nav__link">Home</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#services" class="nav__link">Services</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#about" class="nav__link">About</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#testimonials" class="nav__link">Testimonials</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#contact" class="nav__link">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+            <a href="#contact" class="btn btn-primary header__cta">Schedule Consultation</a>
+            <button class="mobile-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <button class="mobile-menu__close">
+            <i class="fas fa-times"></i>
+        </button>
+        <ul class="mobile-menu__list">
+            <li class="mobile-menu__item">
+                <a href="#home" class="mobile-menu__link">Home</a>
+            </li>
+            <li class="mobile-menu__item">
+                <a href="#services" class="mobile-menu__link">Services</a>
+            </li>
+            <li class="mobile-menu__item">
+                <a href="#about" class="mobile-menu__link">About</a>
+            </li>
+            <li class="mobile-menu__item">
+                <a href="#testimonials" class="mobile-menu__link">Testimonials</a>
+            </li>
+            <li class="mobile-menu__item">
+                <a href="#contact" class="mobile-menu__link">Contact</a>
+            </li>
+        </ul>
+    </div>
+    <div class="overlay"></div>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container hero__container">
+            <div class="hero__content">
+                <h1 class="hero__title">Strategic Solutions for Business Excellence</h1>
+                <p class="hero__subtitle">We help businesses navigate challenges, capitalize on opportunities, and achieve sustainable growth through expert consulting services.</p>
+                <a href="#contact" class="btn hero__btn">Get Started Today</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-title fade-in">
+                <h2>Our Services</h2>
+                <p>Comprehensive business solutions tailored to your specific needs</p>
+            </div>
+            <div class="services__grid">
+                <div class="service-card fade-in">
+                    <div class="service-card__icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="service-card__title">Business Strategy</h3>
+                    <p class="service-card__description">Develop robust strategic plans to achieve your business objectives and outperform competitors.</p>
+                    <a href="#contact" class="btn btn-secondary">Learn More</a>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-card__icon">
+                        <i class="fas fa-search-dollar"></i>
+                    </div>
+                    <h3 class="service-card__title">Market Analysis</h3>
+                    <p class="service-card__description">Gain critical insights into market trends, customer behavior, and competitive landscapes.</p>
+                    <a href="#contact" class="btn btn-secondary">Learn More</a>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-card__icon">
+                        <i class="fas fa-money-bill-wave"></i>
+                    </div>
+                    <h3 class="service-card__title">Financial Planning</h3>
+                    <p class="service-card__description">Optimize your financial resources with comprehensive planning and forecasting.</p>
+                    <a href="#contact" class="btn btn-secondary">Learn More</a>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-card__icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 class="service-card__title">Risk Management</h3>
+                    <p class="service-card__description">Identify, assess, and mitigate potential risks to protect your business interests.</p>
+                    <a href="#contact" class="btn btn-secondary">Learn More</a>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-card__icon">
+                        <i class="fas fa-users-cog"></i>
+                    </div>
+                    <h3 class="service-card__title">Operational Excellence</h3>
+                    <p class="service-card__description">Streamline operations, enhance productivity, and implement best practices.</p>
+                    <a href="#contact" class="btn btn-secondary">Learn More</a>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-card__icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3 class="service-card__title">Strategic Partnerships</h3>
+                    <p class="service-card__description">Forge valuable alliances to expand your reach and create new opportunities.</p>
+                    <a href="#contact" class="btn btn-secondary">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container about__container">
+            <div class="about__image fade-in">
+                <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="ABC Consulting team in a modern office">
+            </div>
+            <div class="about__content fade-in">
+                <h2 class="about__title">About ABC Consulting</h2>
+                <h3 class="about__subtitle">Trusted Business Advisors Since 2010</h3>
+                <p class="about__text">Led by Russel, our consulting firm leverages decades of combined experience to deliver exceptional results for our clients. We understand the challenges businesses face in today's competitive landscape.</p>
+                <p class="about__text">Our approach is client-centered, data-driven, and results-oriented. We take pride in developing customized solutions that address your unique business challenges and drive sustainable growth.</p>
+                <div class="about__expertise">
+                    <h3>Our Expertise:</h3>
+                    <div class="expertise-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Over 15 years of industry experience</span>
+                    </div>
+                    <div class="expertise-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>MBA-qualified consultants</span>
+                    </div>
+                    <div class="expertise-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Proven track record with Fortune 500 companies</span>
+                    </div>
+                    <div class="expertise-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Tailored solutions for your specific industry</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <div class="section-title fade-in">
+                <h2>Client Success Stories</h2>
+                <p>Discover how we've helped businesses like yours achieve remarkable results</p>
+            </div>
+            <div class="testimonials__slider fade-in">
+                <div class="testimonials__slides">
+                    <div class="testimonial-card">
+                        <div class="testimonial-card__top">
+                            <div class="testimonial-card__avatar">
+                                <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="James Wilson">
+                            </div>
+                            <div class="testimonial-card__info">
+                                <h4 class="testimonial-card__name">James Wilson</h4>
+                                <p class="testimonial-card__position">CEO, TechInnovate Inc.</p>
+                            </div>
+                        </div>
+                        <div class="testimonial-card__rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-card__text">ABC Consulting's strategic guidance helped us identify new market opportunities and optimize our operations. Their expertise was instrumental in our 45% growth over the past year.</p>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-card__top">
+                            <div class="testimonial-card__avatar">
+                                <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Sarah Johnson">
+                            </div>
+                            <div class="testimonial-card__info">
+                                <h4 class="testimonial-card__name">Sarah Johnson</h4>
+                                <p class="testimonial-card__position">CFO, Global Retail Solutions</p>
+                            </div>
+                        </div>
+                        <div class="testimonial-card__rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-card__text">The financial planning services provided by ABC Consulting transformed our approach to resource allocation. Their insights helped us reduce costs by 30% while increasing productivity.</p>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-card__top">
+                            <div class="testimonial-card__avatar">
+                                <img src="https://randomuser.me/api/portraits/men/62.jpg" alt="Michael Chen">
+                            </div>
+                            <div class="testimonial-card__info">
+                                <h4 class="testimonial-card__name">Michael Chen</h4>
+                                <p class="testimonial-card__position">Founder, Nexus Startups</p>
+                            </div>
+                        </div>
+                        <div class="testimonial-card__rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <p class="testimonial-card__text">As a startup founder, I needed guidance on navigating complex market challenges. Russel and his team provided invaluable insights that helped us secure $2M in funding.</p>
+                    </div>
+                </div>
+                <div class="testimonials__controls">
+                    <div class="testimonials__dots">
+                        <span class="testimonials__dot active" data-slide="0"></span>
+                        <span class="testimonials__dot" data-slide="1"></span>
+                        <span class="testimonials__dot" data-slide="2"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-title fade-in">
+                <h2>Get In Touch</h2>
+                <p>Schedule a consultation or request more information about our services</p>
+            </div>
+            <div class="contact__container">
+                <div class="contact__form-container fade-in">
+                    <form class="contact__form" id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" class="form-control" placeholder="Your name" required>
+                            <span class="error-message">Please enter your name</span>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" class="form-control" placeholder="Your email" required>
+                            <span class="error-message">Please enter a valid email address</span>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" class="form-control" placeholder="Your phone number">
+                        </div>
+                        <div class="form-group">
+                            <label for="service">Service of Interest</label>
+                            <select id="service" class="form-control" required>
+                                <option value="" selected disabled>Select a service</option>
+                                <option value="business-strategy">Business Strategy</option>
+                                <option value="market-analysis">Market Analysis</option>
+                                <option value="financial-planning">Financial Planning</option>
+                                <option value="risk-management">Risk Management</option>
+                                <option value="operational-excellence">Operational Excellence</option>
+                                <option value="strategic-partnerships">Strategic Partnerships</option>
+                            </select>
+                            <span class="error-message">Please select a service</span>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Your Message</label>
+                            <textarea id="message" class="form-control" placeholder="Tell us about your business needs" rows="5" required></textarea>
+                            <span class="error-message">Please enter your message</span>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit Request</button>
+                    </form>
+                </div>
+                <div class="contact__info fade-in">
+                    <h3 class="contact-info__title">Contact Information</h3>
+                    <div class="contact-info__items">
+                        <div class="contact-info__item">
+                            <div class="contact-info__icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-info__content">
+                                <h4 class="contact-info__title">Our Location</h4>
+                                <p class="contact-info__detail">123 Business Lane, Suite 100<br>Metropolis State 12345</p>
+                            </div>
+                        </div>
+                        <div class="contact-info__item">
+                            <div class="contact-info__icon">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div class="contact-info__content">
+                                <h4 class="contact-info__title">Phone Number</h4>
+                                <p class="contact-info__detail">123-456-7890</p>
+                            </div>
+                        </div>
+                        <div class="contact-info__item">
+                            <div class="contact-info__icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-info__content">
+                                <h4 class="contact-info__title">Email Address</h4>
+                                <p class="contact-info__detail">info@abcconsulting.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-info__item">
+                            <div class="contact-info__icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="contact-info__content">
+                                <h4 class="contact-info__title">Business Hours</h4>
+                                <p class="contact-info__detail">
+                                    Monday to Friday: 9 AM to 6 PM<br>
+                                    Saturday: 10 AM to 4 PM<br>
+                                    Closed on Sundays
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="map-container">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.215766846304!2d-73.98785232346817!3d40.758957171383544!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25855c6480299%3A0x55194ec5a1ae072e!2sTimes%20Square!5m2!1s!2s" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer__container">
+            <div class="footer__info">
+                <div class="footer__logo">ABC<span>Consulting</span></div>
+                <p class="footer__text">We provide strategic business solutions to help organizations thrive in today's competitive marketplace.</p>
+                <div class="footer__social">
+                    <a href="#" class="footer__social-link"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="footer__social-link"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="footer__social-link"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="footer__social-link"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer__links-container">
+                <h3 class="footer__title">Quick Links</h3>
+                <ul class="footer__links">
+                    <li class="footer__link-item">
+                        <a href="#home" class="footer__link"><i class="fas fa-chevron-right"></i> Home</a>
+                    </li>
+                    <li class="footer__link-item">
+                        <a href="#about" class="footer__link"><i class="fas fa-chevron-right"></i> About Us</a>
+                    </li>
+                    <li class="footer__link-item">
+                        <a href="#services" class="footer__link"><i class="fas fa-chevron-right"></i> Services</a>
+                    </li>
+                    <li class="footer__link-item">
+                        <a href="#testimonials" class="footer__link"><i class="fas fa-chevron-right"></i> Testimonials</a>
+                    </li>
+                    <li class="footer__link-item">
+                        <a href="#contact" class="footer__link"><i class="fas fa-chevron-right"></i> Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer__links-container">
+                <h3 class="footer__title">Our Services</h3>
+                <ul class="footer__links">
+                    <li class="footer__link-item">
+                        <a href="#services" class="footer__link"><i class="fas fa-chevron-right"></i> Business Strategy</a>
+                    </li>
+                    <li class="footer__link-item">
+                        <a href="#services" class="footer__link"><i class="fas fa-chevron-right"></i> Market Analysis</a>
+                    </li>
+                    <li class="footer__link-item">
+                        <a href="#services" class="footer__link"><i class="fas fa-chevron-right"></i> Financial Planning</a>
+                    </li>
+                    <li class="footer__link-item">
+                        <a href="#services" class="footer__link"><i class="fas fa-chevron-right"></i> Risk Management</a>
+                    </li>
+                    <li class="footer__link-item">
+                        <a href="#services" class="footer__link"><i class="fas fa-chevron-right"></i> Operational Excellence</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer__links-container">
+                <h3 class="footer__title">Contact Us</h3>
+                <ul class="footer__links">
+                    <li class="footer__link-item">
+                        <a href="#" class="footer__link"><i class="fas fa-map-marker-alt"></i> 123 Business Lane, Suite 100<br>Metropolis State 12345</a>
+                    </li>
+                    <li class="footer__link-item">
+                        <a href="tel:1234567890" class="footer__link"><i class="fas fa-phone-alt"></i> 123-456-7890</a>
+                    </li>
+                    <li class="footer__link-item">
+                        <a href="mailto:info@abcconsulting.com" class="footer__link"><i class="fas fa-envelope"></i> info@abcconsulting.com</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <div class="container">
+                <p>&copy; <span id="currentYear">2023</span> ABC Consulting. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <div class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        // Set current year in footer
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        // Mobile Menu Toggle
+        const mobileToggle = document.querySelector('.mobile-toggle');
+        const mobileMenu = document.querySelector('.mobile-menu');
+        const mobileClose = document.querySelector('.mobile-menu__close');
+        const overlay = document.querySelector('.overlay');
+        const body = document.body;
+
+        mobileToggle.addEventListener('click', () => {
+            mobileMenu.classList.add('active');
+            overlay.classList.add('active');
+            body.style.overflow = 'hidden';
+        });
+
+        function closeMenu() {
+            mobileMenu.classList.remove('active');
+            overlay.classList.remove('active');
+            body.style.overflow = '';
+        }
+
+        mobileClose.addEventListener('click', closeMenu);
+        overlay.addEventListener('click', closeMenu);
+
+        document.querySelectorAll('.mobile-menu__link').forEach(link => {
+            link.addEventListener('click', closeMenu);
+        });
+
+        // Sticky Header
+        const header = document.querySelector('.header');
+        
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Back to Top Button
+        const backToTop = document.querySelector('.back-to-top');
+        
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTop.classList.add('active');
+            } else {
+                backToTop.classList.remove('active');
+            }
+        });
+        
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Smooth Scrolling for Internal Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    const headerHeight = document.querySelector('.header').offsetHeight;
+                    const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
+                    
+                    window.scrollTo({
+                        top: targetPosition - headerHeight,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Form Validation
+        const contactForm = document.getElementById('contactForm');
+        
+        contactForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            let isValid = true;
+            
+            // Validate Name
+            const nameInput = document.getElementById('name');
+            if (!nameInput.value.trim()) {
+                showError(nameInput, 'Please enter your name');
+                isValid = false;
+            } else {
+                hideError(nameInput);
+            }
+            
+            // Validate Email
+            const emailInput = document.getElementById('email');
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailInput.value.trim() || !emailRegex.test(emailInput.value)) {
+                showError(emailInput, 'Please enter a valid email address');
+                isValid = false;
+            } else {
+                hideError(emailInput);
+            }
+            
+            // Validate Service Selection
+            const serviceInput = document.getElementById('service');
+            if (serviceInput.value === '') {
+                showError(serviceInput, 'Please select a service');
+                isValid = false;
+            } else {
+                hideError(serviceInput);
+            }
+            
+            // Validate Message
+            const messageInput = document.getElementById('message');
+            if (!messageInput.value.trim()) {
+                showError(messageInput, 'Please enter your message');
+                isValid = false;
+            } else {
+                hideError(messageInput);
+            }
+            
+            if (isValid) {
+                // In a real application, you would submit the form data to your backend
+                alert('Thank you for your message! We will get back to you shortly.');
+                contactForm.reset();
+            }
+        });
+        
+        function showError(input, message) {
+            input.classList.add('error');
+            const errorMessage = input.nextElementSibling;
+            errorMessage.textContent = message;
+            errorMessage.style.display = 'block';
+        }
+        
+        function hideError(input) {
+            input.classList.remove('error');
+            const errorMessage = input.nextElementSibling;
+            errorMessage.style.display = 'none';
+        }
+
+        // Testimonial Slider
+        const testimonialSlides = document.querySelector('.testimonials__slides');
+        const dots = document.querySelectorAll('.testimonials__dot');
+        let currentSlide = 0;
+        let slideWidth = 0;
+        
+        function updateSlideWidth() {
+            if (window.innerWidth >= 1024) {
+                slideWidth = 33.333;
+            } else if (window.innerWidth >= 640) {
+                slideWidth = 50;
+            } else {
+                slideWidth = 100;
+            }
+        }
+
+        function goToSlide(slideIndex) {
+            updateSlideWidth();
+            testimonialSlides.style.transform = `translateX(-${slideIndex * slideWidth}%)`;
+            
+            dots.forEach((dot, index) => {
+                if (index === slideIndex) {
+                    dot.classList.add('active');
+                } else {
+                    dot.classList.remove('active');
+                }
+            });
+            
+            currentSlide = slideIndex;
+        }
+        
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                goToSlide(index);
+            });
+        });
+        
+        // Auto-advance testimonials
+        let testimonialInterval = setInterval(() => {
+            const nextSlide = (currentSlide + 1) % dots.length;
+            goToSlide(nextSlide);
+        }, 5000);
+        
+        // Pause auto-advance on hover
+        const testimonialSlider = document.querySelector('.testimonials__slider');
+        
+        testimonialSlider.addEventListener('mouseenter', () => {
+            clearInterval(testimonialInterval);
+        });
+        
+        testimonialSlider.addEventListener('mouseleave', () => {
+            testimonialInterval = setInterval(() => {
+                const nextSlide = (currentSlide + 1) % dots.length;
+                goToSlide(nextSlide);
+            }, 5000);
+        });
+        
+        // Initialize testimonial slider
+        updateSlideWidth();
+        goToSlide(0);
+        
+        // Update slider on resize
+        window.addEventListener('resize', () => {
+            updateSlideWidth();
+            goToSlide(currentSlide);
+        });
+
+        // Fade-in animation on scroll
+        const fadeElements = document.querySelectorAll('.fade-in');
+        
+        function checkFade() {
+            fadeElements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const elementBottom = element.getBoundingClientRect().bottom;
+                const windowHeight = window.innerHeight;
+                
+                if (elementTop < windowHeight - 100 && elementBottom > 0) {
+                    element.classList.add('active');
+                }
+            });
+        }
+        
+        // Initial check
+        checkFade();
+        
+        // Check on scroll
+        window.addEventListener('scroll', checkFade);
+    </script>
+</body>
+</html>
