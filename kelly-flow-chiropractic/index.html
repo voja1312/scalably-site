@@ -1,0 +1,1551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flow Chiropractic | Dr. Kelly Cogan | Portland, OR</title>
+    <meta name="description" content="Experience holistic chiropractic care with Dr. Kelly Cogan at Flow Chiropractic in Portland. Specializing in back pain relief, personalized treatments, and natural healing.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            /* Healthcare/Wellness Color Palette */
+            --primary-color: #4A8F82; /* Healing Teal */
+            --secondary-color: #7CB6A5; /* Soft Sage */
+            --accent-color: #D0E3DD; /* Light Mint */
+            --dark-color: #2A4F45; /* Deep Forest */
+            --light-color: #F5FAF8; /* Clean White */
+            --text-color: #333333; /* Rich Text */
+            --text-light: #666666; /* Secondary Text */
+            
+            /* Spacing System */
+            --space-xs: 8px;
+            --space-sm: 16px;
+            --space-md: 24px;
+            --space-lg: 32px;
+            --space-xl: 48px;
+            --space-xxl: 64px;
+            
+            /* Timing */
+            --transition-speed: 0.3s;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--text-color);
+            line-height: 1.6;
+            background-color: var(--light-color);
+            overflow-x: hidden;
+            font-weight: 400;
+        }
+        
+        h1, h2, h3, h4, h5 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+            line-height: 1.3;
+            margin-bottom: var(--space-sm);
+            color: var(--dark-color);
+        }
+        
+        h1 {
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            font-weight: 700;
+        }
+        
+        h2 {
+            font-size: clamp(2rem, 4vw, 2.5rem);
+        }
+        
+        h3 {
+            font-size: clamp(1.5rem, 3vw, 1.75rem);
+        }
+        
+        p {
+            margin-bottom: var(--space-md);
+            font-size: clamp(1rem, 1.5vw, 1.125rem);
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        a {
+            color: var(--primary-color);
+            text-decoration: none;
+            transition: all var(--transition-speed) ease;
+        }
+        
+        a:hover {
+            color: var(--dark-color);
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--space-sm);
+        }
+        
+        .section {
+            padding: var(--space-xl) 0;
+            position: relative;
+        }
+        
+        .section--light {
+            background-color: var(--light-color);
+        }
+        
+        .section--accent {
+            background-color: var(--accent-color);
+        }
+        
+        .section__header {
+            text-align: center;
+            margin-bottom: var(--space-xl);
+        }
+        
+        .section__title {
+            position: relative;
+            display: inline-block;
+            margin-bottom: var(--space-md);
+        }
+        
+        .section__title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            height: 3px;
+            width: 60px;
+            background-color: var(--primary-color);
+        }
+        
+        .section__subtitle {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 300;
+            font-size: 1.1rem;
+            color: var(--text-light);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        /* Button Styles */
+        .btn {
+            display: inline-block;
+            padding: var(--space-sm) var(--space-md);
+            border-radius: 4px;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            text-align: center;
+            transition: all var(--transition-speed) ease;
+            font-size: 1rem;
+            cursor: pointer;
+            border: none;
+        }
+        
+        .btn--primary {
+            background-color: var(--primary-color);
+            color: white;
+            box-shadow: 0 4px 12px rgba(74, 143, 130, 0.25);
+        }
+        
+        .btn--primary:hover {
+            background-color: var(--dark-color);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(74, 143, 130, 0.35);
+        }
+        
+        .btn--outline {
+            background-color: transparent;
+            color: var(--primary-color);
+            border: 2px solid var(--primary-color);
+        }
+        
+        .btn--outline:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
+        /* Header & Navigation */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background-color: rgba(255, 255, 255, 0.98);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: var(--space-sm) 0;
+            transition: padding var(--transition-speed) ease;
+        }
+        
+        .header--scrolled {
+            padding: var(--space-xs) 0;
+        }
+        
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo__text {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-left: var(--space-xs);
+        }
+        
+        .nav__menu {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav__item {
+            margin-left: var(--space-md);
+        }
+        
+        .nav__link {
+            color: var(--text-color);
+            font-weight: 500;
+            padding: var(--space-xs);
+            position: relative;
+        }
+        
+        .nav__link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: var(--primary-color);
+            transition: width var(--transition-speed) ease;
+        }
+        
+        .nav__link:hover::after,
+        .nav__link--active::after {
+            width: 100%;
+        }
+        
+        .nav__cta {
+            margin-left: var(--space-md);
+        }
+        
+        .nav__toggle {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 1.5rem;
+            color: var(--primary-color);
+        }
+        
+        /* Hero Section */
+        .hero {
+            padding: calc(80px + var(--space-xxl)) 0 var(--space-xxl);
+            background: linear-gradient(135deg, var(--accent-color) 0%, var(--light-color) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 50%;
+            height: 100%;
+            background-image: url('http://flowchiropracticpdx.com/site/2119flow/IMG_0725.jpg');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.8;
+            clip-path: polygon(15% 0, 100% 0, 100% 100%, 0% 100%);
+        }
+        
+        .hero__content {
+            max-width: 600px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .hero__title {
+            margin-bottom: var(--space-md);
+            color: var(--dark-color);
+        }
+        
+        .hero__subtitle {
+            font-size: clamp(1.1rem, 2vw, 1.25rem);
+            margin-bottom: var(--space-lg);
+            color: var(--text-color);
+        }
+        
+        .hero__cta-group {
+            display: flex;
+            gap: var(--space-md);
+            flex-wrap: wrap;
+        }
+        
+        /* Services Section */
+        .services {
+            background-color: white;
+        }
+        
+        .services__grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: var(--space-lg);
+        }
+        
+        .service-card {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: all var(--transition-speed) ease;
+            padding: var(--space-lg);
+            text-align: center;
+            border-bottom: 3px solid transparent;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.07);
+            border-bottom: 3px solid var(--primary-color);
+        }
+        
+        .service-card__icon {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: var(--space-md);
+            transition: transform var(--transition-speed) ease;
+        }
+        
+        .service-card:hover .service-card__icon {
+            transform: scale(1.1);
+        }
+        
+        .service-card__title {
+            margin-bottom: var(--space-sm);
+            font-weight: 600;
+        }
+        
+        .service-card__description {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+        
+        /* About Section */
+        .about {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .about__content {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: var(--space-xl);
+        }
+        
+        .about__text {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .about__image {
+            flex: 1;
+            min-width: 300px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .about__image img {
+            display: block;
+            width: 100%;
+            height: auto;
+            transition: transform 1s ease;
+        }
+        
+        .about__image:hover img {
+            transform: scale(1.03);
+        }
+        
+        .about__name {
+            color: var(--primary-color);
+            font-weight: 700;
+            margin-bottom: var(--space-xs);
+        }
+        
+        .about__credentials {
+            margin-bottom: var(--space-md);
+            color: var(--text-light);
+            font-style: italic;
+        }
+        
+        .about__bio {
+            margin-bottom: var(--space-md);
+        }
+        
+        .expertise {
+            margin-top: var(--space-lg);
+        }
+        
+        .expertise__title {
+            margin-bottom: var(--space-md);
+            font-size: 1.5rem;
+        }
+        
+        .expertise__list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: var(--space-md);
+        }
+        
+        .expertise__item {
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+            padding: var(--space-sm);
+            border-radius: 4px;
+            background-color: rgba(74, 143, 130, 0.05);
+        }
+        
+        .expertise__icon {
+            color: var(--primary-color);
+            font-size: 1.25rem;
+        }
+        
+        .expertise__text {
+            font-weight: 500;
+            font-size: 0.95rem;
+        }
+        
+        /* Testimonials Section */
+        .testimonials {
+            background-color: var(--light-color);
+        }
+        
+        .testimonials__slider {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .testimonials__track {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+        
+        .testimonial {
+            flex: 0 0 100%;
+            padding: var(--space-lg);
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+            text-align: center;
+        }
+        
+        .testimonial__stars {
+            color: #FFD700;
+            font-size: 1.25rem;
+            margin-bottom: var(--space-sm);
+        }
+        
+        .testimonial__text {
+            font-style: italic;
+            margin-bottom: var(--space-md);
+            position: relative;
+        }
+        
+        .testimonial__text::before,
+        .testimonial__text::after {
+            content: '"';
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            color: var(--accent-color);
+            position: absolute;
+        }
+        
+        .testimonial__text::before {
+            left: -15px;
+            top: -10px;
+        }
+        
+        .testimonial__text::after {
+            right: -15px;
+            bottom: -30px;
+        }
+        
+        .testimonial__author {
+            font-weight: 500;
+        }
+        
+        .testimonial__role {
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+        
+        .testimonials__dots {
+            display: flex;
+            justify-content: center;
+            margin-top: var(--space-lg);
+        }
+        
+        .testimonials__dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: var(--accent-color);
+            margin: 0 5px;
+            cursor: pointer;
+            transition: background-color var(--transition-speed) ease;
+        }
+        
+        .testimonials__dot--active {
+            background-color: var(--primary-color);
+        }
+        
+        /* Contact Section */
+        .contact {
+            background-color: white;
+        }
+        
+        .contact__container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--space-xl);
+        }
+        
+        .contact__info {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .contact__form-container {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .contact__item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: var(--space-md);
+        }
+        
+        .contact__icon {
+            margin-right: var(--space-sm);
+            color: var(--primary-color);
+            font-size: 1.25rem;
+            padding-top: 3px;
+        }
+        
+        .contact__label {
+            font-weight: 600;
+            margin-bottom: 5px;
+            display: block;
+        }
+        
+        .contact__text {
+            color: var(--text-color);
+        }
+        
+        .contact__map {
+            height: 250px;
+            border-radius: 8px;
+            overflow: hidden;
+            margin-top: var(--space-lg);
+        }
+        
+        .contact__map iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+        
+        .contact__form {
+            background-color: var(--light-color);
+            padding: var(--space-lg);
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .form__group {
+            margin-bottom: var(--space-md);
+        }
+        
+        .form__label {
+            display: block;
+            margin-bottom: var(--space-xs);
+            font-weight: 500;
+        }
+        
+        .form__input,
+        .form__textarea {
+            width: 100%;
+            padding: var(--space-sm);
+            border: 1px solid #e0e0e0;
+            border-radius: 4px;
+            font-family: 'Montserrat', sans-serif;
+            transition: border-color var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+        }
+        
+        .form__input:focus,
+        .form__textarea:focus {
+            border-color: var(--primary-color);
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(74, 143, 130, 0.15);
+        }
+        
+        .form__textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+        
+        .form__error {
+            color: #e74c3c;
+            font-size: 0.85rem;
+            margin-top: 5px;
+            display: none;
+        }
+        
+        .form__input--error,
+        .form__textarea--error {
+            border-color: #e74c3c;
+        }
+        
+        .form__input--error + .form__error,
+        .form__textarea--error + .form__error {
+            display: block;
+        }
+        
+        .form__submit {
+            width: 100%;
+            padding: var(--space-sm);
+            font-weight: 500;
+        }
+        
+        /* Footer */
+        .footer {
+            background-color: var(--dark-color);
+            color: white;
+            padding: var(--space-xl) 0 var(--space-lg);
+        }
+        
+        .footer__container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: var(--space-xl);
+        }
+        
+        .footer__column {
+            padding-right: var(--space-md);
+        }
+        
+        .footer__title {
+            color: white;
+            margin-bottom: var(--space-md);
+            font-size: 1.25rem;
+            position: relative;
+            padding-bottom: var(--space-xs);
+        }
+        
+        .footer__title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 2px;
+            background-color: var(--primary-color);
+        }
+        
+        .footer__logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: var(--space-sm);
+            display: inline-block;
+        }
+        
+        .footer__text {
+            margin-bottom: var(--space-md);
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.95rem;
+        }
+        
+        .footer__nav {
+            list-style: none;
+        }
+        
+        .footer__nav-item {
+            margin-bottom: var(--space-xs);
+        }
+        
+        .footer__nav-link {
+            color: rgba(255, 255, 255, 0.8);
+            transition: color var(--transition-speed) ease;
+        }
+        
+        .footer__nav-link:hover {
+            color: white;
+        }
+        
+        .footer__social {
+            display: flex;
+            gap: var(--space-sm);
+            margin-top: var(--space-md);
+        }
+        
+        .footer__social-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: white;
+            transition: background-color var(--transition-speed) ease, transform var(--transition-speed) ease;
+        }
+        
+        .footer__social-link:hover {
+            background-color: var(--primary-color);
+            color: white;
+            transform: translateY(-3px);
+        }
+        
+        .footer__bottom {
+            margin-top: var(--space-xl);
+            padding-top: var(--space-md);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: center;
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.9rem;
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 1024px) {
+            .hero::before {
+                width: 40%;
+            }
+            
+            .hero__content {
+                max-width: 500px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .hero::before {
+                clip-path: none;
+                width: 100%;
+                height: 100%;
+                opacity: 0.15;
+            }
+            
+            .hero__content {
+                max-width: 100%;
+                text-align: center;
+            }
+            
+            .hero__cta-group {
+                justify-content: center;
+            }
+            
+            .about__content {
+                flex-direction: column;
+            }
+            
+            .about__image {
+                order: -1;
+                margin-bottom: var(--space-md);
+            }
+            
+            .nav__menu {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 70%;
+                max-width: 350px;
+                height: 100vh;
+                background-color: white;
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 80px var(--space-lg) var(--space-lg);
+                box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+                transition: right var(--transition-speed) ease;
+                z-index: 1000;
+            }
+            
+            .nav__menu--active {
+                right: 0;
+            }
+            
+            .nav__item {
+                margin: var(--space-xs) 0;
+                width: 100%;
+            }
+            
+            .nav__link {
+                display: block;
+                padding: var(--space-xs) 0;
+            }
+            
+            .nav__cta {
+                margin: var(--space-md) 0 0;
+                width: 100%;
+                text-align: center;
+            }
+            
+            .nav__toggle {
+                display: block;
+                z-index: 1001;
+            }
+            
+            .overlay {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.5);
+                opacity: 0;
+                visibility: hidden;
+                transition: all var(--transition-speed) ease;
+                z-index: 999;
+            }
+            
+            .overlay--active {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+        
+        @media (max-width: 640px) {
+            .section {
+                padding: var(--space-lg) 0;
+            }
+            
+            .section__header {
+                margin-bottom: var(--space-lg);
+            }
+            
+            .services__grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .expertise__list {
+                grid-template-columns: 1fr;
+            }
+            
+            .form__group--half {
+                width: 100%;
+                padding: 0;
+            }
+            
+            .footer__container {
+                grid-template-columns: 1fr;
+                gap: var(--space-lg);
+            }
+        }
+        
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .animate-fadeIn {
+            animation: fadeIn var(--transition-speed) ease forwards;
+        }
+        
+        /* Utility Classes */
+        .text-center {
+            text-align: center;
+        }
+        
+        .form__row {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 -10px;
+        }
+        
+        .form__group--half {
+            width: 50%;
+            padding: 0 10px;
+        }
+        
+        .mt-md {
+            margin-top: var(--space-md);
+        }
+        
+        .mb-md {
+            margin-bottom: var(--space-md);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container">
+            <nav class="nav">
+                <div class="logo">
+                    <span class="logo__text">Flow Chiropractic</span>
+                </div>
+                
+                <button class="nav__toggle" id="navToggle" aria-label="Toggle Navigation">
+                    <i class="fas fa-bars"></i>
+                </button>
+                
+                <ul class="nav__menu" id="navMenu">
+                    <li class="nav__item">
+                        <a href="#home" class="nav__link nav__link--active">Home</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#services" class="nav__link">Services</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#about" class="nav__link">About Dr. Cogan</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#testimonials" class="nav__link">Patient Stories</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#contact" class="nav__link">Contact</a>
+                    </li>
+                    <li class="nav__cta">
+                        <a href="#contact" class="btn btn--primary">Book Appointment</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="overlay" id="overlay"></div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero section" id="home">
+        <div class="container">
+            <div class="hero__content animate-fadeIn">
+                <h1 class="hero__title">Holistic Healing Through Expert Chiropractic Care</h1>
+                <p class="hero__subtitle">Dr. Kelly Cogan combines traditional chiropractic techniques with holistic healing modalities to address the root cause of your pain and restore your body's natural balance.</p>
+                <div class="hero__cta-group">
+                    <a href="#contact" class="btn btn--primary">Schedule a Consultation</a>
+                    <a href="#services" class="btn btn--outline">Explore Services</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services section" id="services">
+        <div class="container">
+            <div class="section__header">
+                <h2 class="section__title">Our Healing Approach</h2>
+                <p class="section__subtitle">Experience personalized care that addresses your unique health concerns through a blend of targeted chiropractic techniques and holistic modalities.</p>
+            </div>
+            
+            <div class="services__grid">
+                <div class="service-card">
+                    <div class="service-card__icon">
+                        <i class="fas fa-spine"></i>
+                    </div>
+                    <h3 class="service-card__title">Gentle Spinal Adjustment</h3>
+                    <p class="service-card__description">Experience precise adjustments that restore proper alignment, reduce pain, and improve function using the Cox 8 technique for gentle, effective care.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-card__icon">
+                        <i class="fas fa-user-md"></i>
+                    </div>
+                    <h3 class="service-card__title">Holistic Pelvic Care</h3>
+                    <p class="service-card__description">Address pelvic floor dysfunction, pain, and related issues with specialized techniques that restore balance and function to this vital area.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-card__icon">
+                        <i class="fas fa-walking"></i>
+                    </div>
+                    <h3 class="service-card__title">Postural Alignment Therapy</h3>
+                    <p class="service-card__description">Correct posture-related pain and dysfunction through specialized Egoscue exercises designed to realign your body's structure naturally.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-card__icon">
+                        <i class="fas fa-hand-holding-medical"></i>
+                    </div>
+                    <h3 class="service-card__title">Soft Tissue Techniques</h3>
+                    <p class="service-card__description">Release tension and promote healing in muscles and fascia through advanced hands-on methods including Graston and myofascial release.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-card__icon">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <h3 class="service-card__title">Ayurvedic Approaches</h3>
+                    <p class="service-card__description">Integrate ancient wisdom with modern chiropractic care, addressing health and wellness through a holistic lens based on your unique constitution.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-card__icon">
+                        <i class="fas fa-book-medical"></i>
+                    </div>
+                    <h3 class="service-card__title">Personalized Home Programs</h3>
+                    <p class="service-card__description">Receive customized exercise and self-care protocols to continue your healing journey between visits, empowering you in your wellness.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about section section--accent" id="about">
+        <div class="container">
+            <div class="section__header">
+                <h2 class="section__title">Meet Dr. Kelly Cogan</h2>
+                <p class="section__subtitle">With over 25 years of experience and extensive training in multiple healing modalities, Dr. Cogan brings a wealth of knowledge to her practice.</p>
+            </div>
+            
+            <div class="about__content">
+                <div class="about__text">
+                    <h3 class="about__name">Dr. Kelly Cogan, D.C.</h3>
+                    <p class="about__credentials">Doctor of Chiropractic, Certified in Multiple Healing Modalities</p>
+                    <p class="about__bio">Since graduating in 1997, Dr. Cogan has dedicated her career to expanding her knowledge of the body's natural healing capabilities. Her journey began at age 22 when she entered chiropractic school, and has since taken her through studies in diverse healing arts and around the world.</p>
+                    <p class="about__bio">Dr. Cogan's international practice experience in Ireland, England, and Italy has shaped her unique approach, allowing her to connect with diverse cultures through the universal language of healing. After settling in Albuquerque, NM, where she built a thriving practice while studying Ayurvedic Medicine with renowned teacher Vasant Lad, she fulfilled her dream of moving to Portland in 2018.</p>
+                    <p class="about__bio">Today, she welcomes patients to her peaceful home office overlooking a garden and the city, creating a serene environment for healing. Her gentle approach combines manual care with personalized home exercises to empower patients in their wellness journey.</p>
+                    
+                    <div class="expertise">
+                        <h4 class="expertise__title">Specialized Training</h4>
+                        <div class="expertise__list">
+                            <div class="expertise__item">
+                                <div class="expertise__icon"><i class="fas fa-certificate"></i></div>
+                                <div class="expertise__text">Cox Chiropractic Technique</div>
+                            </div>
+                            <div class="expertise__item">
+                                <div class="expertise__icon"><i class="fas fa-certificate"></i></div>
+                                <div class="expertise__text">Holistic Pelvic Care</div>
+                            </div>
+                            <div class="expertise__item">
+                                <div class="expertise__icon"><i class="fas fa-certificate"></i></div>
+                                <div class="expertise__text">Egoscue Postural Alignment</div>
+                            </div>
+                            <div class="expertise__item">
+                                <div class="expertise__icon"><i class="fas fa-certificate"></i></div>
+                                <div class="expertise__text">Sacro-Occipital Technique</div>
+                            </div>
+                            <div class="expertise__item">
+                                <div class="expertise__icon"><i class="fas fa-certificate"></i></div>
+                                <div class="expertise__text">Graston Technique</div>
+                            </div>
+                            <div class="expertise__item">
+                                <div class="expertise__icon"><i class="fas fa-certificate"></i></div>
+                                <div class="expertise__text">Mayan Abdominal Massage</div>
+                            </div>
+                            <div class="expertise__item">
+                                <div class="expertise__icon"><i class="fas fa-certificate"></i></div>
+                                <div class="expertise__text">Ayurvedic Medicine</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about__image">
+                    <img src="http://flowchiropracticpdx.com/site/2119flow/IMG_0725.jpg" alt="Dr. Kelly Cogan, Chiropractor at Flow Chiropractic">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials section" id="testimonials">
+        <div class="container">
+            <div class="section__header">
+                <h2 class="section__title">Patient Stories</h2>
+                <p class="section__subtitle">Hear from our patients who have experienced the transformative effects of Dr. Cogan's holistic approach to chiropractic care.</p>
+            </div>
+            
+            <div class="testimonials__slider" id="testimonialSlider">
+                <div class="testimonials__track" id="testimonialTrack">
+                    <div class="testimonial">
+                        <div class="testimonial__stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial__text">After years of chronic back pain and unsuccessful treatments, Dr. Cogan's holistic approach finally provided relief. Her gentle adjustments combined with personalized exercises have transformed my quality of life completely.</p>
+                        <p class="testimonial__author">Sarah M.</p>
+                        <p class="testimonial__role">Patient for 3 years</p>
+                    </div>
+                    
+                    <div class="testimonial">
+                        <div class="testimonial__stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial__text">Dr. Kelly truly listens and provides individualized care. Her knowledge of multiple healing modalities gives her a unique perspective. The peaceful office environment adds to the healing experience. I leave each session feeling renewed.</p>
+                        <p class="testimonial__author">Michael T.</p>
+                        <p class="testimonial__role">Patient for 1 year</p>
+                    </div>
+                    
+                    <div class="testimonial">
+                        <div class="testimonial__stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial__text">I was hesitant about chiropractic care until I met Dr. Cogan. Her gentle approach and comprehensive knowledge put me at ease immediately. She identified issues other practitioners missed and created a treatment plan that has eliminated my migraines.</p>
+                        <p class="testimonial__author">Jennifer L.</p>
+                        <p class="testimonial__role">Patient for 2 years</p>
+                    </div>
+                </div>
+                
+                <div class="testimonials__dots" id="testimonialDots">
+                    <span class="testimonials__dot testimonials__dot--active" data-index="0"></span>
+                    <span class="testimonials__dot" data-index="1"></span>
+                    <span class="testimonials__dot" data-index="2"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact section" id="contact">
+        <div class="container">
+            <div class="section__header">
+                <h2 class="section__title">Get in Touch</h2>
+                <p class="section__subtitle">Schedule a consultation or ask questions about how Dr. Cogan's approach can help address your specific health concerns.</p>
+            </div>
+            
+            <div class="contact__container">
+                <div class="contact__info">
+                    <h3>Contact Information</h3>
+                    <p>Reach out to schedule your appointment or learn more about our services.</p>
+                    
+                    <div class="contact__item">
+                        <div class="contact__icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div>
+                            <span class="contact__label">Office Location</span>
+                            <p class="contact__text">Portland, Oregon<br>Home office with garden view</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact__item">
+                        <div class="contact__icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div>
+                            <span class="contact__label">Phone</span>
+                            <p class="contact__text">(555) 123-4567</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact__item">
+                        <div class="contact__icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <span class="contact__label">Email</span>
+                            <p class="contact__text">dr.kelly@flowchiropracticpdx.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact__item">
+                        <div class="contact__icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div>
+                            <span class="contact__label">Office Hours</span>
+                            <p class="contact__text">
+                                Monday - Friday: 9:00 AM - 5:00 PM<br>
+                                Saturday: By appointment<br>
+                                Sunday: Closed
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact__map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d178484.04260045076!2d-122.7651225!3d45.5426823!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54950b0b7da97427%3A0x1c36b9e6f6d18591!2sPortland%2C%20OR!5e0!3m2!1sen!2sus!4v1653337534589!5m2!1sen!2sus" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+                
+                <div class="contact__form-container">
+                    <form class="contact__form" id="contactForm">
+                        <h3 class="mb-md">Request an Appointment</h3>
+                        
+                        <div class="form__row">
+                            <div class="form__group form__group--half">
+                                <label for="firstName" class="form__label">First Name*</label>
+                                <input type="text" id="firstName" name="firstName" class="form__input" required>
+                                <span class="form__error">Please enter your first name</span>
+                            </div>
+                            
+                            <div class="form__group form__group--half">
+                                <label for="lastName" class="form__label">Last Name*</label>
+                                <input type="text" id="lastName" name="lastName" class="form__input" required>
+                                <span class="form__error">Please enter your last name</span>
+                            </div>
+                        </div>
+                        
+                        <div class="form__row">
+                            <div class="form__group form__group--half">
+                                <label for="email" class="form__label">Email*</label>
+                                <input type="email" id="email" name="email" class="form__input" required>
+                                <span class="form__error">Please enter a valid email</span>
+                            </div>
+                            
+                            <div class="form__group form__group--half">
+                                <label for="phone" class="form__label">Phone*</label>
+                                <input type="tel" id="phone" name="phone" class="form__input" required>
+                                <span class="form__error">Please enter your phone number</span>
+                            </div>
+                        </div>
+                        
+                        <div class="form__group">
+                            <label for="serviceType" class="form__label">Service of Interest</label>
+                            <select id="serviceType" name="serviceType" class="form__input">
+                                <option value="">Select a service...</option>
+                                <option value="spinal-adjustment">Spinal Adjustment</option>
+                                <option value="pelvic-care">Holistic Pelvic Care</option>
+                                <option value="postural-therapy">Postural Alignment Therapy</option>
+                                <option value="soft-tissue">Soft Tissue Techniques</option>
+                                <option value="ayurvedic">Ayurvedic Approaches</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form__group">
+                            <label for="message" class="form__label">Your Health Concerns</label>
+                            <textarea id="message" name="message" class="form__textarea" placeholder="Please describe your current health concerns or questions..."></textarea>
+                        </div>
+                        
+                        <div class="form__group">
+                            <label for="newPatient" class="form__label">
+                                <input type="checkbox" id="newPatient" name="newPatient">
+                                I am a new patient
+                            </label>
+                        </div>
+                        
+                        <button type="submit" class="btn btn--primary form__submit">Request Appointment</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__container">
+                <div class="footer__column">
+                    <a href="#home" class="footer__logo">Flow Chiropractic</a>
+                    <p class="footer__text">Dr. Kelly Cogan provides holistic chiropractic care and natural healing modalities in a peaceful Portland, Oregon setting.</p>
+                    <div class="footer__social">
+                        <a href="#" class="footer__social-link" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="footer__social-link" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="footer__social-link" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="footer__social-link" aria-label="YouTube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer__column">
+                    <h3 class="footer__title">Quick Links</h3>
+                    <ul class="footer__nav">
+                        <li class="footer__nav-item">
+                            <a href="#home" class="footer__nav-link">Home</a>
+                        </li>
+                        <li class="footer__nav-item">
+                            <a href="#services" class="footer__nav-link">Services</a>
+                        </li>
+                        <li class="footer__nav-item">
+                            <a href="#about" class="footer__nav-link">About Dr. Cogan</a>
+                        </li>
+                        <li class="footer__nav-item">
+                            <a href="#testimonials" class="footer__nav-link">Patient Stories</a>
+                        </li>
+                        <li class="footer__nav-item">
+                            <a href="#contact" class="footer__nav-link">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="footer__column">
+                    <h3 class="footer__title">Services</h3>
+                    <ul class="footer__nav">
+                        <li class="footer__nav-item">
+                            <a href="#services" class="footer__nav-link">Spinal Adjustment</a>
+                        </li>
+                        <li class="footer__nav-item">
+                            <a href="#services" class="footer__nav-link">Holistic Pelvic Care</a>
+                        </li>
+                        <li class="footer__nav-item">
+                            <a href="#services" class="footer__nav-link">Postural Alignment</a>
+                        </li>
+                        <li class="footer__nav-item">
+                            <a href="#services" class="footer__nav-link">Soft Tissue Techniques</a>
+                        </li>
+                        <li class="footer__nav-item">
+                            <a href="#services" class="footer__nav-link">Ayurvedic Approaches</a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="footer__column">
+                    <h3 class="footer__title">Contact</h3>
+                    <ul class="footer__nav">
+                        <li class="footer__nav-item">
+                            <i class="fas fa-map-marker-alt"></i> Portland, Oregon
+                        </li>
+                        <li class="footer__nav-item">
+                            <i class="fas fa-phone-alt"></i> (555) 123-4567
+                        </li>
+                        <li class="footer__nav-item">
+                            <i class="fas fa-envelope"></i> dr.kelly@flowchiropracticpdx.com
+                        </li>
+                        <li class="footer__nav-item">
+                            <i class="fas fa-clock"></i> Mon-Fri: 9AM-5PM
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer__bottom">
+                <p>&copy; <span id="currentYear">2023</span> Flow Chiropractic. All rights reserved. | Privacy Policy | Terms of Service</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Current Year for Footer
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+        
+        // Mobile Navigation
+        const navToggle = document.getElementById('navToggle');
+        const navMenu = document.getElementById('navMenu');
+        const overlay = document.getElementById('overlay');
+        
+        navToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('nav__menu--active');
+            navToggle.querySelector('i').classList.toggle('fa-bars');
+            navToggle.querySelector('i').classList.toggle('fa-times');
+            overlay.classList.toggle('overlay--active');
+            document.body.style.overflow = navMenu.classList.contains('nav__menu--active') ? 'hidden' : '';
+        });
+        
+        overlay.addEventListener('click', () => {
+            navMenu.classList.remove('nav__menu--active');
+            navToggle.querySelector('i').classList.add('fa-bars');
+            navToggle.querySelector('i').classList.remove('fa-times');
+            overlay.classList.remove('overlay--active');
+            document.body.style.overflow = '';
+        });
+        
+        // Close mobile menu when clicking a nav link
+        const navLinks = document.querySelectorAll('.nav__link');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('nav__menu--active');
+                navToggle.querySelector('i').classList.add('fa-bars');
+                navToggle.querySelector('i').classList.remove('fa-times');
+                overlay.classList.remove('overlay--active');
+                document.body.style.overflow = '';
+            });
+        });
+        
+        // Header Scroll Effect
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('header--scrolled');
+            } else {
+                header.classList.remove('header--scrolled');
+            }
+        });
+        
+        // Smooth Scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    const headerHeight = document.querySelector('.header').offsetHeight;
+                    const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+                    
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Form Validation
+        const contactForm = document.getElementById('contactForm');
+        
+        if (contactForm) {
+            contactForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                
+                let isValid = true;
+                const requiredFields = contactForm.querySelectorAll('[required]');
+                
+                requiredFields.forEach(field => {
+                    if (!field.value.trim()) {
+                        field.classList.add('form__input--error');
+                        isValid = false;
+                    } else {
+                        field.classList.remove('form__input--error');
+                    }
+                    
+                    // Email validation
+                    if (field.type === 'email' && field.value.trim()) {
+                        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                        if (!emailPattern.test(field.value)) {
+                            field.classList.add('form__input--error');
+                            isValid = false;
+                        }
+                    }
+                });
+                
+                if (isValid) {
+                    // In a real implementation, you would send the form data to a server
+                    alert('Thank you for your message! We will contact you shortly.');
+                    contactForm.reset();
+                }
+            });
+            
+            // Real-time validation
+            const inputs = contactForm.querySelectorAll('.form__input, .form__textarea');
+            inputs.forEach(input => {
+                input.addEventListener('input', function() {
+                    if (this.hasAttribute('required') && !this.value.trim()) {
+                        this.classList.add('form__input--error');
+                    } else {
+                        this.classList.remove('form__input--error');
+                    }
+                    
+                    if (this.type === 'email' && this.value.trim()) {
+                        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                        if (!emailPattern.test(this.value)) {
+                            this.classList.add('form__input--error');
+                        } else {
+                            this.classList.remove('form__input--error');
+                        }
+                    }
+                });
+            });
+        }
+        
+        // Testimonial Slider
+        const testimonialTrack = document.getElementById('testimonialTrack');
+        const testimonialDots = document.getElementById('testimonialDots').querySelectorAll('.testimonials__dot');
+        let currentSlide = 0;
+        let interval;
+        
+        function moveToSlide(index) {
+            testimonialTrack.style.transform = `translateX(-${index * 100}%)`;
+            
+            // Update active dot
+            testimonialDots.forEach(dot => {
+                dot.classList.remove('testimonials__dot--active');
+            });
+            testimonialDots[index].classList.add('testimonials__dot--active');
+            
+            currentSlide = index;
+        }
+        
+        // Set up dot navigation
+        testimonialDots.forEach(dot => {
+            dot.addEventListener('click', function() {
+                const slideIndex = parseInt(this.getAttribute('data-index'));
+                moveToSlide(slideIndex);
+                resetInterval();
+            });
+        });
+        
+        // Auto-advancing functionality
+        function startInterval() {
+            interval = setInterval(() => {
+                currentSlide = (currentSlide + 1) % testimonialDots.length;
+                moveToSlide(currentSlide);
+            }, 5000);
+        }
+        
+        function resetInterval() {
+            clearInterval(interval);
+            startInterval();
+        }
+        
+        // Initialize slider
+        startInterval();
+        
+        // Stop auto-advancing when user interacts with slider
+        document.getElementById('testimonialSlider').addEventListener('mouseenter', () => {
+            clearInterval(interval);
+        });
+        
+        // Resume auto-advancing when user leaves
+        document.getElementById('testimonialSlider').addEventListener('mouseleave', () => {
+            startInterval();
+        });
+        
+        // Initialize animation on scroll
+        document.addEventListener('DOMContentLoaded', function() {
+            const animatedElements = document.querySelectorAll('.section__header, .service-card, .about__image, .about__text, .testimonial');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate-fadeIn');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            animatedElements.forEach(element => {
+                observer.observe(element);
+                element.style.opacity = '0';
+            });
+        });
+    </script>
+</body>
+</html>
