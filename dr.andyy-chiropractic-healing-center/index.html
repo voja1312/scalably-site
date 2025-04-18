@@ -1,0 +1,1882 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chiropractic Healing Center | Dr. Andy Harding | Kansas City</title>
+    <meta name="description" content="Kansas City's premier chiropractic care with Dr. Andy Harding. Voted Chiropractor of the Year 15+ times. Schedule your consultation today.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            /* Healthcare-specific Color Palette - Calming Blues and Healing Greens */
+            --primary-color: #2C7873; /* Deep teal - trust and healing */
+            --secondary-color: #6FB98F; /* Healing green - growth and wellness */
+            --accent-color: #004445; /* Deep green - stability and authority */
+            --light-color: #F2F7F6; /* Soft white - purity and cleanliness */
+            --dark-color: #2A2D34; /* Near black - professionalism */
+            --neutral-color: #E7ECEF; /* Light gray - balance */
+            
+            /* Spacing System */
+            --space-xs: 8px;
+            --space-sm: 16px;
+            --space-md: 24px;
+            --space-lg: 32px;
+            --space-xl: 48px;
+            --space-xxl: 64px;
+            
+            /* Typography */
+            --heading-font: 'Playfair Display', serif;
+            --body-font: 'Montserrat', sans-serif;
+            
+            /* Animation Settings */
+            --transition-speed: 0.3s;
+            --transition-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: var(--body-font);
+            line-height: 1.6;
+            color: var(--dark-color);
+            background-color: var(--light-color);
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--heading-font);
+            font-weight: 600;
+            line-height: 1.3;
+            color: var(--accent-color);
+            margin-bottom: var(--space-sm);
+        }
+        
+        h1 {
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            font-weight: 700;
+        }
+        
+        h2 {
+            font-size: clamp(2rem, 4vw, 2.75rem);
+            position: relative;
+            margin-bottom: var(--space-lg);
+        }
+        
+        h2::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -10px;
+            width: 80px;
+            height: 3px;
+            background-color: var(--secondary-color);
+            transition: width var(--transition-speed) var(--transition-function);
+        }
+        
+        .section-title {
+            text-align: center;
+        }
+        
+        .section-title h2::after {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        h3 {
+            font-size: clamp(1.5rem, 3vw, 1.75rem);
+        }
+        
+        p {
+            margin-bottom: var(--space-md);
+            font-size: 1rem;
+            color: var(--dark-color);
+        }
+        
+        a {
+            color: var(--primary-color);
+            text-decoration: none;
+            transition: all var(--transition-speed) var(--transition-function);
+        }
+        
+        a:hover {
+            color: var(--accent-color);
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        section {
+            padding: var(--space-xl) var(--space-md);
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--space-md);
+        }
+        
+        /* Header Styles */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background-color: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            transition: all var(--transition-speed) var(--transition-function);
+        }
+        
+        .header__container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: var(--space-sm) var(--space-md);
+        }
+        
+        .header__logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .header__logo-text {
+            font-family: var(--heading-font);
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            line-height: 1;
+        }
+        
+        .header__logo-text span {
+            display: block;
+            font-size: 0.9rem;
+            font-weight: 400;
+            color: var(--accent-color);
+            font-family: var(--body-font);
+        }
+        
+        .header__nav {
+            display: none;
+        }
+        
+        .header__nav-list {
+            display: flex;
+            list-style: none;
+            gap: var(--space-md);
+        }
+        
+        .header__nav-link {
+            color: var(--dark-color);
+            font-weight: 500;
+            position: relative;
+            padding: var(--space-xs) 0;
+        }
+        
+        .header__nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--primary-color);
+            transition: width var(--transition-speed) var(--transition-function);
+        }
+        
+        .header__nav-link:hover::after,
+        .header__nav-link.active::after {
+            width: 100%;
+        }
+        
+        .header__cta {
+            display: none;
+        }
+        
+        .hamburger {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 24px;
+            height: 18px;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+            z-index: 1010;
+        }
+        
+        .hamburger__line {
+            width: 100%;
+            height: 2px;
+            background-color: var(--primary-color);
+            transition: all var(--transition-speed) var(--transition-function);
+        }
+        
+        .hamburger.active .hamburger__line:nth-child(1) {
+            transform: translateY(8px) rotate(45deg);
+        }
+        
+        .hamburger.active .hamburger__line:nth-child(2) {
+            opacity: 0;
+        }
+        
+        .hamburger.active .hamburger__line:nth-child(3) {
+            transform: translateY(-8px) rotate(-45deg);
+        }
+        
+        .mobile-nav {
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 80%;
+            max-width: 300px;
+            height: 100vh;
+            background-color: var(--light-color);
+            z-index: 1000;
+            padding: var(--space-xl) var(--space-md);
+            transform: translateX(100%);
+            transition: transform var(--transition-speed) var(--transition-function);
+            box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .mobile-nav.active {
+            transform: translateX(0);
+        }
+        
+        .mobile-nav__list {
+            list-style: none;
+            margin-top: var(--space-lg);
+        }
+        
+        .mobile-nav__item {
+            margin-bottom: var(--space-md);
+        }
+        
+        .mobile-nav__link {
+            color: var(--dark-color);
+            font-size: 1.1rem;
+            font-weight: 500;
+            display: block;
+            padding: var(--space-xs) 0;
+        }
+        
+        .mobile-nav__cta {
+            margin-top: var(--space-lg);
+        }
+        
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 990;
+            opacity: 0;
+            visibility: hidden;
+            transition: all var(--transition-speed) var(--transition-function);
+        }
+        
+        .overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        /* Button Styles */
+        .btn {
+            display: inline-block;
+            padding: var(--space-sm) var(--space-md);
+            border-radius: 4px;
+            font-weight: 600;
+            text-align: center;
+            cursor: pointer;
+            transition: all var(--transition-speed) var(--transition-function);
+            border: none;
+            font-family: var(--body-font);
+        }
+        
+        .btn--primary {
+            background-color: var(--primary-color);
+            color: white;
+            box-shadow: 0 4px 6px rgba(44, 120, 115, 0.2);
+        }
+        
+        .btn--primary:hover {
+            background-color: var(--accent-color);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(44, 120, 115, 0.3);
+            color: white;
+        }
+        
+        .btn--secondary {
+            background-color: transparent;
+            color: var(--primary-color);
+            border: 2px solid var(--primary-color);
+        }
+        
+        .btn--secondary:hover {
+            background-color: var(--primary-color);
+            color: white;
+            transform: translateY(-2px);
+        }
+        
+        .btn--full {
+            width: 100%;
+        }
+        
+        /* Hero Section */
+        .hero {
+            position: relative;
+            padding: 0;
+            height: 100vh;
+            min-height: 600px;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(135deg, rgba(44, 120, 115, 0.8), rgba(0, 68, 69, 0.9)), url('https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80') center/cover no-repeat;
+            margin-top: 0;
+        }
+        
+        .hero__container {
+            color: white;
+            padding-top: 70px;
+        }
+        
+        .hero__title {
+            color: white;
+            margin-bottom: var(--space-md);
+            position: relative;
+        }
+        
+        .hero__subtitle {
+            font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+            margin-bottom: var(--space-lg);
+            color: rgba(255, 255, 255, 0.9);
+            font-family: var(--body-font);
+            font-weight: 400;
+            max-width: 600px;
+        }
+        
+        .hero__cta-group {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-sm);
+        }
+        
+        .hero__scroll {
+            position: absolute;
+            bottom: var(--space-lg);
+            left: 50%;
+            transform: translateX(-50%);
+            color: white;
+            text-align: center;
+            opacity: 0.8;
+            transition: opacity var(--transition-speed) var(--transition-function);
+        }
+        
+        .hero__scroll:hover {
+            opacity: 1;
+        }
+        
+        .hero__scroll-icon {
+            font-size: 1.5rem;
+            animation: bounce 2s infinite;
+        }
+        
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-10px);
+            }
+            60% {
+                transform: translateY(-5px);
+            }
+        }
+        
+        /* Services Section */
+        .services {
+            background-color: white;
+        }
+        
+        .services__grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: var(--space-md);
+            margin-top: var(--space-lg);
+        }
+        
+        .service-card {
+            background-color: var(--light-color);
+            border-radius: 8px;
+            padding: var(--space-md);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            transition: all var(--transition-speed) var(--transition-function);
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            border-bottom: 3px solid var(--secondary-color);
+        }
+        
+        .service-card__icon {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: var(--space-sm);
+        }
+        
+        .service-card__title {
+            margin-bottom: var(--space-sm);
+            font-size: 1.4rem;
+        }
+        
+        .service-card__desc {
+            color: var(--dark-color);
+            font-size: 0.95rem;
+            margin-bottom: var(--space-md);
+        }
+        
+        .service-card__link {
+            margin-top: auto;
+            color: var(--primary-color);
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-xs);
+        }
+        
+        .service-card__link:hover {
+            color: var(--accent-color);
+        }
+        
+        .service-card__link i {
+            transition: transform var(--transition-speed) var(--transition-function);
+        }
+        
+        .service-card__link:hover i {
+            transform: translateX(4px);
+        }
+        
+        /* About Section */
+        .about {
+            background-color: var(--neutral-color);
+        }
+        
+        .about__container {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-xl);
+        }
+        
+        .about__content {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-lg);
+        }
+        
+        .about__image-container {
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+        
+        .about__image {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.5s var(--transition-function);
+        }
+        
+        .about__image-container:hover .about__image {
+            transform: scale(1.03);
+        }
+        
+        .about__text h2 {
+            text-align: left;
+        }
+        
+        .about__text h2::after {
+            left: 0;
+            transform: none;
+        }
+        
+        .about__text p {
+            margin-bottom: var(--space-md);
+        }
+        
+        .about__credentials {
+            display: flex;
+            gap: var(--space-md);
+            flex-wrap: wrap;
+            margin-top: var(--space-lg);
+        }
+        
+        .credential {
+            background-color: white;
+            border-radius: 6px;
+            padding: var(--space-sm);
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            flex: 1 1 calc(50% - var(--space-md));
+            min-width: 200px;
+        }
+        
+        .credential__icon {
+            color: var(--primary-color);
+            font-size: 1.5rem;
+        }
+        
+        .credential__text {
+            font-size: 0.9rem;
+            margin: 0;
+        }
+        
+        /* Testimonials Section */
+        .testimonials {
+            background-color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .testimonials::before {
+            content: '';
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background-color: rgba(111, 185, 143, 0.1);
+            top: -150px;
+            left: -150px;
+            z-index: 1;
+        }
+        
+        .testimonials::after {
+            content: '';
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background-color: rgba(44, 120, 115, 0.1);
+            bottom: -100px;
+            right: -100px;
+            z-index: 1;
+        }
+        
+        .testimonials__container {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .testimonials__slider {
+            position: relative;
+            margin-top: var(--space-lg);
+        }
+        
+        .testimonial-slide {
+            display: none;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        
+        .testimonial-slide.active {
+            display: block;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        .testimonial-card {
+            background-color: var(--light-color);
+            border-radius: 8px;
+            padding: var(--space-lg);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+            position: relative;
+            z-index: 2;
+        }
+        
+        .testimonial-card::before {
+            content: '"';
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            font-size: 5rem;
+            font-family: var(--heading-font);
+            color: rgba(44, 120, 115, 0.1);
+            line-height: 1;
+            z-index: 1;
+        }
+        
+        .testimonial-card__content {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .testimonial-card__rating {
+            color: #FFC107;
+            margin-bottom: var(--space-sm);
+            font-size: 1.2rem;
+        }
+        
+        .testimonial-card__text {
+            font-style: italic;
+            margin-bottom: var(--space-md);
+            position: relative;
+            z-index: 2;
+        }
+        
+        .testimonial-card__author {
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+        }
+        
+        .testimonial-card__author-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            overflow: hidden;
+            background-color: var(--neutral-color);
+        }
+        
+        .testimonial-card__author-info h4 {
+            margin: 0;
+            font-size: 1.1rem;
+            font-family: var(--body-font);
+        }
+        
+        .testimonial-card__author-info p {
+            margin: 0;
+            font-size: 0.9rem;
+            color: var(--accent-color);
+        }
+        
+        .testimonials__controls {
+            display: flex;
+            justify-content: center;
+            gap: var(--space-md);
+            margin-top: var(--space-lg);
+        }
+        
+        .testimonials__control {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: white;
+            border: 1px solid var(--primary-color);
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all var(--transition-speed) var(--transition-function);
+        }
+        
+        .testimonials__control:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
+        .testimonials__indicators {
+            display: flex;
+            justify-content: center;
+            gap: var(--space-xs);
+            margin-top: var(--space-md);
+        }
+        
+        .testimonials__indicator {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: var(--neutral-color);
+            cursor: pointer;
+            transition: all var(--transition-speed) var(--transition-function);
+        }
+        
+        .testimonials__indicator.active {
+            background-color: var(--primary-color);
+            transform: scale(1.2);
+        }
+        
+        /* Contact Section */
+        .contact {
+            background-color: var(--neutral-color);
+        }
+        
+        .contact__container {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-xl);
+        }
+        
+        .contact__content {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-xl);
+        }
+        
+        .contact__info {
+            background-color: white;
+            border-radius: 8px;
+            padding: var(--space-lg);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .contact__info-title {
+            font-size: 1.5rem;
+            margin-bottom: var(--space-md);
+            color: var(--accent-color);
+        }
+        
+        .contact__info-list {
+            list-style: none;
+        }
+        
+        .contact__info-item {
+            display: flex;
+            gap: var(--space-md);
+            margin-bottom: var(--space-md);
+            align-items: flex-start;
+        }
+        
+        .contact__info-icon {
+            font-size: 1.2rem;
+            color: var(--primary-color);
+            width: 24px;
+        }
+        
+        .contact__info-text {
+            flex: 1;
+            margin: 0;
+        }
+        
+        .contact__info-label {
+            font-weight: 600;
+            display: block;
+            margin-bottom: 4px;
+        }
+        
+        .contact__map {
+            height: 250px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .contact__map iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        
+        .contact__form {
+            background-color: white;
+            border-radius: 8px;
+            padding: var(--space-lg);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .contact__form-title {
+            font-size: 1.5rem;
+            margin-bottom: var(--space-md);
+            color: var(--accent-color);
+        }
+        
+        .form-group {
+            margin-bottom: var(--space-md);
+        }
+        
+        .form-label {
+            display: block;
+            margin-bottom: var(--space-xs);
+            font-weight: 500;
+            color: var(--dark-color);
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: var(--space-sm);
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-family: var(--body-font);
+            font-size: 1rem;
+            transition: all var(--transition-speed) var(--transition-function);
+        }
+        
+        .form-control:focus {
+            border-color: var(--primary-color);
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(44, 120, 115, 0.1);
+        }
+        
+        .form-control--error {
+            border-color: #dc3545;
+        }
+        
+        .form-error {
+            color: #dc3545;
+            font-size: 0.85rem;
+            margin-top: var(--space-xs);
+            display: none;
+        }
+        
+        .form-error.visible {
+            display: block;
+        }
+        
+        textarea.form-control {
+            min-height: 120px;
+            resize: vertical;
+        }
+        
+        .form-submit {
+            margin-top: var(--space-md);
+        }
+        
+        /* Footer */
+        .footer {
+            background-color: var(--accent-color);
+            color: white;
+            padding-top: var(--space-xl);
+        }
+        
+        .footer__main {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: var(--space-lg);
+            padding-bottom: var(--space-lg);
+        }
+        
+        .footer__logo {
+            display: inline-block;
+            margin-bottom: var(--space-sm);
+        }
+        
+        .footer__logo-text {
+            font-family: var(--heading-font);
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: white;
+        }
+        
+        .footer__about {
+            max-width: 400px;
+        }
+        
+        .footer__about p {
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: var(--space-md);
+        }
+        
+        .footer__links-title {
+            color: white;
+            font-size: 1.2rem;
+            margin-bottom: var(--space-md);
+        }
+        
+        .footer__links-list {
+            list-style: none;
+        }
+        
+        .footer__links-item {
+            margin-bottom: var(--space-sm);
+        }
+        
+        .footer__link {
+            color: rgba(255, 255, 255, 0.8);
+            transition: all var(--transition-speed) var(--transition-function);
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-xs);
+        }
+        
+        .footer__link:hover {
+            color: white;
+            transform: translateX(3px);
+        }
+        
+        .footer__social {
+            display: flex;
+            gap: var(--space-sm);
+            margin-top: var(--space-sm);
+        }
+        
+        .footer__social-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: white;
+            transition: all var(--transition-speed) var(--transition-function);
+        }
+        
+        .footer__social-link:hover {
+            background-color: var(--primary-color);
+            transform: translateY(-3px);
+            color: white;
+        }
+        
+        .footer__bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding: var(--space-md) 0;
+            text-align: center;
+        }
+        
+        .footer__copyright {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.9rem;
+            margin: 0;
+        }
+        
+        /* Media Queries */
+        @media (min-width: 640px) {
+            .hero__cta-group {
+                flex-direction: row;
+                gap: var(--space-md);
+            }
+            
+            .services__grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .testimonial-card {
+                padding: var(--space-xl);
+            }
+            
+            .footer__main {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (min-width: 768px) {
+            .about__container {
+                flex-direction: row;
+            }
+            
+            .about__image-container {
+                flex: 1;
+            }
+            
+            .about__text {
+                flex: 1;
+            }
+            
+            .contact__content {
+                flex-direction: row;
+            }
+            
+            .contact__info-wrapper {
+                flex: 1;
+            }
+            
+            .contact__form {
+                flex: 1.5;
+            }
+        }
+        
+        @media (min-width: 1024px) {
+            .header__nav {
+                display: block;
+            }
+            
+            .header__cta {
+                display: block;
+            }
+            
+            .hamburger {
+                display: none;
+            }
+            
+            .services__grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            
+            .footer__main {
+                grid-template-columns: 1.5fr repeat(3, 1fr);
+            }
+        }
+        
+        /* Utilities */
+        .text-center {
+            text-align: center;
+        }
+        
+        .mt-lg {
+            margin-top: var(--space-lg);
+        }
+        
+        .mb-lg {
+            margin-bottom: var(--space-lg);
+        }
+        
+        .mt-md {
+            margin-top: var(--space-md);
+        }
+        
+        .mb-md {
+            margin-bottom: var(--space-md);
+        }
+        
+        .uppercase {
+            text-transform: uppercase;
+        }
+        
+        .fade-in {
+            animation: fadeIn 0.8s ease-in-out;
+        }
+        
+        /* Accessibility */
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border-width: 0;
+        }
+        
+        /* Scroll animations */
+        .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s var(--transition-function);
+        }
+        
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .reveal--delay-1 {
+            transition-delay: 0.1s;
+        }
+        
+        .reveal--delay-2 {
+            transition-delay: 0.2s;
+        }
+        
+        .reveal--delay-3 {
+            transition-delay: 0.3s;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="header__container container">
+            <a href="#" class="header__logo">
+                <div class="header__logo-text">
+                    Chiropractic Healing Center
+                    <span>Dr. Andy Harding</span>
+                </div>
+            </a>
+            
+            <nav class="header__nav">
+                <ul class="header__nav-list">
+                    <li><a href="#home" class="header__nav-link active">Home</a></li>
+                    <li><a href="#services" class="header__nav-link">Services</a></li>
+                    <li><a href="#about" class="header__nav-link">About Dr. Harding</a></li>
+                    <li><a href="#testimonials" class="header__nav-link">Testimonials</a></li>
+                    <li><a href="#contact" class="header__nav-link">Contact</a></li>
+                </ul>
+            </nav>
+            
+            <a href="#contact" class="header__cta btn btn--primary">Schedule Appointment</a>
+            
+            <button class="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-nav">
+                <span class="hamburger__line"></span>
+                <span class="hamburger__line"></span>
+                <span class="hamburger__line"></span>
+            </button>
+        </div>
+    </header>
+    
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav" id="mobile-nav">
+        <ul class="mobile-nav__list">
+            <li class="mobile-nav__item"><a href="#home" class="mobile-nav__link">Home</a></li>
+            <li class="mobile-nav__item"><a href="#services" class="mobile-nav__link">Services</a></li>
+            <li class="mobile-nav__item"><a href="#about" class="mobile-nav__link">About Dr. Harding</a></li>
+            <li class="mobile-nav__item"><a href="#testimonials" class="mobile-nav__link">Testimonials</a></li>
+            <li class="mobile-nav__item"><a href="#contact" class="mobile-nav__link">Contact</a></li>
+        </ul>
+        
+        <div class="mobile-nav__cta">
+            <a href="#contact" class="btn btn--primary btn--full">Schedule Appointment</a>
+        </div>
+    </div>
+    
+    <div class="overlay" id="overlay"></div>
+    
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero__container container">
+            <h1 class="hero__title reveal reveal--delay-1">Rediscover Life Without Pain</h1>
+            <p class="hero__subtitle reveal reveal--delay-2">With over 30 years of experience, Dr. Andy Harding's evidence-based chiropractic care helps patients achieve lasting relief and improved wellness.</p>
+            <div class="hero__cta-group reveal reveal--delay-3">
+                <a href="#contact" class="btn btn--primary">Schedule Your Consultation</a>
+                <a href="#services" class="btn btn--secondary">Explore Our Services</a>
+            </div>
+        </div>
+        
+        <a href="#services" class="hero__scroll">
+            <span class="sr-only">Scroll down</span>
+            <i class="fa-solid fa-chevron-down hero__scroll-icon"></i>
+        </a>
+    </section>
+    
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-title">
+                <h2 class="reveal">Comprehensive Chiropractic Care</h2>
+                <p class="text-center reveal reveal--delay-1">We offer specialized treatments tailored to address your specific pain and wellness goals.</p>
+            </div>
+            
+            <div class="services__grid">
+                <div class="service-card reveal reveal--delay-1">
+                    <div class="service-card__icon">
+                        <i class="fa-solid fa-spine"></i>
+                    </div>
+                    <h3 class="service-card__title">Spinal Adjustments</h3>
+                    <p class="service-card__desc">Gentle, precise spinal manipulation to restore proper alignment, relieve pressure on nerves, and reduce pain while improving overall function.</p>
+                    <a href="#contact" class="service-card__link">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="service-card reveal reveal--delay-2">
+                    <div class="service-card__icon">
+                        <i class="fa-solid fa-head-side-brain"></i>
+                    </div>
+                    <h3 class="service-card__title">Headache Relief</h3>
+                    <p class="service-card__desc">Specialized treatment for tension, migraine, and cervicogenic headaches, addressing the root causes rather than just symptoms.</p>
+                    <a href="#contact" class="service-card__link">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="service-card reveal reveal--delay-3">
+                    <div class="service-card__icon">
+                        <i class="fa-solid fa-person-walking"></i>
+                    </div>
+                    <h3 class="service-card__title">Sports Rehabilitation</h3>
+                    <p class="service-card__desc">Recovery programs for athletes and active individuals, combining chiropractic care with rehabilitative exercises to restore performance.</p>
+                    <a href="#contact" class="service-card__link">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="service-card reveal reveal--delay-1">
+                    <div class="service-card__icon">
+                        <i class="fa-solid fa-bolt"></i>
+                    </div>
+                    <h3 class="service-card__title">Sciatica Treatment</h3>
+                    <p class="service-card__desc">Effective relief for sciatic nerve pain, numbness, and tingling using targeted adjustments and complementary therapies.</p>
+                    <a href="#contact" class="service-card__link">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="service-card reveal reveal--delay-2">
+                    <div class="service-card__icon">
+                        <i class="fa-solid fa-user-doctor"></i>
+                    </div>
+                    <h3 class="service-card__title">Wellness Care</h3>
+                    <p class="service-card__desc">Proactive maintenance programs designed to prevent injuries, enhance mobility, and support your long-term health goals.</p>
+                    <a href="#contact" class="service-card__link">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="service-card reveal reveal--delay-3">
+                    <div class="service-card__icon">
+                        <i class="fa-solid fa-baby"></i>
+                    </div>
+                    <h3 class="service-card__title">Family Chiropractic</h3>
+                    <p class="service-card__desc">Gentle, age-appropriate care for your entire family, from infants and children to seniors with special attention to each individual's needs.</p>
+                    <a href="#contact" class="service-card__link">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container about__container">
+            <div class="about__image-container reveal">
+                <img src="https://kckchiropractic.com/uploads/Andy_Web_Photo.jpeg" alt="Dr. Andy Harding, Chiropractor" class="about__image">
+            </div>
+            
+            <div class="about__text">
+                <h2 class="reveal">Meet Dr. Andy Harding</h2>
+                <p class="reveal reveal--delay-1">Born and raised in Kansas City, Kansas, Dr. Andy Harding has dedicated over 30 years to providing exceptional chiropractic care to the community. As the sixth of six children, he learned early the values of compassion, dedication, and service that now define his practice.</p>
+                
+                <p class="reveal reveal--delay-2">After attending St. Patrick's grade school and graduating from Bishop Ward High School in 1981, Dr. Harding earned a football scholarship to Kansas State University. There, he excelled both athletically as a 4-year letterman and academically, receiving Academic All-Big Eight awards in 1985. His educational journey culminated with a degree in Human Movement Studies from KSU and graduation from Cleveland Chiropractic College in 1989.</p>
+                
+                <p class="reveal reveal--delay-3">Since establishing his practice, Dr. Harding has been recognized as "Chiropractor of the Year" over 15 times by various publications, a testament to his commitment to patient care and professional excellence. His leadership in the field includes numerous positions with the International Chiropractors Association and being named a Distinguished Fellow of the ICA.</p>
+                
+                <p class="reveal reveal--delay-3">In 2011, Dr. Harding founded the Band of Brothers in KCK, mentoring Chiropractors and students worldwide. His passion for sharing chiropractic philosophy has led him to speak to audiences across 12 states and internationally through virtual presentations.</p>
+                
+                <p class="reveal reveal--delay-3">Dr. Harding has been married to Renée since 1991, and they are proud parents of two adult daughters, Kristyn and Olivia.</p>
+                
+                <div class="about__credentials">
+                    <div class="credential reveal reveal--delay-1">
+                        <div class="credential__icon">
+                            <i class="fa-solid fa-award"></i>
+                        </div>
+                        <p class="credential__text">Distinguished Fellow, International Chiropractors Association</p>
+                    </div>
+                    
+                    <div class="credential reveal reveal--delay-2">
+                        <div class="credential__icon">
+                            <i class="fa-solid fa-trophy"></i>
+                        </div>
+                        <p class="credential__text">15+ Times "Chiropractor of the Year" Award Winner</p>
+                    </div>
+                    
+                    <div class="credential reveal reveal--delay-2">
+                        <div class="credential__icon">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                        </div>
+                        <p class="credential__text">Cleveland Chiropractic College Graduate, 1989</p>
+                    </div>
+                    
+                    <div class="credential reveal reveal--delay-3">
+                        <div class="credential__icon">
+                            <i class="fa-solid fa-users"></i>
+                        </div>
+                        <p class="credential__text">Founder, Band of Brothers Mentoring Program</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+        <div class="container testimonials__container">
+            <div class="section-title">
+                <h2 class="reveal">Patient Success Stories</h2>
+                <p class="text-center reveal reveal--delay-1">Hear from our patients who have experienced the life-changing benefits of our care.</p>
+            </div>
+            
+            <div class="testimonials__slider reveal reveal--delay-2">
+                <div class="testimonial-slide active">
+                    <div class="testimonial-card">
+                        <div class="testimonial-card__content">
+                            <div class="testimonial-card__rating">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <p class="testimonial-card__text">"After suffering from debilitating back pain for years, I had almost given up hope. Within just a few weeks of treatment with Dr. Harding, I experienced dramatic improvement. His thorough approach, genuine concern, and exceptional expertise have given me my life back. I can now play with my grandchildren pain-free!"</p>
+                            <div class="testimonial-card__author">
+                                <div class="testimonial-card__author-avatar">
+                                    <i class="fa-solid fa-user" style="font-size: 20px; color: #6FB98F; display: flex; justify-content: center; align-items: center; height: 100%;"></i>
+                                </div>
+                                <div class="testimonial-card__author-info">
+                                    <h4>Margaret J.</h4>
+                                    <p>Patient for 3 years</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-slide">
+                    <div class="testimonial-card">
+                        <div class="testimonial-card__content">
+                            <div class="testimonial-card__rating">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <p class="testimonial-card__text">"As a college athlete, injuries were threatening my scholarship. Dr. Harding not only helped me recover from a serious lower back injury but created a preventative care plan that's kept me performing at my best. His sports background gives him unique insight into athletic care. I recommend him to all my teammates!"</p>
+                            <div class="testimonial-card__author">
+                                <div class="testimonial-card__author-avatar">
+                                    <i class="fa-solid fa-user" style="font-size: 20px; color: #6FB98F; display: flex; justify-content: center; align-items: center; height: 100%;"></i>
+                                </div>
+                                <div class="testimonial-card__author-info">
+                                    <h4>Jason M.</h4>
+                                    <p>College Football Player</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-slide">
+                    <div class="testimonial-card">
+                        <div class="testimonial-card__content">
+                            <div class="testimonial-card__rating">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <p class="testimonial-card__text">"After two car accidents left me with chronic neck pain and migraines, I tried everything from pain medication to physical therapy without success. Dr. Harding's comprehensive approach addressed not just my symptoms but the underlying issues. His knowledge, care, and genuine concern for his patients is evident in everything he does. I can now live without constant pain!"</p>
+                            <div class="testimonial-card__author">
+                                <div class="testimonial-card__author-avatar">
+                                    <i class="fa-solid fa-user" style="font-size: 20px; color: #6FB98F; display: flex; justify-content: center; align-items: center; height: 100%;"></i>
+                                </div>
+                                <div class="testimonial-card__author-info">
+                                    <h4>Sarah K.</h4>
+                                    <p>Patient for 7 years</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="testimonials__controls">
+                <button class="testimonials__control" id="prev-testimonial" aria-label="Previous testimonial">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </button>
+                <button class="testimonials__control" id="next-testimonial" aria-label="Next testimonial">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </button>
+            </div>
+            
+            <div class="testimonials__indicators">
+                <span class="testimonials__indicator active" data-index="0" aria-label="Testimonial 1"></span>
+                <span class="testimonials__indicator" data-index="1" aria-label="Testimonial 2"></span>
+                <span class="testimonials__indicator" data-index="2" aria-label="Testimonial 3"></span>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container contact__container">
+            <div class="section-title">
+                <h2 class="reveal">Schedule Your Consultation</h2>
+                <p class="text-center reveal reveal--delay-1">Take the first step toward pain-free living. Contact us today to schedule your initial consultation.</p>
+            </div>
+            
+            <div class="contact__content">
+                <div class="contact__info-wrapper reveal reveal--delay-1">
+                    <div class="contact__info">
+                        <h3 class="contact__info-title">Contact Information</h3>
+                        <ul class="contact__info-list">
+                            <li class="contact__info-item">
+                                <div class="contact__info-icon">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                </div>
+                                <p class="contact__info-text">
+                                    <span class="contact__info-label">Our Location</span>
+                                    2200 N 59th Street<br>
+                                    Kansas City, KS 66104
+                                </p>
+                            </li>
+                            <li class="contact__info-item">
+                                <div class="contact__info-icon">
+                                    <i class="fa-solid fa-phone"></i>
+                                </div>
+                                <p class="contact__info-text">
+                                    <span class="contact__info-label">Phone</span>
+                                    <a href="tel:+19139997771">(913) 999-7771</a>
+                                </p>
+                            </li>
+                            <li class="contact__info-item">
+                                <div class="contact__info-icon">
+                                    <i class="fa-solid fa-envelope"></i>
+                                </div>
+                                <p class="contact__info-text">
+                                    <span class="contact__info-label">Email</span>
+                                    <a href="mailto:info@chiropractichealing.com">info@chiropractichealing.com</a>
+                                </p>
+                            </li>
+                            <li class="contact__info-item">
+                                <div class="contact__info-icon">
+                                    <i class="fa-solid fa-clock"></i>
+                                </div>
+                                <p class="contact__info-text">
+                                    <span class="contact__info-label">Hours</span>
+                                    Monday - Friday: 9am - 6pm<br>
+                                    Saturday: 9am - 1pm<br>
+                                    Sunday: Closed
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="contact__map mt-lg">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3097.687842428426!2d-94.68791232433814!3d39.08676634034099!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87c08c62e0ce6f43%3A0x6b8825d3deccf591!2s2200%20N%2059th%20St%2C%20Kansas%20City%2C%20KS%2066104!5e0!3m2!1sen!2sus!4v1690125444927!5m2!1sen!2sus" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Office location map"></iframe>
+                    </div>
+                </div>
+                
+                <div class="contact__form reveal reveal--delay-2">
+                    <h3 class="contact__form-title">Request an Appointment</h3>
+                    <form id="contact-form" novalidate>
+                        <div class="form-group">
+                            <label for="name" class="form-label">Full Name*</label>
+                            <input type="text" id="name" name="name" class="form-control" required>
+                            <div class="form-error" id="name-error">Please enter your full name</div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email" class="form-label">Email Address*</label>
+                            <input type="email" id="email" name="email" class="form-control" required>
+                            <div class="form-error" id="email-error">Please enter a valid email address</div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone" class="form-label">Phone Number*</label>
+                            <input type="tel" id="phone" name="phone" class="form-control" required>
+                            <div class="form-error" id="phone-error">Please enter a valid phone number</div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="service" class="form-label">Service of Interest</label>
+                            <select id="service" name="service" class="form-control">
+                                <option value="">Select a service</option>
+                                <option value="spinal-adjustment">Spinal Adjustment</option>
+                                <option value="headache-relief">Headache Relief</option>
+                                <option value="sports-rehab">Sports Rehabilitation</option>
+                                <option value="sciatica">Sciatica Treatment</option>
+                                <option value="wellness">Wellness Care</option>
+                                <option value="family">Family Chiropractic</option>
+                                <option value="other">Other (Please specify)</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message" class="form-label">Your Health Concerns</label>
+                            <textarea id="message" name="message" class="form-control" placeholder="Please briefly describe your symptoms or concerns..."></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="preferred-date" class="form-label">Preferred Date</label>
+                            <input type="date" id="preferred-date" name="preferred-date" class="form-control">
+                        </div>
+                        
+                        <div class="form-submit">
+                            <button type="submit" class="btn btn--primary btn--full">Request Appointment</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__main">
+                <div class="footer__about">
+                    <a href="#" class="footer__logo">
+                        <div class="footer__logo-text">Chiropractic Healing Center</div>
+                    </a>
+                    <p>Dr. Andy Harding has been providing exceptional chiropractic care to Kansas City residents for over 30 years, combining expertise, compassion, and a whole-body approach to wellness.</p>
+                    <div class="footer__social">
+                        <a href="#" class="footer__social-link" aria-label="Facebook">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="footer__social-link" aria-label="Instagram">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="#" class="footer__social-link" aria-label="Twitter">
+                            <i class="fa-brands fa-twitter"></i>
+                        </a>
+                        <a href="#" class="footer__social-link" aria-label="LinkedIn">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer__links">
+                    <h4 class="footer__links-title">Quick Links</h4>
+                    <ul class="footer__links-list">
+                        <li class="footer__links-item">
+                            <a href="#home" class="footer__link">
+                                <i class="fa-solid fa-chevron-right"></i> Home
+                            </a>
+                        </li>
+                        <li class="footer__links-item">
+                            <a href="#services" class="footer__link">
+                                <i class="fa-solid fa-chevron-right"></i> Services
+                            </a>
+                        </li>
+                        <li class="footer__links-item">
+                            <a href="#about" class="footer__link">
+                                <i class="fa-solid fa-chevron-right"></i> About Dr. Harding
+                            </a>
+                        </li>
+                        <li class="footer__links-item">
+                            <a href="#testimonials" class="footer__link">
+                                <i class="fa-solid fa-chevron-right"></i> Testimonials
+                            </a>
+                        </li>
+                        <li class="footer__links-item">
+                            <a href="#contact" class="footer__link">
+                                <i class="fa-solid fa-chevron-right"></i> Contact
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="footer__links">
+                    <h4 class="footer__links-title">Services</h4>
+                    <ul class="footer__links-list">
+                        <li class="footer__links-item">
+                            <a href="#services" class="footer__link">
+                                <i class="fa-solid fa-chevron-right"></i> Spinal Adjustments
+                            </a>
+                        </li>
+                        <li class="footer__links-item">
+                            <a href="#services" class="footer__link">
+                                <i class="fa-solid fa-chevron-right"></i> Headache Relief
+                            </a>
+                        </li>
+                        <li class="footer__links-item">
+                            <a href="#services" class="footer__link">
+                                <i class="fa-solid fa-chevron-right"></i> Sports Rehabilitation
+                            </a>
+                        </li>
+                        <li class="footer__links-item">
+                            <a href="#services" class="footer__link">
+                                <i class="fa-solid fa-chevron-right"></i> Sciatica Treatment
+                            </a>
+                        </li>
+                        <li class="footer__links-item">
+                            <a href="#services" class="footer__link">
+                                <i class="fa-solid fa-chevron-right"></i> Wellness Care
+                            </a>
+                        </li>
+                        <li class="footer__links-item">
+                            <a href="#services" class="footer__link">
+                                <i class="fa-solid fa-chevron-right"></i> Family Chiropractic
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="footer__links">
+                    <h4 class="footer__links-title">Contact Us</h4>
+                    <ul class="footer__links-list">
+                        <li class="footer__links-item">
+                            <a href="https://goo.gl/maps/JLPthLmX3U1KeLjW9" target="_blank" class="footer__link">
+                                <i class="fa-solid fa-location-dot"></i> 2200 N 59th Street, Kansas City, KS 66104
+                            </a>
+                        </li>
+                        <li class="footer__links-item">
+                            <a href="tel:+19139997771" class="footer__link">
+                                <i class="fa-solid fa-phone"></i> (913) 999-7771
+                            </a>
+                        </li>
+                        <li class="footer__links-item">
+                            <a href="mailto:info@chiropractichealing.com" class="footer__link">
+                                <i class="fa-solid fa-envelope"></i> info@chiropractichealing.com
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer__bottom">
+                <p class="footer__copyright">&copy; <span id="current-year">2023</span> Chiropractic Healing Center. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        // Mobile navigation toggle
+        const hamburger = document.querySelector('.hamburger');
+        const mobileNav = document.getElementById('mobile-nav');
+        const overlay = document.getElementById('overlay');
+        const mobileNavLinks = document.querySelectorAll('.mobile-nav__link');
+        
+        hamburger.addEventListener('click', function() {
+            this.classList.toggle('active');
+            mobileNav.classList.toggle('active');
+            overlay.classList.toggle('active');
+            document.body.style.overflow = mobileNav.classList.contains('active') ? 'hidden' : '';
+            
+            const expanded = this.getAttribute('aria-expanded') === 'true' || false;
+            this.setAttribute('aria-expanded', !expanded);
+        });
+        
+        overlay.addEventListener('click', function() {
+            hamburger.classList.remove('active');
+            mobileNav.classList.remove('active');
+            overlay.classList.remove('active');
+            document.body.style.overflow = '';
+            hamburger.setAttribute('aria-expanded', 'false');
+        });
+        
+        mobileNavLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                hamburger.classList.remove('active');
+                mobileNav.classList.remove('active');
+                overlay.classList.remove('active');
+                document.body.style.overflow = '';
+                hamburger.setAttribute('aria-expanded', 'false');
+            });
+        });
+        
+        // Testimonials slider
+        const testimonialSlides = document.querySelectorAll('.testimonial-slide');
+        const testimonialIndicators = document.querySelectorAll('.testimonials__indicator');
+        const prevButton = document.getElementById('prev-testimonial');
+        const nextButton = document.getElementById('next-testimonial');
+        let currentSlide = 0;
+        let slideInterval;
+        
+        function showSlide(index) {
+            testimonialSlides.forEach(slide => slide.classList.remove('active'));
+            testimonialIndicators.forEach(indicator => indicator.classList.remove('active'));
+            
+            testimonialSlides[index].classList.add('active');
+            testimonialIndicators[index].classList.add('active');
+            currentSlide = index;
+        }
+        
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % testimonialSlides.length;
+            showSlide(currentSlide);
+        }
+        
+        function prevSlide() {
+            currentSlide = (currentSlide - 1 + testimonialSlides.length) % testimonialSlides.length;
+            showSlide(currentSlide);
+        }
+        
+        function startSlideInterval() {
+            slideInterval = setInterval(nextSlide, 5000);
+        }
+        
+        function resetSlideInterval() {
+            clearInterval(slideInterval);
+            startSlideInterval();
+        }
+        
+        prevButton.addEventListener('click', () => {
+            prevSlide();
+            resetSlideInterval();
+        });
+        
+        nextButton.addEventListener('click', () => {
+            nextSlide();
+            resetSlideInterval();
+        });
+        
+        testimonialIndicators.forEach((indicator, index) => {
+            indicator.addEventListener('click', () => {
+                showSlide(index);
+                resetSlideInterval();
+            });
+        });
+        
+        startSlideInterval();
+        
+        // Form validation
+        const contactForm = document.getElementById('contact-form');
+        
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            let isValid = true;
+            
+            // Validate name
+            const nameInput = document.getElementById('name');
+            const nameError = document.getElementById('name-error');
+            
+            if (!nameInput.value.trim()) {
+                nameInput.classList.add('form-control--error');
+                nameError.classList.add('visible');
+                isValid = false;
+            } else {
+                nameInput.classList.remove('form-control--error');
+                nameError.classList.remove('visible');
+            }
+            
+            // Validate email
+            const emailInput = document.getElementById('email');
+            const emailError = document.getElementById('email-error');
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            
+            if (!emailRegex.test(emailInput.value.trim())) {
+                emailInput.classList.add('form-control--error');
+                emailError.classList.add('visible');
+                isValid = false;
+            } else {
+                emailInput.classList.remove('form-control--error');
+                emailError.classList.remove('visible');
+            }
+            
+            // Validate phone
+            const phoneInput = document.getElementById('phone');
+            const phoneError = document.getElementById('phone-error');
+            const phoneRegex = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
+            
+            if (!phoneRegex.test(phoneInput.value.trim())) {
+                phoneInput.classList.add('form-control--error');
+                phoneError.classList.add('visible');
+                isValid = false;
+            } else {
+                phoneInput.classList.remove('form-control--error');
+                phoneError.classList.remove('visible');
+            }
+            
+            if (isValid) {
+                // In a real implementation, you would submit the form to a server
+                alert('Thank you! Your appointment request has been submitted. We will contact you shortly to confirm.');
+                contactForm.reset();
+            }
+        });
+        
+        // Form input real-time validation
+        const formInputs = contactForm.querySelectorAll('.form-control');
+        
+        formInputs.forEach(input => {
+            input.addEventListener('blur', function() {
+                validateInput(this);
+            });
+            
+            input.addEventListener('input', function() {
+                validateInput(this);
+            });
+        });
+        
+        function validateInput(input) {
+            const errorElement = document.getElementById(`${input.id}-error`);
+            if (!errorElement) return;
+            
+            switch (input.id) {
+                case 'name':
+                    if (!input.value.trim()) {
+                        input.classList.add('form-control--error');
+                        errorElement.classList.add('visible');
+                    } else {
+                        input.classList.remove('form-control--error');
+                        errorElement.classList.remove('visible');
+                    }
+                    break;
+                    
+                case 'email':
+                    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                    if (!emailRegex.test(input.value.trim())) {
+                        input.classList.add('form-control--error');
+                        errorElement.classList.add('visible');
+                    } else {
+                        input.classList.remove('form-control--error');
+                        errorElement.classList.remove('visible');
+                    }
+                    break;
+                    
+                case 'phone':
+                    const phoneRegex = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
+                    if (!phoneRegex.test(input.value.trim())) {
+                        input.classList.add('form-control--error');
+                        errorElement.classList.add('visible');
+                    } else {
+                        input.classList.remove('form-control--error');
+                        errorElement.classList.remove('visible');
+                    }
+                    break;
+            }
+        }
+        
+        // Scroll animations
+        function revealOnScroll() {
+            const reveals = document.querySelectorAll('.reveal');
+            
+            reveals.forEach(element => {
+                const windowHeight = window.innerHeight;
+                const elementTop = element.getBoundingClientRect().top;
+                const elementVisible = 150;
+                
+                if (elementTop < windowHeight - elementVisible) {
+                    element.classList.add('active');
+                }
+            });
+        }
+        
+        window.addEventListener('scroll', revealOnScroll);
+        window.addEventListener('load', revealOnScroll);
+        
+        // Dynamically update year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+        
+        // Sticky header
+        const header = document.getElementById('header');
+        const headerNavLinks = document.querySelectorAll('.header__nav-link');
+        
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 50) {
+                header.style.padding = '8px 0';
+                header.style.boxShadow = '0 4px 15px rgba(0, 0, 0, 0.1)';
+            } else {
+                header.style.padding = '';
+                header.style.boxShadow = '';
+            }
+            
+            // Update active nav links
+            const sections = document.querySelectorAll('section');
+            let currentSection = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                
+                if (window.scrollY >= sectionTop - 150 && window.scrollY < sectionTop + sectionHeight - 150) {
+                    currentSection = section.getAttribute('id');
+                }
+            });
+            
+            headerNavLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').slice(1) === currentSection) {
+                    link.classList.add('active');
+                }
+            });
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    const headerOffset = 80;
+                    const elementPosition = targetElement.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                    
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
