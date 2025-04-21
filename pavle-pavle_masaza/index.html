@@ -1,0 +1,1706 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pavle Masaža | Professional Chiropractic Care in Novi Sad</title>
+    <meta name="description" content="Expert chiropractic care and massage therapy by Pavle Lazić in Novi Sad. Relieve pain, improve mobility, and enhance your wellbeing with our professional services.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* CSS Variables */
+        :root {
+            /* Healthcare/Wellness Color Palette */
+            --primary-color: #4A8CA0; /* Calming blue */
+            --secondary-color: #5ABAA7; /* Healing teal */
+            --accent-color: #E5F5F3; /* Light teal */
+            --dark-color: #2A4B54; /* Deep blue */
+            --light-color: #F4FBFA; /* Off-white */
+            --text-color: #324B50; /* Dark teal-gray */
+            --text-light: #6A8992; /* Medium teal-gray */
+            
+            /* Spacing System (8px grid) */
+            --space-xs: 0.5rem; /* 8px */
+            --space-sm: 1rem; /* 16px */
+            --space-md: 1.5rem; /* 24px */
+            --space-lg: 2rem; /* 32px */
+            --space-xl: 3rem; /* 48px */
+            --space-xxl: 4rem; /* 64px */
+            
+            /* Animation System */
+            --transition-fast: 0.2s ease-in-out;
+            --transition-base: 0.3s ease-in-out;
+            --transition-slow: 0.5s ease-in-out;
+            
+            /* Typography */
+            --heading-font: 'Playfair Display', serif;
+            --body-font: 'Montserrat', sans-serif;
+            
+            /* Shadows */
+            --shadow-soft: 0 10px 30px rgba(74, 140, 160, 0.1);
+            --shadow-medium: 0 15px 35px rgba(74, 140, 160, 0.15);
+            --shadow-hard: 0 20px 40px rgba(74, 140, 160, 0.2);
+        }
+
+        /* Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
+        body {
+            font-family: var(--body-font);
+            color: var(--text-color);
+            line-height: 1.6;
+            background-color: var(--light-color);
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--heading-font);
+            font-weight: 600;
+            margin-bottom: var(--space-sm);
+            color: var(--dark-color);
+            line-height: 1.3;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+
+        h2 {
+            font-size: 2rem;
+            position: relative;
+            margin-bottom: var(--space-lg);
+        }
+
+        h2::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background-color: var(--secondary-color);
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            transition: var(--transition-base);
+        }
+
+        .text-center h2::after {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        h3 {
+            font-size: 1.5rem;
+        }
+
+        p {
+            margin-bottom: var(--space-md);
+            color: var(--text-light);
+        }
+
+        a {
+            color: var(--primary-color);
+            text-decoration: none;
+            transition: var(--transition-base);
+        }
+
+        a:hover {
+            color: var(--secondary-color);
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--space-sm);
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        section {
+            padding: var(--space-xl) 0;
+        }
+
+        /* Header & Navigation */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.97);
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+            z-index: 1000;
+            transition: var(--transition-base);
+        }
+
+        .header.scrolled {
+            padding: 0.5rem 0;
+            background-color: rgba(255, 255, 255, 0.98);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .header__container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: var(--space-sm) 0;
+        }
+
+        .logo {
+            font-family: var(--heading-font);
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        .logo span {
+            color: var(--secondary-color);
+        }
+
+        .nav {
+            display: none;
+        }
+
+        .nav__list {
+            display: flex;
+            list-style: none;
+            gap: var(--space-lg);
+        }
+
+        .nav__link {
+            color: var(--text-color);
+            font-weight: 500;
+            position: relative;
+            padding-bottom: 5px;
+        }
+
+        .nav__link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--secondary-color);
+            transition: var(--transition-base);
+        }
+
+        .nav__link:hover::after,
+        .nav__link.active::after {
+            width: 100%;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 50px;
+            font-weight: 500;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 0.5px;
+            transition: all var(--transition-base);
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(74, 140, 160, 0.2);
+        }
+
+        .btn:hover {
+            background-color: var(--dark-color);
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(42, 75, 84, 0.2);
+        }
+
+        .btn--secondary {
+            background-color: var(--secondary-color);
+        }
+
+        .btn--secondary:hover {
+            background-color: var(--primary-color);
+        }
+
+        .menu-toggle {
+            display: block;
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            cursor: pointer;
+            z-index: 1001;
+        }
+
+        .mobile-nav {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 80%;
+            height: 100vh;
+            background-color: white;
+            z-index: 1000;
+            padding: var(--space-xl) var(--space-md);
+            transition: var(--transition-base);
+            box-shadow: -5px 0 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .mobile-nav.active {
+            right: 0;
+        }
+
+        .mobile-nav__close {
+            position: absolute;
+            top: var(--space-md);
+            right: var(--space-md);
+            font-size: 1.5rem;
+            color: var(--text-color);
+            cursor: pointer;
+        }
+
+        .mobile-nav__list {
+            list-style: none;
+            margin-top: var(--space-xl);
+        }
+
+        .mobile-nav__item {
+            margin-bottom: var(--space-md);
+        }
+
+        .mobile-nav__link {
+            color: var(--text-color);
+            font-size: 1.2rem;
+            font-weight: 500;
+            display: block;
+            padding: var(--space-xs) 0;
+        }
+
+        .mobile-nav__link:hover {
+            color: var(--primary-color);
+        }
+
+        .mobile-nav__cta {
+            margin-top: var(--space-lg);
+        }
+
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.5);
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition-base);
+            z-index: 999;
+        }
+
+        .overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            min-height: 600px;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB2aWV3Qm94PSIwIDAgMTAwIDEwMCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMCAwIEwxMDAgMTAwIEwxMDAgMCBMMCAwIFoiIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wNSIvPjwvc3ZnPg==');
+            background-size: cover;
+            opacity: 0.3;
+        }
+
+        .hero__content {
+            position: relative;
+            z-index: 10;
+            color: white;
+            max-width: 600px;
+        }
+
+        .hero__title {
+            font-size: 3rem;
+            margin-bottom: var(--space-md);
+            color: white;
+            line-height: 1.2;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .hero__subtitle {
+            font-size: 1.2rem;
+            margin-bottom: var(--space-lg);
+            color: rgba(255, 255, 255, 0.9);
+            font-weight: 400;
+            line-height: 1.6;
+        }
+
+        .hero__cta {
+            display: flex;
+            gap: var(--space-md);
+            flex-wrap: wrap;
+        }
+
+        .hero__image {
+            display: none;
+        }
+
+        /* Services Section */
+        .services {
+            background-color: white;
+            position: relative;
+        }
+
+        .services__intro {
+            max-width: 700px;
+            margin: 0 auto var(--space-xl);
+            text-align: center;
+        }
+
+        .services__grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: var(--space-lg);
+        }
+
+        .service-card {
+            background-color: white;
+            border-radius: 10px;
+            padding: var(--space-lg);
+            box-shadow: var(--shadow-soft);
+            transition: var(--transition-base);
+            border: 1px solid rgba(74, 140, 160, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-medium);
+            border-color: var(--secondary-color);
+        }
+
+        .service-card:hover .service-card__icon {
+            color: var(--secondary-color);
+            transform: scale(1.1);
+        }
+
+        .service-card__icon {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: var(--space-sm);
+            transition: var(--transition-base);
+        }
+
+        .service-card__title {
+            font-size: 1.3rem;
+            margin-bottom: var(--space-sm);
+        }
+
+        .service-card__description {
+            font-size: 0.95rem;
+        }
+
+        /* About Section */
+        .about {
+            background-color: var(--accent-color);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .about__container {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-xl);
+            align-items: center;
+        }
+
+        .about__image {
+            flex: 1;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow-medium);
+        }
+
+        .about__image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition-slow);
+        }
+
+        .about:hover .about__image img {
+            transform: scale(1.03);
+        }
+
+        .about__content {
+            flex: 1;
+        }
+
+        .about__title {
+            margin-bottom: var(--space-md);
+        }
+
+        .about__text {
+            margin-bottom: var(--space-md);
+        }
+
+        .about__credentials {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--space-md);
+            margin-top: var(--space-lg);
+        }
+
+        .credential {
+            display: flex;
+            align-items: center;
+            background-color: white;
+            padding: var(--space-xs) var(--space-sm);
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: var(--dark-color);
+            box-shadow: var(--shadow-soft);
+        }
+
+        .credential i {
+            color: var(--secondary-color);
+            margin-right: var(--space-xs);
+        }
+
+        /* Testimonials Section */
+        .testimonials {
+            background-color: white;
+            position: relative;
+        }
+
+        .testimonials__intro {
+            max-width: 700px;
+            margin: 0 auto var(--space-xl);
+            text-align: center;
+        }
+
+        .testimonials__slider {
+            position: relative;
+            max-width: 900px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        .testimonials__track {
+            display: flex;
+            transition: transform var(--transition-slow);
+        }
+
+        .testimonial {
+            min-width: 100%;
+            padding: 0 var(--space-sm);
+        }
+
+        .testimonial__inner {
+            background-color: var(--light-color);
+            border-radius: 10px;
+            padding: var(--space-lg);
+            box-shadow: var(--shadow-soft);
+            position: relative;
+        }
+
+        .testimonial__content {
+            font-style: italic;
+            margin-bottom: var(--space-md);
+            color: var(--text-color);
+            position: relative;
+            z-index: 1;
+        }
+
+        .testimonial__content::before {
+            content: '\201C';
+            font-family: Georgia, serif;
+            font-size: 5rem;
+            color: var(--secondary-color);
+            opacity: 0.2;
+            position: absolute;
+            top: -40px;
+            left: -20px;
+            z-index: -1;
+        }
+
+        .testimonial__rating {
+            color: #FFD700;
+            margin-bottom: var(--space-sm);
+        }
+
+        .testimonial__author {
+            display: flex;
+            align-items: center;
+        }
+
+        .testimonial__author-image {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-right: var(--space-sm);
+            border: 2px solid var(--secondary-color);
+        }
+
+        .testimonial__author-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .testimonial__author-info h4 {
+            margin-bottom: 0;
+            font-size: 1.1rem;
+        }
+
+        .testimonial__author-info p {
+            margin-bottom: 0;
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+
+        .testimonials__controls {
+            display: flex;
+            justify-content: center;
+            margin-top: var(--space-lg);
+            gap: var(--space-sm);
+        }
+
+        .testimonials__btn {
+            background-color: transparent;
+            border: none;
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: var(--transition-base);
+        }
+
+        .testimonials__btn:hover {
+            color: var(--secondary-color);
+            transform: scale(1.1);
+        }
+
+        .testimonials__dots {
+            display: flex;
+            justify-content: center;
+            margin-top: var(--space-md);
+            gap: 8px;
+        }
+
+        .testimonials__dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #D1E8EB;
+            cursor: pointer;
+            transition: var(--transition-base);
+        }
+
+        .testimonials__dot.active {
+            background-color: var(--secondary-color);
+            transform: scale(1.2);
+        }
+
+        /* Contact Section */
+        .contact {
+            background-color: var(--light-color);
+            position: relative;
+        }
+
+        .contact__container {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-xl);
+        }
+
+        .contact__info {
+            flex: 1;
+        }
+
+        .contact__info-title {
+            margin-bottom: var(--space-md);
+        }
+
+        .contact__items {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: var(--space-md);
+        }
+
+        .contact__item {
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .contact__item-icon {
+            min-width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: var(--accent-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-color);
+            font-size: 1.2rem;
+            margin-right: var(--space-sm);
+            transition: var(--transition-base);
+        }
+
+        .contact__item:hover .contact__item-icon {
+            background-color: var(--primary-color);
+            color: white;
+            transform: scale(1.1);
+        }
+
+        .contact__item-content h4 {
+            margin-bottom: 5px;
+            font-size: 1.1rem;
+        }
+
+        .contact__item-content p, .contact__item-content a {
+            color: var(--text-light);
+            margin-bottom: 0;
+        }
+
+        .contact__form {
+            flex: 1;
+            background-color: white;
+            padding: var(--space-lg);
+            border-radius: 10px;
+            box-shadow: var(--shadow-medium);
+        }
+
+        .contact__form-title {
+            margin-bottom: var(--space-md);
+        }
+
+        .form__group {
+            margin-bottom: var(--space-md);
+        }
+
+        .form__label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: var(--dark-color);
+        }
+
+        .form__input, .form__textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #E8F1F2;
+            border-radius: 5px;
+            font-family: var(--body-font);
+            font-size: 1rem;
+            color: var(--text-color);
+            transition: var(--transition-base);
+        }
+
+        .form__input:focus, .form__textarea:focus {
+            outline: none;
+            border-color: var(--secondary-color);
+            box-shadow: 0 0 0 3px rgba(90, 186, 167, 0.2);
+        }
+
+        .form__textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        .form__input.error, .form__textarea.error {
+            border-color: #E74C3C;
+        }
+
+        .form__error {
+            display: none;
+            color: #E74C3C;
+            font-size: 0.85rem;
+            margin-top: 5px;
+        }
+
+        .form__error.visible {
+            display: block;
+        }
+
+        .contact__map {
+            border-radius: 10px;
+            overflow: hidden;
+            height: 300px;
+            width: 100%;
+            position: relative;
+            margin-top: var(--space-lg);
+            box-shadow: var(--shadow-soft);
+        }
+
+        .contact__map iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: var(--dark-color);
+            color: white;
+            padding: var(--space-xl) 0 var(--space-md);
+        }
+
+        .footer__container {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: var(--space-lg);
+        }
+
+        .footer__logo {
+            font-family: var(--heading-font);
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: var(--space-sm);
+        }
+
+        .footer__logo span {
+            color: var(--secondary-color);
+        }
+
+        .footer__description {
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: var(--space-md);
+        }
+
+        .footer__social {
+            display: flex;
+            gap: var(--space-sm);
+        }
+
+        .footer__social-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: white;
+            font-size: 1rem;
+            transition: var(--transition-base);
+        }
+
+        .footer__social-link:hover {
+            background-color: var(--secondary-color);
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        .footer__title {
+            font-size: 1.2rem;
+            color: white;
+            margin-bottom: var(--space-md);
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer__title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 2px;
+            background-color: var(--secondary-color);
+        }
+
+        .footer__links {
+            list-style: none;
+        }
+
+        .footer__link {
+            margin-bottom: var(--space-xs);
+        }
+
+        .footer__link a {
+            color: rgba(255, 255, 255, 0.7);
+            transition: var(--transition-base);
+            display: flex;
+            align-items: center;
+        }
+
+        .footer__link a i {
+            margin-right: 8px;
+            font-size: 0.8rem;
+        }
+
+        .footer__link a:hover {
+            color: var(--secondary-color);
+            padding-left: 5px;
+        }
+
+        .footer__contact-item {
+            display: flex;
+            margin-bottom: var(--space-xs);
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .footer__contact-item i {
+            margin-right: 10px;
+            color: var(--secondary-color);
+        }
+
+        .footer__bottom {
+            margin-top: var(--space-lg);
+            padding-top: var(--space-md);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .footer__copyright {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.9rem;
+        }
+
+        .footer__bottom-links {
+            display: flex;
+            gap: var(--space-md);
+            margin-top: var(--space-sm);
+        }
+
+        .footer__bottom-link {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.9rem;
+            transition: var(--transition-base);
+        }
+
+        .footer__bottom-link:hover {
+            color: var(--secondary-color);
+        }
+
+        /* Back to Top Button */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: var(--primary-color);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition-base);
+            z-index: 99;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-5px);
+        }
+
+        /* Media Queries */
+        @media (min-width: 640px) {
+            h1 {
+                font-size: 3rem;
+            }
+
+            h2 {
+                font-size: 2.25rem;
+            }
+
+            .hero__title {
+                font-size: 3.5rem;
+            }
+
+            .services__grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .contact__items {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .footer__container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 1024px) {
+            h1 {
+                font-size: 3.5rem;
+            }
+
+            .menu-toggle {
+                display: none;
+            }
+
+            .nav {
+                display: block;
+            }
+
+            .hero {
+                height: 90vh;
+            }
+
+            .hero__content {
+                max-width: 50%;
+            }
+
+            .hero__image {
+                display: block;
+                position: absolute;
+                right: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 45%;
+                height: 80%;
+                z-index: 2;
+            }
+
+            .hero__image img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 10px;
+                box-shadow: var(--shadow-hard);
+            }
+
+            .services__grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .about__container {
+                flex-direction: row;
+            }
+
+            .contact__container {
+                flex-direction: row;
+            }
+
+            .footer__container {
+                grid-template-columns: 2fr 1fr 1fr 1.5fr;
+            }
+
+            .footer__bottom {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+
+            .footer__bottom-links {
+                margin-top: 0;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate {
+            opacity: 0;
+            animation: fadeIn 0.8s ease forwards;
+        }
+
+        .delay-1 {
+            animation-delay: 0.2s;
+        }
+
+        .delay-2 {
+            animation-delay: 0.4s;
+        }
+
+        .delay-3 {
+            animation-delay: 0.6s;
+        }
+
+        .delay-4 {
+            animation-delay: 0.8s;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container header__container">
+            <a href="#" class="logo">Pavle<span>Masaža</span></a>
+            
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li><a href="#home" class="nav__link active">Početna</a></li>
+                    <li><a href="#services" class="nav__link">Usluge</a></li>
+                    <li><a href="#about" class="nav__link">O nama</a></li>
+                    <li><a href="#testimonials" class="nav__link">Iskustva</a></li>
+                    <li><a href="#contact" class="nav__link">Kontakt</a></li>
+                </ul>
+            </nav>
+            
+            <a href="#contact" class="btn btn--secondary">Zakaži termin</a>
+            
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav">
+        <div class="mobile-nav__close">
+            <i class="fas fa-times"></i>
+        </div>
+        <ul class="mobile-nav__list">
+            <li class="mobile-nav__item"><a href="#home" class="mobile-nav__link">Početna</a></li>
+            <li class="mobile-nav__item"><a href="#services" class="mobile-nav__link">Usluge</a></li>
+            <li class="mobile-nav__item"><a href="#about" class="mobile-nav__link">O nama</a></li>
+            <li class="mobile-nav__item"><a href="#testimonials" class="mobile-nav__link">Iskustva</a></li>
+            <li class="mobile-nav__item"><a href="#contact" class="mobile-nav__link">Kontakt</a></li>
+        </ul>
+        <div class="mobile-nav__cta">
+            <a href="#contact" class="btn btn--secondary">Zakaži termin</a>
+        </div>
+    </div>
+    <div class="overlay"></div>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero__content animate">
+                <h1 class="hero__title">Profesionalna hiropraktika i masaža u Novom Sadu</h1>
+                <p class="hero__subtitle">Oslobodite se bolova, poboljšajte pokretljivost i unapredite svoje zdravlje uz ekspertski tretman Pavla Lazića.</p>
+                <div class="hero__cta">
+                    <a href="#services" class="btn">Naše usluge</a>
+                    <a href="#contact" class="btn btn--secondary">Zakaži termin</a>
+                </div>
+            </div>
+            <div class="hero__image animate delay-2">
+                <img src="https://images.unsplash.com/photo-1614771637369-cdc4aae9c324?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8Y2hpcm9wcmFjdGljfHx8fHx8MTY5NTMwMjQyMA&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1080" alt="Hiropraktički tretman u Pavle Masaža salonu">
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="services__intro animate">
+                <h2>Naše Usluge</h2>
+                <p>U Pavle Masaža nudimo širok spektar profesionalnih tretmana prilagođenih vašim individualnim potrebama. Svaki tretman je pažljivo kreiran da vam pruži olakšanje, oporavak i revitalizaciju.</p>
+            </div>
+            <div class="services__grid">
+                <div class="service-card animate delay-1">
+                    <div class="service-card__icon">
+                        <i class="fas fa-spine"></i>
+                    </div>
+                    <h3 class="service-card__title">Hiropraktika kičme</h3>
+                    <p class="service-card__description">Specijalizovane tehnike za poravnavanje kičme, oslobađanje od bolova u leđima i poboljšanje držanja tela.</p>
+                </div>
+                
+                <div class="service-card animate delay-2">
+                    <div class="service-card__icon">
+                        <i class="fas fa-hands"></i>
+                    </div>
+                    <h3 class="service-card__title">Duboka masaža tkiva</h3>
+                    <p class="service-card__description">Ciljano tretiranje dubokih slojeva mišića za oslobađanje od hroničnih napetosti i bolova.</p>
+                </div>
+                
+                <div class="service-card animate delay-3">
+                    <div class="service-card__icon">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <h3 class="service-card__title">Sportska masaža</h3>
+                    <p class="service-card__description">Prilagođena masaža za sportiste koja pomaže u oporavku, prevenciji povreda i poboljšanju performansi.</p>
+                </div>
+                
+                <div class="service-card animate delay-1">
+                    <div class="service-card__icon">
+                        <i class="fas fa-head-side"></i>
+                    </div>
+                    <h3 class="service-card__title">Tretman za glavobolju</h3>
+                    <p class="service-card__description">Specijalizovane tehnike za ublažavanje tenzionih i migrenskih glavobolja kroz tretmane vrata i glave.</p>
+                </div>
+                
+                <div class="service-card animate delay-2">
+                    <div class="service-card__icon">
+                        <i class="fas fa-user-injured"></i>
+                    </div>
+                    <h3 class="service-card__title">Rehabilitacija povreda</h3>
+                    <p class="service-card__description">Individualno prilagođeni programi za rehabilitaciju nakon povreda i hirurških intervencija.</p>
+                </div>
+                
+                <div class="service-card animate delay-3">
+                    <div class="service-card__icon">
+                        <i class="fas fa-wind"></i>
+                    </div>
+                    <h3 class="service-card__title">Relaksaciona masaža</h3>
+                    <p class="service-card__description">Opuštajuća masaža koja smanjuje stres, poboljšava cirkulaciju i donosi osećaj potpunog blagostanja.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container about__container">
+            <div class="about__image animate">
+                <img src="https://images.unsplash.com/photo-1598259812920-09beef312a52?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8cGh5c2lvdGhlcmFwaXN0fHx8fHx8MTY5NTMwMjUyMA&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1080" alt="Pavle Lazić, Profesionalni Hiropraktičar">
+            </div>
+            <div class="about__content animate delay-2">
+                <h2 class="about__title">O Pavlu Laziću</h2>
+                <p class="about__text">Pavle Lazić je sertifikovani hiropraktičar i masažni terapeut sa više od 10 godina profesionalnog iskustva. Nakon završetka studija na Fakultetu za sport i fizičku kulturu, Pavle se specijalizovao u oblasti hiropraktike, masaže i rehabilitacije.</p>
+                <p class="about__text">Njegova filozofija lečenja fokusira se na holistički pristup, tretiranjem ne samo simptoma već i uzroka problema. Pavle veruje da svako telo ima neverovatnu sposobnost samoizlečenja kada se pravilno tretira.</p>
+                <p class="about__text">U svojoj praksi, Pavle kombinuje tradicionalne tehnike sa najnovijim saznanjima iz oblasti sportske medicine i anatomije kako bi pružio personalizovani tretman svakom klijentu.</p>
+                
+                <div class="about__credentials">
+                    <div class="credential">
+                        <i class="fas fa-certificate"></i>
+                        <span>Sertifikovani hiropraktičar</span>
+                    </div>
+                    <div class="credential">
+                        <i class="fas fa-medal"></i>
+                        <span>10+ godina iskustva</span>
+                    </div>
+                    <div class="credential">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>Fakultet za sport i fizičku kulturu</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <div class="testimonials__intro animate">
+                <h2>Šta kažu naši klijenti</h2>
+                <p>Pročitajte iskustva ljudi kojima smo pomogli da se oslobode bolova i unaprede svoje zdravlje.</p>
+            </div>
+            
+            <div class="testimonials__slider animate delay-1">
+                <div class="testimonials__track">
+                    <div class="testimonial">
+                        <div class="testimonial__inner">
+                            <div class="testimonial__rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p class="testimonial__content">Godinama sam se mučio sa bolovima u donjem delu leđa, ali nakon samo nekoliko tretmana kod Pavla osetio sam ogromno olakšanje. Njegova stručnost i pristup su zaista izvanredni!</p>
+                            <div class="testimonial__author">
+                                <div class="testimonial__author-image">
+                                    <img src="https://randomuser.me/api/portraits/men/43.jpg" alt="Marko Jovanović">
+                                </div>
+                                <div class="testimonial__author-info">
+                                    <h4>Marko Jovanović</h4>
+                                    <p>Profesor</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial">
+                        <div class="testimonial__inner">
+                            <div class="testimonial__rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p class="testimonial__content">Kao aktivni trkač, često imam problema sa zategnućem mišića. Pavlova sportska masaža je čudesna! Pomaže mi da brže oporavim i sprečava povrede. Definitivno najbolji terapeut u Novom Sadu.</p>
+                            <div class="testimonial__author">
+                                <div class="testimonial__author-image">
+                                    <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Ana Petrović">
+                                </div>
+                                <div class="testimonial__author-info">
+                                    <h4>Ana Petrović</h4>
+                                    <p>Sportista</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial">
+                        <div class="testimonial__inner">
+                            <div class="testimonial__rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <p class="testimonial__content">Nakon saobraćajne nezgode, imala sam jake bolove u vratu. Pavle mi je preporučio program rehabilitacije koji je potpuno prilagođen mojim potrebama. Posle dva meseca, osećam se kao nova osoba!</p>
+                            <div class="testimonial__author">
+                                <div class="testimonial__author-image">
+                                    <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Milica Simić">
+                                </div>
+                                <div class="testimonial__author-info">
+                                    <h4>Milica Simić</h4>
+                                    <p>Arhitekta</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonials__controls">
+                    <button class="testimonials__btn testimonials__btn--prev">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="testimonials__btn testimonials__btn--next">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+                
+                <div class="testimonials__dots">
+                    <div class="testimonials__dot active"></div>
+                    <div class="testimonials__dot"></div>
+                    <div class="testimonials__dot"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container contact__container">
+            <div class="contact__info animate">
+                <h2 class="contact__info-title">Kontaktirajte nas</h2>
+                <p>Imate pitanja ili želite da zakažete termin? Kontaktirajte nas na jedan od sledećih načina ili popunite kontakt formu.</p>
+                
+                <div class="contact__items">
+                    <div class="contact__item">
+                        <div class="contact__item-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact__item-content">
+                            <h4>Lokacija</h4>
+                            <p>Bulevar oslobođenja 47, Novi Sad</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact__item">
+                        <div class="contact__item-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div class="contact__item-content">
+                            <h4>Telefon</h4>
+                            <a href="tel:+381637894561">+381 63 789 4561</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact__item">
+                        <div class="contact__item-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact__item-content">
+                            <h4>Email</h4>
+                            <a href="mailto:info@pavlemasaza.rs">info@pavlemasaza.rs</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact__item">
+                        <div class="contact__item-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="contact__item-content">
+                            <h4>Radno vreme</h4>
+                            <p>Pon - Pet: 9:00 - 20:00<br>Sub: 9:00 - 15:00</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="contact__form animate delay-2">
+                <h3 class="contact__form-title">Zakažite termin</h3>
+                <form id="contactForm">
+                    <div class="form__group">
+                        <label for="name" class="form__label">Ime i prezime</label>
+                        <input type="text" id="name" class="form__input" required>
+                        <div class="form__error">Molimo unesite vaše ime</div>
+                    </div>
+                    
+                    <div class="form__group">
+                        <label for="phone" class="form__label">Telefon</label>
+                        <input type="tel" id="phone" class="form__input" required>
+                        <div class="form__error">Molimo unesite ispravan broj telefona</div>
+                    </div>
+                    
+                    <div class="form__group">
+                        <label for="email" class="form__label">Email</label>
+                        <input type="email" id="email" class="form__input" required>
+                        <div class="form__error">Molimo unesite ispravan email</div>
+                    </div>
+                    
+                    <div class="form__group">
+                        <label for="service" class="form__label">Usluga</label>
+                        <select id="service" class="form__input" required>
+                            <option value="">Izaberite uslugu</option>
+                            <option value="hiropraktika">Hiropraktika kičme</option>
+                            <option value="duboka-masaza">Duboka masaža tkiva</option>
+                            <option value="sportska-masaza">Sportska masaža</option>
+                            <option value="glavobolja">Tretman za glavobolju</option>
+                            <option value="rehabilitacija">Rehabilitacija povreda</option>
+                            <option value="relaksacija">Relaksaciona masaža</option>
+                        </select>
+                        <div class="form__error">Molimo izaberite uslugu</div>
+                    </div>
+                    
+                    <div class="form__group">
+                        <label for="message" class="form__label">Poruka (opišite problem)</label>
+                        <textarea id="message" class="form__textarea" required></textarea>
+                        <div class="form__error">Molimo unesite poruku</div>
+                    </div>
+                    
+                    <button type="submit" class="btn btn--primary">Pošalji zahtev</button>
+                </form>
+            </div>
+        </div>
+        
+        <div class="contact__map animate delay-3">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2808.9005903400646!2d19.8309345!3d45.2551096!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475b11d23c0f0eed%3A0xb83e2e6d48670956!2sBulevar%20oslobo%C4%91enja%2047%2C%20Novi%20Sad!5e0!3m2!1sen!2srs!4v1695302900!5m2!1sen!2srs" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__container">
+                <div class="footer__column">
+                    <div class="footer__logo">Pavle<span>Masaža</span></div>
+                    <p class="footer__description">Profesionalna hiropraktika i masaža u Novom Sadu. Oslobodite se bolova i unapredite svoje zdravlje uz stručnu pomoć.</p>
+                    <div class="footer__social">
+                        <a href="#" class="footer__social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="footer__social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="footer__social-link"><i class="fab fa-viber"></i></a>
+                        <a href="#" class="footer__social-link"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer__column">
+                    <h3 class="footer__title">Brzi linkovi</h3>
+                    <ul class="footer__links">
+                        <li class="footer__link"><a href="#home"><i class="fas fa-chevron-right"></i> Početna</a></li>
+                        <li class="footer__link"><a href="#services"><i class="fas fa-chevron-right"></i> Usluge</a></li>
+                        <li class="footer__link"><a href="#about"><i class="fas fa-chevron-right"></i> O nama</a></li>
+                        <li class="footer__link"><a href="#testimonials"><i class="fas fa-chevron-right"></i> Iskustva</a></li>
+                        <li class="footer__link"><a href="#contact"><i class="fas fa-chevron-right"></i> Kontakt</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer__column">
+                    <h3 class="footer__title">Usluge</h3>
+                    <ul class="footer__links">
+                        <li class="footer__link"><a href="#services"><i class="fas fa-chevron-right"></i> Hiropraktika kičme</a></li>
+                        <li class="footer__link"><a href="#services"><i class="fas fa-chevron-right"></i> Duboka masaža tkiva</a></li>
+                        <li class="footer__link"><a href="#services"><i class="fas fa-chevron-right"></i> Sportska masaža</a></li>
+                        <li class="footer__link"><a href="#services"><i class="fas fa-chevron-right"></i> Tretman za glavobolju</a></li>
+                        <li class="footer__link"><a href="#services"><i class="fas fa-chevron-right"></i> Rehabilitacija povreda</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer__column">
+                    <h3 class="footer__title">Kontakt informacije</h3>
+                    <div class="footer__contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>Bulevar oslobođenja 47, Novi Sad</div>
+                    </div>
+                    <div class="footer__contact-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <div>+381 63 789 4561</div>
+                    </div>
+                    <div class="footer__contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>info@pavlemasaza.rs</div>
+                    </div>
+                    <div class="footer__contact-item">
+                        <i class="fas fa-clock"></i>
+                        <div>Pon - Pet: 9:00 - 20:00<br>Sub: 9:00 - 15:00</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer__bottom">
+                <div class="footer__copyright">
+                    &copy; <span id="year"></span> Pavle Masaža. Sva prava zadržana.
+                </div>
+                <div class="footer__bottom-links">
+                    <a href="#" class="footer__bottom-link">Politika privatnosti</a>
+                    <a href="#" class="footer__bottom-link">Uslovi korišćenja</a>
+                    <a href="#" class="footer__bottom-link">Mapa sajta</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <div class="back-to-top">
+        <i class="fas fa-chevron-up"></i>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        // Set current year in footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Mobile menu toggle
+        const menuToggle = document.querySelector('.menu-toggle');
+        const mobileNav = document.querySelector('.mobile-nav');
+        const mobileNavClose = document.querySelector('.mobile-nav__close');
+        const overlay = document.querySelector('.overlay');
+        
+        menuToggle.addEventListener('click', () => {
+            mobileNav.classList.add('active');
+            overlay.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+        
+        mobileNavClose.addEventListener('click', () => {
+            mobileNav.classList.remove('active');
+            overlay.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        });
+        
+        overlay.addEventListener('click', () => {
+            mobileNav.classList.remove('active');
+            overlay.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        });
+
+        // Navigation active class
+        const navLinks = document.querySelectorAll('.nav__link');
+        const mobileNavLinks = document.querySelectorAll('.mobile-nav__link');
+        
+        function setActiveLink(links) {
+            links.forEach(link => {
+                link.addEventListener('click', function() {
+                    links.forEach(l => l.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    if (mobileNav.classList.contains('active')) {
+                        mobileNav.classList.remove('active');
+                        overlay.classList.remove('active');
+                        document.body.style.overflow = 'auto';
+                    }
+                });
+            });
+        }
+        
+        setActiveLink(navLinks);
+        setActiveLink(mobileNavLinks);
+
+        // Sticky header
+        const header = document.querySelector('.header');
+        
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Back to top button
+        const backToTopBtn = document.querySelector('.back-to-top');
+        
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTopBtn.classList.add('visible');
+            } else {
+                backToTopBtn.classList.remove('visible');
+            }
+        });
+        
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Testimonials slider
+        const testimonialTrack = document.querySelector('.testimonials__track');
+        const testimonials = document.querySelectorAll('.testimonial');
+        const prevBtn = document.querySelector('.testimonials__btn--prev');
+        const nextBtn = document.querySelector('.testimonials__btn--next');
+        const dots = document.querySelectorAll('.testimonials__dot');
+        
+        let currentIndex = 0;
+        
+        function updateSlider() {
+            testimonialTrack.style.transform = `translateX(-${currentIndex * 100}%)`;
+            
+            dots.forEach((dot, index) => {
+                dot.classList.toggle('active', index === currentIndex);
+            });
+        }
+        
+        prevBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex === 0) ? testimonials.length - 1 : currentIndex - 1;
+            updateSlider();
+        });
+        
+        nextBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex === testimonials.length - 1) ? 0 : currentIndex + 1;
+            updateSlider();
+        });
+        
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                currentIndex = index;
+                updateSlider();
+            });
+        });
+        
+        // Auto advance testimonials
+        let testimonialInterval = setInterval(() => {
+            currentIndex = (currentIndex === testimonials.length - 1) ? 0 : currentIndex + 1;
+            updateSlider();
+        }, 5000);
+        
+        // Pause auto advance on interaction
+        [prevBtn, nextBtn, ...dots].forEach(el => {
+            el.addEventListener('mouseenter', () => {
+                clearInterval(testimonialInterval);
+            });
+            
+            el.addEventListener('mouseleave', () => {
+                testimonialInterval = setInterval(() => {
+                    currentIndex = (currentIndex === testimonials.length - 1) ? 0 : currentIndex + 1;
+                    updateSlider();
+                }, 5000);
+            });
+        });
+
+        // Form validation
+        const contactForm = document.getElementById('contactForm');
+        const formInputs = contactForm.querySelectorAll('.form__input, .form__textarea');
+        
+        formInputs.forEach(input => {
+            input.addEventListener('blur', validateInput);
+            input.addEventListener('input', function() {
+                if (this.classList.contains('error')) {
+                    validateInput.call(this);
+                }
+            });
+        });
+        
+        function validateInput() {
+            const errorElement = this.nextElementSibling;
+            
+            if (this.validity.valid) {
+                this.classList.remove('error');
+                errorElement.classList.remove('visible');
+            } else {
+                this.classList.add('error');
+                errorElement.classList.add('visible');
+                
+                if (this.validity.valueMissing) {
+                    errorElement.textContent = 'Ovo polje je obavezno';
+                } else if (this.validity.typeMismatch) {
+                    if (this.type === 'email') {
+                        errorElement.textContent = 'Unesite ispravnu email adresu';
+                    } else if (this.type === 'tel') {
+                        errorElement.textContent = 'Unesite ispravan broj telefona';
+                    }
+                }
+            }
+        }
+        
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            let isValid = true;
+            
+            formInputs.forEach(input => {
+                if (!input.validity.valid) {
+                    isValid = false;
+                    input.classList.add('error');
+                    input.nextElementSibling.classList.add('visible');
+                }
+            });
+            
+            if (isValid) {
+                // In a real implementation, you would send the form data to the server
+                alert('Vaš zahtev je uspešno poslat! Kontaktiraćemo vas u najkraćem mogućem roku.');
+                contactForm.reset();
+            }
+        });
+
+        // Animate elements on scroll
+        const animateElements = document.querySelectorAll('.animate');
+        
+        function checkIfInView() {
+            const windowHeight = window.innerHeight;
+            const windowTopPosition = window.scrollY;
+            const windowBottomPosition = windowTopPosition + windowHeight;
+            
+            animateElements.forEach(element => {
+                const elementHeight = element.offsetHeight;
+                const elementTopPosition = element.offsetTop;
+                const elementBottomPosition = elementTopPosition + elementHeight;
+                
+                // Check if element is in viewport
+                if (
+                    (elementBottomPosition >= windowTopPosition) &&
+                    (elementTopPosition <= windowBottomPosition - 100)
+                ) {
+                    element.style.opacity = '1';
+                }
+            });
+        }
+        
+        window.addEventListener('scroll', checkIfInView);
+        window.addEventListener('resize', checkIfInView);
+        window.addEventListener('load', checkIfInView);
+    </script>
+</body>
+</html>
