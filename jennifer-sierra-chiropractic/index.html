@@ -1,0 +1,1643 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sierra Chiropractic | Dr. Jennifer & Steven Mathews | Clovis, CA</title>
+    <meta name="description" content="Sierra Chiropractic in Clovis, CA offers expert chiropractic care by Drs. Jennifer & Steven Mathews. Natural pain relief and wellness solutions for the whole family.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* CSS Variables for Semantic Color System */
+        :root {
+            /* Healthcare/Wellness Primary Palette */
+            --color-primary: #3a8fb7; /* Calming blue */
+            --color-primary-light: #b0e0e6; /* Powder blue */
+            --color-primary-dark: #1a5276; /* Deep blue */
+            --color-accent: #5cb85c; /* Healing green */
+            --color-accent-light: #d5ebd5; /* Light green */
+            
+            /* Neutrals */
+            --color-neutral-100: #ffffff;
+            --color-neutral-200: #f8f9fa;
+            --color-neutral-300: #e9ecef;
+            --color-neutral-400: #dee2e6;
+            --color-neutral-500: #adb5bd;
+            --color-neutral-600: #6c757d;
+            --color-neutral-700: #495057;
+            --color-neutral-800: #343a40;
+            --color-neutral-900: #212529;
+            
+            /* Functional Colors */
+            --color-text: var(--color-neutral-800);
+            --color-text-light: var(--color-neutral-600);
+            --color-background: var(--color-neutral-100);
+            --color-card-bg: var(--color-neutral-200);
+            --color-border: var(--color-neutral-400);
+            
+            /* Spacing System (8px grid) */
+            --space-1: 0.25rem; /* 4px */
+            --space-2: 0.5rem;  /* 8px */
+            --space-3: 1rem;    /* 16px */
+            --space-4: 1.5rem;  /* 24px */
+            --space-5: 2rem;    /* 32px */
+            --space-6: 3rem;    /* 48px */
+            --space-7: 4rem;    /* 64px */
+            --space-8: 6rem;    /* 96px */
+            
+            /* Animation System */
+            --transition-fast: 0.2s ease-in-out;
+            --transition-default: 0.3s ease-in-out;
+            --transition-slow: 0.5s ease-in-out;
+            
+            /* Typography */
+            --font-heading: 'Playfair Display', serif;
+            --font-body: 'Montserrat', sans-serif;
+            
+            /* Border Radius */
+            --radius-sm: 0.25rem;
+            --radius-md: 0.5rem;
+            --radius-lg: 1rem;
+            
+            /* Box Shadows */
+            --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
+        body {
+            font-family: var(--font-body);
+            color: var(--color-text);
+            line-height: 1.6;
+            background-color: var(--color-background);
+            overflow-x: hidden;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-heading);
+            font-weight: 600;
+            line-height: 1.2;
+            margin-bottom: var(--space-3);
+            color: var(--color-primary-dark);
+        }
+
+        h1 {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-weight: 700;
+        }
+
+        h2 {
+            font-size: clamp(1.75rem, 4vw, 2.5rem);
+            position: relative;
+            display: inline-block;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 80px;
+            height: 3px;
+            background-color: var(--color-accent);
+        }
+
+        h3 {
+            font-size: clamp(1.25rem, 3vw, 1.75rem);
+        }
+
+        p {
+            margin-bottom: var(--space-3);
+            color: var(--color-text);
+        }
+
+        a {
+            color: var(--color-primary);
+            text-decoration: none;
+            transition: var(--transition-default);
+        }
+
+        a:hover {
+            color: var(--color-primary-dark);
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--space-3);
+        }
+
+        .section {
+            padding: var(--space-6) 0;
+            position: relative;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        /* Button Styles */
+        .btn {
+            display: inline-block;
+            padding: var(--space-2) var(--space-4);
+            background-color: var(--color-primary);
+            color: white;
+            border: none;
+            border-radius: var(--radius-md);
+            font-family: var(--font-body);
+            font-weight: 500;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: var(--transition-default);
+            text-align: center;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .btn:hover {
+            background-color: var(--color-primary-dark);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+            color: white;
+        }
+
+        .btn--accent {
+            background-color: var(--color-accent);
+        }
+
+        .btn--accent:hover {
+            background-color: #4a9d4a;
+        }
+
+        .btn--lg {
+            padding: var(--space-3) var(--space-5);
+            font-size: 1.1rem;
+        }
+
+        /* Header & Navigation */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background-color: rgba(255, 255, 255, 0.95);
+            box-shadow: var(--shadow-sm);
+            padding: var(--space-2) 0;
+            transition: var(--transition-default);
+        }
+
+        .header.scrolled {
+            padding: var(--space-1) 0;
+            box-shadow: var(--shadow-md);
+        }
+
+        .header__container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--color-primary-dark);
+            transition: var(--transition-default);
+        }
+
+        .logo:hover {
+            color: var(--color-primary);
+        }
+
+        .logo__icon {
+            margin-right: var(--space-2);
+            color: var(--color-accent);
+        }
+
+        .nav {
+            display: none;
+        }
+
+        .nav__list {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            gap: var(--space-4);
+        }
+
+        .nav__link {
+            font-weight: 500;
+            font-size: 1rem;
+            color: var(--color-neutral-700);
+            padding: var(--space-1) 0;
+            position: relative;
+        }
+
+        .nav__link:hover {
+            color: var(--color-primary);
+        }
+
+        .nav__link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--color-primary);
+            transition: var(--transition-default);
+        }
+
+        .nav__link:hover::after {
+            width: 100%;
+        }
+
+        .nav__cta {
+            margin-left: var(--space-3);
+        }
+
+        .mobile-nav-toggle {
+            display: block;
+            background: transparent;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--color-primary);
+            cursor: pointer;
+            z-index: 2000;
+        }
+
+        .mobile-nav {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 80%;
+            height: 100vh;
+            background-color: var(--color-primary-dark);
+            padding: var(--space-6) var(--space-4);
+            z-index: 1500;
+            transition: var(--transition-default);
+            overflow-y: auto;
+        }
+
+        .mobile-nav.active {
+            right: 0;
+        }
+
+        .mobile-nav__list {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .mobile-nav__item {
+            margin-bottom: var(--space-3);
+        }
+
+        .mobile-nav__link {
+            font-size: 1.2rem;
+            color: white;
+            display: block;
+            padding: var(--space-2) 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .mobile-nav__link:hover {
+            color: var(--color-accent-light);
+        }
+
+        .mobile-nav-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: 1400;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition-default);
+        }
+
+        .mobile-nav-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding-top: calc(76px + var(--space-6));
+            padding-bottom: var(--space-6);
+            background: linear-gradient(135deg, var(--color-primary-light) 0%, var(--color-primary) 100%);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23ffffff' fill-opacity='0.1' fill-rule='evenodd'/%3E%3C/svg%3E");
+            opacity: 0.3;
+        }
+
+        .hero__container {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .hero__content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero__title {
+            color: white;
+            margin-bottom: var(--space-3);
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .hero__subtitle {
+            font-size: clamp(1.1rem, 2.5vw, 1.3rem);
+            margin-bottom: var(--space-4);
+            color: rgba(255, 255, 255, 0.9);
+            font-weight: 400;
+        }
+
+        .hero__cta {
+            margin-top: var(--space-4);
+        }
+
+        /* Services Section */
+        .services {
+            background-color: var(--color-neutral-200);
+            position: relative;
+        }
+
+        .services__title-container {
+            text-align: center;
+            margin-bottom: var(--space-5);
+        }
+
+        .services__title {
+            display: inline-block;
+        }
+
+        .services__grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: var(--space-4);
+            margin-top: var(--space-5);
+        }
+
+        .service-card {
+            background-color: var(--color-neutral-100);
+            border-radius: var(--radius-md);
+            padding: var(--space-4);
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition-default);
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .service-card__icon {
+            font-size: 2.5rem;
+            color: var(--color-primary);
+            margin-bottom: var(--space-3);
+        }
+
+        .service-card__title {
+            font-size: 1.3rem;
+            margin-bottom: var(--space-2);
+            color: var(--color-primary-dark);
+        }
+
+        .service-card__description {
+            color: var(--color-text-light);
+            font-size: 0.95rem;
+            flex-grow: 1;
+        }
+
+        .service-card__link {
+            margin-top: var(--space-3);
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .service-card__link i {
+            margin-left: var(--space-1);
+            transition: var(--transition-default);
+        }
+
+        .service-card__link:hover i {
+            transform: translateX(3px);
+        }
+
+        /* About Section */
+        .about {
+            background-color: var(--color-neutral-100);
+        }
+
+        .about__container {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-5);
+        }
+
+        .about__image-container {
+            flex: 1;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+        }
+
+        .about__image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition-default);
+        }
+
+        .about__image:hover {
+            transform: scale(1.02);
+        }
+
+        .about__content {
+            flex: 1;
+        }
+
+        .about__subtitle {
+            font-size: 1.1rem;
+            color: var(--color-primary);
+            margin-bottom: var(--space-2);
+            font-weight: 600;
+        }
+
+        .about__title {
+            margin-bottom: var(--space-3);
+        }
+
+        .about__text {
+            margin-bottom: var(--space-3);
+        }
+
+        .about__credentials {
+            margin-top: var(--space-4);
+            padding: var(--space-3);
+            border-left: 3px solid var(--color-primary);
+            background-color: var(--color-neutral-200);
+            border-radius: 0 var(--radius-md) var(--radius-md) 0;
+        }
+
+        .about__doctor {
+            margin-bottom: var(--space-4);
+        }
+
+        .about__doctor:last-child {
+            margin-bottom: 0;
+        }
+
+        .doctor__name {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--color-primary-dark);
+            margin-bottom: var(--space-1);
+        }
+
+        .doctor__credentials {
+            font-size: 0.9rem;
+            color: var(--color-text-light);
+            margin-bottom: var(--space-2);
+        }
+
+        /* Testimonials Section */
+        .testimonials {
+            background-color: var(--color-neutral-200);
+            position: relative;
+        }
+
+        .testimonials::before {
+            content: '"';
+            position: absolute;
+            top: 2rem;
+            left: 2rem;
+            font-size: 10rem;
+            font-family: var(--font-heading);
+            color: var(--color-primary-light);
+            opacity: 0.3;
+            line-height: 1;
+        }
+
+        .testimonials__title-container {
+            text-align: center;
+            margin-bottom: var(--space-5);
+            position: relative;
+            z-index: 1;
+        }
+
+        .testimonials__carousel {
+            position: relative;
+            padding: var(--space-4) 0;
+            overflow: hidden;
+        }
+
+        .testimonial-slide {
+            display: none;
+            animation: fadeIn 0.8s;
+        }
+
+        .testimonial-slide.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .testimonial {
+            background-color: var(--color-neutral-100);
+            border-radius: var(--radius-md);
+            padding: var(--space-4);
+            box-shadow: var(--shadow-md);
+            margin: 0 auto;
+            max-width: 800px;
+            position: relative;
+        }
+
+        .testimonial__content {
+            font-style: italic;
+            font-size: 1.1rem;
+            margin-bottom: var(--space-3);
+            color: var(--color-text);
+            position: relative;
+            z-index: 1;
+        }
+
+        .testimonial__rating {
+            color: #FFD700;
+            font-size: 1.2rem;
+            margin-bottom: var(--space-3);
+        }
+
+        .testimonial__author {
+            display: flex;
+            align-items: center;
+            gap: var(--space-3);
+        }
+
+        .testimonial__avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            overflow: hidden;
+            background-color: var(--color-primary-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--color-primary-dark);
+            font-weight: 600;
+            font-size: 1.5rem;
+        }
+
+        .testimonial__info {
+            flex: 1;
+        }
+
+        .testimonial__name {
+            font-weight: 600;
+            font-size: 1.1rem;
+            color: var(--color-primary-dark);
+        }
+
+        .testimonial__title {
+            font-size: 0.9rem;
+            color: var(--color-text-light);
+        }
+
+        .testimonial-nav {
+            display: flex;
+            justify-content: center;
+            margin-top: var(--space-4);
+            gap: var(--space-1);
+        }
+
+        .testimonial-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: var(--color-neutral-400);
+            cursor: pointer;
+            transition: var(--transition-default);
+        }
+
+        .testimonial-dot.active {
+            background-color: var(--color-primary);
+            transform: scale(1.2);
+        }
+
+        /* Contact Section */
+        .contact {
+            background-color: var(--color-neutral-100);
+            position: relative;
+        }
+
+        .contact__container {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-5);
+        }
+
+        .contact__info {
+            flex: 1;
+        }
+
+        .contact__form-container {
+            flex: 1;
+        }
+
+        .contact__title {
+            margin-bottom: var(--space-4);
+        }
+
+        .contact__text {
+            margin-bottom: var(--space-4);
+        }
+
+        .contact__details {
+            margin-bottom: var(--space-4);
+        }
+
+        .contact__item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: var(--space-3);
+        }
+
+        .contact__item-icon {
+            font-size: 1.2rem;
+            color: var(--color-primary);
+            margin-right: var(--space-2);
+            margin-top: 4px;
+        }
+
+        .contact__item-content {
+            flex: 1;
+        }
+
+        .contact__item-title {
+            font-weight: 600;
+            margin-bottom: 4px;
+            color: var(--color-primary-dark);
+        }
+
+        .contact__map {
+            height: 250px;
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .contact__map iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        .contact-form {
+            background-color: var(--color-neutral-200);
+            padding: var(--space-4);
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .form-group {
+            margin-bottom: var(--space-3);
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: var(--space-1);
+            font-weight: 500;
+            color: var(--color-primary-dark);
+        }
+
+        .form-control {
+            width: 100%;
+            padding: var(--space-2);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius-sm);
+            font-family: var(--font-body);
+            font-size: 1rem;
+            transition: var(--transition-default);
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--color-primary);
+            box-shadow: 0 0 0 3px rgba(58, 143, 183, 0.15);
+        }
+
+        .form-control.error {
+            border-color: #dc3545;
+        }
+
+        .form-error-message {
+            color: #dc3545;
+            font-size: 0.85rem;
+            margin-top: var(--space-1);
+            display: none;
+        }
+
+        .form-error-message.visible {
+            display: block;
+        }
+
+        textarea.form-control {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .form-submit {
+            width: 100%;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: var(--color-primary-dark);
+            color: white;
+            padding: var(--space-6) 0 var(--space-3);
+        }
+
+        .footer__container {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-5);
+        }
+
+        .footer__logo {
+            margin-bottom: var(--space-3);
+            color: white;
+            font-size: 1.8rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+        }
+
+        .footer__logo-icon {
+            margin-right: var(--space-2);
+            color: var(--color-accent);
+        }
+
+        .footer__content {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-5);
+        }
+
+        .footer__column {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .footer__heading {
+            color: white;
+            font-size: 1.2rem;
+            margin-bottom: var(--space-3);
+            position: relative;
+            padding-bottom: var(--space-2);
+        }
+
+        .footer__heading::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 2px;
+            background-color: var(--color-accent);
+        }
+
+        .footer__nav-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer__nav-item {
+            margin-bottom: var(--space-2);
+        }
+
+        .footer__nav-link {
+            color: rgba(255, 255, 255, 0.8);
+            transition: var(--transition-default);
+        }
+
+        .footer__nav-link:hover {
+            color: white;
+            padding-left: var(--space-1);
+        }
+
+        .footer__contact-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: var(--space-2);
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .footer__contact-icon {
+            margin-right: var(--space-2);
+            color: var(--color-accent);
+        }
+
+        .footer__social {
+            display: flex;
+            gap: var(--space-2);
+        }
+
+        .footer__social-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: white;
+            transition: var(--transition-default);
+        }
+
+        .footer__social-link:hover {
+            background-color: var(--color-accent);
+            transform: translateY(-3px);
+            color: white;
+        }
+
+        .footer__bottom {
+            padding-top: var(--space-3);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: center;
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.9rem;
+        }
+
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: var(--color-accent);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition-default);
+            z-index: 99;
+            box-shadow: var(--shadow-md);
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            background-color: var(--color-primary);
+            transform: translateY(-3px);
+        }
+
+        /* Responsive Styles */
+        @media (min-width: 640px) {
+            .contact__container {
+                flex-direction: row;
+                align-items: stretch;
+            }
+            
+            .footer__content {
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
+            
+            .services__grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 768px) {
+            .nav {
+                display: block;
+            }
+            
+            .mobile-nav-toggle {
+                display: none;
+            }
+            
+            .about__container {
+                flex-direction: row;
+            }
+            
+            .contact__container {
+                flex-direction: row;
+            }
+            
+            .services__grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .services__grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            
+            .hero__content {
+                padding: var(--space-6) 0;
+            }
+            
+            .footer__content {
+                flex-wrap: nowrap;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container header__container">
+            <a href="#" class="logo">
+                <i class="fas fa-spine logo__icon"></i>
+                Sierra Chiropractic
+            </a>
+            
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="#home" class="nav__link">Home</a></li>
+                    <li class="nav__item"><a href="#services" class="nav__link">Services</a></li>
+                    <li class="nav__item"><a href="#about" class="nav__link">About Us</a></li>
+                    <li class="nav__item"><a href="#testimonials" class="nav__link">Testimonials</a></li>
+                    <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+                    <li class="nav__item"><a href="tel:+15598713223" class="btn btn--accent nav__cta">Call Now</a></li>
+                </ul>
+            </nav>
+            
+            <button class="mobile-nav-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+    
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav-overlay"></div>
+    <nav class="mobile-nav">
+        <ul class="mobile-nav__list">
+            <li class="mobile-nav__item"><a href="#home" class="mobile-nav__link">Home</a></li>
+            <li class="mobile-nav__item"><a href="#services" class="mobile-nav__link">Services</a></li>
+            <li class="mobile-nav__item"><a href="#about" class="mobile-nav__link">About Us</a></li>
+            <li class="mobile-nav__item"><a href="#testimonials" class="mobile-nav__link">Testimonials</a></li>
+            <li class="mobile-nav__item"><a href="#contact" class="mobile-nav__link">Contact</a></li>
+            <li class="mobile-nav__item"><a href="tel:+15598713223" class="mobile-nav__link"><i class="fas fa-phone"></i> (559) 871-3223</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Hero Section -->
+    <section class="hero section" id="home">
+        <div class="container hero__container">
+            <div class="hero__content">
+                <h1 class="hero__title">Restore Health & Wellness with Expert Chiropractic Care</h1>
+                <p class="hero__subtitle">Experience natural pain relief and improved mobility with Drs. Steven & Jennifer Mathews, your trusted chiropractic team in Clovis, CA.</p>
+                <div class="hero__cta">
+                    <a href="#contact" class="btn btn--accent btn--lg">Schedule Appointment</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Services Section -->
+    <section class="services section" id="services">
+        <div class="container">
+            <div class="services__title-container">
+                <h2 class="services__title">Our Services</h2>
+                <p>Comprehensive care tailored to your unique health needs</p>
+            </div>
+            
+            <div class="services__grid">
+                <div class="service-card">
+                    <div class="service-card__icon">
+                        <i class="fas fa-align-center"></i>
+                    </div>
+                    <h3 class="service-card__title">Spinal Adjustments</h3>
+                    <p class="service-card__description">Precise manual adjustments to realign the spine, reduce pain, and improve physical function and mobility.</p>
+                    <a href="#contact" class="service-card__link">Learn more <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-card__icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3 class="service-card__title">Neurological Care</h3>
+                    <p class="service-card__description">Treatment focused on nervous system health to address headaches, nerve pain, and neurological conditions.</p>
+                    <a href="#contact" class="service-card__link">Learn more <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-card__icon">
+                        <i class="fas fa-hands"></i>
+                    </div>
+                    <h3 class="service-card__title">Therapeutic Massage</h3>
+                    <p class="service-card__description">Professional massage therapy to relieve muscle tension, improve circulation, and enhance recovery from injuries.</p>
+                    <a href="#contact" class="service-card__link">Learn more <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-card__icon">
+                        <i class="fas fa-walking"></i>
+                    </div>
+                    <h3 class="service-card__title">Rehabilitation Exercises</h3>
+                    <p class="service-card__description">Customized exercise programs designed to strengthen muscles, improve flexibility, and prevent future injuries.</p>
+                    <a href="#contact" class="service-card__link">Learn more <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-card__icon">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <h3 class="service-card__title">Nutritional Counseling</h3>
+                    <p class="service-card__description">Expert guidance on nutrition and supplements to support your body's natural healing processes and overall wellness.</p>
+                    <a href="#contact" class="service-card__link">Learn more <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-card__icon">
+                        <i class="fas fa-user-md"></i>
+                    </div>
+                    <h3 class="service-card__title">Wellness Care</h3>
+                    <p class="service-card__description">Preventative chiropractic care that helps maintain optimal health and prevents future injuries or conditions.</p>
+                    <a href="#contact" class="service-card__link">Learn more <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- About Section -->
+    <section class="about section" id="about">
+        <div class="container about__container">
+            <div class="about__image-container">
+                <img src="https://www.sierrachiropractic.com/wp-content/uploads/2014/02/about-featured.jpg" alt="Drs. Steven and Jennifer Mathews, Chiropractors at Sierra Chiropractic" class="about__image">
+            </div>
+            
+            <div class="about__content">
+                <p class="about__subtitle">Meet Our Doctors</p>
+                <h2 class="about__title">Expert Chiropractic Care by Husband & Wife Team</h2>
+                <p class="about__text">At Sierra Chiropractic, we're dedicated to providing exceptional care that helps you achieve optimal health and wellness naturally. Our husband-and-wife team brings together decades of experience, advanced training, and a genuine passion for helping patients live pain-free lives.</p>
+                <p class="about__text">What sets us apart is our personalized approach—we take the time to understand your unique health concerns and develop customized treatment plans that address the root cause of your problems, not just the symptoms.</p>
+                
+                <div class="about__credentials">
+                    <div class="about__doctor">
+                        <div class="doctor__name">Dr. Steven R. Mathews, D.C., CMT</div>
+                        <div class="doctor__credentials">Life Chiropractic College West Graduate</div>
+                        <p>Dr. Steve has practiced chiropractic since 2001 and has been a certified massage therapist since 1995. His unique background includes eight years as a Fresno County paramedic before pursuing his chiropractic education, giving him exceptional insight into emergency care and patient needs.</p>
+                    </div>
+                    
+                    <div class="about__doctor">
+                        <div class="doctor__name">Dr. Jennifer M. Mathews, D.C.</div>
+                        <div class="doctor__credentials">Fresno State & Life Chiropractic College West Graduate</div>
+                        <p>Dr. Jen earned her biology-physiology degree from Fresno State in 1999 followed by her Doctor of Chiropractic from Life Chiropractic College West in 2002. She brings specialized expertise in family wellness care and women's health issues to our practice.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Testimonials Section -->
+    <section class="testimonials section" id="testimonials">
+        <div class="container">
+            <div class="testimonials__title-container">
+                <h2 class="testimonials__title">Patient Success Stories</h2>
+                <p>See what our patients have to say about their experiences at Sierra Chiropractic</p>
+            </div>
+            
+            <div class="testimonials__carousel">
+                <div class="testimonial-slide active">
+                    <div class="testimonial">
+                        <div class="testimonial__rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial__content">"After years of chronic back pain and trying numerous treatments, I found Sierra Chiropractic. Dr. Steve and Dr. Jen's comprehensive approach has been life-changing. For the first time in 10 years, I'm living without constant pain. Their expertise, personalized care, and genuine concern for my well-being sets them apart from any other healthcare providers I've seen."</p>
+                        <div class="testimonial__author">
+                            <div class="testimonial__avatar">ML</div>
+                            <div class="testimonial__info">
+                                <div class="testimonial__name">Michael Lewis</div>
+                                <div class="testimonial__title">Patient since 2018</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-slide">
+                    <div class="testimonial">
+                        <div class="testimonial__rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial__content">"I started seeing Dr. Jennifer after a car accident left me with severe neck pain and headaches. She took the time to thoroughly assess my condition and develop a treatment plan specifically for my needs. Three months later, I'm pain-free and have regained full mobility. The entire staff at Sierra Chiropractic is professional, caring, and truly invested in their patients' recovery."</p>
+                        <div class="testimonial__author">
+                            <div class="testimonial__avatar">SS</div>
+                            <div class="testimonial__info">
+                                <div class="testimonial__name">Sarah Smith</div>
+                                <div class="testimonial__title">Patient since 2020</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-slide">
+                    <div class="testimonial">
+                        <div class="testimonial__rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial__content">"As someone who was skeptical about chiropractic care, I can't believe the difference Dr. Steve has made in my life. I suffered from migraines for over 15 years, trying countless medications with little relief. After just a few adjustments, my migraines decreased dramatically in both frequency and intensity. The combination of chiropractic care and Dr. Steve's nutritional advice has given me my life back. I couldn't recommend Sierra Chiropractic more highly!"</p>
+                        <div class="testimonial__author">
+                            <div class="testimonial__avatar">JR</div>
+                            <div class="testimonial__info">
+                                <div class="testimonial__name">James Rodriguez</div>
+                                <div class="testimonial__title">Patient since 2019</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-nav">
+                    <div class="testimonial-dot active" data-slide="0"></div>
+                    <div class="testimonial-dot" data-slide="1"></div>
+                    <div class="testimonial-dot" data-slide="2"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section class="contact section" id="contact">
+        <div class="container contact__container">
+            <div class="contact__info">
+                <h2 class="contact__title">Get in Touch</h2>
+                <p class="contact__text">Have questions or ready to schedule your appointment? Contact us today to take the first step toward better health and pain-free living.</p>
+                
+                <div class="contact__details">
+                    <div class="contact__item">
+                        <div class="contact__item-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact__item-content">
+                            <div class="contact__item-title">Our Location</div>
+                            <p>1805 Herndon Ave, Suite F<br>Clovis, CA 93611</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact__item">
+                        <div class="contact__item-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div class="contact__item-content">
+                            <div class="contact__item-title">Phone</div>
+                            <p><a href="tel:+15598713223">(559) 871-3223</a></p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact__item">
+                        <div class="contact__item-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact__item-content">
+                            <div class="contact__item-title">Email</div>
+                            <p><a href="mailto:info@sierrachiropractic.com">info@sierrachiropractic.com</a></p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact__item">
+                        <div class="contact__item-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="contact__item-content">
+                            <div class="contact__item-title">Office Hours</div>
+                            <p>Monday - Friday: 9:00 AM - 6:00 PM<br>Saturday: 9:00 AM - 1:00 PM<br>Sunday: Closed</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact__map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3194.5115091326347!2d-119.75839892367588!3d36.836999966164384!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80945de1549e71dd%3A0xebed0c4c64ef9fe3!2s1805%20Herndon%20Ave%20f%2C%20Clovis%2C%20CA%2093611!5e0!3m2!1sen!2sus!4v1687295090149!5m2!1sen!2sus" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+            
+            <div class="contact__form-container">
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <label for="name" class="form-label">Full Name</label>
+                        <input type="text" id="name" class="form-control" required>
+                        <div class="form-error-message" id="nameError">Please enter your name</div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email" class="form-label">Email Address</label>
+                        <input type="email" id="email" class="form-control" required>
+                        <div class="form-error-message" id="emailError">Please enter a valid email address</div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone" class="form-label">Phone Number</label>
+                        <input type="tel" id="phone" class="form-control" required>
+                        <div class="form-error-message" id="phoneError">Please enter a valid phone number</div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="service" class="form-label">Service Interested In</label>
+                        <select id="service" class="form-control" required>
+                            <option value="">Select a service</option>
+                            <option value="Spinal Adjustments">Spinal Adjustments</option>
+                            <option value="Neurological Care">Neurological Care</option>
+                            <option value="Therapeutic Massage">Therapeutic Massage</option>
+                            <option value="Rehabilitation Exercises">Rehabilitation Exercises</option>
+                            <option value="Nutritional Counseling">Nutritional Counseling</option>
+                            <option value="Wellness Care">Wellness Care</option>
+                            <option value="Other">Other</option>
+                        </select>
+                        <div class="form-error-message" id="serviceError">Please select a service</div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message" class="form-label">Message</label>
+                        <textarea id="message" class="form-control" placeholder="Tell us about your health concerns or questions..."></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn btn--accent form-submit">Schedule Appointment</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer__container">
+            <div class="footer__content">
+                <div class="footer__column">
+                    <a href="#" class="footer__logo">
+                        <i class="fas fa-spine footer__logo-icon"></i>
+                        Sierra Chiropractic
+                    </a>
+                    <p>Expert chiropractic care provided by Drs. Steven & Jennifer Mathews in Clovis, CA. We're dedicated to helping you achieve optimal health and wellness naturally.</p>
+                    <div class="footer__social">
+                        <a href="#" class="footer__social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="footer__social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="footer__social-link"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="footer__social-link"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer__column">
+                    <h3 class="footer__heading">Quick Links</h3>
+                    <ul class="footer__nav-list">
+                        <li class="footer__nav-item"><a href="#home" class="footer__nav-link">Home</a></li>
+                        <li class="footer__nav-item"><a href="#services" class="footer__nav-link">Services</a></li>
+                        <li class="footer__nav-item"><a href="#about" class="footer__nav-link">About Us</a></li>
+                        <li class="footer__nav-item"><a href="#testimonials" class="footer__nav-link">Testimonials</a></li>
+                        <li class="footer__nav-item"><a href="#contact" class="footer__nav-link">Contact</a></li>
+                        <li class="footer__nav-item"><a href="#" class="footer__nav-link">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer__column">
+                    <h3 class="footer__heading">Our Services</h3>
+                    <ul class="footer__nav-list">
+                        <li class="footer__nav-item"><a href="#services" class="footer__nav-link">Spinal Adjustments</a></li>
+                        <li class="footer__nav-item"><a href="#services" class="footer__nav-link">Neurological Care</a></li>
+                        <li class="footer__nav-item"><a href="#services" class="footer__nav-link">Therapeutic Massage</a></li>
+                        <li class="footer__nav-item"><a href="#services" class="footer__nav-link">Rehabilitation Exercises</a></li>
+                        <li class="footer__nav-item"><a href="#services" class="footer__nav-link">Nutritional Counseling</a></li>
+                        <li class="footer__nav-item"><a href="#services" class="footer__nav-link">Wellness Care</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer__column">
+                    <h3 class="footer__heading">Contact Info</h3>
+                    <div class="footer__contact-item">
+                        <i class="fas fa-map-marker-alt footer__contact-icon"></i>
+                        <span>1805 Herndon Ave, Suite F<br>Clovis, CA 93611</span>
+                    </div>
+                    <div class="footer__contact-item">
+                        <i class="fas fa-phone-alt footer__contact-icon"></i>
+                        <span><a href="tel:+15598713223">(559) 871-3223</a></span>
+                    </div>
+                    <div class="footer__contact-item">
+                        <i class="fas fa-envelope footer__contact-icon"></i>
+                        <span><a href="mailto:info@sierrachiropractic.com">info@sierrachiropractic.com</a></span>
+                    </div>
+                    <div class="footer__contact-item">
+                        <i class="fas fa-clock footer__contact-icon"></i>
+                        <span>Mon-Fri: 9AM-6PM<br>Sat: 9AM-1PM</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer__bottom">
+                <p>&copy; <span id="currentYear">2023</span> Sierra Chiropractic. All Rights Reserved. | Website designed with care.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top" id="backToTop">
+        <i class="fas fa-chevron-up"></i>
+    </a>
+    
+    <!-- JavaScript -->
+    <script>
+        // Update current year
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+        
+        // Mobile Navigation Toggle
+        const mobileNavToggle = document.querySelector('.mobile-nav-toggle');
+        const mobileNav = document.querySelector('.mobile-nav');
+        const mobileNavOverlay = document.querySelector('.mobile-nav-overlay');
+        
+        function toggleMobileNav() {
+            mobileNav.classList.toggle('active');
+            mobileNavOverlay.classList.toggle('active');
+            document.body.classList.toggle('no-scroll');
+        }
+        
+        mobileNavToggle.addEventListener('click', toggleMobileNav);
+        mobileNavOverlay.addEventListener('click', toggleMobileNav);
+        
+        // Close mobile nav when clicking on a link
+        const mobileNavLinks = document.querySelectorAll('.mobile-nav__link');
+        mobileNavLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileNav.classList.remove('active');
+                mobileNavOverlay.classList.remove('active');
+                document.body.classList.remove('no-scroll');
+            });
+        });
+        
+        // Sticky header
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+        
+        // Back to top button
+        const backToTopBtn = document.getElementById('backToTop');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 500) {
+                backToTopBtn.classList.add('visible');
+            } else {
+                backToTopBtn.classList.remove('visible');
+            }
+        });
+        
+        backToTopBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // Smooth scrolling for all anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                if (this.getAttribute('href') !== '#') {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    
+                    if (targetElement) {
+                        const headerHeight = document.querySelector('.header').offsetHeight;
+                        const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+                        
+                        window.scrollTo({
+                            top: targetPosition,
+                            behavior: 'smooth'
+                        });
+                    }
+                }
+            });
+        });
+        
+        // Testimonial carousel
+        const testimonialSlides = document.querySelectorAll('.testimonial-slide');
+        const testimonialDots = document.querySelectorAll('.testimonial-dot');
+        let currentSlide = 0;
+        
+        function showSlide(index) {
+            testimonialSlides.forEach(slide => {
+                slide.classList.remove('active');
+            });
+            testimonialDots.forEach(dot => {
+                dot.classList.remove('active');
+            });
+            
+            testimonialSlides[index].classList.add('active');
+            testimonialDots[index].classList.add('active');
+            currentSlide = index;
+        }
+        
+        testimonialDots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                showSlide(index);
+            });
+        });
+        
+        function nextSlide() {
+            let newIndex = currentSlide + 1;
+            if (newIndex >= testimonialSlides.length) {
+                newIndex = 0;
+            }
+            showSlide(newIndex);
+        }
+        
+        // Auto-advance testimonials
+        setInterval(nextSlide, 6000);
+        
+        // Form validation
+        const contactForm = document.getElementById('contactForm');
+        
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            let isValid = true;
+            
+            // Name validation
+            const nameInput = document.getElementById('name');
+            const nameError = document.getElementById('nameError');
+            if (!nameInput.value.trim()) {
+                nameInput.classList.add('error');
+                nameError.classList.add('visible');
+                isValid = false;
+            } else {
+                nameInput.classList.remove('error');
+                nameError.classList.remove('visible');
+            }
+            
+            // Email validation
+            const emailInput = document.getElementById('email');
+            const emailError = document.getElementById('emailError');
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailPattern.test(emailInput.value.trim())) {
+                emailInput.classList.add('error');
+                emailError.classList.add('visible');
+                isValid = false;
+            } else {
+                emailInput.classList.remove('error');
+                emailError.classList.remove('visible');
+            }
+            
+            // Phone validation
+            const phoneInput = document.getElementById('phone');
+            const phoneError = document.getElementById('phoneError');
+            const phonePattern = /^\(?\d{3}\)?[-.\s]?\d{3}[-.\s]?\d{4}$/;
+            if (!phonePattern.test(phoneInput.value.trim())) {
+                phoneInput.classList.add('error');
+                phoneError.classList.add('visible');
+                isValid = false;
+            } else {
+                phoneInput.classList.remove('error');
+                phoneError.classList.remove('visible');
+            }
+            
+            // Service validation
+            const serviceInput = document.getElementById('service');
+            const serviceError = document.getElementById('serviceError');
+            if (!serviceInput.value) {
+                serviceInput.classList.add('error');
+                serviceError.classList.add('visible');
+                isValid = false;
+            } else {
+                serviceInput.classList.remove('error');
+                serviceError.classList.remove('visible');
+            }
+            
+            if (isValid) {
+                // Form is valid, would normally submit to server
+                alert('Thank you! Your appointment request has been received. We will contact you shortly to confirm your appointment.');
+                contactForm.reset();
+            }
+        });
+        
+        // Real-time validation
+        const formInputs = document.querySelectorAll('.form-control');
+        formInputs.forEach(input => {
+            input.addEventListener('blur', () => {
+                validateInput(input);
+            });
+            
+            input.addEventListener('input', () => {
+                validateInput(input);
+            });
+        });
+        
+        function validateInput(input) {
+            switch(input.id) {
+                case 'name':
+                    if (!input.value.trim()) {
+                        input.classList.add('error');
+                        document.getElementById('nameError').classList.add('visible');
+                    } else {
+                        input.classList.remove('error');
+                        document.getElementById('nameError').classList.remove('visible');
+                    }
+                    break;
+                    
+                case 'email':
+                    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                    if (!emailPattern.test(input.value.trim())) {
+                        input.classList.add('error');
+                        document.getElementById('emailError').classList.add('visible');
+                    } else {
+                        input.classList.remove('error');
+                        document.getElementById('emailError').classList.remove('visible');
+                    }
+                    break;
+                    
+                case 'phone':
+                    const phonePattern = /^\(?\d{3}\)?[-.\s]?\d{3}[-.\s]?\d{4}$/;
+                    if (!phonePattern.test(input.value.trim())) {
+                        input.classList.add('error');
+                        document.getElementById('phoneError').classList.add('visible');
+                    } else {
+                        input.classList.remove('error');
+                        document.getElementById('phoneError').classList.remove('visible');
+                    }
+                    break;
+                    
+                case 'service':
+                    if (!input.value) {
+                        input.classList.add('error');
+                        document.getElementById('serviceError').classList.add('visible');
+                    } else {
+                        input.classList.remove('error');
+                        document.getElementById('serviceError').classList.remove('visible');
+                    }
+                    break;
+            }
+        }
+    </script>
+</body>
+</html>
