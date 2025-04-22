@@ -1,0 +1,1438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Dr. Russell Gilstrap - Chiropractic Physician & Family Nurse Practitioner in Tulsa. Providing holistic care since 1987.">
+    <title>Gilstrap Clinic | Chiropractic & Holistic Care in Tulsa</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Color System - Healthcare/Wellness Palette */
+        :root {
+            --primary: #2C7873; /* Healing teal */
+            --primary-light: #6FB98F; /* Refreshing mint */
+            --primary-dark: #004445; /* Deep healing */
+            --accent: #F7F9F9; /* Clean white */
+            --text-dark: #2B2B2B; /* Rich black */
+            --text-medium: #555555; /* Balanced gray */
+            --text-light: #888888; /* Soft gray */
+            --space-xs: 8px;
+            --space-sm: 16px;
+            --space-md: 24px;
+            --space-lg: 48px;
+            --space-xl: 64px;
+            --border-radius: 8px;
+            --shadow-sm: 0 4px 6px rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 6px 12px rgba(0, 0, 0, 0.08);
+            --shadow-lg: 0 15px 25px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+
+        /* Reset & Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--text-dark);
+            line-height: 1.6;
+            background-color: #FAFAFA;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+            line-height: 1.3;
+            margin-bottom: var(--space-md);
+            color: var(--primary-dark);
+        }
+
+        h1 {
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            letter-spacing: -0.5px;
+        }
+
+        h2 {
+            font-size: clamp(2rem, 4vw, 2.5rem);
+            position: relative;
+            margin-bottom: var(--space-lg);
+        }
+
+        h2:after {
+            content: '';
+            position: absolute;
+            width: 80px;
+            height: 3px;
+            background-color: var(--primary);
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        h3 {
+            font-size: clamp(1.5rem, 3vw, 1.8rem);
+        }
+
+        p {
+            margin-bottom: var(--space-md);
+            color: var(--text-medium);
+            font-size: 1rem;
+            line-height: 1.8;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        a {
+            color: var(--primary);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        a:hover {
+            color: var(--primary-dark);
+        }
+
+        section {
+            padding: var(--space-xl) var(--space-md);
+            position: relative;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--space-md);
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 28px;
+            background-color: var(--primary);
+            color: white;
+            border: none;
+            border-radius: var(--border-radius);
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: var(--transition);
+            text-align: center;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .btn:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+            color: white;
+        }
+
+        .btn--outline {
+            background-color: transparent;
+            border: 2px solid var(--primary);
+            color: var(--primary);
+        }
+
+        .btn--outline:hover {
+            background-color: var(--primary);
+            color: white;
+        }
+
+        /* Header & Navigation */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.98);
+            box-shadow: var(--shadow-sm);
+            z-index: 1000;
+            padding: var(--space-sm) 0;
+            transition: var(--transition);
+        }
+
+        .header--scrolled {
+            padding: 10px 0;
+            box-shadow: var(--shadow-md);
+        }
+
+        .header__container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary-dark);
+            display: flex;
+            align-items: center;
+        }
+
+        .logo i {
+            margin-right: var(--space-xs);
+            color: var(--primary);
+        }
+
+        .nav {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav__links {
+            display: none;
+        }
+
+        .nav__link {
+            margin-left: var(--space-md);
+            color: var(--text-dark);
+            font-weight: 500;
+            position: relative;
+        }
+
+        .nav__link:after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--primary);
+            transition: var(--transition);
+        }
+
+        .nav__link:hover:after {
+            width: 100%;
+        }
+
+        .header__cta {
+            margin-left: var(--space-md);
+        }
+
+        .mobile-toggle {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+            z-index: 1001;
+        }
+
+        .mobile-toggle span {
+            display: block;
+            width: 25px;
+            height: 2px;
+            background-color: var(--primary-dark);
+            position: relative;
+            transition: var(--transition);
+        }
+
+        .mobile-toggle span:before,
+        .mobile-toggle span:after {
+            content: '';
+            position: absolute;
+            width: 25px;
+            height: 2px;
+            background-color: var(--primary-dark);
+            transition: var(--transition);
+        }
+
+        .mobile-toggle span:before {
+            top: -8px;
+        }
+
+        .mobile-toggle span:after {
+            top: 8px;
+        }
+
+        .mobile-menu {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 80%;
+            max-width: 400px;
+            height: 100vh;
+            background-color: white;
+            box-shadow: var(--shadow-lg);
+            z-index: 1000;
+            padding: var(--space-xl) var(--space-md);
+            display: flex;
+            flex-direction: column;
+            transition: var(--transition);
+        }
+
+        .mobile-menu.active {
+            right: 0;
+        }
+
+        .mobile-menu__link {
+            font-size: 1.2rem;
+            padding: var(--space-sm) 0;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            display: block;
+        }
+
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+            z-index: 999;
+        }
+
+        .overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 0;
+            margin-top: 80px;
+            background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+            position: relative;
+            overflow: hidden;
+            color: white;
+        }
+
+        .hero:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            width: 40%;
+            background-color: rgba(255, 255, 255, 0.1);
+            transform: skewX(-15deg) translateX(10%);
+        }
+
+        .hero__container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 90vh;
+            padding: var(--space-xl) var(--space-md);
+            position: relative;
+            z-index: 2;
+            text-align: center;
+        }
+
+        .hero__content {
+            max-width: 800px;
+        }
+
+        .hero h1 {
+            color: white;
+            margin-bottom: var(--space-md);
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .hero p {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.2rem;
+            margin-bottom: var(--space-lg);
+            animation: fadeInUp 1s ease-out 0.2s forwards;
+            opacity: 0;
+        }
+
+        .hero__cta {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-sm);
+            animation: fadeInUp 1s ease-out 0.4s forwards;
+            opacity: 0;
+        }
+
+        .hero__btn {
+            background-color: white;
+            color: var(--primary-dark);
+        }
+
+        .hero__btn:hover {
+            background-color: var(--accent);
+            color: var(--primary-dark);
+        }
+
+        .hero__btn--outline {
+            background-color: transparent;
+            border: 2px solid white;
+            color: white;
+        }
+
+        .hero__btn--outline:hover {
+            background-color: white;
+            color: var(--primary-dark);
+        }
+
+        /* Services Section */
+        .services {
+            background-color: white;
+            position: relative;
+        }
+
+        .services:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 100px;
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.03), transparent);
+        }
+
+        .services__grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: var(--space-md);
+            margin-top: var(--space-lg);
+        }
+
+        .service-card {
+            background-color: white;
+            border-radius: var(--border-radius);
+            padding: var(--space-md);
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .service-card:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 0;
+            background-color: var(--primary);
+            transition: var(--transition);
+        }
+
+        .service-card:hover:before {
+            height: 100%;
+        }
+
+        .service-card__icon {
+            width: 70px;
+            height: 70px;
+            margin: 0 auto var(--space-md);
+            background-color: rgba(44, 120, 115, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+            font-size: 28px;
+            transition: var(--transition);
+        }
+
+        .service-card:hover .service-card__icon {
+            background-color: var(--primary);
+            color: white;
+            transform: rotateY(180deg);
+        }
+
+        .service-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: var(--space-sm);
+        }
+
+        .service-card p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        /* About Section */
+        .about {
+            background-color: #F5F7F7;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .about:after {
+            content: '';
+            position: absolute;
+            bottom: -50px;
+            right: -50px;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background-color: rgba(44, 120, 115, 0.05);
+            z-index: 1;
+        }
+
+        .about__container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .about__content {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .about__image {
+            width: 100%;
+            max-width: 400px;
+            border-radius: var(--border-radius);
+            margin-bottom: var(--space-lg);
+            box-shadow: var(--shadow-md);
+            border: 5px solid white;
+            overflow: hidden;
+        }
+
+        .about__image img {
+            transition: var(--transition);
+            width: 100%;
+        }
+
+        .about__image:hover img {
+            transform: scale(1.02);
+        }
+
+        .about__credentials {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: var(--space-sm);
+            margin-top: var(--space-md);
+        }
+
+        .credential {
+            background-color: white;
+            padding: var(--space-xs) var(--space-sm);
+            border-radius: 30px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: var(--primary-dark);
+            box-shadow: var(--shadow-sm);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        /* Testimonials Section */
+        .testimonials {
+            background-color: white;
+            position: relative;
+        }
+
+        .testimonials__container {
+            max-width: 1000px;
+        }
+
+        .testimonial-slider {
+            position: relative;
+            overflow: hidden;
+            padding: var(--space-md) 0;
+        }
+
+        .testimonial-track {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+
+        .testimonial {
+            min-width: 100%;
+            padding: 0 var(--space-sm);
+            flex: 1 0 100%;
+        }
+
+        .testimonial__inner {
+            background-color: #F5F7F7;
+            border-radius: var(--border-radius);
+            padding: var(--space-lg);
+            box-shadow: var(--shadow-sm);
+            position: relative;
+        }
+
+        .testimonial__inner:before {
+            content: '\201C';
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-size: 4rem;
+            font-family: Georgia, serif;
+            color: rgba(44, 120, 115, 0.2);
+            line-height: 1;
+        }
+
+        .testimonial__content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .testimonial__stars {
+            color: #FFD700;
+            margin-bottom: var(--space-sm);
+        }
+
+        .testimonial__text {
+            font-style: italic;
+            margin-bottom: var(--space-md);
+        }
+
+        .testimonial__author {
+            display: flex;
+            align-items: center;
+        }
+
+        .testimonial__avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-right: var(--space-sm);
+            background-color: #E1E1E1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+        }
+
+        .testimonial__name {
+            font-weight: 600;
+            color: var(--primary-dark);
+        }
+
+        .testimonial__location {
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+
+        .slider-nav {
+            display: flex;
+            justify-content: center;
+            gap: var(--space-sm);
+            margin-top: var(--space-md);
+        }
+
+        .slider-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #DDD;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .slider-dot.active {
+            background-color: var(--primary);
+            transform: scale(1.2);
+        }
+
+        /* Contact Section */
+        .contact {
+            background-color: #F5F7F7;
+            position: relative;
+        }
+
+        .contact__container {
+            max-width: 1000px;
+        }
+
+        .contact__content {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-lg);
+        }
+
+        .contact-form {
+            background-color: white;
+            border-radius: var(--border-radius);
+            padding: var(--space-lg);
+            box-shadow: var(--shadow-md);
+        }
+
+        .form-group {
+            margin-bottom: var(--space-md);
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: var(--space-xs);
+            font-weight: 500;
+            color: var(--primary-dark);
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #DDD;
+            border-radius: var(--border-radius);
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(44, 120, 115, 0.1);
+        }
+
+        .form-textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        .form-submit {
+            width: 100%;
+            cursor: pointer;
+        }
+
+        .locations {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-md);
+        }
+
+        .location {
+            background-color: white;
+            border-radius: var(--border-radius);
+            padding: var(--space-md);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .location h3 {
+            margin-bottom: var(--space-sm);
+            color: var(--primary-dark);
+        }
+
+        .location__details {
+            margin-bottom: var(--space-sm);
+        }
+
+        .location__detail {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: var(--space-xs);
+        }
+
+        .location__detail i {
+            color: var(--primary);
+            margin-right: var(--space-xs);
+            margin-top: 4px;
+        }
+
+        .map {
+            width: 100%;
+            height: 200px;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            border: 1px solid #DDD;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: var(--primary-dark);
+            color: white;
+            padding: var(--space-xl) 0 var(--space-md);
+        }
+
+        .footer__container {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-lg);
+        }
+
+        .footer__top {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-lg);
+        }
+
+        .footer__section {
+            flex: 1;
+        }
+
+        .footer__logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: var(--space-sm);
+            display: flex;
+            align-items: center;
+        }
+
+        .footer__logo i {
+            margin-right: var(--space-xs);
+            color: var(--primary-light);
+        }
+
+        .footer__about {
+            margin-bottom: var(--space-md);
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .footer h4 {
+            color: white;
+            margin-bottom: var(--space-md);
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 600;
+            position: relative;
+        }
+
+        .footer h4:after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 40px;
+            height: 2px;
+            background-color: var(--primary-light);
+        }
+
+        .footer__links {
+            list-style: none;
+        }
+
+        .footer__link {
+            margin-bottom: var(--space-xs);
+        }
+
+        .footer__link a {
+            color: rgba(255, 255, 255, 0.7);
+            transition: var(--transition);
+        }
+
+        .footer__link a:hover {
+            color: white;
+            padding-left: 5px;
+        }
+
+        .footer__social {
+            display: flex;
+            gap: var(--space-sm);
+            margin-top: var(--space-sm);
+        }
+
+        .social-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: white;
+            transition: var(--transition);
+        }
+
+        .social-icon:hover {
+            background-color: var(--primary-light);
+            transform: translateY(-3px);
+        }
+
+        .footer__bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: var(--space-md);
+            text-align: center;
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.9rem;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .fade-in.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Responsive Styles */
+        @media (min-width: 640px) {
+            .services__grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .hero__cta {
+                flex-direction: row;
+            }
+
+            .about__content {
+                text-align: left;
+            }
+
+            .about__credentials {
+                justify-content: flex-start;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .about__container {
+                flex-direction: row;
+                align-items: center;
+                gap: var(--space-lg);
+            }
+
+            .about__image {
+                margin-bottom: 0;
+            }
+
+            .locations {
+                flex-direction: row;
+            }
+
+            .contact__content {
+                flex-direction: row;
+            }
+
+            .contact-form {
+                flex: 3;
+            }
+
+            .locations {
+                flex-direction: column;
+                flex: 2;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .nav__links {
+                display: flex;
+            }
+
+            .mobile-toggle {
+                display: none;
+            }
+
+            .services__grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .footer__top {
+                flex-direction: row;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container header__container">
+            <a href="#" class="logo">
+                <i class="fas fa-spine"></i>
+                <span>Gilstrap Clinic</span>
+            </a>
+            <nav class="nav">
+                <div class="nav__links">
+                    <a href="#services" class="nav__link">Services</a>
+                    <a href="#about" class="nav__link">About</a>
+                    <a href="#testimonials" class="nav__link">Testimonials</a>
+                    <a href="#contact" class="nav__link">Contact</a>
+                </div>
+                <a href="#contact" class="btn header__cta">Schedule Appointment</a>
+                <div class="mobile-toggle" id="mobile-toggle">
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobile-menu">
+        <a href="#services" class="mobile-menu__link">Services</a>
+        <a href="#about" class="mobile-menu__link">About</a>
+        <a href="#testimonials" class="mobile-menu__link">Testimonials</a>
+        <a href="#contact" class="mobile-menu__link">Contact</a>
+        <a href="#contact" class="btn" style="margin-top: var(--space-md);">Schedule Appointment</a>
+    </div>
+    <div class="overlay" id="overlay"></div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container hero__container">
+            <div class="hero__content">
+                <h1>Holistic Healing for Optimal Wellbeing</h1>
+                <p>Dr. Russell Gilstrap combines chiropractic expertise and family medicine to deliver personalized, comprehensive care tailored to your unique health needs.</p>
+                <div class="hero__cta">
+                    <a href="#contact" class="btn hero__btn">Schedule Your Visit</a>
+                    <a href="#about" class="btn btn--outline hero__btn--outline">Learn About Our Approach</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <h2 class="text-center">Our Holistic Services</h2>
+            <p class="text-center" style="max-width: 700px; margin: 0 auto var(--space-lg);">Our comprehensive approach to wellness includes a variety of treatments designed to help you live pain-free and achieve optimal health.</p>
+            
+            <div class="services__grid">
+                <div class="service-card fade-in">
+                    <div class="service-card__icon">
+                        <i class="fas fa-align-center"></i>
+                    </div>
+                    <h3>Chiropractic Adjustment</h3>
+                    <p>Expert spinal adjustments to restore proper alignment, improve function, and relieve pain through gentle, precise techniques.</p>
+                </div>
+
+                <div class="service-card fade-in">
+                    <div class="service-card__icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3>Physical Therapy</h3>
+                    <p>Customized therapy programs to strengthen muscles, improve mobility, and accelerate recovery from injuries or chronic conditions.</p>
+                </div>
+
+                <div class="service-card fade-in">
+                    <div class="service-card__icon">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <h3>Family Medicine</h3>
+                    <p>Comprehensive primary care services from our Family Nurse Practitioner expertise, focusing on prevention and whole-person wellness.</p>
+                </div>
+
+                <div class="service-card fade-in">
+                    <div class="service-card__icon">
+                        <i class="fas fa-stethoscope"></i>
+                    </div>
+                    <h3>Health Assessment</h3>
+                    <p>Thorough evaluation of your condition using advanced diagnostic techniques to develop targeted treatment strategies.</p>
+                </div>
+
+                <div class="service-card fade-in">
+                    <div class="service-card__icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3>Natural Healing</h3>
+                    <p>Evidence-based natural treatments and supplements to support your body's innate healing abilities and overall wellness.</p>
+                </div>
+
+                <div class="service-card fade-in">
+                    <div class="service-card__icon">
+                        <i class="fas fa-user-md"></i>
+                    </div>
+                    <h3>Wellness Consultation</h3>
+                    <p>Personalized guidance on nutrition, exercise, and lifestyle modifications to optimize your health and prevent future issues.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container about__container">
+            <div class="about__image fade-in">
+                <img src="https://drgilstrap.com/images/smilingdoctor.jpg" alt="Dr. Russell Gilstrap - Chiropractic Physician">
+            </div>
+            <div class="about__content fade-in">
+                <h2>Meet Dr. Russell Gilstrap</h2>
+                <p>Since 1987, Dr. Gilstrap has been a trusted healthcare provider in the Tulsa metropolitan area, combining his expertise as both a Chiropractic Physician and Family Nurse Practitioner to deliver exceptional care.</p>
+                <p>With over three decades of experience, Dr. Gilstrap provides a unique integrated approach to healthcare, addressing not just symptoms but root causes of health issues. His dual credentials allow him to offer comprehensive treatment options that bridge traditional medicine with natural healing methods.</p>
+                <div class="about__credentials">
+                    <span class="credential">Chiropractic Physician</span>
+                    <span class="credential">Family Nurse Practitioner</span>
+                    <span class="credential">30+ Years Experience</span>
+                    <span class="credential">Holistic Care</span>
+                </div>
+                <a href="#contact" class="btn" style="margin-top: var(--space-md);">Schedule a Consultation</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+        <div class="container testimonials__container">
+            <h2 class="text-center">What Our Patients Say</h2>
+            <div class="testimonial-slider">
+                <div class="testimonial-track" id="testimonial-track">
+                    <!-- Testimonial 1 -->
+                    <div class="testimonial">
+                        <div class="testimonial__inner">
+                            <div class="testimonial__content">
+                                <div class="testimonial__stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <p class="testimonial__text">"After suffering from chronic back pain for years, Dr. Gilstrap's comprehensive approach finally gave me relief. He took the time to understand my condition and created a personalized treatment plan that addressed the root causes. I can't recommend him enough!"</p>
+                                <div class="testimonial__author">
+                                    <div class="testimonial__avatar">
+                                        <i class="fas fa-user"></i>
+                                    </div>
+                                    <div>
+                                        <div class="testimonial__name">Sarah Johnson</div>
+                                        <div class="testimonial__location">Tulsa, OK</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 2 -->
+                    <div class="testimonial">
+                        <div class="testimonial__inner">
+                            <div class="testimonial__content">
+                                <div class="testimonial__stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <p class="testimonial__text">"What sets Dr. Gilstrap apart is his dual expertise in chiropractic care and family medicine. He was able to address both my spinal issues and overall health concerns in one visit. His holistic approach has made a tremendous difference in my quality of life."</p>
+                                <div class="testimonial__author">
+                                    <div class="testimonial__avatar">
+                                        <i class="fas fa-user"></i>
+                                    </div>
+                                    <div>
+                                        <div class="testimonial__name">Michael Thompson</div>
+                                        <div class="testimonial__location">Broken Arrow, OK</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 3 -->
+                    <div class="testimonial">
+                        <div class="testimonial__inner">
+                            <div class="testimonial__content">
+                                <div class="testimonial__stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <p class="testimonial__text">"I've been seeing Dr. Gilstrap for over 10 years now. His knowledge, compassion, and commitment to patient care are unmatched. He truly listens and develops treatment plans that work. The fact that he offers same-day appointments has been a lifesaver during acute pain episodes."</p>
+                                <div class="testimonial__author">
+                                    <div class="testimonial__avatar">
+                                        <i class="fas fa-user"></i>
+                                    </div>
+                                    <div>
+                                        <div class="testimonial__name">Jennifer Davis</div>
+                                        <div class="testimonial__location">Sand Springs, OK</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slider-nav" id="slider-nav">
+                    <div class="slider-dot active" data-index="0"></div>
+                    <div class="slider-dot" data-index="1"></div>
+                    <div class="slider-dot" data-index="2"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container contact__container">
+            <h2 class="text-center">Get in Touch</h2>
+            <p class="text-center" style="max-width: 700px; margin: 0 auto var(--space-lg);">Schedule your appointment today or reach out with any questions. We offer same-day appointments for acute conditions.</p>
+            
+            <div class="contact__content">
+                <div class="contact-form fade-in">
+                    <h3>Schedule an Appointment</h3>
+                    <form id="appointment-form">
+                        <div class="form-group">
+                            <label for="name" class="form-label">Full Name</label>
+                            <input type="text" id="name" class="form-input" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone" class="form-label">Phone Number</label>
+                            <input type="tel" id="phone" class="form-input" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="form-label">Email Address</label>
+                            <input type="email" id="email" class="form-input" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="location" class="form-label">Preferred Location</label>
+                            <select id="location" class="form-input" required>
+                                <option value="">Select location</option>
+                                <option value="Sand Springs">Sand Springs Clinic</option>
+                                <option value="Broken Arrow">Broken Arrow Clinic</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message" class="form-label">Reason for Visit</label>
+                            <textarea id="message" class="form-input form-textarea" required></textarea>
+                        </div>
+                        <button type="submit" class="btn form-submit">Request Appointment</button>
+                    </form>
+                </div>
+
+                <div class="locations fade-in">
+                    <div class="location">
+                        <h3>Sand Springs Clinic</h3>
+                        <div class="location__details">
+                            <div class="location__detail">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <div>123 Main Street<br>Sand Springs, OK 74063</div>
+                            </div>
+                            <div class="location__detail">
+                                <i class="fas fa-phone"></i>
+                                <div>(918) 555-1234</div>
+                            </div>
+                            <div class="location__detail">
+                                <i class="fas fa-clock"></i>
+                                <div>Mon-Fri: 8am-5pm<br>Sat: 9am-12pm</div>
+                            </div>
+                        </div>
+                        <div class="map">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d103585.79883199998!2d-96.1543742!3d36.1398957!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87b69119ebb5b245%3A0xbe2ba8675d1cc0a!2sSand%20Springs%2C%20OK!5e0!3m2!1sen!2sus!4v1655992235264!5m2!1sen!2sus" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+
+                    <div class="location">
+                        <h3>Broken Arrow Clinic</h3>
+                        <div class="location__details">
+                            <div class="location__detail">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <div>456 Oak Avenue<br>Broken Arrow, OK 74012</div>
+                            </div>
+                            <div class="location__detail">
+                                <i class="fas fa-phone"></i>
+                                <div>(918) 555-5678</div>
+                            </div>
+                            <div class="location__detail">
+                                <i class="fas fa-clock"></i>
+                                <div>Mon-Fri: 8am-5pm<br>Sat: Closed</div>
+                            </div>
+                        </div>
+                        <div class="map">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d103443.25211772956!2d-95.8378722!3d36.0375477!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87b6eb8e35889487%3A0xcb93b766f518d83!2sBroken%20Arrow%2C%20OK!5e0!3m2!1sen!2sus!4v1655992318841!5m2!1sen!2sus" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer__container">
+            <div class="footer__top">
+                <div class="footer__section">
+                    <div class="footer__logo">
+                        <i class="fas fa-spine"></i>
+                        <span>Gilstrap Clinic</span>
+                    </div>
+                    <p class="footer__about">Providing comprehensive chiropractic care and family medicine services to the Tulsa metropolitan area since 1987. Our integrated approach focuses on treating the whole person, not just symptoms.</p>
+                    <div class="footer__social">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer__section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer__links">
+                        <li class="footer__link"><a href="#home">Home</a></li>
+                        <li class="footer__link"><a href="#services">Services</a></li>
+                        <li class="footer__link"><a href="#about">About Dr. Gilstrap</a></li>
+                        <li class="footer__link"><a href="#testimonials">Testimonials</a></li>
+                        <li class="footer__link"><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__section">
+                    <h4>Services</h4>
+                    <ul class="footer__links">
+                        <li class="footer__link"><a href="#services">Chiropractic Adjustment</a></li>
+                        <li class="footer__link"><a href="#services">Physical Therapy</a></li>
+                        <li class="footer__link"><a href="#services">Family Medicine</a></li>
+                        <li class="footer__link"><a href="#services">Health Assessment</a></li>
+                        <li class="footer__link"><a href="#services">Natural Healing</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__section">
+                    <h4>Contact Us</h4>
+                    <ul class="footer__links">
+                        <li class="footer__link">
+                            <a href="tel:9185551234">Sand Springs: (918) 555-1234</a>
+                        </li>
+                        <li class="footer__link">
+                            <a href="tel:9185555678">Broken Arrow: (918) 555-5678</a>
+                        </li>
+                        <li class="footer__link">
+                            <a href="mailto:info@gilstrapclinic.com">info@gilstrapclinic.com</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer__bottom">
+                <p>&copy; <span id="year"></span> Gilstrap Clinic. All rights reserved. | Providing Holistic Care in Tulsa Metropolitan Area</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Set current year in footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Mobile menu toggle
+        const mobileToggle = document.getElementById('mobile-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const overlay = document.getElementById('overlay');
+
+        mobileToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
+            overlay.classList.toggle('active');
+        });
+
+        overlay.addEventListener('click', () => {
+            mobileMenu.classList.remove('active');
+            overlay.classList.remove('active');
+        });
+
+        // Close menu when clicking on a link
+        const mobileLinks = document.querySelectorAll('.mobile-menu__link');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('active');
+                overlay.classList.remove('active');
+            });
+        });
+
+        // Header scroll effect
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('header--scrolled');
+            } else {
+                header.classList.remove('header--scrolled');
+            }
+        });
+
+        // Testimonial slider
+        const track = document.getElementById('testimonial-track');
+        const dots = document.querySelectorAll('.slider-dot');
+        let currentSlide = 0;
+        const slideCount = document.querySelectorAll('.testimonial').length;
+
+        function goToSlide(index) {
+            if (index < 0) index = slideCount - 1;
+            if (index >= slideCount) index = 0;
+            
+            track.style.transform = `translateX(-${index * 100}%)`;
+            
+            // Update active dot
+            dots.forEach(dot => dot.classList.remove('active'));
+            dots[index].classList.add('active');
+            
+            currentSlide = index;
+        }
+
+        // Initialize dots click event
+        dots.forEach(dot => {
+            dot.addEventListener('click', () => {
+                const slideIndex = parseInt(dot.getAttribute('data-index'));
+                goToSlide(slideIndex);
+            });
+        });
+
+        // Auto advance slides
+        setInterval(() => {
+            goToSlide(currentSlide + 1);
+        }, 5000);
+
+        // Form validation
+        const form = document.getElementById('appointment-form');
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Thank you for submitting your appointment request. We will contact you shortly to confirm your appointment.');
+            form.reset();
+        });
+
+        // Fade in elements on scroll
+        const fadeElements = document.querySelectorAll('.fade-in');
+        
+        function checkFade() {
+            fadeElements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const elementBottom = element.getBoundingClientRect().bottom;
+                const windowHeight = window.innerHeight;
+                
+                if (elementTop < windowHeight * 0.9 && elementBottom > 0) {
+                    element.classList.add('active');
+                }
+            });
+        }
+        
+        window.addEventListener('scroll', checkFade);
+        window.addEventListener('load', checkFade);
+        
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    const headerHeight = document.querySelector('.header').offsetHeight;
+                    const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+                    
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
