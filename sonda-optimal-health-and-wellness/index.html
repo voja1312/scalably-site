@@ -1,0 +1,2055 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Optimal Health and Wellness | Chiropractic Care in Tulsa, OK</title>
+    <meta name="description" content="Drs. Riley & Sonda Powell provide expert chiropractic care in Tulsa, OK. From back pain to holistic wellness, we help patients of all ages achieve optimal health.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* CSS Variables */
+        :root {
+            /* Color Palette - Healthcare/Wellness */
+            --color-primary: #2B7D6A; /* Healing green */
+            --color-secondary: #5FBFAD; /* Lighter green */
+            --color-accent: #F0A868; /* Warm accent */
+            --color-dark: #1A3D35; /* Deep green */
+            --color-light: #F3F8F6; /* Off-white */
+            --color-white: #FFFFFF;
+            --color-text: #333333;
+            --color-text-light: #666666;
+            
+            /* Spacing System (8px grid) */
+            --space-xs: 0.5rem; /* 8px */
+            --space-sm: 1rem; /* 16px */
+            --space-md: 2rem; /* 32px */
+            --space-lg: 3rem; /* 48px */
+            --space-xl: 4rem; /* 64px */
+            
+            /* Transitions */
+            --transition-fast: 0.2s ease;
+            --transition-standard: 0.3s ease;
+            --transition-slow: 0.5s ease;
+            
+            /* Shadows */
+            --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.1);
+            
+            /* Border Radius */
+            --radius-sm: 4px;
+            --radius-md: 8px;
+            --radius-lg: 16px;
+            --radius-xl: 24px;
+            --radius-rounded: 100px;
+        }
+        
+        /* Reset & Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--color-text);
+            line-height: 1.6;
+            background-color: var(--color-white);
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+            line-height: 1.2;
+            margin-bottom: var(--space-sm);
+            color: var(--color-dark);
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+        }
+        
+        h2 {
+            font-size: 2rem;
+        }
+        
+        h3 {
+            font-size: 1.75rem;
+        }
+        
+        h4 {
+            font-size: 1.5rem;
+        }
+        
+        h5 {
+            font-size: 1.25rem;
+        }
+        
+        p {
+            margin-bottom: var(--space-sm);
+        }
+        
+        a {
+            color: var(--color-primary);
+            text-decoration: none;
+            transition: color var(--transition-standard);
+        }
+        
+        a:hover {
+            color: var(--color-secondary);
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--space-sm);
+        }
+        
+        .section {
+            padding: var(--space-xl) 0;
+        }
+        
+        .section__header {
+            text-align: center;
+            margin-bottom: var(--space-lg);
+        }
+        
+        .section__title {
+            position: relative;
+            display: inline-block;
+            margin-bottom: var(--space-sm);
+            z-index: 1;
+        }
+        
+        .section__title::after {
+            content: "";
+            position: absolute;
+            left: 25%;
+            bottom: -8px;
+            width: 50%;
+            height: 3px;
+            background-color: var(--color-accent);
+            z-index: -1;
+        }
+        
+        .section__subtitle {
+            color: var(--color-text-light);
+            font-weight: 400;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            font-size: 1rem;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-radius: var(--radius-rounded);
+            cursor: pointer;
+            transition: all var(--transition-standard);
+        }
+        
+        .btn--primary {
+            background-color: var(--color-primary);
+            color: var(--color-white);
+            border: 2px solid var(--color-primary);
+        }
+        
+        .btn--primary:hover {
+            background-color: var(--color-dark);
+            border-color: var(--color-dark);
+            color: var(--color-white);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .btn--secondary {
+            background-color: transparent;
+            color: var(--color-primary);
+            border: 2px solid var(--color-primary);
+        }
+        
+        .btn--secondary:hover {
+            background-color: var(--color-primary);
+            color: var(--color-white);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+        
+        /* Header */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: var(--shadow-sm);
+            z-index: 1000;
+            padding: var(--space-xs) 0;
+            transition: all var(--transition-standard);
+        }
+        
+        .header--scrolled {
+            padding: 0.5rem 0;
+            box-shadow: var(--shadow-md);
+        }
+        
+        .header__container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: var(--space-xs);
+        }
+        
+        .logo__img {
+            width: 40px;
+            height: 40px;
+        }
+        
+        .logo__text {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: var(--color-primary);
+        }
+        
+        .nav {
+            display: none;
+        }
+        
+        .nav__list {
+            display: flex;
+            gap: var(--space-md);
+            list-style: none;
+        }
+        
+        .nav__link {
+            font-weight: 500;
+            position: relative;
+            padding: 0.25rem 0;
+        }
+        
+        .nav__link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: var(--color-primary);
+            transition: width var(--transition-standard);
+        }
+        
+        .nav__link:hover::after {
+            width: 100%;
+        }
+        
+        .nav__cta {
+            margin-left: var(--space-sm);
+        }
+        
+        .hamburger {
+            display: block;
+            cursor: pointer;
+            background: none;
+            border: none;
+            padding: var(--space-xs);
+        }
+        
+        .hamburger__icon {
+            display: block;
+            width: 24px;
+            height: 3px;
+            background-color: var(--color-primary);
+            position: relative;
+            transition: background-color var(--transition-fast);
+        }
+        
+        .hamburger__icon::before,
+        .hamburger__icon::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: var(--color-primary);
+            transition: all var(--transition-fast);
+        }
+        
+        .hamburger__icon::before {
+            top: -8px;
+        }
+        
+        .hamburger__icon::after {
+            bottom: -8px;
+        }
+        
+        /* Mobile Menu */
+        .mobile-menu {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 80%;
+            max-width: 400px;
+            height: 100vh;
+            background-color: var(--color-white);
+            box-shadow: var(--shadow-lg);
+            z-index: 1001;
+            padding: var(--space-lg) var(--space-md);
+            transition: right var(--transition-standard);
+            overflow-y: auto;
+        }
+        
+        .mobile-menu--active {
+            right: 0;
+        }
+        
+        .mobile-menu__close {
+            position: absolute;
+            top: var(--space-sm);
+            right: var(--space-sm);
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--color-primary);
+            cursor: pointer;
+        }
+        
+        .mobile-menu__list {
+            list-style: none;
+            margin-top: var(--space-md);
+        }
+        
+        .mobile-menu__item {
+            margin-bottom: var(--space-sm);
+        }
+        
+        .mobile-menu__link {
+            display: block;
+            font-size: 1.25rem;
+            font-weight: 500;
+            padding: var(--space-xs) 0;
+            border-bottom: 1px solid var(--color-light);
+        }
+        
+        .mobile-menu__cta {
+            margin-top: var(--space-md);
+            width: 100%;
+        }
+        
+        .backdrop {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+            display: none;
+        }
+        
+        .backdrop--active {
+            display: block;
+        }
+        
+        /* Hero Section */
+        .hero {
+            position: relative;
+            padding: 8rem 0 var(--space-xl);
+            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+            overflow: hidden;
+            color: var(--color-white);
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('data:image/svg+xml;charset=utf8,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"%3E%3Cpath fill="%23ffffff" fill-opacity="0.05" d="M0,224L48,229.3C96,235,192,245,288,240C384,235,480,213,576,181.3C672,149,768,107,864,117.3C960,128,1056,192,1152,202.7C1248,213,1344,171,1392,149.3L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"%3E%3C/path%3E%3C/svg%3E');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.3;
+        }
+        
+        .hero__container {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: var(--space-lg);
+        }
+        
+        .hero__content {
+            max-width: 800px;
+        }
+        
+        .hero__title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: var(--space-sm);
+            color: var(--color-white);
+        }
+        
+        .hero__subtitle {
+            font-size: 1.25rem;
+            font-weight: 400;
+            margin-bottom: var(--space-md);
+            opacity: 0.9;
+        }
+        
+        .hero__cta-group {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-sm);
+            margin-top: var(--space-md);
+        }
+        
+        .hero__btn--primary {
+            background-color: var(--color-white);
+            color: var(--color-primary);
+            border-color: var(--color-white);
+        }
+        
+        .hero__btn--primary:hover {
+            background-color: transparent;
+            color: var(--color-white);
+        }
+        
+        .hero__btn--secondary {
+            background-color: transparent;
+            color: var(--color-white);
+            border-color: var(--color-white);
+        }
+        
+        .hero__btn--secondary:hover {
+            background-color: var(--color-white);
+            color: var(--color-primary);
+        }
+        
+        /* Services Section */
+        .services {
+            background-color: var(--color-light);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .services__container {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .services__grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: var(--space-md);
+        }
+        
+        .service-card {
+            background-color: var(--color-white);
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-sm);
+            padding: var(--space-md);
+            transition: all var(--transition-standard);
+            position: relative;
+            overflow: hidden;
+            height: 100%;
+        }
+        
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background-color: var(--color-primary);
+            opacity: 0.7;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .service-card:hover::before {
+            opacity: 1;
+        }
+        
+        .service-card__icon {
+            font-size: 2.5rem;
+            color: var(--color-primary);
+            margin-bottom: var(--space-sm);
+        }
+        
+        .service-card__title {
+            font-size: 1.25rem;
+            margin-bottom: var(--space-xs);
+        }
+        
+        .service-card__description {
+            color: var(--color-text-light);
+            margin-bottom: var(--space-sm);
+        }
+        
+        .service-card__link {
+            display: inline-flex;
+            align-items: center;
+            font-weight: 600;
+            font-size: 0.875rem;
+            gap: 0.25rem;
+        }
+        
+        .service-card__link i {
+            transition: transform var(--transition-standard);
+        }
+        
+        .service-card__link:hover i {
+            transform: translateX(4px);
+        }
+        
+        /* About Section */
+        .about {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .about__container {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .about__content {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-lg);
+        }
+        
+        .about__images {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-md);
+            margin-bottom: var(--space-md);
+        }
+        
+        .doctor-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: var(--space-sm);
+            margin-bottom: var(--space-md);
+        }
+        
+        .doctor-card__image {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid var(--color-primary);
+            box-shadow: var(--shadow-md);
+            transition: all var(--transition-standard);
+        }
+        
+        .doctor-card:hover .doctor-card__image {
+            transform: scale(1.02);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .doctor-card__name {
+            margin-bottom: 0;
+        }
+        
+        .doctor-card__title {
+            color: var(--color-text-light);
+            font-weight: 500;
+            margin-bottom: var(--space-xs);
+        }
+        
+        .about__text {
+            flex: 1;
+        }
+        
+        .about__title {
+            margin-bottom: var(--space-sm);
+        }
+        
+        .about__description {
+            margin-bottom: var(--space-md);
+        }
+        
+        .about__highlights {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: var(--space-sm);
+            margin-bottom: var(--space-md);
+        }
+        
+        .about__highlight {
+            display: flex;
+            align-items: center;
+            gap: var(--space-xs);
+        }
+        
+        .about__highlight-icon {
+            width: 40px;
+            height: 40px;
+            min-width: 40px;
+            border-radius: 50%;
+            background-color: var(--color-primary);
+            color: var(--color-white);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+        }
+        
+        .about__highlight-text {
+            font-weight: 500;
+        }
+        
+        .about__cta {
+            margin-top: var(--space-md);
+        }
+        
+        /* Testimonials Section */
+        .testimonials {
+            background-color: var(--color-light);
+            padding: var(--space-xl) 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .testimonials__container {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .testimonials__slider {
+            margin-top: var(--space-lg);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .testimonials__track {
+            display: flex;
+            transition: transform var(--transition-slow);
+        }
+        
+        .testimonial-card {
+            min-width: 100%;
+            padding: 0 var(--space-sm);
+            transition: opacity var(--transition-standard);
+        }
+        
+        .testimonial-card__inner {
+            background-color: var(--color-white);
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-md);
+            padding: var(--space-md);
+            position: relative;
+        }
+        
+        .testimonial-card__quote {
+            position: absolute;
+            top: -15px;
+            left: 20px;
+            font-size: 4rem;
+            color: var(--color-primary);
+            opacity: 0.2;
+            font-family: 'Playfair Display', serif;
+            line-height: 1;
+        }
+        
+        .testimonial-card__rating {
+            color: var(--color-accent);
+            font-size: 1.25rem;
+            margin-bottom: var(--space-xs);
+        }
+        
+        .testimonial-card__text {
+            font-style: italic;
+            margin-bottom: var(--space-sm);
+            position: relative;
+            z-index: 1;
+        }
+        
+        .testimonial-card__author {
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+        }
+        
+        .testimonial-card__author-img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+            background-color: var(--color-light);
+        }
+        
+        .testimonial-card__author-info {
+            flex: 1;
+        }
+        
+        .testimonial-card__author-name {
+            font-weight: 600;
+            margin-bottom: 0;
+        }
+        
+        .testimonial-card__author-title {
+            font-size: 0.875rem;
+            color: var(--color-text-light);
+        }
+        
+        .testimonials__controls {
+            display: flex;
+            justify-content: center;
+            gap: var(--space-sm);
+            margin-top: var(--space-md);
+        }
+        
+        .testimonials__btn {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: var(--color-white);
+            color: var(--color-primary);
+            border: 1px solid var(--color-primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all var(--transition-standard);
+        }
+        
+        .testimonials__btn:hover {
+            background-color: var(--color-primary);
+            color: var(--color-white);
+        }
+        
+        .testimonials__indicators {
+            display: flex;
+            justify-content: center;
+            gap: var(--space-xs);
+            margin-top: var(--space-md);
+        }
+        
+        .testimonials__indicator {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: var(--color-light);
+            border: 1px solid var(--color-primary);
+            transition: all var(--transition-standard);
+            cursor: pointer;
+        }
+        
+        .testimonials__indicator--active {
+            background-color: var(--color-primary);
+            transform: scale(1.2);
+        }
+        
+        /* Contact Section */
+        .contact {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .contact__container {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .contact__content {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-lg);
+        }
+        
+        .contact__info {
+            flex: 1;
+        }
+        
+        .contact__text {
+            margin-bottom: var(--space-md);
+        }
+        
+        .contact__methods {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: var(--space-md);
+            margin-bottom: var(--space-lg);
+        }
+        
+        .contact__method {
+            display: flex;
+            align-items: flex-start;
+            gap: var(--space-sm);
+        }
+        
+        .contact__method-icon {
+            width: 40px;
+            height: 40px;
+            min-width: 40px;
+            border-radius: 50%;
+            background-color: var(--color-primary);
+            color: var(--color-white);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+        }
+        
+        .contact__method-content {
+            flex: 1;
+        }
+        
+        .contact__method-title {
+            font-weight: 600;
+            margin-bottom: var(--space-xs);
+        }
+        
+        .contact__method-text {
+            color: var(--color-text-light);
+            margin-bottom: 0;
+        }
+        
+        .contact__method-link {
+            transition: color var(--transition-standard);
+        }
+        
+        .contact__method-link:hover {
+            color: var(--color-primary);
+        }
+        
+        .contact__form-wrapper {
+            flex: 1;
+            background-color: var(--color-light);
+            border-radius: var(--radius-md);
+            padding: var(--space-md);
+        }
+        
+        .contact__form {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: var(--space-sm);
+        }
+        
+        .form__group {
+            position: relative;
+        }
+        
+        .form__input,
+        .form__textarea {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1rem;
+            color: var(--color-text);
+            background-color: var(--color-white);
+            border: 1px solid #e0e0e0;
+            border-radius: var(--radius-sm);
+            transition: all var(--transition-standard);
+        }
+        
+        .form__input::placeholder,
+        .form__textarea::placeholder {
+            color: #aaa;
+        }
+        
+        .form__input:focus,
+        .form__textarea:focus {
+            outline: none;
+            border-color: var(--color-primary);
+            box-shadow: 0 0 0 3px rgba(43, 125, 106, 0.2);
+        }
+        
+        .form__textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+        
+        .form__error {
+            position: absolute;
+            bottom: -20px;
+            left: 0;
+            font-size: 0.75rem;
+            color: #e53935;
+            opacity: 0;
+            transition: opacity var(--transition-standard);
+        }
+        
+        .form__error--visible {
+            opacity: 1;
+        }
+        
+        .form__submit {
+            margin-top: var(--space-sm);
+            cursor: pointer;
+        }
+        
+        .map {
+            margin-top: var(--space-lg);
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            height: 300px;
+        }
+        
+        /* Footer */
+        .footer {
+            background-color: var(--color-dark);
+            color: var(--color-white);
+            padding: var(--space-lg) 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .footer__container {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .footer__content {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: var(--space-lg);
+            padding-bottom: var(--space-lg);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .footer__logo {
+            display: flex;
+            align-items: center;
+            gap: var(--space-xs);
+            margin-bottom: var(--space-sm);
+        }
+        
+        .footer__logo-text {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: var(--color-white);
+        }
+        
+        .footer__about {
+            margin-bottom: var(--space-md);
+            opacity: 0.8;
+        }
+        
+        .footer__social {
+            display: flex;
+            gap: var(--space-sm);
+        }
+        
+        .footer__social-link {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: var(--color-white);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+            transition: all var(--transition-standard);
+        }
+        
+        .footer__social-link:hover {
+            background-color: var(--color-secondary);
+            transform: translateY(-3px);
+            color: var(--color-white);
+        }
+        
+        .footer__col-title {
+            color: var(--color-white);
+            font-size: 1.25rem;
+            margin-bottom: var(--space-sm);
+            position: relative;
+            display: inline-block;
+        }
+        
+        .footer__col-title::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -8px;
+            width: 40px;
+            height: 3px;
+            background-color: var(--color-accent);
+        }
+        
+        .footer__links {
+            list-style: none;
+        }
+        
+        .footer__link-item {
+            margin-bottom: var(--space-xs);
+        }
+        
+        .footer__link {
+            color: rgba(255, 255, 255, 0.8);
+            transition: all var(--transition-standard);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.25rem;
+        }
+        
+        .footer__link:hover {
+            color: var(--color-white);
+            transform: translateX(3px);
+        }
+        
+        .footer__contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: var(--space-xs);
+            margin-bottom: var(--space-xs);
+            color: rgba(255, 255, 255, 0.8);
+        }
+        
+        .footer__contact-icon {
+            min-width: 20px;
+            color: var(--color-accent);
+        }
+        
+        .footer__contact-link {
+            color: rgba(255, 255, 255, 0.8);
+            transition: color var(--transition-standard);
+        }
+        
+        .footer__contact-link:hover {
+            color: var(--color-white);
+        }
+        
+        .footer__bottom {
+            padding-top: var(--space-md);
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-sm);
+            text-align: center;
+        }
+        
+        .footer__copyright {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.875rem;
+        }
+        
+        .footer__policy-links {
+            display: flex;
+            justify-content: center;
+            gap: var(--space-md);
+        }
+        
+        .footer__policy-link {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.875rem;
+            transition: color var(--transition-standard);
+        }
+        
+        .footer__policy-link:hover {
+            color: var(--color-white);
+        }
+        
+        /* Back to Top Button */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: var(--color-primary);
+            color: var(--color-white);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+            box-shadow: var(--shadow-md);
+            cursor: pointer;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all var(--transition-standard);
+            z-index: 99;
+        }
+        
+        .back-to-top--visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .back-to-top:hover {
+            background-color: var(--color-dark);
+            transform: translateY(-5px);
+        }
+        
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes fadeInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        @keyframes fadeInRight {
+            from {
+                opacity: 0;
+                transform: translateX(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+        
+        .animate-fade-in {
+            animation: fadeIn 1s forwards;
+        }
+        
+        .animate-fade-in-left {
+            animation: fadeInLeft 1s forwards;
+        }
+        
+        .animate-fade-in-right {
+            animation: fadeInRight 1s forwards;
+        }
+        
+        .animate-pulse {
+            animation: pulse 2s infinite;
+        }
+        
+        /* Responsive Styles */
+        @media (min-width: 640px) {
+            h1 {
+                font-size: 3rem;
+            }
+            
+            h2 {
+                font-size: 2.25rem;
+            }
+            
+            .services__grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .about__highlights {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .hero__cta-group {
+                flex-direction: row;
+            }
+            
+            .testimonial-card {
+                padding: 0 var(--space-md);
+            }
+            
+            .footer__content {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .footer__bottom {
+                flex-direction: row;
+                justify-content: space-between;
+                text-align: left;
+            }
+        }
+        
+        @media (min-width: 768px) {
+            .about__content {
+                flex-direction: row;
+            }
+            
+            .about__images {
+                width: 40%;
+            }
+            
+            .about__text {
+                width: 60%;
+            }
+            
+            .contact__content {
+                flex-direction: row;
+            }
+            
+            .contact__info,
+            .contact__form-wrapper {
+                width: 50%;
+            }
+        }
+        
+        @media (min-width: 1024px) {
+            h1 {
+                font-size: 3.5rem;
+            }
+            
+            .nav {
+                display: block;
+            }
+            
+            .hamburger {
+                display: none;
+            }
+            
+            .services__grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            
+            .hero__title {
+                font-size: 3.5rem;
+            }
+            
+            .about__highlight {
+                gap: var(--space-sm);
+            }
+            
+            .footer__content {
+                grid-template-columns: 2fr 1fr 1fr 1fr;
+            }
+            
+            .about__images {
+                flex-direction: row;
+                justify-content: center;
+                gap: var(--space-lg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container header__container">
+            <a href="#" class="logo">
+                <div class="logo__text">Optimal Health</div>
+            </a>
+            
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="#home" class="nav__link">Home</a></li>
+                    <li class="nav__item"><a href="#services" class="nav__link">Services</a></li>
+                    <li class="nav__item"><a href="#about" class="nav__link">About Us</a></li>
+                    <li class="nav__item"><a href="#testimonials" class="nav__link">Testimonials</a></li>
+                    <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+                    <li class="nav__item nav__cta"><a href="#contact" class="btn btn--primary">Book Appointment</a></li>
+                </ul>
+            </nav>
+            
+            <button class="hamburger" id="hamburger" aria-label="Menu">
+                <span class="hamburger__icon"></span>
+            </button>
+        </div>
+    </header>
+    
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobile-menu">
+        <button class="mobile-menu__close" id="mobile-menu-close" aria-label="Close menu">
+            <i class="fas fa-times"></i>
+        </button>
+        
+        <ul class="mobile-menu__list">
+            <li class="mobile-menu__item"><a href="#home" class="mobile-menu__link">Home</a></li>
+            <li class="mobile-menu__item"><a href="#services" class="mobile-menu__link">Services</a></li>
+            <li class="mobile-menu__item"><a href="#about" class="mobile-menu__link">About Us</a></li>
+            <li class="mobile-menu__item"><a href="#testimonials" class="mobile-menu__link">Testimonials</a></li>
+            <li class="mobile-menu__item"><a href="#contact" class="mobile-menu__link">Contact</a></li>
+            <li class="mobile-menu__item"><a href="#contact" class="btn btn--primary mobile-menu__cta">Book Appointment</a></li>
+        </ul>
+    </div>
+    
+    <div class="backdrop" id="backdrop"></div>
+    
+    <!-- Hero Section -->
+    <section class="hero section" id="home">
+        <div class="container hero__container">
+            <div class="hero__content animate-fade-in">
+                <h1 class="hero__title">Your Journey to Optimal Health Begins Here</h1>
+                <p class="hero__subtitle">Experience holistic chiropractic care that addresses the root cause of your health concerns, not just the symptoms.</p>
+                <div class="hero__cta-group">
+                    <a href="#contact" class="btn hero__btn--primary animate-pulse">Schedule a Consultation</a>
+                    <a href="#services" class="btn hero__btn--secondary">Explore Our Services</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Services Section -->
+    <section class="services section" id="services">
+        <div class="container services__container">
+            <div class="section__header animate-fade-in">
+                <h2 class="section__title">Our Comprehensive Services</h2>
+                <p class="section__subtitle">We offer a wide range of chiropractic and wellness services tailored to meet your specific health needs at every stage of life.</p>
+            </div>
+            
+            <div class="services__grid">
+                <div class="service-card animate-fade-in">
+                    <div class="service-card__icon">
+                        <i class="fas fa-spine"></i>
+                    </div>
+                    <h3 class="service-card__title">Chiropractic Adjustments</h3>
+                    <p class="service-card__description">Gentle, personalized adjustments to correct spinal misalignments, improve nervous system function, and alleviate pain.</p>
+                    <a href="#contact" class="service-card__link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="service-card animate-fade-in">
+                    <div class="service-card__icon">
+                        <i class="fas fa-baby"></i>
+                    </div>
+                    <h3 class="service-card__title">Pediatric Care</h3>
+                    <p class="service-card__description">Specialized care for infants and children with colic, tongue ties, autism, sensory disorders, and developmental concerns.</p>
+                    <a href="#contact" class="service-card__link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="service-card animate-fade-in">
+                    <div class="service-card__icon">
+                        <i class="fas fa-female"></i>
+                    </div>
+                    <h3 class="service-card__title">Prenatal Chiropractic</h3>
+                    <p class="service-card__description">Safe and effective care for expecting mothers to alleviate pregnancy discomfort and prepare for a healthy birth.</p>
+                    <a href="#contact" class="service-card__link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="service-card animate-fade-in">
+                    <div class="service-card__icon">
+                        <i class="fas fa-car-crash"></i>
+                    </div>
+                    <h3 class="service-card__title">Auto Injury Recovery</h3>
+                    <p class="service-card__description">Comprehensive treatment plans for whiplash and other auto accident injuries to reduce pain and prevent chronic issues.</p>
+                    <a href="#contact" class="service-card__link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="service-card animate-fade-in">
+                    <div class="service-card__icon">
+                        <i class="fas fa-head-side-brain"></i>
+                    </div>
+                    <h3 class="service-card__title">Headache Relief</h3>
+                    <p class="service-card__description">Targeted care to address the root causes of tension headaches, migraines, and other chronic head pain conditions.</p>
+                    <a href="#contact" class="service-card__link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="service-card animate-fade-in">
+                    <div class="service-card__icon">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <h3 class="service-card__title">Chronic Health Conditions</h3>
+                    <p class="service-card__description">Holistic approaches to managing thyroid imbalances, digestive disorders, and other chronic health challenges.</p>
+                    <a href="#contact" class="service-card__link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- About Section -->
+    <section class="about section" id="about">
+        <div class="container about__container">
+            <div class="section__header animate-fade-in">
+                <h2 class="section__title">Meet Our Doctors</h2>
+                <p class="section__subtitle">With over 20 years of combined experience, Drs. Riley and Sonda Powell are committed to helping you achieve optimal health and wellness.</p>
+            </div>
+            
+            <div class="about__content">
+                <div class="about__images animate-fade-in-left">
+                    <div class="doctor-card">
+                        <img src="https://images.squarespace-cdn.com/content/v1/67534b97859dda7cfc87ec93/5e563466-67ac-4be9-b287-01e0d577f7c8/PowellChiro192024.cc.jpg?format=2500w" alt="Dr. Sonda Powell" class="doctor-card__image">
+                        <h3 class="doctor-card__name">Dr. Sonda Powell</h3>
+                        <p class="doctor-card__title">Chiropractor & Co-Owner</p>
+                    </div>
+                    
+                    <div class="doctor-card">
+                        <img src="https://images.squarespace-cdn.com/content/v1/67534b97859dda7cfc87ec93/c8218ee6-33e9-4d5f-93f0-20f6855280d3/PowellChiro262024.cc.jpg?format=2500w" alt="Dr. Riley Powell" class="doctor-card__image">
+                        <h3 class="doctor-card__name">Dr. Riley Powell</h3>
+                        <p class="doctor-card__title">Chiropractor & Co-Owner</p>
+                    </div>
+                </div>
+                
+                <div class="about__text animate-fade-in-right">
+                    <h3 class="about__title">Our Story</h3>
+                    <p class="about__description">Since 2004, Drs. Riley and Sonda Powell have been dedicated to helping patients of all ages achieve optimal health through chiropractic care. Originally operating as Powell Chiropractic, they rebranded to Optimal Health and Wellness in 2018 to better reflect their expanded focus on holistic health solutions.</p>
+                    
+                    <p class="about__description">Our mission is simple yet powerful: to remove interference so the body can heal itself. We believe in addressing the root cause of health issues rather than just treating symptoms, empowering our patients to live their healthiest lives possible.</p>
+                    
+                    <div class="about__highlights">
+                        <div class="about__highlight">
+                            <div class="about__highlight-icon">
+                                <i class="fas fa-calendar-check"></i>
+                            </div>
+                            <span class="about__highlight-text">Serving Tulsa since 2004</span>
+                        </div>
+                        
+                        <div class="about__highlight">
+                            <div class="about__highlight-icon">
+                                <i class="fas fa-user-md"></i>
+                            </div>
+                            <span class="about__highlight-text">Advanced certifications</span>
+                        </div>
+                        
+                        <div class="about__highlight">
+                            <div class="about__highlight-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <span class="about__highlight-text">Thousands of patients helped</span>
+                        </div>
+                        
+                        <div class="about__highlight">
+                            <div class="about__highlight-icon">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <span class="about__highlight-text">Continuous education</span>
+                        </div>
+                    </div>
+                    
+                    <a href="#contact" class="btn btn--primary about__cta">Schedule Your Consultation</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Testimonials Section -->
+    <section class="testimonials section" id="testimonials">
+        <div class="container testimonials__container">
+            <div class="section__header animate-fade-in">
+                <h2 class="section__title">Patient Success Stories</h2>
+                <p class="section__subtitle">Hear from our patients who have experienced life-changing results through our comprehensive chiropractic care.</p>
+            </div>
+            
+            <div class="testimonials__slider" id="testimonials-slider">
+                <div class="testimonials__track" id="testimonials-track">
+                    <div class="testimonial-card">
+                        <div class="testimonial-card__inner">
+                            <div class="testimonial-card__quote">"</div>
+                            <div class="testimonial-card__rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p class="testimonial-card__text">After struggling with debilitating migraines for years, I found real relief with Dr. Sonda. Her approach addressed the root cause of my pain rather than just masking symptoms. I'm now living migraine-free for the first time in a decade!</p>
+                            <div class="testimonial-card__author">
+                                <div class="testimonial-card__author-img"></div>
+                                <div class="testimonial-card__author-info">
+                                    <h4 class="testimonial-card__author-name">Jennifer M.</h4>
+                                    <p class="testimonial-card__author-title">Migraine Patient</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <div class="testimonial-card__inner">
+                            <div class="testimonial-card__quote">"</div>
+                            <div class="testimonial-card__rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p class="testimonial-card__text">My son struggled with sensory processing issues for years. After just a few months of care with Dr. Riley, we've seen remarkable improvements in his focus, behavior, and overall well-being. The personalized approach made all the difference.</p>
+                            <div class="testimonial-card__author">
+                                <div class="testimonial-card__author-img"></div>
+                                <div class="testimonial-card__author-info">
+                                    <h4 class="testimonial-card__author-name">Michael T.</h4>
+                                    <p class="testimonial-card__author-title">Parent of Pediatric Patient</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <div class="testimonial-card__inner">
+                            <div class="testimonial-card__quote">"</div>
+                            <div class="testimonial-card__rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p class="testimonial-card__text">The prenatal chiropractic care I received from Dr. Sonda made my pregnancy so much more comfortable. After my previous difficult birth, I was amazed at how smoothly this delivery went. I credit the consistent chiropractic adjustments for preparing my body.</p>
+                            <div class="testimonial-card__author">
+                                <div class="testimonial-card__author-img"></div>
+                                <div class="testimonial-card__author-info">
+                                    <h4 class="testimonial-card__author-name">Sarah K.</h4>
+                                    <p class="testimonial-card__author-title">Prenatal Patient</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <div class="testimonial-card__inner">
+                            <div class="testimonial-card__quote">"</div>
+                            <div class="testimonial-card__rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p class="testimonial-card__text">After my car accident, I was in constant pain. The team at Optimal Health and Wellness created a comprehensive recovery plan that had me back to normal much faster than I expected. Their expertise in auto injuries is unmatched in Tulsa.</p>
+                            <div class="testimonial-card__author">
+                                <div class="testimonial-card__author-img"></div>
+                                <div class="testimonial-card__author-info">
+                                    <h4 class="testimonial-card__author-name">Robert D.</h4>
+                                    <p class="testimonial-card__author-title">Auto Injury Patient</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonials__controls">
+                    <button class="testimonials__btn" id="prev-testimonial" aria-label="Previous testimonial">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="testimonials__btn" id="next-testimonial" aria-label="Next testimonial">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+                
+                <div class="testimonials__indicators" id="testimonials-indicators">
+                    <button class="testimonials__indicator testimonials__indicator--active" data-index="0" aria-label="Testimonial 1"></button>
+                    <button class="testimonials__indicator" data-index="1" aria-label="Testimonial 2"></button>
+                    <button class="testimonials__indicator" data-index="2" aria-label="Testimonial 3"></button>
+                    <button class="testimonials__indicator" data-index="3" aria-label="Testimonial 4"></button>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section class="contact section" id="contact">
+        <div class="container contact__container">
+            <div class="section__header animate-fade-in">
+                <h2 class="section__title">Connect With Us</h2>
+                <p class="section__subtitle">Have questions or ready to start your journey to optimal health? Contact us today to schedule your consultation.</p>
+            </div>
+            
+            <div class="contact__content">
+                <div class="contact__info animate-fade-in-left">
+                    <div class="contact__text">
+                        <h3>Get in Touch</h3>
+                        <p>We're here to answer your questions and help you take the first step toward a healthier life. Reach out to us using any of the methods below or fill out the form to schedule your consultation.</p>
+                    </div>
+                    
+                    <div class="contact__methods">
+                        <div class="contact__method">
+                            <div class="contact__method-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact__method-content">
+                                <h4 class="contact__method-title">Visit Our Office</h4>
+                                <p class="contact__method-text">123 Wellness Way, Tulsa, OK 74133</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact__method">
+                            <div class="contact__method-icon">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div class="contact__method-content">
+                                <h4 class="contact__method-title">Call Us</h4>
+                                <p class="contact__method-text">
+                                    <a href="tel:9185551234" class="contact__method-link">(918) 555-1234</a>
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact__method">
+                            <div class="contact__method-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact__method-content">
+                                <h4 class="contact__method-title">Email Us</h4>
+                                <p class="contact__method-text">
+                                    <a href="mailto:info@optimalhealthtulsa.com" class="contact__method-link">info@optimalhealthtulsa.com</a>
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact__method">
+                            <div class="contact__method-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="contact__method-content">
+                                <h4 class="contact__method-title">Office Hours</h4>
+                                <p class="contact__method-text">Monday - Friday: 8am - 6pm<br>Saturday: 9am - 1pm<br>Sunday: Closed</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact__form-wrapper animate-fade-in-right">
+                    <form id="contact-form" class="contact__form">
+                        <div class="form__group">
+                            <input type="text" id="name" name="name" class="form__input" placeholder="Your Full Name" required>
+                            <span class="form__error" id="name-error">Please enter your name</span>
+                        </div>
+                        
+                        <div class="form__group">
+                            <input type="email" id="email" name="email" class="form__input" placeholder="Your Email" required>
+                            <span class="form__error" id="email-error">Please enter a valid email</span>
+                        </div>
+                        
+                        <div class="form__group">
+                            <input type="tel" id="phone" name="phone" class="form__input" placeholder="Your Phone Number" required>
+                            <span class="form__error" id="phone-error">Please enter a valid phone number</span>
+                        </div>
+                        
+                        <div class="form__group">
+                            <select id="service" name="service" class="form__input" required>
+                                <option value="" disabled selected>Select Service</option>
+                                <option value="chiropractic">Chiropractic Adjustments</option>
+                                <option value="pediatric">Pediatric Care</option>
+                                <option value="prenatal">Prenatal Chiropractic</option>
+                                <option value="auto">Auto Injury Recovery</option>
+                                <option value="headache">Headache Relief</option>
+                                <option value="chronic">Chronic Health Conditions</option>
+                            </select>
+                            <span class="form__error" id="service-error">Please select a service</span>
+                        </div>
+                        
+                        <div class="form__group">
+                            <textarea id="message" name="message" class="form__textarea" placeholder="Tell us about your health concerns" required></textarea>
+                            <span class="form__error" id="message-error">Please enter your message</span>
+                        </div>
+                        
+                        <button type="submit" class="btn btn--primary form__submit">Send Message</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="map animate-fade-in">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d104861.91305409226!2d-95.9966103!3d36.1311974!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87b692b8ddd12e8f%3A0xe76910c81bd96af7!2sTulsa%2C%20OK!5e0!3m2!1sen!2sus!4v1623244252694!5m2!1sen!2sus" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer__container">
+            <div class="footer__content">
+                <div class="footer__col">
+                    <div class="footer__logo">
+                        <div class="footer__logo-text">Optimal Health</div>
+                    </div>
+                    <p class="footer__about">Since 2004, Drs. Riley and Sonda Powell have been dedicated to helping patients of all ages achieve optimal health through comprehensive chiropractic care in Tulsa, Oklahoma.</p>
+                    <div class="footer__social">
+                        <a href="#" class="footer__social-link" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="footer__social-link" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="footer__social-link" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="footer__social-link" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer__col">
+                    <h4 class="footer__col-title">Quick Links</h4>
+                    <ul class="footer__links">
+                        <li class="footer__link-item">
+                            <a href="#home" class="footer__link">
+                                <i class="fas fa-chevron-right"></i> Home
+                            </a>
+                        </li>
+                        <li class="footer__link-item">
+                            <a href="#services" class="footer__link">
+                                <i class="fas fa-chevron-right"></i> Services
+                            </a>
+                        </li>
+                        <li class="footer__link-item">
+                            <a href="#about" class="footer__link">
+                                <i class="fas fa-chevron-right"></i> About Us
+                            </a>
+                        </li>
+                        <li class="footer__link-item">
+                            <a href="#testimonials" class="footer__link">
+                                <i class="fas fa-chevron-right"></i> Testimonials
+                            </a>
+                        </li>
+                        <li class="footer__link-item">
+                            <a href="#contact" class="footer__link">
+                                <i class="fas fa-chevron-right"></i> Contact
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="footer__col">
+                    <h4 class="footer__col-title">Our Services</h4>
+                    <ul class="footer__links">
+                        <li class="footer__link-item">
+                            <a href="#services" class="footer__link">
+                                <i class="fas fa-chevron-right"></i> Chiropractic Adjustments
+                            </a>
+                        </li>
+                        <li class="footer__link-item">
+                            <a href="#services" class="footer__link">
+                                <i class="fas fa-chevron-right"></i> Pediatric Care
+                            </a>
+                        </li>
+                        <li class="footer__link-item">
+                            <a href="#services" class="footer__link">
+                                <i class="fas fa-chevron-right"></i> Prenatal Chiropractic
+                            </a>
+                        </li>
+                        <li class="footer__link-item">
+                            <a href="#services" class="footer__link">
+                                <i class="fas fa-chevron-right"></i> Auto Injury Recovery
+                            </a>
+                        </li>
+                        <li class="footer__link-item">
+                            <a href="#services" class="footer__link">
+                                <i class="fas fa-chevron-right"></i> Chronic Health Conditions
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="footer__col">
+                    <h4 class="footer__col-title">Contact Info</h4>
+                    <div class="footer__contact">
+                        <div class="footer__contact-item">
+                            <div class="footer__contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <p>123 Wellness Way<br>Tulsa, OK 74133</p>
+                        </div>
+                        
+                        <div class="footer__contact-item">
+                            <div class="footer__contact-icon">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <p>
+                                <a href="tel:9185551234" class="footer__contact-link">(918) 555-1234</a>
+                            </p>
+                        </div>
+                        
+                        <div class="footer__contact-item">
+                            <div class="footer__contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <p>
+                                <a href="mailto:info@optimalhealthtulsa.com" class="footer__contact-link">info@optimalhealthtulsa.com</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer__bottom">
+                <div class="footer__copyright">
+                    © <span id="current-year">2023</span> Optimal Health and Wellness. All Rights Reserved.
+                </div>
+                
+                <div class="footer__policy-links">
+                    <a href="#" class="footer__policy-link">Privacy Policy</a>
+                    <a href="#" class="footer__policy-link">Terms of Service</a>
+                    <a href="#" class="footer__policy-link">Accessibility</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+    
+    <!-- JavaScript -->
+    <script>
+        // DOM Elements
+        const header = document.getElementById('header');
+        const hamburger = document.getElementById('hamburger');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileMenuClose = document.getElementById('mobile-menu-close');
+        const backdrop = document.getElementById('backdrop');
+        const mobileMenuLinks = document.querySelectorAll('.mobile-menu__link');
+        const backToTop = document.getElementById('back-to-top');
+        const currentYearSpan = document.getElementById('current-year');
+        const contactForm = document.getElementById('contact-form');
+        
+        // Testimonials Elements
+        const testimonialsTrack = document.getElementById('testimonials-track');
+        const prevButton = document.getElementById('prev-testimonial');
+        const nextButton = document.getElementById('next-testimonial');
+        const indicators = document.getElementById('testimonials-indicators').querySelectorAll('.testimonials__indicator');
+        
+        // Set current year
+        currentYearSpan.textContent = new Date().getFullYear();
+        
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('header--scrolled');
+                backToTop.classList.add('back-to-top--visible');
+            } else {
+                header.classList.remove('header--scrolled');
+                backToTop.classList.remove('back-to-top--visible');
+            }
+        });
+        
+        // Mobile menu functionality
+        hamburger.addEventListener('click', () => {
+            mobileMenu.classList.add('mobile-menu--active');
+            backdrop.classList.add('backdrop--active');
+            document.body.style.overflow = 'hidden';
+        });
+        
+        const closeMobileMenu = () => {
+            mobileMenu.classList.remove('mobile-menu--active');
+            backdrop.classList.remove('backdrop--active');
+            document.body.style.overflow = '';
+        };
+        
+        mobileMenuClose.addEventListener('click', closeMobileMenu);
+        backdrop.addEventListener('click', closeMobileMenu);
+        
+        mobileMenuLinks.forEach(link => {
+            link.addEventListener('click', closeMobileMenu);
+        });
+        
+        // Back to top button
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    const headerHeight = header.offsetHeight;
+                    const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+                    
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Testimonials slider
+        let currentSlide = 0;
+        const slideCount = document.querySelectorAll('.testimonial-card').length;
+        let autoSlideInterval;
+        
+        const updateSlider = () => {
+            testimonialsTrack.style.transform = `translateX(-${currentSlide * 100}%)`;
+            
+            // Update indicators
+            indicators.forEach((indicator, index) => {
+                if (index === currentSlide) {
+                    indicator.classList.add('testimonials__indicator--active');
+                } else {
+                    indicator.classList.remove('testimonials__indicator--active');
+                }
+            });
+        };
+        
+        const nextSlide = () => {
+            currentSlide = (currentSlide + 1) % slideCount;
+            updateSlider();
+        };
+        
+        const prevSlide = () => {
+            currentSlide = (currentSlide - 1 + slideCount) % slideCount;
+            updateSlider();
+        };
+        
+        // Auto advance slides
+        const startAutoSlide = () => {
+            autoSlideInterval = setInterval(nextSlide, 5000);
+        };
+        
+        const stopAutoSlide = () => {
+            clearInterval(autoSlideInterval);
+        };
+        
+        // Event listeners for testimonials
+        prevButton.addEventListener('click', () => {
+            prevSlide();
+            stopAutoSlide();
+            startAutoSlide();
+        });
+        
+        nextButton.addEventListener('click', () => {
+            nextSlide();
+            stopAutoSlide();
+            startAutoSlide();
+        });
+        
+        indicators.forEach((indicator, index) => {
+            indicator.addEventListener('click', () => {
+                currentSlide = index;
+                updateSlider();
+                stopAutoSlide();
+                startAutoSlide();
+            });
+        });
+        
+        // Form validation
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            let isValid = true;
+            const nameInput = document.getElementById('name');
+            const emailInput = document.getElementById('email');
+            const phoneInput = document.getElementById('phone');
+            const serviceInput = document.getElementById('service');
+            const messageInput = document.getElementById('message');
+            
+            // Reset errors
+            document.querySelectorAll('.form__error').forEach(error => {
+                error.classList.remove('form__error--visible');
+            });
+            
+            // Validate name
+            if (!nameInput.value.trim()) {
+                document.getElementById('name-error').classList.add('form__error--visible');
+                isValid = false;
+            }
+            
+            // Validate email
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(emailInput.value.trim())) {
+                document.getElementById('email-error').classList.add('form__error--visible');
+                isValid = false;
+            }
+            
+            // Validate phone
+            const phoneRegex = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
+            if (!phoneRegex.test(phoneInput.value.trim())) {
+                document.getElementById('phone-error').classList.add('form__error--visible');
+                isValid = false;
+            }
+            
+            // Validate service
+            if (!serviceInput.value) {
+                document.getElementById('service-error').classList.add('form__error--visible');
+                isValid = false;
+            }
+            
+            // Validate message
+            if (!messageInput.value.trim()) {
+                document.getElementById('message-error').classList.add('form__error--visible');
+                isValid = false;
+            }
+            
+            if (isValid) {
+                // Simulate form submission
+                alert('Thanks for your message! We will get back to you soon.');
+                contactForm.reset();
+            }
+        });
+        
+        // Initialize
+        startAutoSlide();
+        
+        // Scroll animations
+        const animateElements = () => {
+            const elements = document.querySelectorAll('.animate-fade-in, .animate-fade-in-left, .animate-fade-in-right');
+            
+            elements.forEach(element => {
+                const elementPosition = element.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+                
+                if (elementPosition < windowHeight * 0.85) {
+                    element.style.opacity = '1';
+                    element.style.transform = 'translateY(0) translateX(0)';
+                }
+            });
+        };
+        
+        // Set initial opacity for animated elements
+        document.querySelectorAll('.animate-fade-in, .animate-fade-in-left, .animate-fade-in-right').forEach(element => {
+            element.style.opacity = '0';
+            element.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
+            
+            if (element.classList.contains('animate-fade-in')) {
+                element.style.transform = 'translateY(20px)';
+            } else if (element.classList.contains('animate-fade-in-left')) {
+                element.style.transform = 'translateX(-20px)';
+            } else if (element.classList.contains('animate-fade-in-right')) {
+                element.style.transform = 'translateX(20px)';
+            }
+        });
+        
+        window.addEventListener('scroll', animateElements);
+        window.addEventListener('load', animateElements);
+    </script>
+</body>
+</html>
