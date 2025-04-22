@@ -1,0 +1,1609 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robinson Chiropractic | Dr. Matt Robinson | Tulsa, Oklahoma</title>
+    <meta name="description" content="Dr. Matt Robinson offers affordable chiropractic care in Tulsa with 29 years of experience. $50 adjustments and $200 monthly plans. Most insurances accepted.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            /* Healthcare/Wellness Color Palette - Calming blues and healing greens */
+            --primary-color: #2c7873; /* Healing teal - main brand color */
+            --secondary-color: #6FB98F; /* Refreshing green - accent color */
+            --accent-color: #004445; /* Deep blue-green - visual highlights */
+            --light-color: #e7f5f3; /* Soft light teal - backgrounds */
+            --dark-color: #1a3c40; /* Dark teal - text and footers */
+            --white: #ffffff;
+            --off-white: #f8fcfb;
+            --gray-light: #e5eeed;
+            --gray-medium: #b8c7c5;
+            --gray-dark: #5b6e6d;
+            
+            /* Spacing System (8px grid) */
+            --space-xs: 0.5rem; /* 8px */
+            --space-sm: 1rem;   /* 16px */
+            --space-md: 1.5rem; /* 24px */
+            --space-lg: 2rem;   /* 32px */
+            --space-xl: 3rem;   /* 48px */
+            --space-xxl: 4rem;  /* 64px */
+            
+            /* Typography */
+            --font-heading: 'Playfair Display', serif;
+            --font-body: 'Montserrat', sans-serif;
+            
+            /* Transitions */
+            --transition-fast: 0.2s ease;
+            --transition-standard: 0.3s ease;
+            --transition-slow: 0.5s ease;
+            
+            /* Shadows */
+            --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.1);
+            
+            /* Border Radius */
+            --radius-sm: 4px;
+            --radius-md: 8px;
+            --radius-lg: 12px;
+            --radius-xl: 20px;
+            --radius-circle: 50%;
+        }
+        
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+        
+        body {
+            font-family: var(--font-body);
+            color: var(--dark-color);
+            background-color: var(--off-white);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-heading);
+            font-weight: 600;
+            line-height: 1.2;
+            margin-bottom: var(--space-sm);
+            color: var(--dark-color);
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+        
+        h2 {
+            font-size: 2rem;
+            position: relative;
+            margin-bottom: var(--space-lg);
+        }
+        
+        h2:after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background-color: var(--secondary-color);
+        }
+        
+        h3 {
+            font-size: 1.5rem;
+        }
+        
+        p {
+            margin-bottom: var(--space-md);
+            font-weight: 400;
+        }
+        
+        a {
+            color: var(--primary-color);
+            text-decoration: none;
+            transition: color var(--transition-standard);
+        }
+        
+        a:hover {
+            color: var(--secondary-color);
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--space-md);
+        }
+        
+        .text-center {
+            text-align: center;
+        }
+        
+        .section {
+            padding: var(--space-xl) 0;
+            position: relative;
+        }
+        
+        .section--light {
+            background-color: var(--light-color);
+        }
+        
+        .section--white {
+            background-color: var(--white);
+        }
+        
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            font-weight: 600;
+            font-size: 1rem;
+            text-align: center;
+            text-decoration: none;
+            border: none;
+            border-radius: var(--radius-md);
+            cursor: pointer;
+            transition: all var(--transition-standard);
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .btn--primary {
+            background-color: var(--primary-color);
+            color: var(--white);
+        }
+        
+        .btn--primary:hover {
+            background-color: var(--accent-color);
+            color: var(--white);
+            box-shadow: var(--shadow-md);
+            transform: translateY(-2px);
+        }
+        
+        .btn--secondary {
+            background-color: var(--secondary-color);
+            color: var(--white);
+        }
+        
+        .btn--secondary:hover {
+            background-color: var(--primary-color);
+            color: var(--white);
+            box-shadow: var(--shadow-md);
+            transform: translateY(-2px);
+        }
+        
+        .btn--outline {
+            background-color: transparent;
+            border: 2px solid var(--primary-color);
+            color: var(--primary-color);
+        }
+        
+        .btn--outline:hover {
+            background-color: var(--primary-color);
+            color: var(--white);
+            box-shadow: var(--shadow-md);
+            transform: translateY(-2px);
+        }
+        
+        /* Header */
+        .header {
+            position: sticky;
+            top: 0;
+            background-color: var(--white);
+            box-shadow: var(--shadow-sm);
+            padding: var(--space-sm) 0;
+            z-index: 1000;
+            transition: all var(--transition-standard);
+        }
+        
+        .header__container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        
+        .header__logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .header__logo-img {
+            height: 50px;
+            margin-right: var(--space-sm);
+        }
+        
+        .header__logo-text {
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+        
+        .header__nav {
+            display: none;
+        }
+        
+        .header__nav-list {
+            display: flex;
+            list-style: none;
+            gap: var(--space-md);
+        }
+        
+        .header__nav-item {
+            position: relative;
+        }
+        
+        .header__nav-link {
+            color: var(--dark-color);
+            font-weight: 500;
+            transition: color var(--transition-standard);
+        }
+        
+        .header__nav-link:hover {
+            color: var(--primary-color);
+        }
+        
+        .header__nav-link.active {
+            color: var(--primary-color);
+        }
+        
+        .header__cta {
+            display: none;
+        }
+        
+        .header__toggle {
+            display: block;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            cursor: pointer;
+        }
+        
+        .header__mobile-nav {
+            width: 100%;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height var(--transition-standard);
+        }
+        
+        .header__mobile-nav.open {
+            max-height: 300px;
+            margin-top: var(--space-sm);
+        }
+        
+        .header__mobile-list {
+            list-style: none;
+            padding: var(--space-sm) 0;
+        }
+        
+        .header__mobile-item {
+            margin-bottom: var(--space-xs);
+        }
+        
+        .header__mobile-link {
+            display: block;
+            padding: var(--space-xs) 0;
+            color: var(--dark-color);
+            font-weight: 500;
+            transition: color var(--transition-standard);
+        }
+        
+        .header__mobile-link:hover {
+            color: var(--primary-color);
+        }
+        
+        /* Hero Section */
+        .hero {
+            padding: var(--space-xxl) 0;
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            color: var(--white);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background-image: url('data:image/svg+xml;charset=utf8,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"%3E%3Cpath fill="%23ffffff" fill-opacity="0.05" d="M0,96L48,112C96,128,192,160,288,186.7C384,213,480,235,576,208C672,181,768,107,864,80C960,53,1056,75,1152,96C1248,117,1344,139,1392,149.3L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"%3E%3C/path%3E%3C/svg%3E');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.2;
+        }
+        
+        .hero__container {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: var(--space-lg);
+        }
+        
+        .hero__content {
+            max-width: 700px;
+        }
+        
+        .hero__subtitle {
+            font-size: 1.25rem;
+            font-weight: 500;
+            margin-bottom: var(--space-md);
+            color: var(--gray-light);
+        }
+        
+        .hero__title {
+            font-size: 2.5rem;
+            margin-bottom: var(--space-md);
+            color: var(--white);
+        }
+        
+        .hero__description {
+            font-size: 1.125rem;
+            margin-bottom: var(--space-lg);
+            color: var(--gray-light);
+        }
+        
+        .hero__cta-group {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-sm);
+            margin-top: var(--space-md);
+        }
+        
+        .hero__image {
+            width: 100%;
+            max-width: 400px;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-lg);
+            border: 5px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        /* Services Section */
+        .services__intro {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto var(--space-xl);
+        }
+        
+        .services__grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: var(--space-md);
+        }
+        
+        .service-card {
+            background-color: var(--white);
+            border-radius: var(--radius-lg);
+            padding: var(--space-lg);
+            box-shadow: var(--shadow-sm);
+            transition: all var(--transition-standard);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+            border-bottom: 3px solid var(--primary-color);
+        }
+        
+        .service-card__icon {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: var(--space-sm);
+            background-color: var(--light-color);
+            width: 80px;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: var(--radius-circle);
+            transition: all var(--transition-standard);
+        }
+        
+        .service-card:hover .service-card__icon {
+            color: var(--white);
+            background-color: var(--primary-color);
+            transform: scale(1.05);
+        }
+        
+        .service-card__title {
+            font-size: 1.25rem;
+            margin-bottom: var(--space-sm);
+            color: var(--dark-color);
+        }
+        
+        .service-card__description {
+            color: var(--gray-dark);
+            margin-bottom: var(--space-md);
+        }
+        
+        /* About Section */
+        .about {
+            background-color: var(--white);
+        }
+        
+        .about__container {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-xl);
+        }
+        
+        .about__content {
+            flex: 1;
+        }
+        
+        .about__image-wrapper {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+        }
+        
+        .about__image {
+            max-width: 100%;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-md);
+            border: 5px solid var(--light-color);
+        }
+        
+        .about__title {
+            position: relative;
+        }
+        
+        .about__subtitle {
+            font-size: 1.125rem;
+            color: var(--primary-color);
+            margin-bottom: var(--space-sm);
+        }
+        
+        .about__description {
+            margin-bottom: var(--space-md);
+        }
+        
+        .about__highlight {
+            display: flex;
+            align-items: center;
+            margin-bottom: var(--space-sm);
+        }
+        
+        .about__highlight-icon {
+            color: var(--primary-color);
+            margin-right: var(--space-sm);
+            font-size: 1.25rem;
+        }
+        
+        .credentials {
+            margin-top: var(--space-lg);
+            padding: var(--space-md);
+            background-color: var(--light-color);
+            border-radius: var(--radius-md);
+            border-left: 4px solid var(--primary-color);
+        }
+        
+        .credentials__title {
+            font-size: 1.25rem;
+            margin-bottom: var(--space-sm);
+        }
+        
+        .credentials__list {
+            list-style: none;
+        }
+        
+        .credentials__item {
+            display: flex;
+            align-items: center;
+            margin-bottom: var(--space-xs);
+        }
+        
+        .credentials__icon {
+            color: var(--primary-color);
+            margin-right: var(--space-sm);
+        }
+        
+        /* Testimonials Section */
+        .testimonials {
+            background-color: var(--light-color);
+            text-align: center;
+        }
+        
+        .testimonials__intro {
+            margin-bottom: var(--space-xl);
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .testimonials__slider {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+        
+        .testimonials__track {
+            display: flex;
+            transition: transform var(--transition-standard);
+        }
+        
+        .testimonial {
+            flex: 0 0 100%;
+            padding: var(--space-lg);
+            background-color: var(--white);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-md);
+            margin: 0 var(--space-sm);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .testimonial__quote {
+            font-size: 1.5rem;
+            color: var(--accent-color);
+            margin-bottom: var(--space-sm);
+        }
+        
+        .testimonial__stars {
+            color: #FFD700;
+            margin-bottom: var(--space-sm);
+            font-size: 1.25rem;
+        }
+        
+        .testimonial__text {
+            font-style: italic;
+            margin-bottom: var(--space-md);
+            color: var(--dark-color);
+        }
+        
+        .testimonial__author {
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+        
+        .testimonial__position {
+            font-size: 0.875rem;
+            color: var(--gray-dark);
+        }
+        
+        .testimonials__nav {
+            display: flex;
+            justify-content: center;
+            margin-top: var(--space-lg);
+            gap: var(--space-xs);
+        }
+        
+        .testimonials__dot {
+            width: 12px;
+            height: 12px;
+            border-radius: var(--radius-circle);
+            background-color: var(--gray-medium);
+            cursor: pointer;
+            transition: all var(--transition-standard);
+        }
+        
+        .testimonials__dot.active {
+            background-color: var(--primary-color);
+            transform: scale(1.2);
+        }
+        
+        /* Pricing Section */
+        .pricing {
+            background-color: var(--white);
+        }
+        
+        .pricing__intro {
+            text-align: center;
+            margin-bottom: var(--space-xl);
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .pricing__grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: var(--space-lg);
+        }
+        
+        .pricing-card {
+            background-color: var(--white);
+            border-radius: var(--radius-lg);
+            padding: var(--space-lg);
+            box-shadow: var(--shadow-md);
+            transition: all var(--transition-standard);
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid var(--gray-light);
+        }
+        
+        .pricing-card--featured {
+            background-color: var(--light-color);
+            border: 2px solid var(--primary-color);
+            transform: scale(1.05);
+            position: relative;
+            z-index: 1;
+        }
+        
+        .pricing-card--featured .pricing-card__header {
+            background-color: var(--primary-color);
+            color: var(--white);
+            margin: calc(-1 * var(--space-lg)) calc(-1 * var(--space-lg)) var(--space-md);
+            padding: var(--space-md);
+            border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+        }
+        
+        .pricing-card__title {
+            font-size: 1.5rem;
+            margin-bottom: var(--space-sm);
+        }
+        
+        .pricing-card__price {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: var(--space-sm);
+            color: var(--primary-color);
+        }
+        
+        .pricing-card__period {
+            font-size: 1rem;
+            color: var(--gray-dark);
+            display: block;
+            font-weight: 400;
+        }
+        
+        .pricing-card__features {
+            list-style: none;
+            margin: var(--space-md) 0;
+            flex-grow: 1;
+        }
+        
+        .pricing-card__feature {
+            padding: var(--space-xs) 0;
+            border-bottom: 1px solid var(--gray-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .pricing-card__feature-icon {
+            color: var(--primary-color);
+            margin-right: var(--space-xs);
+        }
+        
+        .pricing-card__cta {
+            margin-top: var(--space-md);
+        }
+        
+        /* Contact Section */
+        .contact {
+            background-color: var(--light-color);
+        }
+        
+        .contact__container {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-xl);
+        }
+        
+        .contact__content {
+            flex: 1;
+        }
+        
+        .contact__form-wrapper {
+            flex: 1;
+        }
+        
+        .contact__title {
+            position: relative;
+        }
+        
+        .contact__info {
+            margin-bottom: var(--space-md);
+        }
+        
+        .contact__detail {
+            display: flex;
+            align-items: center;
+            margin-bottom: var(--space-sm);
+        }
+        
+        .contact__icon {
+            color: var(--primary-color);
+            margin-right: var(--space-sm);
+            font-size: 1.25rem;
+            width: 24px;
+        }
+        
+        .contact__text {
+            color: var(--dark-color);
+        }
+        
+        .contact__map {
+            margin-top: var(--space-lg);
+            height: 300px;
+            border-radius: var(--radius-md);
+            overflow: hidden;
+        }
+        
+        .contact__form {
+            background-color: var(--white);
+            padding: var(--space-lg);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .form__group {
+            margin-bottom: var(--space-md);
+        }
+        
+        .form__label {
+            display: block;
+            margin-bottom: var(--space-xs);
+            font-weight: 500;
+            color: var(--dark-color);
+        }
+        
+        .form__input,
+        .form__textarea {
+            width: 100%;
+            padding: var(--space-sm);
+            border: 1px solid var(--gray-medium);
+            border-radius: var(--radius-sm);
+            font-family: var(--font-body);
+            font-size: 1rem;
+            transition: border-color var(--transition-standard);
+        }
+        
+        .form__input:focus,
+        .form__textarea:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 2px rgba(44, 120, 115, 0.2);
+        }
+        
+        .form__textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+        
+        .form__submit {
+            width: 100%;
+            padding: var(--space-sm);
+            font-size: 1rem;
+            font-weight: 600;
+        }
+        
+        /* Footer */
+        .footer {
+            background-color: var(--dark-color);
+            color: var(--white);
+            padding: var(--space-xl) 0 var(--space-lg);
+        }
+        
+        .footer__container {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .footer__top {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-lg);
+            padding-bottom: var(--space-lg);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .footer__logo {
+            display: inline-block;
+            margin-bottom: var(--space-sm);
+        }
+        
+        .footer__column-title {
+            font-size: 1.25rem;
+            margin-bottom: var(--space-md);
+            color: var(--white);
+            position: relative;
+        }
+        
+        .footer__column-title:after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 30px;
+            height: 2px;
+            background-color: var(--secondary-color);
+        }
+        
+        .footer__nav-list {
+            list-style: none;
+        }
+        
+        .footer__nav-item {
+            margin-bottom: var(--space-xs);
+        }
+        
+        .footer__nav-link {
+            color: var(--gray-light);
+            transition: color var(--transition-standard);
+        }
+        
+        .footer__nav-link:hover {
+            color: var(--secondary-color);
+        }
+        
+        .footer__description {
+            color: var(--gray-medium);
+            margin-bottom: var(--space-md);
+            max-width: 400px;
+        }
+        
+        .footer__social {
+            display: flex;
+            gap: var(--space-sm);
+        }
+        
+        .footer__social-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: var(--radius-circle);
+            color: var(--white);
+            transition: all var(--transition-standard);
+        }
+        
+        .footer__social-link:hover {
+            background-color: var(--primary-color);
+            color: var(--white);
+            transform: translateY(-3px);
+        }
+        
+        .footer__bottom {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: var(--space-sm);
+            padding-top: var(--space-lg);
+        }
+        
+        .footer__copyright {
+            color: var(--gray-medium);
+            font-size: 0.875rem;
+        }
+        
+        .footer__legal {
+            display: flex;
+            gap: var(--space-md);
+        }
+        
+        .footer__legal-link {
+            color: var(--gray-medium);
+            font-size: 0.875rem;
+            transition: color var(--transition-standard);
+        }
+        
+        .footer__legal-link:hover {
+            color: var(--white);
+        }
+        
+        /* Media Queries */
+        @media (min-width: 640px) {
+            h1 {
+                font-size: 3rem;
+            }
+            
+            h2 {
+                font-size: 2.25rem;
+            }
+            
+            .hero__title {
+                font-size: 3rem;
+            }
+            
+            .services__grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .hero__cta-group {
+                flex-direction: row;
+            }
+            
+            .pricing__grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .footer__top {
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
+            
+            .footer__column {
+                flex: 1 0 40%;
+            }
+            
+            .footer__bottom {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+        }
+        
+        @media (min-width: 1024px) {
+            h1 {
+                font-size: 3.5rem;
+            }
+            
+            .header__nav {
+                display: block;
+            }
+            
+            .header__cta {
+                display: block;
+            }
+            
+            .header__toggle {
+                display: none;
+            }
+            
+            .header__mobile-nav {
+                display: none;
+            }
+            
+            .hero__container {
+                flex-direction: row;
+                text-align: left;
+                justify-content: space-between;
+            }
+            
+            .hero__content {
+                max-width: 50%;
+            }
+            
+            .services__grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            
+            .about__container {
+                flex-direction: row;
+            }
+            
+            .contact__container {
+                flex-direction: row;
+            }
+            
+            .pricing__grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            
+            .footer__column {
+                flex: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container header__container">
+            <div class="header__logo">
+                <div class="header__logo-text">Robinson Chiropractic</div>
+            </div>
+            
+            <nav class="header__nav">
+                <ul class="header__nav-list">
+                    <li class="header__nav-item"><a href="#home" class="header__nav-link active">Home</a></li>
+                    <li class="header__nav-item"><a href="#services" class="header__nav-link">Services</a></li>
+                    <li class="header__nav-item"><a href="#about" class="header__nav-link">About</a></li>
+                    <li class="header__nav-item"><a href="#testimonials" class="header__nav-link">Testimonials</a></li>
+                    <li class="header__nav-item"><a href="#pricing" class="header__nav-link">Pricing</a></li>
+                    <li class="header__nav-item"><a href="#contact" class="header__nav-link">Contact</a></li>
+                </ul>
+            </nav>
+            
+            <a href="#contact" class="btn btn--primary header__cta">Schedule Appointment</a>
+            
+            <button class="header__toggle" id="header-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <div class="header__mobile-nav" id="mobile-nav">
+                <ul class="header__mobile-list">
+                    <li class="header__mobile-item"><a href="#home" class="header__mobile-link">Home</a></li>
+                    <li class="header__mobile-item"><a href="#services" class="header__mobile-link">Services</a></li>
+                    <li class="header__mobile-item"><a href="#about" class="header__mobile-link">About</a></li>
+                    <li class="header__mobile-item"><a href="#testimonials" class="header__mobile-link">Testimonials</a></li>
+                    <li class="header__mobile-item"><a href="#pricing" class="header__mobile-link">Pricing</a></li>
+                    <li class="header__mobile-item"><a href="#contact" class="header__mobile-link">Contact</a></li>
+                    <li class="header__mobile-item"><a href="#contact" class="btn btn--primary">Schedule Appointment</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero section" id="home">
+        <div class="container hero__container">
+            <div class="hero__content">
+                <p class="hero__subtitle">Welcome to Robinson Chiropractic</p>
+                <h1 class="hero__title">Experience Natural Pain Relief with Expert Chiropractic Care</h1>
+                <p class="hero__description">With 29 years of experience, Dr. Matt Robinson provides affordable, effective chiropractic care that addresses the root cause of your pain. Discover why thousands of patients in Tulsa trust their health to Robinson Chiropractic.</p>
+                <div class="hero__cta-group">
+                    <a href="#contact" class="btn btn--primary">Schedule an Appointment</a>
+                    <a href="#pricing" class="btn btn--outline">View Pricing</a>
+                </div>
+            </div>
+            <div class="hero__image-wrapper">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXKKk2GmZ1c8nfW267CuidVkgFjbQQ88Jm4Q&s" alt="Dr. Matt Robinson, Chiropractor" class="hero__image">
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services section" id="services">
+        <div class="container">
+            <div class="services__intro">
+                <h2 class="text-center">Our Specialized Services</h2>
+                <p>Dr. Robinson provides a comprehensive range of chiropractic techniques and physical therapies tailored to your specific needs. As an experienced "old skool" chiropractor, he focuses on effective care without unnecessary long treatment plans.</p>
+            </div>
+            
+            <div class="services__grid">
+                <div class="service-card">
+                    <div class="service-card__icon">
+                        <i class="fas fa-spine"></i>
+                    </div>
+                    <h3 class="service-card__title">Chiropractic Adjustments</h3>
+                    <p class="service-card__description">Expert spinal adjustments to restore proper alignment, relieve pain, and improve your body's natural ability to heal itself.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-card__icon">
+                        <i class="fas fa-user-injured"></i>
+                    </div>
+                    <h3 class="service-card__title">Auto Accident Care</h3>
+                    <p class="service-card__description">Specialized treatment for injuries resulting from auto accidents with flexible payment options. Dr. Robinson will wait for payment in car accident cases.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-card__icon">
+                        <i class="fas fa-diagnoses"></i>
+                    </div>
+                    <h3 class="service-card__title">Personalized Treatment</h3>
+                    <p class="service-card__description">One-on-one care with Dr. Robinson himself. No assistants or receptionists – you work directly with the doctor for highest quality care.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-card__icon">
+                        <i class="fas fa-hand-holding-medical"></i>
+                    </div>
+                    <h3 class="service-card__title">Physical Therapy</h3>
+                    <p class="service-card__description">Complementary physical therapy techniques to enhance your recovery, strengthen muscles, and prevent future injuries.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-card__icon">
+                        <i class="fas fa-file-medical"></i>
+                    </div>
+                    <h3 class="service-card__title">Insurance Assistance</h3>
+                    <p class="service-card__description">We accept most major insurance plans and handle all the paperwork for you to make your experience stress-free.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-card__icon">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <h3 class="service-card__title">Wellness Care</h3>
+                    <p class="service-card__description">Preventative care and maintenance to keep your spine healthy and your body functioning optimally for years to come.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about section" id="about">
+        <div class="container about__container">
+            <div class="about__image-wrapper">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXKKk2GmZ1c8nfW267CuidVkgFjbQQ88Jm4Q&s" alt="Dr. Matt Robinson, Chiropractor" class="about__image">
+            </div>
+            
+            <div class="about__content">
+                <p class="about__subtitle">Meet Your Chiropractor</p>
+                <h2 class="about__title">Dr. Matt Robinson</h2>
+                <p class="about__description">With 29 years of experience in chiropractic care, Dr. Matt Robinson has helped thousands of patients in Tulsa find relief from pain and improve their quality of life. As the sole practitioner at Robinson Chiropractic, Dr. Robinson provides personalized attention to each patient, ensuring you receive the highest quality care during every visit.</p>
+                
+                <div class="about__highlight">
+                    <i class="fas fa-check-circle about__highlight-icon"></i>
+                    <p>29 years of clinical experience</p>
+                </div>
+                
+                <div class="about__highlight">
+                    <i class="fas fa-check-circle about__highlight-icon"></i>
+                    <p>Thousands of satisfied patients</p>
+                </div>
+                
+                <div class="about__highlight">
+                    <i class="fas fa-check-circle about__highlight-icon"></i>
+                    <p>"Old skool" approach focused on effective results</p>
+                </div>
+                
+                <div class="about__highlight">
+                    <i class="fas fa-check-circle about__highlight-icon"></i>
+                    <p>Direct, one-on-one care with the doctor</p>
+                </div>
+                
+                <div class="credentials">
+                    <h3 class="credentials__title">Professional Credentials</h3>
+                    <ul class="credentials__list">
+                        <li class="credentials__item">
+                            <i class="fas fa-graduation-cap credentials__icon"></i>
+                            <span>Doctor of Chiropractic</span>
+                        </li>
+                        <li class="credentials__item">
+                            <i class="fas fa-certificate credentials__icon"></i>
+                            <span>Licensed by the Oklahoma Board of Chiropractic Examiners</span>
+                        </li>
+                        <li class="credentials__item">
+                            <i class="fas fa-award credentials__icon"></i>
+                            <span>Continuing education in advanced chiropractic techniques</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials section" id="testimonials">
+        <div class="container">
+            <div class="testimonials__intro">
+                <h2>What Our Patients Say</h2>
+                <p>Don't just take our word for it. Here's what our satisfied patients have to say about their experience with Dr. Robinson and the care they've received at Robinson Chiropractic.</p>
+            </div>
+            
+            <div class="testimonials__slider">
+                <div class="testimonials__track" id="testimonials-track">
+                    <div class="testimonial">
+                        <i class="fas fa-quote-left testimonial__quote"></i>
+                        <div class="testimonial__stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial__text">"I've been seeing Dr. Robinson for over 5 years. His affordable pricing and direct approach to care have kept me pain-free and active. I appreciate that he doesn't push for unnecessary treatments - he focuses on what works."</p>
+                        <p class="testimonial__author">Sarah Johnson</p>
+                        <p class="testimonial__position">Tulsa, OK</p>
+                    </div>
+                    
+                    <div class="testimonial">
+                        <i class="fas fa-quote-left testimonial__quote"></i>
+                        <div class="testimonial__stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial__text">"After my car accident, I was in terrible pain. Dr. Robinson not only provided excellent care but also waited for the insurance settlement. His personal attention to my case made all the difference in my recovery."</p>
+                        <p class="testimonial__author">Michael Ramirez</p>
+                        <p class="testimonial__position">Tulsa, OK</p>
+                    </div>
+                    
+                    <div class="testimonial">
+                        <i class="fas fa-quote-left testimonial__quote"></i>
+                        <div class="testimonial__stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial__text">"I tried several chiropractors before finding Dr. Robinson. His old school approach and affordable $50 adjustments were exactly what I needed. I love that I work directly with him instead of being passed between assistants."</p>
+                        <p class="testimonial__author">Jennifer Williams</p>
+                        <p class="testimonial__position">Tulsa, OK</p>
+                    </div>
+                </div>
+                
+                <div class="testimonials__nav" id="testimonials-nav">
+                    <span class="testimonials__dot active" data-index="0"></span>
+                    <span class="testimonials__dot" data-index="1"></span>
+                    <span class="testimonials__dot" data-index="2"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing section" id="pricing">
+        <div class="container">
+            <div class="pricing__intro">
+                <h2>Affordable Chiropractic Care</h2>
+                <p>Dr. Robinson believes that quality chiropractic care should be accessible to everyone. That's why we offer straightforward, affordable pricing without hidden fees or complicated packages.</p>
+            </div>
+            
+            <div class="pricing__grid">
+                <div class="pricing-card">
+                    <h3 class="pricing-card__title">Single Adjustment</h3>
+                    <div class="pricing-card__price">$50<span class="pricing-card__period">per visit</span></div>
+                    <ul class="pricing-card__features">
+                        <li class="pricing-card__feature">
+                            <i class="fas fa-check pricing-card__feature-icon"></i>
+                            <span>Same price for first visit</span>
+                        </li>
+                        <li class="pricing-card__feature">
+                            <i class="fas fa-check pricing-card__feature-icon"></i>
+                            <span>No hidden fees</span>
+                        </li>
+                        <li class="pricing-card__feature">
+                            <i class="fas fa-check pricing-card__feature-icon"></i>
+                            <span>Direct care from Dr. Robinson</span>
+                        </li>
+                        <li class="pricing-card__feature">
+                            <i class="fas fa-check pricing-card__feature-icon"></i>
+                            <span>Most insurance accepted</span>
+                        </li>
+                    </ul>
+                    <a href="#contact" class="btn btn--primary pricing-card__cta">Schedule Now</a>
+                </div>
+                
+                <div class="pricing-card pricing-card--featured">
+                    <div class="pricing-card__header">
+                        <h3 class="pricing-card__title">Monthly Unlimited</h3>
+                    </div>
+                    <div class="pricing-card__price">$200<span class="pricing-card__period">per month</span></div>
+                    <ul class="pricing-card__features">
+                        <li class="pricing-card__feature">
+                            <i class="fas fa-check pricing-card__feature-icon"></i>
+                            <span>Unlimited adjustments</span>
+                        </li>
+                        <li class="pricing-card__feature">
+                            <i class="fas fa-check pricing-card__feature-icon"></i>
+                            <span>Significant savings</span>
+                        </li>
+                        <li class="pricing-card__feature">
+                            <i class="fas fa-check pricing-card__feature-icon"></i>
+                            <span>Ideal for maintenance care</span>
+                        </li>
+                        <li class="pricing-card__feature">
+                            <i class="fas fa-check pricing-card__feature-icon"></i>
+                            <span>No appointment needed</span>
+                        </li>
+                        <li class="pricing-card__feature">
+                            <i class="fas fa-check pricing-card__feature-icon"></i>
+                            <span>Direct care from Dr. Robinson</span>
+                        </li>
+                    </ul>
+                    <a href="#contact" class="btn btn--secondary pricing-card__cta">Best Value - Sign Up Now</a>
+                </div>
+                
+                <div class="pricing-card">
+                    <h3 class="pricing-card__title">Insurance</h3>
+                    <div class="pricing-card__price">Varies<span class="pricing-card__period">based on coverage</span></div>
+                    <ul class="pricing-card__features">
+                        <li class="pricing-card__feature">
+                            <i class="fas fa-check pricing-card__feature-icon"></i>
+                            <span>Most major plans accepted</span>
+                        </li>
+                        <li class="pricing-card__feature">
+                            <i class="fas fa-check pricing-card__feature-icon"></i>
+                            <span>We handle all paperwork</span>
+                        </li>
+                        <li class="pricing-card__feature">
+                            <i class="fas fa-check pricing-card__feature-icon"></i>
+                            <span>Car accident cases accepted</span>
+                        </li>
+                        <li class="pricing-card__feature">
+                            <i class="fas fa-check pricing-card__feature-icon"></i>
+                            <span>We wait for payment in accident cases</span>
+                        </li>
+                    </ul>
+                    <a href="#contact" class="btn btn--primary pricing-card__cta">Verify Insurance</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact section" id="contact">
+        <div class="container contact__container">
+            <div class="contact__content">
+                <h2 class="contact__title">Get in Touch</h2>
+                <p>Ready to experience the Robinson Chiropractic difference? Contact us today to schedule your appointment or ask any questions you may have about our services.</p>
+                
+                <div class="contact__info">
+                    <div class="contact__detail">
+                        <i class="fas fa-map-marker-alt contact__icon"></i>
+                        <span class="contact__text">Tulsa, Oklahoma (Exact Address Available Upon Request)</span>
+                    </div>
+                    
+                    <div class="contact__detail">
+                        <i class="fas fa-phone contact__icon"></i>
+                        <span class="contact__text">(555) 123-4567</span>
+                    </div>
+                    
+                    <div class="contact__detail">
+                        <i class="fas fa-envelope contact__icon"></i>
+                        <span class="contact__text">dr.robinson@robinsonchiropractic.com</span>
+                    </div>
+                    
+                    <div class="contact__detail">
+                        <i class="fas fa-clock contact__icon"></i>
+                        <span class="contact__text">Mon-Fri: 9am-6pm | Sat: 9am-12pm | Sun: Closed</span>
+                    </div>
+                </div>
+                
+                <div class="contact__map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d206567.95058844842!2d-96.0987765!3d36.1539816!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87b692b8ddd12e8f%3A0xe76910c81bd96af7!2sTulsa%2C%20OK!5e0!3m2!1sen!2sus!4v1658852691075!5m2!1sen!2sus" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+            
+            <div class="contact__form-wrapper">
+                <form class="contact__form" id="contact-form">
+                    <div class="form__group">
+                        <label for="name" class="form__label">Full Name</label>
+                        <input type="text" id="name" name="name" class="form__input" required>
+                    </div>
+                    
+                    <div class="form__group">
+                        <label for="phone" class="form__label">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" class="form__input" required>
+                    </div>
+                    
+                    <div class="form__group">
+                        <label for="email" class="form__label">Email Address</label>
+                        <input type="email" id="email" name="email" class="form__input" required>
+                    </div>
+                    
+                    <div class="form__group">
+                        <label for="service" class="form__label">What are you interested in?</label>
+                        <select id="service" name="service" class="form__input">
+                            <option value="adjustment">Single Adjustment</option>
+                            <option value="monthly">Monthly Unlimited Plan</option>
+                            <option value="accident">Auto Accident Care</option>
+                            <option value="insurance">Insurance Inquiry</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form__group">
+                        <label for="message" class="form__label">Message</label>
+                        <textarea id="message" name="message" class="form__textarea" placeholder="Please include any details about your condition or questions you may have."></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn btn--primary form__submit">Schedule Appointment</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer__container">
+            <div class="footer__top">
+                <div class="footer__column">
+                    <div class="footer__logo">Robinson Chiropractic</div>
+                    <p class="footer__description">With 29 years of experience, Dr. Matt Robinson provides affordable, effective chiropractic care to the Tulsa community.</p>
+                    
+                    <div class="footer__social">
+                        <a href="#" class="footer__social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="footer__social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="footer__social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="footer__social-link"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer__column">
+                    <h3 class="footer__column-title">Quick Links</h3>
+                    <ul class="footer__nav-list">
+                        <li class="footer__nav-item"><a href="#home" class="footer__nav-link">Home</a></li>
+                        <li class="footer__nav-item"><a href="#services" class="footer__nav-link">Services</a></li>
+                        <li class="footer__nav-item"><a href="#about" class="footer__nav-link">About Dr. Robinson</a></li>
+                        <li class="footer__nav-item"><a href="#testimonials" class="footer__nav-link">Testimonials</a></li>
+                        <li class="footer__nav-item"><a href="#pricing" class="footer__nav-link">Pricing</a></li>
+                        <li class="footer__nav-item"><a href="#contact" class="footer__nav-link">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer__column">
+                    <h3 class="footer__column-title">Services</h3>
+                    <ul class="footer__nav-list">
+                        <li class="footer__nav-item"><a href="#services" class="footer__nav-link">Chiropractic Adjustments</a></li>
+                        <li class="footer__nav-item"><a href="#services" class="footer__nav-link">Auto Accident Care</a></li>
+                        <li class="footer__nav-item"><a href="#services" class="footer__nav-link">Physical Therapy</a></li>
+                        <li class="footer__nav-item"><a href="#services" class="footer__nav-link">Insurance Assistance</a></li>
+                        <li class="footer__nav-item"><a href="#services" class="footer__nav-link">Wellness Care</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer__column">
+                    <h3 class="footer__column-title">Contact Info</h3>
+                    <ul class="footer__nav-list">
+                        <li class="footer__nav-item">Tulsa, Oklahoma</li>
+                        <li class="footer__nav-item">(555) 123-4567</li>
+                        <li class="footer__nav-item">dr.robinson@robinsonchiropractic.com</li>
+                        <li class="footer__nav-item">Mon-Fri: 9am-6pm</li>
+                        <li class="footer__nav-item">Sat: 9am-12pm | Sun: Closed</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer__bottom">
+                <p class="footer__copyright">&copy; <span id="current-year">2023</span> Robinson Chiropractic. All Rights Reserved.</p>
+                
+                <div class="footer__legal">
+                    <a href="#" class="footer__legal-link">Privacy Policy</a>
+                    <a href="#" class="footer__legal-link">Terms of Service</a>
+                    <a href="#" class="footer__legal-link">Accessibility</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Header toggle functionality
+        const headerToggle = document.getElementById('header-toggle');
+        const mobileNav = document.getElementById('mobile-nav');
+        
+        headerToggle.addEventListener('click', () => {
+            mobileNav.classList.toggle('open');
+        });
+        
+        // Testimonials Slider
+        const track = document.getElementById('testimonials-track');
+        const dots = document.querySelectorAll('.testimonials__dot');
+        let currentSlide = 0;
+        let autoSlideInterval;
+        
+        function goToSlide(index) {
+            track.style.transform = `translateX(-${index * 100}%)`;
+            
+            // Update active dot
+            dots.forEach(dot => dot.classList.remove('active'));
+            dots[index].classList.add('active');
+            
+            currentSlide = index;
+        }
+        
+        // Click on navigation dots
+        dots.forEach(dot => {
+            dot.addEventListener('click', () => {
+                const slideIndex = parseInt(dot.getAttribute('data-index'));
+                goToSlide(slideIndex);
+                resetAutoSlide();
+            });
+        });
+        
+        // Auto-advance slider
+        function startAutoSlide() {
+            autoSlideInterval = setInterval(() => {
+                currentSlide = (currentSlide + 1) % dots.length;
+                goToSlide(currentSlide);
+            }, 5000);
+        }
+        
+        function resetAutoSlide() {
+            clearInterval(autoSlideInterval);
+            startAutoSlide();
+        }
+        
+        // Start auto-slide
+        startAutoSlide();
+        
+        // Form validation
+        const contactForm = document.getElementById('contact-form');
+        
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // Basic validation
+            const name = document.getElementById('name').value;
+            const phone = document.getElementById('phone').value;
+            const email = document.getElementById('email').value;
+            
+            if (name.trim() === '' || phone.trim() === '' || email.trim() === '') {
+                alert('Please fill out all required fields.');
+                return;
+            }
+            
+            // Email validation
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                alert('Please enter a valid email address.');
+                return;
+            }
+            
+            // Phone validation
+            const phoneRegex = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
+            if (!phoneRegex.test(phone)) {
+                alert('Please enter a valid phone number.');
+                return;
+            }
+            
+            // Form would normally submit here
+            alert('Thank you for contacting Robinson Chiropractic! We\'ll get back to you shortly.');
+            contactForm.reset();
+        });
+        
+        // Set current year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+        
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    // Close mobile nav if open
+                    mobileNav.classList.remove('open');
+                    
+                    // Scroll to target
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80, // Offset for fixed header
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Highlight active nav item on scroll
+        window.addEventListener('scroll', () => {
+            const scrollPosition = window.scrollY;
+            
+            // Get all sections
+            const sections = document.querySelectorAll('section');
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 100;
+                const sectionHeight = section.offsetHeight;
+                const sectionId = section.getAttribute('id');
+                
+                if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                    // Remove active class from all links
+                    document.querySelectorAll('.header__nav-link').forEach(link => {
+                        link.classList.remove('active');
+                    });
+                    
+                    // Add active class to current section link
+                    const activeLink = document.querySelector(`.header__nav-link[href="#${sectionId}"]`);
+                    if (activeLink) {
+                        activeLink.classList.add('active');
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
