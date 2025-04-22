@@ -1,0 +1,1484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Natural Health Associates | Dr. Larry Ward - Tulsa Chiropractor</title>
+    <meta name="description" content="Dr. Larry Ward offers comprehensive natural health services including chiropractic care, acupuncture and metabolic treatment in Tulsa, OK.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            /* Healthcare/Wellness Color Palette */
+            --primary-color: #3a7d7d; /* Calming teal - main brand color */
+            --secondary-color: #73b5b5; /* Lighter teal for accents */
+            --accent-color: #e8f4f4; /* Soft background tint */
+            --dark-accent: #245a5a; /* Deeper teal for emphasis */
+            --text-primary: #2c3e50; /* Main text color */
+            --text-secondary: #5d6d7e; /* Secondary text color */
+            --text-light: #f8f9fa; /* Light text for dark backgrounds */
+            --bg-light: #ffffff; /* Light background */
+            --bg-off-white: #f5f9f9; /* Off-white background */
+            --success-color: #2ecc71; /* Green for success messages */
+            --warning-color: #e67e22; /* Orange for warnings */
+            --error-color: #e74c3c; /* Red for errors */
+            
+            /* Spacing System */
+            --space-xs: 8px;
+            --space-sm: 16px;
+            --space-md: 24px;
+            --space-lg: 32px;
+            --space-xl: 48px;
+            --space-xxl: 64px;
+            
+            /* Animation */
+            --transition-fast: 0.2s ease;
+            --transition-standard: 0.3s ease;
+            --transition-slow: 0.5s ease;
+            
+            /* Shadows */
+            --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.08);
+            --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.1);
+            
+            /* Border Radius */
+            --radius-sm: 4px;
+            --radius-md: 8px;
+            --radius-lg: 16px;
+            --radius-full: 9999px;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 80px;
+        }
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.6;
+            color: var(--text-primary);
+            background-color: var(--bg-light);
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+            line-height: 1.3;
+            color: var(--primary-color);
+            margin-bottom: var(--space-sm);
+        }
+        
+        h1 {
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            font-weight: 700;
+        }
+        
+        h2 {
+            font-size: clamp(2rem, 4vw, 2.75rem);
+            position: relative;
+            display: inline-block;
+            margin-bottom: var(--space-md);
+        }
+        
+        h2::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -10px;
+            width: 60px;
+            height: 3px;
+            background-color: var(--primary-color);
+        }
+        
+        h3 {
+            font-size: clamp(1.5rem, 3vw, 2rem);
+        }
+        
+        p {
+            margin-bottom: var(--space-md);
+            color: var(--text-secondary);
+        }
+        
+        a {
+            color: var(--primary-color);
+            text-decoration: none;
+            transition: color var(--transition-standard);
+        }
+        
+        a:hover {
+            color: var(--dark-accent);
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        section {
+            padding: var(--space-xl) var(--space-md);
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--space-md);
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: var(--space-xl);
+        }
+        
+        .section-title h2 {
+            margin-bottom: var(--space-xs);
+        }
+        
+        .section-title h2::after {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .section-title p {
+            max-width: 600px;
+            margin: 0 auto var(--space-md);
+            color: var(--text-secondary);
+        }
+        
+        /* Button styles */
+        .btn {
+            display: inline-block;
+            padding: var(--space-sm) var(--space-md);
+            background-color: var(--primary-color);
+            color: var(--text-light);
+            border: none;
+            border-radius: var(--radius-md);
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 500;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all var(--transition-standard);
+            text-align: center;
+        }
+        
+        .btn:hover {
+            background-color: var(--dark-accent);
+            color: var(--text-light);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .btn:active {
+            transform: translateY(0);
+        }
+        
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--primary-color);
+            border: 2px solid var(--primary-color);
+        }
+        
+        .btn-secondary:hover {
+            background-color: var(--primary-color);
+            color: var(--text-light);
+        }
+        
+        .btn-lg {
+            padding: var(--space-sm) var(--space-lg);
+            font-size: 1.1rem;
+        }
+        
+        /* Header styles */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.95);
+            box-shadow: var(--shadow-sm);
+            padding: var(--space-xs) 0;
+            z-index: 1000;
+            transition: all var(--transition-standard);
+        }
+        
+        .header.scrolled {
+            padding: var(--space-xs) 0;
+            box-shadow: var(--shadow-md);
+            background-color: rgba(255, 255, 255, 0.98);
+        }
+        
+        .header__container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            z-index: 1001;
+        }
+        
+        .logo__text {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            margin-left: var(--space-xs);
+        }
+        
+        .nav {
+            display: flex;
+            align-items: center;
+        }
+        
+        .nav__links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav__link {
+            margin: 0 var(--space-sm);
+            font-weight: 500;
+            position: relative;
+        }
+        
+        .nav__link a {
+            color: var(--text-primary);
+            padding: var(--space-xs) 0;
+            display: inline-block;
+            position: relative;
+        }
+        
+        .nav__link a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: var(--primary-color);
+            transition: width var(--transition-standard);
+        }
+        
+        .nav__link a:hover::after {
+            width: 100%;
+        }
+        
+        .nav__cta {
+            margin-left: var(--space-md);
+        }
+        
+        .mobile-toggle {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            z-index: 1001;
+        }
+        
+        .mobile-toggle span {
+            display: block;
+            width: 25px;
+            height: 3px;
+            background-color: var(--primary-color);
+            margin: 5px 0;
+            transition: all var(--transition-standard);
+        }
+        
+        /* Hero section */
+        .hero {
+            background: linear-gradient(135deg, var(--accent-color) 0%, var(--bg-light) 100%);
+            padding: calc(var(--space-xxl) * 2) 0 var(--space-xxl);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxkZWZzPjxwYXR0ZXJuIGlkPSJwYXR0ZXJuIiB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgcGF0dGVyblRyYW5zZm9ybT0icm90YXRlKDQ1KSI+PGNpcmNsZSBjeD0iMjAiIGN5PSIyMCIgcj0iMC43IiBmaWxsPSIjMzQ2NTY1IiBvcGFjaXR5PSIwLjAzIiAvPjwvcGF0dGVybj48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNwYXR0ZXJuKSIgLz48L3N2Zz4=');
+            opacity: 0.7;
+        }
+        
+        .hero__container {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        
+        .hero__content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .hero__subtitle {
+            font-size: 1.2rem;
+            font-weight: 500;
+            color: var(--primary-color);
+            margin-bottom: var(--space-md);
+            letter-spacing: 1px;
+        }
+        
+        .hero__title {
+            margin-bottom: var(--space-md);
+        }
+        
+        .hero__description {
+            font-size: 1.1rem;
+            margin-bottom: var(--space-lg);
+        }
+        
+        .hero__cta-group {
+            display: flex;
+            justify-content: center;
+            gap: var(--space-md);
+            margin-top: var(--space-md);
+        }
+        
+        /* Services section */
+        .services {
+            background-color: var(--bg-off-white);
+            position: relative;
+        }
+        
+        .services__grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: var(--space-lg);
+        }
+        
+        .service-card {
+            background-color: var(--bg-light);
+            border-radius: var(--radius-md);
+            padding: var(--space-lg);
+            box-shadow: var(--shadow-sm);
+            transition: all var(--transition-standard);
+            position: relative;
+            overflow: hidden;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 0;
+            background-color: var(--primary-color);
+            transition: height var(--transition-standard);
+        }
+        
+        .service-card:hover::before {
+            height: 100%;
+        }
+        
+        .service-card__icon {
+            color: var(--primary-color);
+            font-size: 2.5rem;
+            margin-bottom: var(--space-md);
+        }
+        
+        .service-card__title {
+            margin-bottom: var(--space-sm);
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+        
+        .service-card__description {
+            color: var(--text-secondary);
+            margin-bottom: var(--space-md);
+        }
+        
+        .service-card__link {
+            margin-top: auto;
+            display: inline-flex;
+            align-items: center;
+            font-weight: 500;
+            color: var(--primary-color);
+            transition: all var(--transition-standard);
+        }
+        
+        .service-card__link i {
+            margin-left: var(--space-xs);
+            transition: transform var(--transition-standard);
+        }
+        
+        .service-card__link:hover {
+            color: var(--dark-accent);
+        }
+        
+        .service-card__link:hover i {
+            transform: translateX(5px);
+        }
+        
+        /* About section */
+        .about {
+            background-color: var(--bg-light);
+        }
+        
+        .about__container {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-xl);
+        }
+        
+        .about__content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--space-xl);
+            align-items: center;
+        }
+        
+        .about__image {
+            flex: 1;
+            min-width: 300px;
+            position: relative;
+        }
+        
+        .about__image img {
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-md);
+            object-fit: cover;
+            width: 100%;
+            height: auto;
+            aspect-ratio: 4/3;
+        }
+        
+        .about__image::before {
+            content: '';
+            position: absolute;
+            top: -15px;
+            left: -15px;
+            width: 100%;
+            height: 100%;
+            border: 3px solid var(--primary-color);
+            border-radius: var(--radius-md);
+            z-index: -1;
+            opacity: 0.3;
+        }
+        
+        .about__text {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .about__text h2::after {
+            left: 0;
+            transform: none;
+        }
+        
+        .about__credentials {
+            margin-top: var(--space-lg);
+        }
+        
+        .credential {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: var(--space-md);
+        }
+        
+        .credential__icon {
+            color: var(--primary-color);
+            font-size: 1.2rem;
+            margin-right: var(--space-sm);
+            margin-top: 4px;
+        }
+        
+        .credential__text h4 {
+            margin-bottom: var(--space-xs);
+            font-size: 1.1rem;
+        }
+        
+        .credential__text p {
+            margin-bottom: 0;
+            font-size: 0.95rem;
+        }
+        
+        /* Testimonials section */
+        .testimonials {
+            background-color: var(--bg-off-white);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .testimonials::before {
+            content: '"';
+            position: absolute;
+            top: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-family: 'Playfair Display', serif;
+            font-size: 200px;
+            color: var(--primary-color);
+            opacity: 0.05;
+        }
+        
+        .testimonial-slider {
+            position: relative;
+            max-width: 900px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+        
+        .testimonial-slide {
+            text-align: center;
+            padding: var(--space-md);
+            opacity: 0;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            transition: opacity var(--transition-slow);
+            pointer-events: none;
+        }
+        
+        .testimonial-slide.active {
+            opacity: 1;
+            position: relative;
+            pointer-events: auto;
+        }
+        
+        .testimonial-stars {
+            color: #ffc107;
+            font-size: 1.2rem;
+            margin-bottom: var(--space-sm);
+        }
+        
+        .testimonial-text {
+            font-size: 1.1rem;
+            font-style: italic;
+            margin-bottom: var(--space-md);
+            color: var(--text-primary);
+        }
+        
+        .testimonial-author {
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+        
+        .testimonial-position {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+        
+        .testimonial-nav {
+            display: flex;
+            justify-content: center;
+            margin-top: var(--space-lg);
+            gap: var(--space-xs);
+        }
+        
+        .testimonial-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: var(--radius-full);
+            background-color: var(--secondary-color);
+            opacity: 0.3;
+            cursor: pointer;
+            transition: all var(--transition-standard);
+        }
+        
+        .testimonial-dot.active {
+            opacity: 1;
+            width: 24px;
+        }
+        
+        /* Contact section */
+        .contact {
+            background-color: var(--bg-light);
+        }
+        
+        .contact__container {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-xl);
+        }
+        
+        .contact__content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--space-xl);
+        }
+        
+        .contact__info {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .contact__form-container {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .contact-card {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: var(--space-md);
+        }
+        
+        .contact-card__icon {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--accent-color);
+            color: var(--primary-color);
+            border-radius: var(--radius-full);
+            margin-right: var(--space-sm);
+            font-size: 1.2rem;
+        }
+        
+        .contact-card__content h4 {
+            margin-bottom: var(--space-xs);
+            font-size: 1.1rem;
+        }
+        
+        .contact-card__content p, .contact-card__content a {
+            margin-bottom: 0;
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+        }
+        
+        .contact-card__content a:hover {
+            color: var(--primary-color);
+        }
+        
+        .map {
+            margin-top: var(--space-lg);
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            height: 250px;
+        }
+        
+        .map iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        
+        .contact-form {
+            background-color: var(--bg-off-white);
+            padding: var(--space-lg);
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .form-group {
+            margin-bottom: var(--space-md);
+        }
+        
+        .form-label {
+            display: block;
+            margin-bottom: var(--space-xs);
+            font-weight: 500;
+            color: var(--text-primary);
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: var(--space-sm);
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            border-radius: var(--radius-sm);
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1rem;
+            transition: all var(--transition-standard);
+        }
+        
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(58, 125, 125, 0.1);
+        }
+        
+        .form-control.error {
+            border-color: var(--error-color);
+        }
+        
+        .error-message {
+            color: var(--error-color);
+            font-size: 0.85rem;
+            margin-top: var(--space-xs);
+            display: none;
+        }
+        
+        .error-message.visible {
+            display: block;
+        }
+        
+        textarea.form-control {
+            min-height: 120px;
+            resize: vertical;
+        }
+        
+        /* Footer */
+        .footer {
+            background-color: #2c3e50;
+            color: var(--text-light);
+            padding: var(--space-xl) 0 var(--space-md);
+        }
+        
+        .footer__top {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--space-xl);
+            margin-bottom: var(--space-xl);
+        }
+        
+        .footer__logo {
+            color: var(--text-light);
+            font-size: 1.5rem;
+            margin-bottom: var(--space-sm);
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+        }
+        
+        .footer__about p {
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: var(--space-md);
+        }
+        
+        .footer__title {
+            color: var(--text-light);
+            font-size: 1.2rem;
+            margin-bottom: var(--space-md);
+            position: relative;
+            display: inline-block;
+        }
+        
+        .footer__title::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 40px;
+            height: 2px;
+            background-color: var(--secondary-color);
+        }
+        
+        .footer__links {
+            list-style: none;
+        }
+        
+        .footer__link {
+            margin-bottom: var(--space-xs);
+        }
+        
+        .footer__link a {
+            color: rgba(255, 255, 255, 0.7);
+            transition: all var(--transition-standard);
+            display: inline-block;
+        }
+        
+        .footer__link a:hover {
+            color: var(--text-light);
+            transform: translateX(5px);
+        }
+        
+        .footer__social {
+            display: flex;
+            gap: var(--space-sm);
+            margin-top: var(--space-md);
+        }
+        
+        .social-icon {
+            width: 36px;
+            height: 36px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: var(--text-light);
+            border-radius: var(--radius-full);
+            transition: all var(--transition-standard);
+        }
+        
+        .social-icon:hover {
+            background-color: var(--primary-color);
+            color: var(--text-light);
+            transform: translateY(-3px);
+        }
+        
+        .footer__bottom {
+            text-align: center;
+            padding-top: var(--space-md);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .footer__bottom p {
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 0.9rem;
+            margin-bottom: 0;
+        }
+        
+        /* Responsive styles */
+        @media (max-width: 1024px) {
+            section {
+                padding: var(--space-lg) var(--space-sm);
+            }
+            
+            .hero {
+                padding: calc(var(--space-xxl) * 1.5) 0 var(--space-xl);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .nav__links {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100vh;
+                background-color: var(--bg-light);
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: var(--space-md);
+                z-index: 1000;
+                transform: translateX(-100%);
+                transition: transform var(--transition-standard);
+            }
+            
+            .nav__links.active {
+                transform: translateX(0);
+            }
+            
+            .nav__link {
+                margin: var(--space-xs) 0;
+                font-size: 1.2rem;
+            }
+            
+            .nav__cta {
+                margin: var(--space-md) 0 0;
+            }
+            
+            .mobile-toggle {
+                display: block;
+            }
+            
+            .mobile-toggle.active span:nth-child(1) {
+                transform: rotate(45deg) translate(5px, 6px);
+            }
+            
+            .mobile-toggle.active span:nth-child(2) {
+                opacity: 0;
+            }
+            
+            .mobile-toggle.active span:nth-child(3) {
+                transform: rotate(-45deg) translate(5px, -6px);
+            }
+            
+            .hero__cta-group {
+                flex-direction: column;
+                gap: var(--space-sm);
+            }
+        }
+        
+        @media (max-width: 640px) {
+            h1 {
+                font-size: 2.2rem;
+            }
+            
+            h2 {
+                font-size: 1.8rem;
+            }
+            
+            h3 {
+                font-size: 1.4rem;
+            }
+            
+            .hero {
+                padding: calc(var(--space-xl) + 80px) 0 var(--space-lg);
+                text-align: center;
+            }
+            
+            .about__content, .contact__content {
+                flex-direction: column;
+            }
+            
+            .footer__top {
+                grid-template-columns: 1fr;
+            }
+            
+            .service-card {
+                padding: var(--space-md);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container header__container">
+            <div class="logo">
+                <div class="logo__text">Natural Health Associates</div>
+            </div>
+            
+            <nav class="nav">
+                <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                
+                <ul class="nav__links" id="nav-links">
+                    <li class="nav__link"><a href="#home">Home</a></li>
+                    <li class="nav__link"><a href="#services">Services</a></li>
+                    <li class="nav__link"><a href="#about">About</a></li>
+                    <li class="nav__link"><a href="#testimonials">Testimonials</a></li>
+                    <li class="nav__link"><a href="#contact">Contact</a></li>
+                    <li class="nav__cta">
+                        <a href="tel:+19185551234" class="btn">Schedule Now</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container hero__container">
+            <div class="hero__content">
+                <p class="hero__subtitle">DR. LARRY WARD</p>
+                <h1 class="hero__title">Tulsa's Premier Chiropractor & Acupuncturist</h1>
+                <p class="hero__description">Experience natural, comprehensive healing treatments tailored to your unique needs. From chronic pain relief to preventative wellness care, we help you achieve optimal health naturally.</p>
+                <div class="hero__cta-group">
+                    <a href="#contact" class="btn btn-lg">Schedule a Consultation</a>
+                    <a href="#services" class="btn btn-secondary btn-lg">Explore Our Services</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Services</h2>
+                <p>We offer a comprehensive approach to natural health, combining traditional and modern techniques to address your specific health concerns.</p>
+            </div>
+            
+            <div class="services__grid">
+                <div class="service-card">
+                    <div class="service-card__icon">
+                        <i class="fas fa-spine"></i>
+                    </div>
+                    <h3 class="service-card__title">Chiropractic Care</h3>
+                    <p class="service-card__description">Expert spinal adjustments to restore proper alignment, reduce pain, and improve your body's natural function.</p>
+                    <a href="#contact" class="service-card__link">Learn more <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-card__icon">
+                        <i class="fas fa-acupuncture"></i>
+                    </div>
+                    <h3 class="service-card__title">Acupuncture</h3>
+                    <p class="service-card__description">Certified acupuncture treatments to help manage pain, reduce stress, and promote deep relaxation and healing.</p>
+                    <a href="#contact" class="service-card__link">Learn more <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-card__icon">
+                        <i class="fas fa-dna"></i>
+                    </div>
+                    <h3 class="service-card__title">Metabolic Treatment</h3>
+                    <p class="service-card__description">Personalized metabolic health programs to regulate weight, improve energy levels, and enhance emotional wellbeing.</p>
+                    <a href="#contact" class="service-card__link">Learn more <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-card__icon">
+                        <i class="fas fa-joint"></i>
+                    </div>
+                    <h3 class="service-card__title">Pain Management</h3>
+                    <p class="service-card__description">Specialized care for chronic pain, whiplash, knee pain, TMJ disorders, and carpal tunnel syndrome.</p>
+                    <a href="#contact" class="service-card__link">Learn more <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-card__icon">
+                        <i class="fas fa-user-injured"></i>
+                    </div>
+                    <h3 class="service-card__title">Emergency Care</h3>
+                    <p class="service-card__description">Quick appointments for acute back pain and injuries, providing fast relief when you need it most.</p>
+                    <a href="#contact" class="service-card__link">Learn more <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-card__icon">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <h3 class="service-card__title">Wellness Programs</h3>
+                    <p class="service-card__description">Preventative care and personalized wellness plans to maintain optimal health and prevent future issues.</p>
+                    <a href="#contact" class="service-card__link">Learn more <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container about__container">
+            <div class="section-title">
+                <h2>About Dr. Larry Ward</h2>
+                <p>With years of experience and specialized training, Dr. Ward is committed to providing the highest quality natural health care.</p>
+            </div>
+            
+            <div class="about__content">
+                <div class="about__image">
+                    <img src="https://naturalhealthassociates.org/wp-content/uploads/2010/10/PA200020.jpg" alt="Dr. Larry Ward, Tulsa Chiropractor">
+                </div>
+                
+                <div class="about__text">
+                    <h3>Experienced Chiropractor & Certified Acupuncturist</h3>
+                    <p>Dr. Larry Ward has dedicated his career to helping patients achieve optimal health through natural, non-invasive treatments. His comprehensive approach combines traditional chiropractic techniques with advanced therapeutic methods to address each patient's unique needs.</p>
+                    <p>As both a chiropractor and certified acupuncturist, Dr. Ward offers a unique integrated approach to health that treats the whole person, not just symptoms.</p>
+                    
+                    <div class="about__credentials">
+                        <div class="credential">
+                            <div class="credential__icon">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <div class="credential__text">
+                                <h4>Academic Experience</h4>
+                                <p>Adjunct professor at Tulsa Community College, sharing knowledge and experience with the next generation of healthcare professionals.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="credential">
+                            <div class="credential__icon">
+                                <i class="fas fa-microphone"></i>
+                            </div>
+                            <div class="credential__text">
+                                <h4>Professional Speaker</h4>
+                                <p>Frequent speaker at health conferences, educating audiences on natural approaches to wellness and pain management.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="credential">
+                            <div class="credential__icon">
+                                <i class="fas fa-certificate"></i>
+                            </div>
+                            <div class="credential__text">
+                                <h4>Specialized Certifications</h4>
+                                <p>Advanced certifications in chiropractic care, acupuncture, and metabolic health treatments.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <div class="section-title">
+                <h2>Patient Success Stories</h2>
+                <p>Hear from our satisfied patients about their experiences and health transformations.</p>
+            </div>
+            
+            <div class="testimonial-slider" id="testimonial-slider">
+                <div class="testimonial-slide active">
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"After months of chronic back pain, I was desperate for relief. Dr. Ward's comprehensive approach combining chiropractic adjustments and acupuncture has completely transformed my quality of life. I'm now pain-free and able to enjoy activities I had given up on."</p>
+                    <h4 class="testimonial-author">Sarah Johnson</h4>
+                    <p class="testimonial-position">Chronic Back Pain Patient</p>
+                </div>
+                
+                <div class="testimonial-slide">
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"Dr. Ward's metabolic treatment program has been life-changing. After struggling with weight issues and low energy for years, his personalized approach has helped me lose 30 pounds and regain my energy. The office staff is always friendly, and appointments are easy to schedule."</p>
+                    <h4 class="testimonial-author">Michael Roberts</h4>
+                    <p class="testimonial-position">Metabolic Health Patient</p>
+                </div>
+                
+                <div class="testimonial-slide">
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"I was skeptical about acupuncture but decided to try it for my TMJ pain after traditional treatments failed. Dr. Ward took the time to explain everything and made me feel completely at ease. After just a few sessions, my jaw pain has significantly decreased. I'm so grateful!"</p>
+                    <h4 class="testimonial-author">Jennifer Thompson</h4>
+                    <p class="testimonial-position">TMJ Patient</p>
+                </div>
+                
+                <div class="testimonial-slide">
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"When I threw my back out, I could barely move. Dr. Ward got me in the same day and provided immediate relief. His emergency care was exceptional, and his follow-up treatment plan has kept the pain from returning. Natural Health Associates is now my go-to for all my health needs."</p>
+                    <h4 class="testimonial-author">David Wilson</h4>
+                    <p class="testimonial-position">Emergency Care Patient</p>
+                </div>
+            </div>
+            
+            <div class="testimonial-nav" id="testimonial-nav">
+                <span class="testimonial-dot active" data-index="0"></span>
+                <span class="testimonial-dot" data-index="1"></span>
+                <span class="testimonial-dot" data-index="2"></span>
+                <span class="testimonial-dot" data-index="3"></span>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container contact__container">
+            <div class="section-title">
+                <h2>Contact Us</h2>
+                <p>Schedule an appointment or inquire about our services. We're here to help you on your healing journey.</p>
+            </div>
+            
+            <div class="contact__content">
+                <div class="contact__info">
+                    <h3>Get In Touch</h3>
+                    <p>We're committed to providing quick appointments and short wait times. Let us know how we can help you.</p>
+                    
+                    <div class="contact-card">
+                        <div class="contact-card__icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-card__content">
+                            <h4>Location</h4>
+                            <p>1234 Healing Way, Tulsa, OK 74120</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <div class="contact-card__icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div class="contact-card__content">
+                            <h4>Phone</h4>
+                            <a href="tel:+19185551234">(918) 555-1234</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <div class="contact-card__icon">
+                            <i class="far fa-envelope"></i>
+                        </div>
+                        <div class="contact-card__content">
+                            <h4>Email</h4>
+                            <a href="mailto:info@naturalhealthassociates.com">info@naturalhealthassociates.com</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <div class="contact-card__icon">
+                            <i class="far fa-clock"></i>
+                        </div>
+                        <div class="contact-card__content">
+                            <h4>Office Hours</h4>
+                            <p>Monday - Friday: 9:00 AM - 6:00 PM<br>Saturday: 9:00 AM - 2:00 PM<br>Sunday: Closed</p>
+                        </div>
+                    </div>
+                    
+                    <div class="map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d104018.68125607669!2d-96.0700116881245!3d36.15329904840894!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87b692b8ddd12e8f%3A0xe76910c81bd96af7!2sTulsa%2C%20OK!5e0!3m2!1sen!2sus!4v1685449188686!5m2!1sen!2sus" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+                
+                <div class="contact__form-container">
+                    <form id="contact-form" class="contact-form">
+                        <div class="form-group">
+                            <label for="name" class="form-label">Full Name*</label>
+                            <input type="text" id="name" name="name" class="form-control" required>
+                            <div class="error-message" id="name-error">Please enter your name</div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email" class="form-label">Email Address*</label>
+                            <input type="email" id="email" name="email" class="form-control" required>
+                            <div class="error-message" id="email-error">Please enter a valid email address</div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone" class="form-label">Phone Number*</label>
+                            <input type="tel" id="phone" name="phone" class="form-control" required>
+                            <div class="error-message" id="phone-error">Please enter a valid phone number</div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="service" class="form-label">Service of Interest</label>
+                            <select id="service" name="service" class="form-control">
+                                <option value="">Select a service</option>
+                                <option value="chiropractic">Chiropractic Care</option>
+                                <option value="acupuncture">Acupuncture</option>
+                                <option value="metabolic">Metabolic Treatment</option>
+                                <option value="pain">Pain Management</option>
+                                <option value="emergency">Emergency Care</option>
+                                <option value="wellness">Wellness Programs</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message" class="form-label">Your Message / Health Concern</label>
+                            <textarea id="message" name="message" class="form-control"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-lg">Schedule Consultation</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__top">
+                <div class="footer__about">
+                    <div class="footer__logo">Natural Health Associates</div>
+                    <p>Providing comprehensive natural health services in Tulsa, Oklahoma. Dr. Larry Ward combines chiropractic care, acupuncture, and metabolic treatments to help you achieve optimal health naturally.</p>
+                    <div class="footer__social">
+                        <a href="#" class="social-icon" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer__links-container">
+                    <h3 class="footer__title">Quick Links</h3>
+                    <ul class="footer__links">
+                        <li class="footer__link"><a href="#home">Home</a></li>
+                        <li class="footer__link"><a href="#services">Services</a></li>
+                        <li class="footer__link"><a href="#about">About Dr. Ward</a></li>
+                        <li class="footer__link"><a href="#testimonials">Testimonials</a></li>
+                        <li class="footer__link"><a href="#contact">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer__links-container">
+                    <h3 class="footer__title">Our Services</h3>
+                    <ul class="footer__links">
+                        <li class="footer__link"><a href="#services">Chiropractic Care</a></li>
+                        <li class="footer__link"><a href="#services">Acupuncture</a></li>
+                        <li class="footer__link"><a href="#services">Metabolic Treatment</a></li>
+                        <li class="footer__link"><a href="#services">Pain Management</a></li>
+                        <li class="footer__link"><a href="#services">Emergency Care</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer__links-container">
+                    <h3 class="footer__title">Contact Info</h3>
+                    <ul class="footer__links">
+                        <li class="footer__link"><a href="https://maps.google.com" target="_blank"><i class="fas fa-map-marker-alt"></i> 1234 Healing Way, Tulsa, OK 74120</a></li>
+                        <li class="footer__link"><a href="tel:+19185551234"><i class="fas fa-phone-alt"></i> (918) 555-1234</a></li>
+                        <li class="footer__link"><a href="mailto:info@naturalhealthassociates.com"><i class="far fa-envelope"></i> info@naturalhealthassociates.com</a></li>
+                        <li class="footer__link"><a href="#contact"><i class="far fa-clock"></i> Monday - Friday: 9:00 AM - 6:00 PM</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer__bottom">
+                <p>&copy; <span id="current-year">2023</span> Natural Health Associates. All Rights Reserved. | Dr. Larry Ward | Tulsa Chiropractor & Certified Acupuncturist</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        // Mobile menu toggle
+        const mobileToggle = document.getElementById('mobile-toggle');
+        const navLinks = document.getElementById('nav-links');
+        const navItems = document.querySelectorAll('.nav__link a');
+        
+        mobileToggle.addEventListener('click', () => {
+            mobileToggle.classList.toggle('active');
+            navLinks.classList.toggle('active');
+            document.body.classList.toggle('no-scroll');
+        });
+        
+        navItems.forEach(item => {
+            item.addEventListener('click', () => {
+                mobileToggle.classList.remove('active');
+                navLinks.classList.remove('active');
+                document.body.classList.remove('no-scroll');
+            });
+        });
+        
+        // Sticky header
+        const header = document.getElementById('header');
+        
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+        
+        // Testimonial slider
+        const testimonialSlider = document.getElementById('testimonial-slider');
+        const testimonialSlides = testimonialSlider.querySelectorAll('.testimonial-slide');
+        const testimonialDots = document.querySelectorAll('.testimonial-dot');
+        let currentSlide = 0;
+        let testimonialInterval;
+        
+        function showSlide(index) {
+            testimonialSlides.forEach(slide => slide.classList.remove('active'));
+            testimonialDots.forEach(dot => dot.classList.remove('active'));
+            
+            testimonialSlides[index].classList.add('active');
+            testimonialDots[index].classList.add('active');
+            currentSlide = index;
+        }
+        
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % testimonialSlides.length;
+            showSlide(currentSlide);
+        }
+        
+        function startTestimonialSlider() {
+            testimonialInterval = setInterval(nextSlide, 5000);
+        }
+        
+        testimonialDots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                clearInterval(testimonialInterval);
+                showSlide(index);
+                startTestimonialSlider();
+            });
+        });
+        
+        startTestimonialSlider();
+        
+        // Form validation
+        const contactForm = document.getElementById('contact-form');
+        const nameInput = document.getElementById('name');
+        const emailInput = document.getElementById('email');
+        const phoneInput = document.getElementById('phone');
+        const nameError = document.getElementById('name-error');
+        const emailError = document.getElementById('email-error');
+        const phoneError = document.getElementById('phone-error');
+        
+        function validateEmail(email) {
+            const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+            return re.test(String(email).toLowerCase());
+        }
+        
+        function validatePhone(phone) {
+            const re = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/;
+            return re.test(String(phone));
+        }
+        
+        nameInput.addEventListener('blur', () => {
+            if (nameInput.value.trim() === '') {
+                nameInput.classList.add('error');
+                nameError.classList.add('visible');
+            } else {
+                nameInput.classList.remove('error');
+                nameError.classList.remove('visible');
+            }
+        });
+        
+        emailInput.addEventListener('blur', () => {
+            if (!validateEmail(emailInput.value)) {
+                emailInput.classList.add('error');
+                emailError.classList.add('visible');
+            } else {
+                emailInput.classList.remove('error');
+                emailError.classList.remove('visible');
+            }
+        });
+        
+        phoneInput.addEventListener('blur', () => {
+            if (!validatePhone(phoneInput.value)) {
+                phoneInput.classList.add('error');
+                phoneError.classList.add('visible');
+            } else {
+                phoneInput.classList.remove('error');
+                phoneError.classList.remove('visible');
+            }
+        });
+        
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            let isValid = true;
+            
+            if (nameInput.value.trim() === '') {
+                nameInput.classList.add('error');
+                nameError.classList.add('visible');
+                isValid = false;
+            }
+            
+            if (!validateEmail(emailInput.value)) {
+                emailInput.classList.add('error');
+                emailError.classList.add('visible');
+                isValid = false;
+            }
+            
+            if (!validatePhone(phoneInput.value)) {
+                phoneInput.classList.add('error');
+                phoneError.classList.add('visible');
+                isValid = false;
+            }
+            
+            if (isValid) {
+                // In a real implementation, you would send the form data to a server
+                alert('Thank you for your message! We will contact you shortly.');
+                contactForm.reset();
+            }
+        });
+        
+        // Update copyright year
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
