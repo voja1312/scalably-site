@@ -1,0 +1,1433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Family Chiropractic Care | Dr. Sue Rance | Fresno, CA</title>
+    <meta name="description" content="Dr. Sue Rance provides personalized chiropractic care for patients of all ages in Fresno, California. Restore mobility, reduce pain, and improve your quality of life.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* CSS Variables for Healthcare/Wellness Theme */
+        :root {
+            /* Color Palette */
+            --primary-color: #4a8da3; /* Calming blue */
+            --secondary-color: #62b6cb; /* Lighter calming blue */
+            --accent-color: #97d8c4; /* Healing green */
+            --dark-color: #2c3e50; /* Deep navy for text */
+            --light-color: #f8f9fa; /* Off-white for backgrounds */
+            --neutral-color: #e9ecef; /* Light gray for sections */
+            --success-color: #5cb85c; /* Green for positive elements */
+            --warning-color: #f0ad4e; /* Amber for alerts */
+            
+            /* Spacing System (8px grid) */
+            --space-xs: 0.5rem; /* 8px */
+            --space-sm: 1rem; /* 16px */
+            --space-md: 1.5rem; /* 24px */
+            --space-lg: 2rem; /* 32px */
+            --space-xl: 3rem; /* 48px */
+            
+            /* Typography */
+            --heading-font: 'Playfair Display', serif;
+            --body-font: 'Montserrat', sans-serif;
+            --line-height-sm: 1.2;
+            --line-height-md: 1.5;
+            --line-height-lg: 1.8;
+            
+            /* Animation */
+            --transition-speed: 0.3s;
+            --transition-ease: cubic-bezier(0.4, 0, 0.2, 1);
+            
+            /* Border Radius */
+            --radius-sm: 4px;
+            --radius-md: 8px;
+            --radius-lg: 16px;
+            
+            /* Shadows */
+            --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.08);
+            --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* CSS Reset & Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+        
+        body {
+            font-family: var(--body-font);
+            color: var(--dark-color);
+            line-height: var(--line-height-md);
+            background-color: var(--light-color);
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--heading-font);
+            line-height: var(--line-height-sm);
+            color: var(--dark-color);
+            font-weight: 600;
+            margin-bottom: var(--space-sm);
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+        
+        h2 {
+            font-size: 2rem;
+            position: relative;
+            margin-bottom: var(--space-lg);
+        }
+        
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: -0.75rem;
+            left: 0;
+            width: 4rem;
+            height: 3px;
+            background-color: var(--accent-color);
+        }
+        
+        h3 {
+            font-size: 1.5rem;
+        }
+        
+        p {
+            margin-bottom: var(--space-md);
+            color: var(--dark-color);
+        }
+        
+        a {
+            color: var(--primary-color);
+            text-decoration: none;
+            transition: color var(--transition-speed) var(--transition-ease);
+        }
+        
+        a:hover {
+            color: var(--secondary-color);
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--space-sm);
+        }
+        
+        .text-center {
+            text-align: center;
+        }
+        
+        .section {
+            padding: var(--space-xl) 0;
+        }
+        
+        .section--alt {
+            background-color: var(--neutral-color);
+        }
+        
+        /* Button Styles */
+        .btn {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            border-radius: var(--radius-md);
+            font-weight: 600;
+            text-align: center;
+            cursor: pointer;
+            transition: all var(--transition-speed) var(--transition-ease);
+            border: none;
+            font-family: var(--body-font);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.9rem;
+        }
+        
+        .btn--primary {
+            background-color: var(--primary-color);
+            color: white;
+            box-shadow: var(--shadow-md);
+        }
+        
+        .btn--primary:hover {
+            background-color: var(--secondary-color);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .btn--secondary {
+            background-color: transparent;
+            color: var(--primary-color);
+            border: 2px solid var(--primary-color);
+        }
+        
+        .btn--secondary:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
+        /* Header Styles */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.95);
+            box-shadow: var(--shadow-sm);
+            z-index: 1000;
+            padding: var(--space-sm) 0;
+            transition: all var(--transition-speed) var(--transition-ease);
+        }
+        
+        .header--scrolled {
+            padding: var(--space-xs) 0;
+            box-shadow: var(--shadow-md);
+        }
+        
+        .header__container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo__text {
+            font-family: var(--heading-font);
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-left: var(--space-xs);
+        }
+        
+        .logo__subtext {
+            display: block;
+            font-size: 0.8rem;
+            font-family: var(--body-font);
+            font-weight: 400;
+            color: var(--dark-color);
+        }
+        
+        .nav {
+            display: none;
+        }
+        
+        .nav__list {
+            display: flex;
+            list-style: none;
+            gap: var(--space-md);
+        }
+        
+        .nav__link {
+            font-weight: 500;
+            color: var(--dark-color);
+            position: relative;
+            padding: var(--space-xs) 0;
+        }
+        
+        .nav__link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--accent-color);
+            transition: width var(--transition-speed) var(--transition-ease);
+        }
+        
+        .nav__link:hover::after {
+            width: 100%;
+        }
+        
+        .header__cta {
+            display: none;
+        }
+        
+        .mobile-toggle {
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .mobile-nav {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 80%;
+            height: 100vh;
+            background-color: white;
+            z-index: 1001;
+            padding: var(--space-lg);
+            transition: right var(--transition-speed) var(--transition-ease);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .mobile-nav--active {
+            right: 0;
+        }
+        
+        .mobile-nav__close {
+            position: absolute;
+            top: var(--space-sm);
+            right: var(--space-sm);
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--dark-color);
+            cursor: pointer;
+        }
+        
+        .mobile-nav__list {
+            list-style: none;
+            margin-top: var(--space-xl);
+        }
+        
+        .mobile-nav__item {
+            margin-bottom: var(--space-md);
+        }
+        
+        .mobile-nav__link {
+            font-size: 1.2rem;
+            font-weight: 500;
+            color: var(--dark-color);
+            display: block;
+            padding: var(--space-xs) 0;
+            border-bottom: 1px solid var(--neutral-color);
+        }
+        
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+            opacity: 0;
+            visibility: hidden;
+            transition: all var(--transition-speed) var(--transition-ease);
+        }
+        
+        .overlay--active {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        /* Hero Section */
+        .hero {
+            padding-top: 6rem;
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml,<svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path d="M0 0L100 100ZM100 0L0 100Z" stroke="rgba(255,255,255,0.05)" stroke-width="0.5"/></svg>');
+            opacity: 0.1;
+        }
+        
+        .hero__container {
+            position: relative;
+            z-index: 1;
+            color: white;
+            padding: var(--space-xl) 0;
+        }
+        
+        .hero__content {
+            max-width: 600px;
+        }
+        
+        .hero__title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: var(--space-md);
+            color: white;
+        }
+        
+        .hero__subtitle {
+            font-size: 1.2rem;
+            margin-bottom: var(--space-lg);
+            line-height: var(--line-height-lg);
+            color: rgba(255, 255, 255, 0.9);
+        }
+        
+        .hero__cta-group {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-sm);
+        }
+        
+        /* About Section */
+        .about__content {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-lg);
+        }
+        
+        .about__text {
+            flex: 1;
+        }
+        
+        .about__image {
+            flex: 1;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .about__credentials {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--space-md);
+            margin-top: var(--space-md);
+        }
+        
+        .credential {
+            flex: 1 1 45%;
+            background-color: white;
+            padding: var(--space-sm);
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-sm);
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+        }
+        
+        .credential__icon {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            width: 40px;
+            height: 40px;
+            background-color: rgba(74, 141, 163, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .credential__text {
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+        
+        /* Services Section */
+        .services__grid {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            gap: var(--space-md);
+        }
+        
+        .service-card {
+            background-color: white;
+            border-radius: var(--radius-md);
+            padding: var(--space-md);
+            box-shadow: var(--shadow-sm);
+            transition: all var(--transition-speed) var(--transition-ease);
+            border-bottom: 3px solid transparent;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+            border-bottom-color: var(--accent-color);
+        }
+        
+        .service-card__icon {
+            width: 60px;
+            height: 60px;
+            background-color: rgba(74, 141, 163, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: var(--space-sm);
+            color: var(--primary-color);
+            font-size: 1.5rem;
+        }
+        
+        .service-card__title {
+            font-size: 1.2rem;
+            margin-bottom: var(--space-xs);
+        }
+        
+        .service-card__text {
+            font-size: 0.9rem;
+            color: var(--dark-color);
+            opacity: 0.8;
+        }
+        
+        /* Testimonials Section */
+        .testimonials__container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .testimonials-slider {
+            position: relative;
+            overflow: hidden;
+            height: 320px;
+        }
+        
+        .testimonial {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            visibility: hidden;
+            transition: all var(--transition-speed) var(--transition-ease);
+            background-color: white;
+            border-radius: var(--radius-md);
+            padding: var(--space-lg);
+            box-shadow: var(--shadow-md);
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .testimonial--active {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .testimonial__text {
+            font-style: italic;
+            position: relative;
+            padding: 0 var(--space-sm);
+            margin-bottom: var(--space-md);
+            flex-grow: 1;
+        }
+        
+        .testimonial__text::before {
+            content: '"';
+            font-family: Georgia, serif;
+            font-size: 4rem;
+            position: absolute;
+            top: -2rem;
+            left: -1rem;
+            color: var(--accent-color);
+            opacity: 0.3;
+        }
+        
+        .testimonial__author {
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+        }
+        
+        .testimonial__avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            overflow: hidden;
+            background-color: var(--neutral-color);
+        }
+        
+        .testimonial__name {
+            font-weight: 600;
+        }
+        
+        .testimonial__rating {
+            color: var(--warning-color);
+            margin-top: var(--space-xs);
+        }
+        
+        .testimonials-nav {
+            display: flex;
+            justify-content: center;
+            margin-top: var(--space-md);
+            gap: var(--space-xs);
+        }
+        
+        .testimonials-nav__dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: var(--neutral-color);
+            cursor: pointer;
+            transition: all var(--transition-speed) var(--transition-ease);
+        }
+        
+        .testimonials-nav__dot--active {
+            background-color: var(--primary-color);
+            transform: scale(1.3);
+        }
+        
+        /* Contact Section */
+        .contact__container {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-lg);
+        }
+        
+        .contact__form-container {
+            flex: 1;
+        }
+        
+        .contact__info {
+            flex: 1;
+        }
+        
+        .form {
+            background-color: white;
+            padding: var(--space-lg);
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .form__group {
+            margin-bottom: var(--space-md);
+        }
+        
+        .form__label {
+            display: block;
+            margin-bottom: var(--space-xs);
+            font-weight: 500;
+            color: var(--dark-color);
+        }
+        
+        .form__input,
+        .form__textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid var(--neutral-color);
+            border-radius: var(--radius-sm);
+            font-family: var(--body-font);
+            font-size: 1rem;
+            transition: border-color var(--transition-speed) var(--transition-ease);
+        }
+        
+        .form__input:focus,
+        .form__textarea:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 2px rgba(74, 141, 163, 0.2);
+        }
+        
+        .form__textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+        
+        .form__input--error,
+        .form__textarea--error {
+            border-color: #dc3545;
+        }
+        
+        .form__error {
+            color: #dc3545;
+            font-size: 0.8rem;
+            margin-top: var(--space-xs);
+            display: none;
+        }
+        
+        .form__error--visible {
+            display: block;
+        }
+        
+        .contact-info__item {
+            display: flex;
+            align-items: flex-start;
+            gap: var(--space-sm);
+            margin-bottom: var(--space-md);
+        }
+        
+        .contact-info__icon {
+            color: var(--primary-color);
+            font-size: 1.2rem;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(74, 141, 163, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .contact-info__text {
+            flex: 1;
+        }
+        
+        .contact-info__title {
+            font-weight: 600;
+            margin-bottom: var(--space-xs);
+        }
+        
+        .contact-info__content {
+            color: var(--dark-color);
+            line-height: var(--line-height-lg);
+        }
+        
+        .map {
+            height: 250px;
+            margin-top: var(--space-lg);
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+        }
+        
+        /* Footer */
+        .footer {
+            background-color: var(--dark-color);
+            color: white;
+            padding: var(--space-xl) 0 var(--space-lg);
+        }
+        
+        .footer__grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: var(--space-lg);
+        }
+        
+        .footer__about {
+            max-width: 300px;
+        }
+        
+        .footer__logo {
+            font-family: var(--heading-font);
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: var(--space-sm);
+        }
+        
+        .footer__text {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.9rem;
+            line-height: var(--line-height-lg);
+        }
+        
+        .footer__heading {
+            font-size: 1.2rem;
+            margin-bottom: var(--space-md);
+            color: white;
+        }
+        
+        .footer__heading::after {
+            background-color: var(--accent-color);
+        }
+        
+        .footer__links {
+            list-style: none;
+        }
+        
+        .footer__link-item {
+            margin-bottom: var(--space-xs);
+        }
+        
+        .footer__link {
+            color: rgba(255, 255, 255, 0.7);
+            transition: color var(--transition-speed) var(--transition-ease);
+        }
+        
+        .footer__link:hover {
+            color: white;
+        }
+        
+        .footer__social {
+            display: flex;
+            gap: var(--space-sm);
+            margin-top: var(--space-md);
+        }
+        
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all var(--transition-speed) var(--transition-ease);
+        }
+        
+        .social-icon:hover {
+            background-color: var(--primary-color);
+            transform: translateY(-3px);
+        }
+        
+        .footer__bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: var(--space-md);
+            margin-top: var(--space-lg);
+            text-align: center;
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 0.9rem;
+        }
+        
+        /* Responsive Styles */
+        @media (min-width: 640px) {
+            h1 {
+                font-size: 3rem;
+            }
+            
+            h2 {
+                font-size: 2.25rem;
+            }
+            
+            .hero__title {
+                font-size: 3.5rem;
+            }
+            
+            .services__grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .hero__cta-group {
+                flex-direction: row;
+            }
+            
+            .testimonial {
+                height: 280px;
+            }
+        }
+        
+        @media (min-width: 1024px) {
+            .mobile-toggle {
+                display: none;
+            }
+            
+            .nav {
+                display: block;
+            }
+            
+            .header__cta {
+                display: block;
+            }
+            
+            .logo__text {
+                font-size: 1.8rem;
+            }
+            
+            .hero__title {
+                font-size: 4rem;
+            }
+            
+            .hero__content {
+                max-width: 650px;
+            }
+            
+            .about__content {
+                flex-direction: row;
+            }
+            
+            .services__grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            
+            .testimonial {
+                height: 250px;
+            }
+            
+            .contact__container {
+                flex-direction: row;
+            }
+            
+            .footer__grid {
+                grid-template-columns: 2fr 1fr 1fr 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container header__container">
+            <a href="#" class="logo">
+                <span class="logo__text">Family Chiropractic Care<span class="logo__subtext">Dr. Sue Rance</span></span>
+            </a>
+            
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li><a href="#about" class="nav__link">About</a></li>
+                    <li><a href="#services" class="nav__link">Services</a></li>
+                    <li><a href="#testimonials" class="nav__link">Testimonials</a></li>
+                    <li><a href="#contact" class="nav__link">Contact</a></li>
+                </ul>
+            </nav>
+            
+            <a href="#contact" class="btn btn--primary header__cta">Book Appointment</a>
+            
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+    
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav" id="mobileNav">
+        <button class="mobile-nav__close" id="mobileClose" aria-label="Close Menu">
+            <i class="fas fa-times"></i>
+        </button>
+        <ul class="mobile-nav__list">
+            <li class="mobile-nav__item"><a href="#about" class="mobile-nav__link">About</a></li>
+            <li class="mobile-nav__item"><a href="#services" class="mobile-nav__link">Services</a></li>
+            <li class="mobile-nav__item"><a href="#testimonials" class="mobile-nav__link">Testimonials</a></li>
+            <li class="mobile-nav__item"><a href="#contact" class="mobile-nav__link">Contact</a></li>
+            <li class="mobile-nav__item"><a href="#contact" class="btn btn--primary">Book Appointment</a></li>
+        </ul>
+    </div>
+    
+    <div class="overlay" id="overlay"></div>
+    
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container hero__container">
+            <div class="hero__content">
+                <h1 class="hero__title">Restore Mobility, Reduce Pain, Improve Life</h1>
+                <p class="hero__subtitle">Dr. Sue Rance provides personalized chiropractic care for patients of all ages in Fresno, California. Experience natural, effective healing for your whole family.</p>
+                <div class="hero__cta-group">
+                    <a href="#contact" class="btn btn--primary">Schedule Consultation</a>
+                    <a href="#services" class="btn btn--secondary">Explore Services</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- About Section -->
+    <section class="section" id="about">
+        <div class="container">
+            <h2 class="text-center">About Dr. Sue Rance</h2>
+            <div class="about__content">
+                <div class="about__text">
+                    <p>Dr. Sue Rance is a dedicated chiropractor committed to helping patients restore mobility, reduce pain, and improve their overall quality of life through personalized chiropractic care.</p>
+                    <p>With years of specialized training and experience, Dr. Rance works with patients of all ages - from infants to seniors - offering personalized care plans tailored to each individual's specific needs and health goals.</p>
+                    <p>Her approach combines hands-on chiropractic adjustments with comprehensive lifestyle guidance to support long-term wellness and prevent future issues. Dr. Rance believes in treating the whole person, not just symptoms, and empowering patients to take an active role in their health journey.</p>
+                    
+                    <div class="about__credentials">
+                        <div class="credential">
+                            <div class="credential__icon">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <div class="credential__text">Doctor of Chiropractic, Life Chiropractic College West</div>
+                        </div>
+                        <div class="credential">
+                            <div class="credential__icon">
+                                <i class="fas fa-certificate"></i>
+                            </div>
+                            <div class="credential__text">Certified in Pediatric Chiropractic Care</div>
+                        </div>
+                        <div class="credential">
+                            <div class="credential__icon">
+                                <i class="fas fa-award"></i>
+                            </div>
+                            <div class="credential__text">Member, American Chiropractic Association</div>
+                        </div>
+                        <div class="credential">
+                            <div class="credential__icon">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <div class="credential__text">Voted "Best Chiropractor in Fresno" 2022</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about__image">
+                    <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Dr. Sue Rance providing chiropractic care in her Fresno clinic">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Services Section -->
+    <section class="section section--alt" id="services">
+        <div class="container">
+            <h2 class="text-center">Our Services</h2>
+            <div class="services__grid">
+                <div class="service-card">
+                    <div class="service-card__icon">
+                        <i class="fas fa-spine"></i>
+                    </div>
+                    <h3 class="service-card__title">Spinal Adjustments</h3>
+                    <p class="service-card__text">Gentle, precise adjustments to correct spinal misalignments, relieve pressure on nerves, and restore proper function to your body's systems.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-card__icon">
+                        <i class="fas fa-child"></i>
+                    </div>
+                    <h3 class="service-card__title">Pediatric Chiropractic</h3>
+                    <p class="service-card__text">Safe, gentle care for infants and children to support proper development, address common childhood conditions, and build a foundation for lifelong health.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-card__icon">
+                        <i class="fas fa-user-injured"></i>
+                    </div>
+                    <h3 class="service-card__title">Sports Injury Treatment</h3>
+                    <p class="service-card__text">Specialized care for athletes of all levels to recover from injuries, improve performance, and prevent future injuries through proper biomechanics.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-card__icon">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <h3 class="service-card__title">Prenatal Chiropractic</h3>
+                    <p class="service-card__text">Safe, gentle adjustments to help manage pregnancy-related discomfort, maintain pelvic alignment, and prepare for a more comfortable delivery.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-card__icon">
+                        <i class="fas fa-head-side-brain"></i>
+                    </div>
+                    <h3 class="service-card__title">Headache Relief</h3>
+                    <p class="service-card__text">Effective care for tension headaches and migraines by addressing the root causes, including neck tension, spinal misalignments, and lifestyle factors.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-card__icon">
+                        <i class="fas fa-apple-alt"></i>
+                    </div>
+                    <h3 class="service-card__title">Nutritional Guidance</h3>
+                    <p class="service-card__text">Personalized nutritional advice to complement your chiropractic care, reduce inflammation, support healing, and enhance your overall wellness.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Testimonials Section -->
+    <section class="section" id="testimonials">
+        <div class="container testimonials__container">
+            <h2 class="text-center">What Our Patients Say</h2>
+            
+            <div class="testimonials-slider" id="testimonialsSlider">
+                <div class="testimonial testimonial--active" data-index="0">
+                    <p class="testimonial__text">After years of chronic back pain and seeing multiple specialists, I found Dr. Rance. Her comprehensive approach has not only relieved my pain but improved my overall health. I can finally play with my grandchildren without discomfort!</p>
+                    <div class="testimonial__author">
+                        <div class="testimonial__avatar">
+                            <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Maria Johnson">
+                        </div>
+                        <div>
+                            <p class="testimonial__name">Maria Johnson</p>
+                            <div class="testimonial__rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial" data-index="1">
+                    <p class="testimonial__text">My 10-year-old son was having frequent headaches and trouble focusing in school. Dr. Rance's gentle pediatric adjustments have made an incredible difference. His headaches are gone, and his teachers have noticed improved concentration in class.</p>
+                    <div class="testimonial__author">
+                        <div class="testimonial__avatar">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Robert Alvarez">
+                        </div>
+                        <div>
+                            <p class="testimonial__name">Robert Alvarez</p>
+                            <div class="testimonial__rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial" data-index="2">
+                    <p class="testimonial__text">As a marathon runner, I rely on my body to perform at its best. Dr. Rance keeps me aligned and injury-free with her knowledge of sports chiropractic. Her nutritional advice has also helped me recover faster between training sessions.</p>
+                    <div class="testimonial__author">
+                        <div class="testimonial__avatar">
+                            <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Jennifer Liu">
+                        </div>
+                        <div>
+                            <p class="testimonial__name">Jennifer Liu</p>
+                            <div class="testimonial__rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial" data-index="3">
+                    <p class="testimonial__text">Dr. Rance's prenatal chiropractic care was a lifesaver during my pregnancy. Her gentle adjustments relieved my back pain and sciatic discomfort, helping me stay active until delivery. I'm convinced it contributed to my easier labor experience!</p>
+                    <div class="testimonial__author">
+                        <div class="testimonial__avatar">
+                            <img src="https://randomuser.me/api/portraits/women/28.jpg" alt="Samantha Torres">
+                        </div>
+                        <div>
+                            <p class="testimonial__name">Samantha Torres</p>
+                            <div class="testimonial__rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="testimonials-nav" id="testimonialsNav">
+                <div class="testimonials-nav__dot testimonials-nav__dot--active" data-index="0"></div>
+                <div class="testimonials-nav__dot" data-index="1"></div>
+                <div class="testimonials-nav__dot" data-index="2"></div>
+                <div class="testimonials-nav__dot" data-index="3"></div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section class="section section--alt" id="contact">
+        <div class="container">
+            <h2 class="text-center">Schedule Your Appointment</h2>
+            <div class="contact__container">
+                <div class="contact__form-container">
+                    <form class="form" id="contactForm">
+                        <div class="form__group">
+                            <label for="name" class="form__label">Full Name</label>
+                            <input type="text" id="name" name="name" class="form__input" required>
+                            <div class="form__error" id="nameError">Please enter your full name</div>
+                        </div>
+                        
+                        <div class="form__group">
+                            <label for="email" class="form__label">Email Address</label>
+                            <input type="email" id="email" name="email" class="form__input" required>
+                            <div class="form__error" id="emailError">Please enter a valid email address</div>
+                        </div>
+                        
+                        <div class="form__group">
+                            <label for="phone" class="form__label">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" class="form__input" required>
+                            <div class="form__error" id="phoneError">Please enter a valid phone number</div>
+                        </div>
+                        
+                        <div class="form__group">
+                            <label for="service" class="form__label">Service Interested In</label>
+                            <select id="service" name="service" class="form__input">
+                                <option value="">Select a service</option>
+                                <option value="Spinal Adjustments">Spinal Adjustments</option>
+                                <option value="Pediatric Chiropractic">Pediatric Chiropractic</option>
+                                <option value="Sports Injury Treatment">Sports Injury Treatment</option>
+                                <option value="Prenatal Chiropractic">Prenatal Chiropractic</option>
+                                <option value="Headache Relief">Headache Relief</option>
+                                <option value="Nutritional Guidance">Nutritional Guidance</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form__group">
+                            <label for="message" class="form__label">Your Message or Health Concerns</label>
+                            <textarea id="message" name="message" class="form__textarea" rows="5"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn--primary">Request Appointment</button>
+                    </form>
+                </div>
+                
+                <div class="contact__info">
+                    <div class="contact-info__item">
+                        <div class="contact-info__icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-info__text">
+                            <h3 class="contact-info__title">Office Location</h3>
+                            <p class="contact-info__content">123 Wellness Way<br>Fresno, CA 93721</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-info__item">
+                        <div class="contact-info__icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div class="contact-info__text">
+                            <h3 class="contact-info__title">Phone</h3>
+                            <p class="contact-info__content">(559) 123-4567</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-info__item">
+                        <div class="contact-info__icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-info__text">
+                            <h3 class="contact-info__title">Email</h3>
+                            <p class="contact-info__content">dr.sue@familychiropracticcare.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-info__item">
+                        <div class="contact-info__icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="contact-info__text">
+                            <h3 class="contact-info__title">Office Hours</h3>
+                            <p class="contact-info__content">
+                                Monday - Friday: 9am - 6pm<br>
+                                Saturday: 9am - 2pm<br>
+                                Sunday: Closed
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d102858.96011189378!2d-119.85000894179687!3d36.74755500000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80945de1549e4e9d%3A0x7b12406449a3b811!2sFresno%2C%20CA%2C%20USA!5e0!3m2!1sen!2s!4v1650000000000!5m2!1sen!2s" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__about">
+                    <div class="footer__logo">Family Chiropractic Care</div>
+                    <p class="footer__text">Dedicated to helping patients restore mobility, reduce pain, and improve their overall quality of life through personalized chiropractic care in Fresno, California.</p>
+                    <div class="footer__social">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer__links-container">
+                    <h3 class="footer__heading">Quick Links</h3>
+                    <ul class="footer__links">
+                        <li class="footer__link-item"><a href="#about" class="footer__link">About Us</a></li>
+                        <li class="footer__link-item"><a href="#services" class="footer__link">Services</a></li>
+                        <li class="footer__link-item"><a href="#testimonials" class="footer__link">Testimonials</a></li>
+                        <li class="footer__link-item"><a href="#contact" class="footer__link">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer__links-container">
+                    <h3 class="footer__heading">Services</h3>
+                    <ul class="footer__links">
+                        <li class="footer__link-item"><a href="#services" class="footer__link">Spinal Adjustments</a></li>
+                        <li class="footer__link-item"><a href="#services" class="footer__link">Pediatric Chiropractic</a></li>
+                        <li class="footer__link-item"><a href="#services" class="footer__link">Sports Injury Treatment</a></li>
+                        <li class="footer__link-item"><a href="#services" class="footer__link">Prenatal Chiropractic</a></li>
+                        <li class="footer__link-item"><a href="#services" class="footer__link">Headache Relief</a></li>
+                        <li class="footer__link-item"><a href="#services" class="footer__link">Nutritional Guidance</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer__links-container">
+                    <h3 class="footer__heading">Contact Info</h3>
+                    <ul class="footer__links">
+                        <li class="footer__link-item"><a href="#" class="footer__link">123 Wellness Way, Fresno, CA 93721</a></li>
+                        <li class="footer__link-item"><a href="tel:+15591234567" class="footer__link">(559) 123-4567</a></li>
+                        <li class="footer__link-item"><a href="mailto:dr.sue@familychiropracticcare.com" class="footer__link">dr.sue@familychiropracticcare.com</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer__bottom">
+                <p>&copy; <span id="currentYear">2023</span> Family Chiropractic Care. All Rights Reserved. | Website designed by <a href="#" class="footer__link">Premium Web Designs</a></p>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        // Mobile Navigation Toggle
+        const mobileToggle = document.getElementById('mobileToggle');
+        const mobileNav = document.getElementById('mobileNav');
+        const mobileClose = document.getElementById('mobileClose');
+        const overlay = document.getElementById('overlay');
+        const mobileLinks = document.querySelectorAll('.mobile-nav__link');
+        
+        mobileToggle.addEventListener('click', () => {
+            mobileNav.classList.add('mobile-nav--active');
+            overlay.classList.add('overlay--active');
+            document.body.style.overflow = 'hidden';
+        });
+        
+        function closeMobileNav() {
+            mobileNav.classList.remove('mobile-nav--active');
+            overlay.classList.remove('overlay--active');
+            document.body.style.overflow = '';
+        }
+        
+        mobileClose.addEventListener('click', closeMobileNav);
+        overlay.addEventListener('click', closeMobileNav);
+        
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', closeMobileNav);
+        });
+        
+        // Sticky Header
+        const header = document.getElementById('header');
+        
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                header.classList.add('header--scrolled');
+            } else {
+                header.classList.remove('header--scrolled');
+            }
+        });
+        
+        // Testimonials Slider
+        const testimonialsSlider = document.getElementById('testimonialsSlider');
+        const testimonials = document.querySelectorAll('.testimonial');
+        const testimonialsDots = document.querySelectorAll('.testimonials-nav__dot');
+        let currentTestimonial = 0;
+        let testimonialInterval;
+        
+        function showTestimonial(index) {
+            testimonials.forEach(testimonial => {
+                testimonial.classList.remove('testimonial--active');
+            });
+            
+            testimonialsDots.forEach(dot => {
+                dot.classList.remove('testimonials-nav__dot--active');
+            });
+            
+            testimonials[index].classList.add('testimonial--active');
+            testimonialsDots[index].classList.add('testimonials-nav__dot--active');
+            currentTestimonial = index;
+        }
+        
+        function nextTestimonial() {
+            currentTestimonial = (currentTestimonial + 1) % testimonials.length;
+            showTestimonial(currentTestimonial);
+        }
+        
+        function startTestimonialSlider() {
+            testimonialInterval = setInterval(nextTestimonial, 5000);
+        }
+        
+        testimonialsDots.forEach(dot => {
+            dot.addEventListener('click', () => {
+                const index = parseInt(dot.dataset.index);
+                showTestimonial(index);
+                clearInterval(testimonialInterval);
+                startTestimonialSlider();
+            });
+        });
+        
+        // Form Validation
+        const contactForm = document.getElementById('contactForm');
+        const nameInput = document.getElementById('name');
+        const emailInput = document.getElementById('email');
+        const phoneInput = document.getElementById('phone');
+        const nameError = document.getElementById('nameError');
+        const emailError = document.getElementById('emailError');
+        const phoneError = document.getElementById('phoneError');
+        
+        function validateEmail(email) {
+            const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+            return re.test(String(email).toLowerCase());
+        }
+        
+        function validatePhone(phone) {
+            const re = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/;
+            return re.test(String(phone));
+        }
+        
+        nameInput.addEventListener('blur', () => {
+            if (nameInput.value.trim() === '') {
+                nameInput.classList.add('form__input--error');
+                nameError.classList.add('form__error--visible');
+            } else {
+                nameInput.classList.remove('form__input--error');
+                nameError.classList.remove('form__error--visible');
+            }
+        });
+        
+        emailInput.addEventListener('blur', () => {
+            if (!validateEmail(emailInput.value.trim())) {
+                emailInput.classList.add('form__input--error');
+                emailError.classList.add('form__error--visible');
+            } else {
+                emailInput.classList.remove('form__input--error');
+                emailError.classList.remove('form__error--visible');
+            }
+        });
+        
+        phoneInput.addEventListener('blur', () => {
+            if (!validatePhone(phoneInput.value.trim())) {
+                phoneInput.classList.add('form__input--error');
+                phoneError.classList.add('form__error--visible');
+            } else {
+                phoneInput.classList.remove('form__input--error');
+                phoneError.classList.remove('form__error--visible');
+            }
+        });
+        
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            let valid = true;
+            
+            if (nameInput.value.trim() === '') {
+                nameInput.classList.add('form__input--error');
+                nameError.classList.add('form__error--visible');
+                valid = false;
+            }
+            
+            if (!validateEmail(emailInput.value.trim())) {
+                emailInput.classList.add('form__input--error');
+                emailError.classList.add('form__error--visible');
+                valid = false;
+            }
+            
+            if (!validatePhone(phoneInput.value.trim())) {
+                phoneInput.classList.add('form__input--error');
+                phoneError.classList.add('form__error--visible');
+                valid = false;
+            }
+            
+            if (valid) {
+                // In a real application, you would send the form data to a server here
+                alert('Your appointment request has been submitted! We will contact you shortly to confirm your appointment.');
+                contactForm.reset();
+            }
+        });
+        
+        // Set copyright year dynamically
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+        
+        // Initialize the testimonial slider
+        startTestimonialSlider();
+    </script>
+</body>
+</html>
