@@ -1,0 +1,1434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harris Sports Chiropractic | Jenks, Oklahoma</title>
+    <meta name="description" content="Dr. Paul Harris provides total family chiropractic care in Jenks, Oklahoma since 1986. Specializing in sports injuries, rehab, and nutritional counseling.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* CSS Variables - Healthcare/Wellness Color Palette */
+        :root {
+            /* Primary Colors */
+            --color-primary: #2D7D90; /* Healing blue */
+            --color-primary-light: #4A9DAE;
+            --color-primary-dark: #1E5F6E;
+            
+            /* Secondary Colors */
+            --color-secondary: #4CAF82; /* Calming green */
+            --color-secondary-light: #6BC29A;
+            --color-secondary-dark: #3A8A65;
+            
+            /* Neutral Colors */
+            --color-background: #F7F9FB;
+            --color-text: #2A3B47;
+            --color-text-light: #5A6D7A;
+            --color-white: #FFFFFF;
+            --color-off-white: #F0F4F7;
+            
+            /* Accent Colors */
+            --color-accent: #E8F4F8; /* Light blue background */
+            --color-highlight: #EBF7F2; /* Light green highlight */
+            --color-warning: #E8A87C; /* Soft orange for highlights */
+            
+            /* Spacing System (8px grid) */
+            --space-xs: 0.5rem; /* 8px */
+            --space-sm: 1rem;   /* 16px */
+            --space-md: 1.5rem; /* 24px */
+            --space-lg: 2rem;   /* 32px */
+            --space-xl: 3rem;   /* 48px */
+            --space-xxl: 4rem;  /* 64px */
+            
+            /* Transition and Animation */
+            --transition-fast: 0.2s ease;
+            --transition-standard: 0.3s ease;
+            --transition-slow: 0.5s ease;
+            
+            /* Border Radius */
+            --radius-sm: 0.25rem;
+            --radius-md: 0.5rem;
+            --radius-lg: 1rem;
+            
+            /* Box Shadows */
+            --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
+            --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.12);
+            
+            /* Content Width */
+            --content-width-narrow: 600px;
+            --content-width-standard: 1140px;
+        }
+        
+        /* Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 5rem;
+        }
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 400;
+            line-height: 1.6;
+            color: var(--color-text);
+            background-color: var(--color-background);
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+            line-height: 1.3;
+            margin-bottom: var(--space-sm);
+            color: var(--color-primary-dark);
+        }
+        
+        h1 {
+            font-size: clamp(2.25rem, 5vw, 3.5rem);
+        }
+        
+        h2 {
+            font-size: clamp(1.75rem, 4vw, 2.5rem);
+            position: relative;
+            margin-bottom: var(--space-lg);
+        }
+        
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: -0.75rem;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background-color: var(--color-secondary);
+        }
+        
+        .text-center h2::after {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        h3 {
+            font-size: clamp(1.25rem, 3vw, 1.75rem);
+        }
+        
+        p {
+            margin-bottom: var(--space-md);
+            font-size: 1rem;
+            color: var(--color-text-light);
+        }
+        
+        a {
+            color: var(--color-primary);
+            text-decoration: none;
+            transition: color var(--transition-standard);
+        }
+        
+        a:hover {
+            color: var(--color-primary-dark);
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        button, .btn {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            border: none;
+            border-radius: var(--radius-sm);
+            cursor: pointer;
+            transition: all var(--transition-standard);
+            background-color: var(--color-primary);
+            color: var(--color-white);
+        }
+        
+        .btn-primary {
+            background-color: var(--color-primary);
+            color: var(--color-white);
+        }
+        
+        .btn-primary:hover {
+            background-color: var(--color-primary-dark);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .btn-secondary {
+            background-color: var(--color-secondary);
+            color: var(--color-white);
+        }
+        
+        .btn-secondary:hover {
+            background-color: var(--color-secondary-dark);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid var(--color-primary);
+            color: var(--color-primary);
+        }
+        
+        .btn-outline:hover {
+            background-color: var(--color-primary);
+            color: var(--color-white);
+            transform: translateY(-2px);
+        }
+        
+        /* Layout Containers */
+        .container {
+            width: 90%;
+            max-width: var(--content-width-standard);
+            margin: 0 auto;
+            padding: 0 var(--space-sm);
+        }
+        
+        .section {
+            padding: var(--space-xl) 0;
+            position: relative;
+        }
+        
+        .section-light {
+            background-color: var(--color-white);
+        }
+        
+        .section-dark {
+            background-color: var(--color-accent);
+        }
+        
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 -1rem;
+        }
+        
+        .col {
+            flex: 1;
+            padding: 0 1rem;
+            margin-bottom: var(--space-md);
+        }
+        
+        /* Header & Navigation */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background-color: var(--color-white);
+            box-shadow: var(--shadow-sm);
+            transition: all var(--transition-standard);
+        }
+        
+        .header.scrolled {
+            padding: 0.5rem 0;
+            box-shadow: var(--shadow-md);
+        }
+        
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: var(--color-primary-dark);
+            text-decoration: none;
+        }
+        
+        .logo span {
+            color: var(--color-secondary);
+        }
+        
+        .logo img {
+            height: 2.5rem;
+            margin-right: 0.5rem;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: var(--space-md);
+        }
+        
+        .nav-links a {
+            color: var(--color-text);
+            font-weight: 500;
+            font-size: 0.95rem;
+            padding: 0.5rem 0;
+            position: relative;
+        }
+        
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--color-secondary);
+            transition: width var(--transition-standard);
+        }
+        
+        .nav-links a:hover::after,
+        .nav-links a.active::after {
+            width: 100%;
+        }
+        
+        .nav-links a:hover {
+            color: var(--color-primary);
+        }
+        
+        .mobile-nav-toggle {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 1.5rem;
+            color: var(--color-primary);
+        }
+        
+        /* Hero Section */
+        .hero {
+            padding: calc(4rem + var(--space-xxl)) 0 var(--space-xxl);
+            background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-primary) 100%);
+            color: var(--color-white);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxkZWZzPjxwYXR0ZXJuIGlkPSJwYXR0ZXJuIiB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgcGF0dGVyblRyYW5zZm9ybT0icm90YXRlKDQ1KSI+PGNpcmNsZSBjeD0iMjAiIGN5PSIyMCIgcj0iMC41IiBmaWxsPSJyZ2JhKDI1NSwgMjU1LCAyNTUsIDAuMSkiLz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjcGF0dGVybikiLz48L3N2Zz4=');
+            opacity: 0.4;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: var(--space-xl);
+        }
+        
+        .hero-text {
+            flex: 1;
+        }
+        
+        .hero h1 {
+            color: var(--color-white);
+            margin-bottom: var(--space-md);
+            line-height: 1.2;
+        }
+        
+        .hero p {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.1rem;
+            margin-bottom: var(--space-lg);
+            max-width: 600px;
+        }
+        
+        .hero-cta {
+            display: flex;
+            gap: var(--space-sm);
+        }
+        
+        .hero-image {
+            flex: 1;
+            display: flex;
+            justify-content: flex-end;
+            position: relative;
+        }
+        
+        .hero-image img {
+            max-width: 100%;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-lg);
+            border: 5px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        /* Services Section */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: var(--space-lg);
+            margin-top: var(--space-lg);
+        }
+        
+        .service-card {
+            background-color: var(--color-white);
+            border-radius: var(--radius-md);
+            padding: var(--space-lg);
+            box-shadow: var(--shadow-sm);
+            transition: all var(--transition-standard);
+            border-bottom: 3px solid transparent;
+            height: 100%;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-md);
+            border-bottom: 3px solid var(--color-secondary);
+        }
+        
+        .service-icon {
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: var(--space-md);
+            background-color: var(--color-accent);
+            color: var(--color-primary);
+            border-radius: 50%;
+            font-size: 1.5rem;
+        }
+        
+        .service-title {
+            font-size: 1.3rem;
+            margin-bottom: var(--space-sm);
+            color: var(--color-primary-dark);
+        }
+        
+        /* About Section */
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: var(--space-xl);
+        }
+        
+        .about-image {
+            flex: 1;
+            position: relative;
+        }
+        
+        .about-image img {
+            width: 100%;
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .about-image::before {
+            content: '';
+            position: absolute;
+            top: -15px;
+            left: -15px;
+            width: 100%;
+            height: 100%;
+            border: 2px solid var(--color-secondary);
+            border-radius: var(--radius-md);
+            z-index: -1;
+        }
+        
+        .about-image .experience-badge {
+            position: absolute;
+            bottom: -20px;
+            right: -20px;
+            background-color: var(--color-secondary);
+            color: var(--color-white);
+            padding: 1rem;
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            line-height: 1.2;
+            box-shadow: var(--shadow-md);
+        }
+        
+        .about-text {
+            flex: 1;
+        }
+        
+        .credentials {
+            margin-top: var(--space-md);
+            padding: var(--space-md);
+            background-color: var(--color-highlight);
+            border-left: 3px solid var(--color-secondary);
+            border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+        }
+        
+        .credentials h4 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: var(--space-xs);
+            color: var(--color-primary);
+        }
+        
+        .credentials ul {
+            list-style-type: none;
+        }
+        
+        .credentials li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+        }
+        
+        .credentials li::before {
+            content: '\f058';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            color: var(--color-secondary);
+            position: absolute;
+            left: 0;
+        }
+        
+        /* Testimonials Section */
+        .testimonials {
+            background-color: var(--color-accent);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .testimonials::before {
+            content: '\f10d';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            top: 2rem;
+            left: 2rem;
+            font-size: 4rem;
+            color: rgba(0, 0, 0, 0.03);
+        }
+        
+        .testimonials::after {
+            content: '\f10e';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            bottom: 2rem;
+            right: 2rem;
+            font-size: 4rem;
+            color: rgba(0, 0, 0, 0.03);
+        }
+        
+        .testimonial-slider {
+            position: relative;
+            overflow: hidden;
+            margin-top: var(--space-lg);
+        }
+        
+        .testimonial-track {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+        
+        .testimonial-slide {
+            flex: 0 0 100%;
+            min-width: 100%;
+            padding: 0 var(--space-sm);
+        }
+        
+        .testimonial-card {
+            background-color: var(--color-white);
+            padding: var(--space-lg);
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-md);
+            position: relative;
+        }
+        
+        .testimonial-content {
+            margin-bottom: var(--space-md);
+            font-style: italic;
+            color: var(--color-text);
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+        }
+        
+        .testimonial-author img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: var(--space-sm);
+        }
+        
+        .author-info h4 {
+            margin-bottom: 0;
+            font-size: 1rem;
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        .author-info p {
+            margin-bottom: 0;
+            font-size: 0.85rem;
+        }
+        
+        .testimonial-rating {
+            color: #FFC107;
+            margin-bottom: var(--space-sm);
+        }
+        
+        .slider-controls {
+            display: flex;
+            justify-content: center;
+            margin-top: var(--space-md);
+        }
+        
+        .slider-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: rgba(45, 125, 144, 0.2);
+            margin: 0 6px;
+            cursor: pointer;
+            transition: background-color var(--transition-standard);
+        }
+        
+        .slider-dot.active {
+            background-color: var(--color-primary);
+        }
+        
+        /* Contact Section */
+        .contact {
+            background-color: var(--color-white);
+        }
+        
+        .contact-content {
+            display: flex;
+            gap: var(--space-xl);
+        }
+        
+        .contact-info {
+            flex: 1;
+        }
+        
+        .contact-methods {
+            margin-top: var(--space-md);
+        }
+        
+        .contact-method {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: var(--space-md);
+        }
+        
+        .contact-icon {
+            font-size: 1.2rem;
+            color: var(--color-primary);
+            margin-right: var(--space-sm);
+            width: 1.5rem;
+            text-align: center;
+        }
+        
+        .contact-text h4 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1rem;
+            margin-bottom: 0.25rem;
+        }
+        
+        .contact-form {
+            flex: 1;
+            padding: var(--space-lg);
+            background-color: var(--color-highlight);
+            border-radius: var(--radius-md);
+        }
+        
+        .form-group {
+            margin-bottom: var(--space-md);
+        }
+        
+        .form-label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: var(--color-primary-dark);
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #ddd;
+            border-radius: var(--radius-sm);
+            font-family: 'Montserrat', sans-serif;
+            transition: border-color var(--transition-standard);
+        }
+        
+        .form-control:focus {
+            outline: none;
+            border-color: var(--color-primary);
+            box-shadow: 0 0 0 2px rgba(45, 125, 144, 0.2);
+        }
+        
+        textarea.form-control {
+            min-height: 120px;
+            resize: vertical;
+        }
+        
+        .map-container {
+            margin-top: var(--space-lg);
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            height: 300px;
+        }
+        
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+        
+        /* Footer Section */
+        .footer {
+            background-color: var(--color-primary-dark);
+            color: var(--color-white);
+            padding: var(--space-xl) 0 var(--space-lg);
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: var(--space-lg);
+        }
+        
+        .footer-col h3 {
+            color: var(--color-white);
+            font-size: 1.2rem;
+            margin-bottom: var(--space-md);
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+        }
+        
+        .footer-nav {
+            list-style: none;
+        }
+        
+        .footer-nav li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .footer-nav a {
+            color: rgba(255, 255, 255, 0.8);
+            transition: color var(--transition-standard);
+        }
+        
+        .footer-nav a:hover {
+            color: var(--color-white);
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 0.8rem;
+            margin-top: var(--space-sm);
+        }
+        
+        .social-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: var(--color-white);
+            border-radius: 50%;
+            transition: all var(--transition-standard);
+        }
+        
+        .social-link:hover {
+            background-color: var(--color-secondary);
+            color: var(--color-white);
+            transform: translateY(-3px);
+        }
+        
+        .footer-bottom {
+            margin-top: var(--space-lg);
+            padding-top: var(--space-md);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: center;
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.85rem;
+        }
+        
+        /* Utility Classes */
+        .text-center {
+            text-align: center;
+        }
+        
+        .text-right {
+            text-align: right;
+        }
+        
+        .mt-1 { margin-top: var(--space-xs); }
+        .mt-2 { margin-top: var(--space-sm); }
+        .mt-3 { margin-top: var(--space-md); }
+        .mt-4 { margin-top: var(--space-lg); }
+        .mt-5 { margin-top: var(--space-xl); }
+        
+        .mb-1 { margin-bottom: var(--space-xs); }
+        .mb-2 { margin-bottom: var(--space-sm); }
+        .mb-3 { margin-bottom: var(--space-md); }
+        .mb-4 { margin-bottom: var(--space-lg); }
+        .mb-5 { margin-bottom: var(--space-xl); }
+        
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .animate-fadeIn {
+            animation: fadeIn 0.8s ease forwards;
+        }
+        
+        /* Media Queries */
+        @media (max-width: 1024px) {
+            .hero-content {
+                flex-direction: column;
+            }
+            
+            .hero-image {
+                justify-content: center;
+                margin-top: var(--space-lg);
+            }
+            
+            .hero-image img {
+                max-width: 80%;
+            }
+            
+            .about-content {
+                flex-direction: column;
+            }
+            
+            .contact-content {
+                flex-direction: column;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                position: fixed;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                background-color: var(--color-white);
+                flex-direction: column;
+                padding: var(--space-md);
+                box-shadow: var(--shadow-md);
+            }
+            
+            .nav-links.active {
+                display: flex;
+            }
+            
+            .nav-links li {
+                margin: 0.5rem 0;
+                width: 100%;
+            }
+            
+            .nav-links a {
+                display: block;
+                padding: 0.5rem;
+            }
+            
+            .mobile-nav-toggle {
+                display: block;
+            }
+            
+            .about-image::before {
+                display: none;
+            }
+            
+            .about-image .experience-badge {
+                width: 80px;
+                height: 80px;
+                font-size: 0.8rem;
+                right: -10px;
+                bottom: -10px;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 640px) {
+            .hero {
+                text-align: center;
+            }
+            
+            .hero-cta {
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+            
+            .hero-image img {
+                max-width: 100%;
+            }
+            
+            h2::after {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .about-image {
+                margin-bottom: var(--space-lg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header" id="header">
+        <div class="container">
+            <div class="nav-container">
+                <a href="#" class="logo">
+                    <span>Harris</span> Sports Chiropractic
+                </a>
+                
+                <button class="mobile-nav-toggle" aria-label="Toggle Navigation">
+                    <i class="fas fa-bars"></i>
+                </button>
+                
+                <ul class="nav-links">
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#about">About Dr. Harris</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="tel:9185555555" class="btn btn-primary">Schedule Now</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero section" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text animate-fadeIn">
+                    <h1>Restore Your Body's Natural Balance</h1>
+                    <p>Dr. Paul Harris provides comprehensive chiropractic care in Jenks, Oklahoma with over 39 years of experience. Specializing in sports injuries, rehabilitation, and nutritional counseling.</p>
+                    <div class="hero-cta">
+                        <a href="#contact" class="btn btn-secondary">Schedule Consultation</a>
+                        <a href="#services" class="btn btn-outline">Explore Services</a>
+                    </div>
+                </div>
+                <div class="hero-image animate-fadeIn">
+                    <img src="https://media.licdn.com/dms/image/v2/C4D22AQGw-03ILpwUQQ/feedshare-shrink_2048_1536/feedshare-shrink_2048_1536/0/1635803656791?e=2147483647&v=beta&t=KgGi3EP_ds8Os3XcspQYWzi4gKhuRyyCzinyo-QC7I8" alt="Dr. Paul Harris, Chiropractor in Jenks, Oklahoma">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services section section-light" id="services">
+        <div class="container">
+            <div class="text-center">
+                <h2>Our Specialized Services</h2>
+                <p>We offer comprehensive chiropractic treatments customized to your unique needs</p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-running"></i>
+                    </div>
+                    <h3 class="service-title">Sports Injury Treatment</h3>
+                    <p>Specialized care for athletes of all levels, addressing sports-related injuries with targeted adjustments and rehabilitation protocols.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-spine"></i>
+                    </div>
+                    <h3 class="service-title">Spinal Adjustments</h3>
+                    <p>Precise manual adjustments to restore proper alignment, reduce pain, and improve nervous system function for optimal health.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-apple-alt"></i>
+                    </div>
+                    <h3 class="service-title">Nutritional Counseling</h3>
+                    <p>Personalized nutritional guidance to support your body's healing process and promote long-term wellness through proper diet.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-child"></i>
+                    </div>
+                    <h3 class="service-title">Family Chiropractic Care</h3>
+                    <p>Gentle, effective care for patients of all ages, from infants to seniors, with techniques adapted to each stage of life.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-dumbbell"></i>
+                    </div>
+                    <h3 class="service-title">Rehabilitation Exercises</h3>
+                    <p>Custom exercise programs designed to strengthen injured areas, improve mobility, and prevent future injuries.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-hand-holding-medical"></i>
+                    </div>
+                    <h3 class="service-title">Extremity Treatment</h3>
+                    <p>Specialized care for joints beyond the spine, including shoulders, knees, ankles, wrists, and more to restore function and reduce pain.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about section section-dark" id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="https://media.licdn.com/dms/image/v2/C4D22AQGw-03ILpwUQQ/feedshare-shrink_2048_1536/feedshare-shrink_2048_1536/0/1635803656791?e=2147483647&v=beta&t=KgGi3EP_ds8Os3XcspQYWzi4gKhuRyyCzinyo-QC7I8" alt="Dr. Paul Harris, Chiropractor">
+                    <div class="experience-badge">
+                        <span>39+ Years</span>
+                        <span>Experience</span>
+                    </div>
+                </div>
+                
+                <div class="about-text">
+                    <h2>About Dr. Paul Harris</h2>
+                    <p>Dr. Harris is the Owner and President of Harris Sports Chiropractic & Wellness Center, proudly serving Jenks, Oklahoma since 1986. With over 39 years of experience in the field, he has dedicated his career to helping patients achieve optimal health through natural chiropractic care.</p>
+                    
+                    <p>Having treated thousands of patients throughout his career, Dr. Harris combines traditional chiropractic techniques with modern approaches to provide comprehensive care tailored to each individual's needs.</p>
+                    
+                    <div class="credentials">
+                        <h4>Specializations & Certifications</h4>
+                        <ul>
+                            <li>Sports Injury Rehabilitation Specialist</li>
+                            <li>Certified in Extremity Evaluation and Injury Treatment</li>
+                            <li>Advanced Training in Nutritional Counseling</li>
+                            <li>Custom Exercise Program Development</li>
+                            <li>Total Family Chiropractic Care Provider</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials section" id="testimonials">
+        <div class="container">
+            <div class="text-center">
+                <h2>Patient Experiences</h2>
+                <p>Hear from our patients about how chiropractic care has improved their lives</p>
+            </div>
+            
+            <div class="testimonial-slider">
+                <div class="testimonial-track">
+                    <div class="testimonial-slide">
+                        <div class="testimonial-card">
+                            <div class="testimonial-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p class="testimonial-content">"After suffering from chronic back pain for years, Dr. Harris developed a treatment plan that finally gave me relief. His sports injury expertise was evident from our first session, and I'm now back to my active lifestyle pain-free!"</p>
+                            <div class="testimonial-author">
+                                <img src="data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 50 50'%3E%3Cpath fill='%23ddd' d='M25,0 C38.8071187,0 50,11.1928813 50,25 C50,38.8071187 38.8071187,50 25,50 C11.1928813,50 0,38.8071187 0,25 C0,11.1928813 11.1928813,0 25,0 Z'/%3E%3Cpath fill='%23aaa' d='M25,25 m-10,0 a10,10 0 1,0 20,0 a10,10 0 1,0 -20,0 Z'/%3E%3Cpath fill='%23aaa' d='M25,28 C31.2114159,28 36.4818892,30.2116711 40,33.5960878 L40,50 L10,50 L10,33.5960878 C13.5181108,30.2116711 18.7885841,28 25,28 Z'/%3E%3C/svg%3E" alt="Michael Jennings">
+                                <div class="author-info">
+                                    <h4>Michael Jennings</h4>
+                                    <p>High School Basketball Coach</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-slide">
+                        <div class="testimonial-card">
+                            <div class="testimonial-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p class="testimonial-content">"Dr. Harris truly cares about his patients. His nutritional counseling helped me identify food sensitivities that were contributing to my migraines. The combination of adjustments and dietary changes has been life-changing for me and my family."</p>
+                            <div class="testimonial-author">
+                                <img src="data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 50 50'%3E%3Cpath fill='%23ddd' d='M25,0 C38.8071187,0 50,11.1928813 50,25 C50,38.8071187 38.8071187,50 25,50 C11.1928813,50 0,38.8071187 0,25 C0,11.1928813 11.1928813,0 25,0 Z'/%3E%3Cpath fill='%23aaa' d='M25,25 m-10,0 a10,10 0 1,0 20,0 a10,10 0 1,0 -20,0 Z'/%3E%3Cpath fill='%23aaa' d='M25,28 C31.2114159,28 36.4818892,30.2116711 40,33.5960878 L40,50 L10,50 L10,33.5960878 C13.5181108,30.2116711 18.7885841,28 25,28 Z'/%3E%3C/svg%3E" alt="Sarah Thompson">
+                                <div class="author-info">
+                                    <h4>Sarah Thompson</h4>
+                                    <p>Elementary School Teacher</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-slide">
+                        <div class="testimonial-card">
+                            <div class="testimonial-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p class="testimonial-content">"As a runner with recurring knee issues, I was skeptical about chiropractic care. Dr. Harris's expertise in extremity treatment completely changed my perspective. His understanding of athletic injuries and personalized approach to treatment has kept me running pain-free."</p>
+                            <div class="testimonial-author">
+                                <img src="data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 50 50'%3E%3Cpath fill='%23ddd' d='M25,0 C38.8071187,0 50,11.1928813 50,25 C50,38.8071187 38.8071187,50 25,50 C11.1928813,50 0,38.8071187 0,25 C0,11.1928813 11.1928813,0 25,0 Z'/%3E%3Cpath fill='%23aaa' d='M25,25 m-10,0 a10,10 0 1,0 20,0 a10,10 0 1,0 -20,0 Z'/%3E%3Cpath fill='%23aaa' d='M25,28 C31.2114159,28 36.4818892,30.2116711 40,33.5960878 L40,50 L10,50 L10,33.5960878 C13.5181108,30.2116711 18.7885841,28 25,28 Z'/%3E%3C/svg%3E" alt="David Rodriguez">
+                                <div class="author-info">
+                                    <h4>David Rodriguez</h4>
+                                    <p>Marathon Runner</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="slider-controls">
+                    <div class="slider-dot active" data-slide="0"></div>
+                    <div class="slider-dot" data-slide="1"></div>
+                    <div class="slider-dot" data-slide="2"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact section" id="contact">
+        <div class="container">
+            <div class="text-center">
+                <h2>Get in Touch</h2>
+                <p>Schedule your consultation or ask us any questions about our services</p>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <p>We're here to help you achieve optimal health and wellness. Reach out to schedule your appointment or to learn more about our services.</p>
+                    
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Office Location</h4>
+                                <p>123 Main Street, Jenks, OK 74037</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-method">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Phone Number</h4>
+                                <p><a href="tel:9185555555">(918) 555-5555</a></p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-method">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Email Address</h4>
+                                <p><a href="mailto:info@harrissportschiropractic.com">info@harrissportschiropractic.com</a></p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-method">
+                            <div class="contact-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Office Hours</h4>
+                                <p>Monday-Friday: 8am-6pm<br>Saturday: 9am-1pm<br>Sunday: Closed</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <h3>Schedule a Consultation</h3>
+                    <form id="appointmentForm" action="#" method="POST">
+                        <div class="form-group">
+                            <label for="name" class="form-label">Full Name</label>
+                            <input type="text" id="name" name="name" class="form-control" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email" class="form-label">Email Address</label>
+                            <input type="email" id="email" name="email" class="form-control" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone" class="form-label">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" class="form-control" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="service" class="form-label">Service of Interest</label>
+                            <select id="service" name="service" class="form-control" required>
+                                <option value="" selected disabled>Select a service</option>
+                                <option value="Sports Injury">Sports Injury Treatment</option>
+                                <option value="Spinal Adjustment">Spinal Adjustments</option>
+                                <option value="Nutritional Counseling">Nutritional Counseling</option>
+                                <option value="Family Care">Family Chiropractic Care</option>
+                                <option value="Rehabilitation">Rehabilitation Exercises</option>
+                                <option value="Extremity Treatment">Extremity Treatment</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message" class="form-label">Additional Information</label>
+                            <textarea id="message" name="message" class="form-control" placeholder="Please describe any specific concerns or conditions"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-secondary">Request Appointment</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d51882.90453377974!2d-95.99355565136714!3d36.026027599999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87b692fc01132f85%3A0x73bb725106d92bf1!2sJenks%2C%20OK!5e0!3m2!1sen!2sus!4v1635803656791!5m2!1sen!2sus" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h3>Harris Sports Chiropractic</h3>
+                    <p>Providing exceptional chiropractic care to Jenks, Oklahoma and surrounding communities since 1986.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Our Services</h3>
+                    <ul class="footer-nav">
+                        <li><a href="#services">Sports Injury Treatment</a></li>
+                        <li><a href="#services">Spinal Adjustments</a></li>
+                        <li><a href="#services">Nutritional Counseling</a></li>
+                        <li><a href="#services">Family Chiropractic Care</a></li>
+                        <li><a href="#services">Rehabilitation Exercises</a></li>
+                        <li><a href="#services">Extremity Treatment</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-nav">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Dr. Harris</a></li>
+                        <li><a href="#testimonials">Patient Testimonials</a></li>
+                        <li><a href="#contact">Contact Us</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Office Hours</h3>
+                    <p>Monday-Friday: 8am-6pm<br>Saturday: 9am-1pm<br>Sunday: Closed</p>
+                    <p><strong>Phone:</strong> (918) 555-5555<br>
+                    <strong>Email:</strong> info@harrissportschiropractic.com</p>
+                    <a href="#contact" class="btn btn-secondary mt-2">Schedule Now</a>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; <span id="currentYear"></span> Harris Sports Chiropractic & Wellness Center. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Set current year in copyright
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+        
+        // Mobile Navigation Toggle
+        const mobileNavToggle = document.querySelector('.mobile-nav-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        
+        mobileNavToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            const icon = mobileNavToggle.querySelector('i');
+            if (icon.classList.contains('fa-bars')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            } else {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        });
+        
+        // Header Scroll Effect
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+        
+        // Testimonial Slider
+        const sliderTrack = document.querySelector('.testimonial-track');
+        const slides = document.querySelectorAll('.testimonial-slide');
+        const dots = document.querySelectorAll('.slider-dot');
+        let currentSlide = 0;
+        
+        function updateSlider() {
+            sliderTrack.style.transform = `translateX(-${currentSlide * 100}%)`;
+            
+            dots.forEach((dot, index) => {
+                if (index === currentSlide) {
+                    dot.classList.add('active');
+                } else {
+                    dot.classList.remove('active');
+                }
+            });
+        }
+        
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                currentSlide = index;
+                updateSlider();
+            });
+        });
+        
+        // Auto advance slides
+        setInterval(() => {
+            currentSlide = (currentSlide + 1) % slides.length;
+            updateSlider();
+        }, 5000);
+        
+        // Form Validation
+        const appointmentForm = document.getElementById('appointmentForm');
+        
+        appointmentForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Validate form
+            let isValid = true;
+            const name = document.getElementById('name');
+            const email = document.getElementById('email');
+            const phone = document.getElementById('phone');
+            
+            if (name.value.trim() === '') {
+                isValid = false;
+                highlightField(name);
+            }
+            
+            if (email.value.trim() === '' || !isValidEmail(email.value)) {
+                isValid = false;
+                highlightField(email);
+            }
+            
+            if (phone.value.trim() === '' || !isValidPhone(phone.value)) {
+                isValid = false;
+                highlightField(phone);
+            }
+            
+            if (isValid) {
+                // In a real implementation, this would submit the form
+                alert('Thank you! Your appointment request has been submitted. We will contact you shortly to confirm.');
+                appointmentForm.reset();
+            }
+        });
+        
+        function highlightField(field) {
+            field.style.borderColor = '#E8A87C';
+            field.style.backgroundColor = 'rgba(232, 168, 124, 0.1)';
+            
+            field.addEventListener('input', function() {
+                field.style.borderColor = '';
+                field.style.backgroundColor = '';
+            }, { once: true });
+        }
+        
+        function isValidEmail(email) {
+            const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+            return re.test(String(email).toLowerCase());
+        }
+        
+        function isValidPhone(phone) {
+            const re = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/;
+            return re.test(String(phone));
+        }
+        
+        // Smooth Scrolling for Navigation Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                // Close mobile menu if open
+                if (navLinks.classList.contains('active')) {
+                    navLinks.classList.remove('active');
+                    const icon = mobileNavToggle.querySelector('i');
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                }
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
