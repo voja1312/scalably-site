@@ -1,0 +1,1861 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keefe Clinic | Chiropractic, Nutritional Therapy & VEGA Testing | Tulsa, OK</title>
+    <meta name="description" content="Dr. John Keefe offers comprehensive natural healing through spinal adjustments, VEGA testing, and nutritional therapy in Tulsa, Oklahoma.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            /* Healthcare/Wellness Color Palette - Calming Blues & Healing Greens */
+            --color-primary: #1a7c7c; /* Teal - Trust, healing */
+            --color-primary-light: #2a9d9d;
+            --color-primary-dark: #0e6464;
+            --color-secondary: #44b3aa; /* Seafoam - Calm, renewal */
+            --color-accent: #de7c5a; /* Warm coral - Energy, vitality */
+            --color-text: #2c3e50; /* Dark slate - Authority, confidence */
+            --color-text-light: #566573; /* Medium slate - Supportive information */
+            --color-white: #ffffff;
+            --color-off-white: #f9f9f9;
+            --color-light-gray: #f2f2f2;
+            --color-medium-gray: #e0e0e0;
+            
+            /* Spacing System (8px grid) */
+            --space-xxs: 4px;
+            --space-xs: 8px;
+            --space-sm: 16px;
+            --space-md: 24px;
+            --space-lg: 32px;
+            --space-xl: 48px;
+            --space-xxl: 64px;
+            --space-xxxl: 96px;
+            
+            /* Transition System */
+            --transition-fast: 0.2s ease;
+            --transition-standard: 0.3s ease;
+            --transition-slow: 0.5s ease;
+            
+            /* Shadows */
+            --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.1);
+            
+            /* Border Radius */
+            --radius-sm: 4px;
+            --radius-md: 8px;
+            --radius-lg: 16px;
+            --radius-xl: 24px;
+            --radius-round: 50%;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--color-text);
+            line-height: 1.6;
+            background-color: var(--color-off-white);
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3, h4, h5 {
+            font-family: 'Playfair Display', serif;
+            line-height: 1.2;
+            font-weight: 600;
+        }
+        
+        h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            margin-bottom: var(--space-md);
+            color: var(--color-white);
+        }
+        
+        h2 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            margin-bottom: var(--space-md);
+            color: var(--color-primary-dark);
+        }
+        
+        h3 {
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            margin-bottom: var(--space-sm);
+            color: var(--color-primary);
+        }
+        
+        h4 {
+            font-size: clamp(1.2rem, 2vw, 1.5rem);
+            margin-bottom: var(--space-xs);
+        }
+        
+        p {
+            margin-bottom: var(--space-md);
+            font-size: clamp(1rem, 1.5vw, 1.1rem);
+        }
+        
+        a {
+            color: var(--color-primary);
+            text-decoration: none;
+            transition: color var(--transition-standard);
+        }
+        
+        a:hover {
+            color: var(--color-primary-light);
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--space-md);
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: var(--space-sm) var(--space-md);
+            border-radius: var(--radius-md);
+            font-weight: 600;
+            text-align: center;
+            transition: all var(--transition-standard);
+            cursor: pointer;
+            font-size: 1rem;
+            border: none;
+            outline: none;
+        }
+        
+        .btn--primary {
+            background-color: var(--color-primary);
+            color: var(--color-white);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .btn--primary:hover {
+            background-color: var(--color-primary-light);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+            color: var(--color-white);
+        }
+        
+        .btn--secondary {
+            background-color: transparent;
+            color: var(--color-primary);
+            border: 2px solid var(--color-primary);
+        }
+        
+        .btn--secondary:hover {
+            background-color: var(--color-primary);
+            color: var(--color-white);
+            transform: translateY(-2px);
+        }
+        
+        .btn--accent {
+            background-color: var(--color-accent);
+            color: var(--color-white);
+        }
+        
+        .btn--accent:hover {
+            opacity: 0.9;
+            transform: translateY(-2px);
+            color: var(--color-white);
+        }
+        
+        /* Header Styles */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background-color: var(--color-white);
+            box-shadow: var(--shadow-md);
+            padding: var(--space-xs) 0;
+            transition: all var(--transition-standard);
+        }
+        
+        .header.scrolled {
+            padding: var(--space-xxs) 0;
+            background-color: rgba(255, 255, 255, 0.95);
+        }
+        
+        .header__container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo__text {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--color-primary-dark);
+            transition: color var(--transition-standard);
+        }
+        
+        .logo__text:hover {
+            color: var(--color-primary);
+        }
+        
+        .logo__subtitle {
+            font-size: 0.75rem;
+            margin-top: -5px;
+            color: var(--color-text-light);
+            letter-spacing: 0.5px;
+        }
+        
+        .nav {
+            display: none;
+        }
+        
+        .nav__list {
+            display: flex;
+            list-style: none;
+            gap: var(--space-lg);
+        }
+        
+        .nav__link {
+            font-weight: 500;
+            font-size: 1rem;
+            transition: color var(--transition-standard);
+            color: var(--color-text);
+            position: relative;
+        }
+        
+        .nav__link:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: var(--color-primary);
+            transition: width var(--transition-standard);
+        }
+        
+        .nav__link:hover {
+            color: var(--color-primary);
+        }
+        
+        .nav__link:hover:after {
+            width: 100%;
+        }
+        
+        .header__cta {
+            display: none;
+        }
+        
+        .mobile-nav-toggle {
+            display: block;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--color-primary);
+            cursor: pointer;
+        }
+        
+        .mobile-nav {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 80%;
+            height: 100vh;
+            background-color: var(--color-white);
+            z-index: 1001;
+            padding: var(--space-xl) var(--space-md);
+            transition: right var(--transition-standard);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .mobile-nav.active {
+            right: 0;
+        }
+        
+        .mobile-nav__close {
+            position: absolute;
+            top: var(--space-md);
+            right: var(--space-md);
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--color-primary);
+            cursor: pointer;
+        }
+        
+        .mobile-nav__list {
+            list-style: none;
+            margin-top: var(--space-xl);
+        }
+        
+        .mobile-nav__item {
+            margin-bottom: var(--space-md);
+        }
+        
+        .mobile-nav__link {
+            font-size: 1.2rem;
+            font-weight: 500;
+            color: var(--color-text);
+            transition: color var(--transition-standard);
+        }
+        
+        .mobile-nav__link:hover {
+            color: var(--color-primary);
+        }
+        
+        .mobile-nav__cta {
+            margin-top: var(--space-xl);
+            width: 100%;
+        }
+        
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+            opacity: 0;
+            visibility: hidden;
+            transition: all var(--transition-standard);
+        }
+        
+        .overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        /* Hero Section */
+        .hero {
+            padding: calc(var(--space-xxxl) + 40px) 0 var(--space-xxxl);
+            background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-primary) 100%);
+            color: var(--color-white);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero:after {
+            content: '';
+            position: absolute;
+            bottom: -10%;
+            left: 0;
+            width: 100%;
+            height: 20%;
+            background-color: var(--color-white);
+            transform: skewY(-3deg);
+        }
+        
+        .hero__container {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .hero__content {
+            max-width: 700px;
+        }
+        
+        .hero__subtitle {
+            font-size: clamp(1rem, 2vw, 1.25rem);
+            font-weight: 500;
+            margin-bottom: var(--space-md);
+            opacity: 0.9;
+        }
+        
+        .hero__text {
+            font-size: clamp(1.1rem, 2vw, 1.3rem);
+            margin-bottom: var(--space-lg);
+            opacity: 0.9;
+        }
+        
+        .hero__cta-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--space-sm);
+        }
+        
+        /* About Section */
+        .about {
+            padding: var(--space-xxl) 0;
+            background-color: var(--color-white);
+        }
+        
+        .about__grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: var(--space-xl);
+            align-items: center;
+        }
+        
+        .about__image {
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+            position: relative;
+        }
+        
+        .about__image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform var(--transition-slow);
+        }
+        
+        .about__image:hover img {
+            transform: scale(1.03);
+        }
+        
+        .about__content {
+            padding: var(--space-md);
+        }
+        
+        .about__subtitle {
+            color: var(--color-primary);
+            font-weight: 600;
+            margin-bottom: var(--space-xs);
+            font-size: 1.1rem;
+        }
+        
+        .about__title {
+            margin-bottom: var(--space-md);
+        }
+        
+        .about__text {
+            margin-bottom: var(--space-md);
+        }
+        
+        .about__credentials {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--space-xs) var(--space-sm);
+            margin-bottom: var(--space-md);
+        }
+        
+        .credential {
+            background-color: var(--color-light-gray);
+            padding: var(--space-xs) var(--space-sm);
+            border-radius: var(--radius-sm);
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: var(--color-text-light);
+        }
+        
+        /* Services Section */
+        .services {
+            padding: var(--space-xxl) 0;
+            background-color: var(--color-off-white);
+            position: relative;
+        }
+        
+        .services__header {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto var(--space-xl);
+        }
+        
+        .services__subtitle {
+            color: var(--color-primary);
+            font-weight: 600;
+            margin-bottom: var(--space-xs);
+            font-size: 1.1rem;
+        }
+        
+        .services__grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: var(--space-md);
+        }
+        
+        .service-card {
+            background-color: var(--color-white);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            transition: all var(--transition-standard);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .service-card__icon {
+            width: 60px;
+            height: 60px;
+            background-color: rgba(26, 124, 124, 0.1);
+            border-radius: var(--radius-round);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: var(--space-sm);
+            color: var(--color-primary);
+            font-size: 1.5rem;
+        }
+        
+        .service-card__content {
+            padding: var(--space-md);
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .service-card__title {
+            margin-bottom: var(--space-sm);
+            font-size: 1.3rem;
+        }
+        
+        .service-card__text {
+            margin-bottom: var(--space-md);
+            color: var(--color-text-light);
+            flex-grow: 1;
+        }
+        
+        .service-card__link {
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: var(--space-xxs);
+            width: fit-content;
+        }
+        
+        .service-card__link i {
+            transition: transform var(--transition-standard);
+        }
+        
+        .service-card__link:hover i {
+            transform: translateX(4px);
+        }
+        
+        /* Approach Section */
+        .approach {
+            padding: var(--space-xxl) 0;
+            background-color: var(--color-white);
+        }
+        
+        .approach__header {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto var(--space-xl);
+        }
+        
+        .approach__subtitle {
+            color: var(--color-primary);
+            font-weight: 600;
+            margin-bottom: var(--space-xs);
+            font-size: 1.1rem;
+        }
+        
+        .approach__steps {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: var(--space-xl);
+        }
+        
+        .step {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            position: relative;
+        }
+        
+        .step__number {
+            width: 50px;
+            height: 50px;
+            border-radius: var(--radius-round);
+            background-color: var(--color-primary);
+            color: var(--color-white);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            font-size: 1.5rem;
+            margin-bottom: var(--space-sm);
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .step__content {
+            width: 100%;
+        }
+        
+        .step__title {
+            margin-bottom: var(--space-sm);
+            font-size: 1.4rem;
+        }
+        
+        .step__description {
+            color: var(--color-text-light);
+        }
+        
+        /* Testimonials Section */
+        .testimonials {
+            padding: var(--space-xxl) 0;
+            background-color: var(--color-off-white);
+        }
+        
+        .testimonials__header {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto var(--space-xl);
+        }
+        
+        .testimonials__subtitle {
+            color: var(--color-primary);
+            font-weight: 600;
+            margin-bottom: var(--space-xs);
+            font-size: 1.1rem;
+        }
+        
+        .testimonial-slider {
+            position: relative;
+            max-width: 900px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+        
+        .testimonial-track {
+            display: flex;
+            transition: transform var(--transition-standard);
+        }
+        
+        .testimonial-slide {
+            flex: 0 0 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 0 var(--space-md);
+        }
+        
+        .testimonial__stars {
+            color: #FFD700;
+            font-size: 1.2rem;
+            margin-bottom: var(--space-sm);
+        }
+        
+        .testimonial__quote {
+            font-size: 1.1rem;
+            font-style: italic;
+            margin-bottom: var(--space-md);
+            position: relative;
+            padding: 0 var(--space-md);
+        }
+        
+        .testimonial__quote:before,
+        .testimonial__quote:after {
+            content: '"';
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            color: var(--color-primary);
+            opacity: 0.3;
+            position: absolute;
+        }
+        
+        .testimonial__quote:before {
+            top: -20px;
+            left: 0;
+        }
+        
+        .testimonial__quote:after {
+            bottom: -40px;
+            right: 0;
+        }
+        
+        .testimonial__author {
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+        
+        .testimonial__location {
+            color: var(--color-text-light);
+            font-size: 0.9rem;
+        }
+        
+        .testimonial-nav {
+            display: flex;
+            justify-content: center;
+            margin-top: var(--space-md);
+            gap: var(--space-xs);
+        }
+        
+        .testimonial-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: var(--radius-round);
+            background-color: var(--color-medium-gray);
+            cursor: pointer;
+            transition: all var(--transition-standard);
+        }
+        
+        .testimonial-dot.active {
+            background-color: var(--color-primary);
+            transform: scale(1.2);
+        }
+        
+        /* Contact Section */
+        .contact {
+            padding: var(--space-xxl) 0;
+            background-color: var(--color-white);
+        }
+        
+        .contact__header {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto var(--space-xl);
+        }
+        
+        .contact__subtitle {
+            color: var(--color-primary);
+            font-weight: 600;
+            margin-bottom: var(--space-xs);
+            font-size: 1.1rem;
+        }
+        
+        .contact__grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: var(--space-xl);
+        }
+        
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-md);
+        }
+        
+        .contact-method {
+            display: flex;
+            align-items: flex-start;
+            gap: var(--space-sm);
+        }
+        
+        .contact-method__icon {
+            width: 40px;
+            height: 40px;
+            background-color: rgba(26, 124, 124, 0.1);
+            border-radius: var(--radius-round);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--color-primary);
+            font-size: 1rem;
+            flex-shrink: 0;
+        }
+        
+        .contact-method__content {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .contact-method__label {
+            font-weight: 600;
+            margin-bottom: var(--space-xxs);
+        }
+        
+        .contact-method__value {
+            color: var(--color-text-light);
+        }
+        
+        .contact-method__value a {
+            transition: color var(--transition-standard);
+        }
+        
+        .contact-method__value a:hover {
+            color: var(--color-primary);
+        }
+        
+        .contact-hours {
+            margin-top: var(--space-md);
+            border-top: 1px solid var(--color-medium-gray);
+            padding-top: var(--space-md);
+        }
+        
+        .contact-hours__title {
+            margin-bottom: var(--space-sm);
+            font-size: 1.1rem;
+        }
+        
+        .hours-list {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: var(--space-xxs) var(--space-md);
+        }
+        
+        .hours-list__day {
+            font-weight: 600;
+        }
+        
+        .contact-form {
+            background-color: var(--color-off-white);
+            padding: var(--space-lg);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .form-group {
+            margin-bottom: var(--space-md);
+        }
+        
+        .form-label {
+            display: block;
+            margin-bottom: var(--space-xs);
+            font-weight: 500;
+        }
+        
+        .form-input,
+        .form-textarea {
+            width: 100%;
+            padding: var(--space-sm);
+            border: 1px solid var(--color-medium-gray);
+            border-radius: var(--radius-md);
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1rem;
+            transition: all var(--transition-standard);
+        }
+        
+        .form-input:focus,
+        .form-textarea:focus {
+            outline: none;
+            border-color: var(--color-primary);
+            box-shadow: 0 0 0 2px rgba(26, 124, 124, 0.2);
+        }
+        
+        .form-textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+        
+        .contact-map {
+            width: 100%;
+            height: 300px;
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            margin-top: var(--space-lg);
+        }
+        
+        .contact-map iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        
+        /* Call-to-Action Section */
+        .cta {
+            padding: var(--space-xxl) 0;
+            background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-primary) 100%);
+            color: var(--color-white);
+            text-align: center;
+        }
+        
+        .cta__title {
+            color: var(--color-white);
+            margin-bottom: var(--space-md);
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .cta__text {
+            margin-bottom: var(--space-lg);
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            opacity: 0.9;
+        }
+        
+        .cta__btn {
+            background-color: var(--color-white);
+            color: var(--color-primary-dark);
+            padding: var(--space-sm) var(--space-lg);
+            font-size: 1.1rem;
+        }
+        
+        .cta__btn:hover {
+            background-color: var(--color-off-white);
+            color: var(--color-primary-dark);
+            transform: translateY(-2px);
+        }
+        
+        /* Footer */
+        .footer {
+            background-color: #1d3b3b;
+            color: var(--color-white);
+            padding: var(--space-xl) 0 var(--space-md);
+        }
+        
+        .footer__grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: var(--space-lg);
+            padding-bottom: var(--space-lg);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            margin-bottom: var(--space-md);
+        }
+        
+        .footer__logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--color-white);
+            margin-bottom: var(--space-xs);
+        }
+        
+        .footer__tagline {
+            opacity: 0.8;
+            margin-bottom: var(--space-md);
+        }
+        
+        .footer__social {
+            display: flex;
+            gap: var(--space-sm);
+        }
+        
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: var(--radius-round);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--color-white);
+            font-size: 1rem;
+            transition: all var(--transition-standard);
+        }
+        
+        .social-icon:hover {
+            background-color: var(--color-primary-light);
+            transform: translateY(-3px);
+            color: var(--color-white);
+        }
+        
+        .footer__heading {
+            font-size: 1.2rem;
+            margin-bottom: var(--space-md);
+            color: var(--color-white);
+        }
+        
+        .footer-nav__list {
+            list-style: none;
+        }
+        
+        .footer-nav__item {
+            margin-bottom: var(--space-xs);
+        }
+        
+        .footer-nav__link {
+            color: rgba(255, 255, 255, 0.8);
+            transition: all var(--transition-standard);
+        }
+        
+        .footer-nav__link:hover {
+            color: var(--color-white);
+            padding-left: var(--space-xs);
+        }
+        
+        .footer__contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: var(--space-sm);
+            margin-bottom: var(--space-sm);
+        }
+        
+        .footer__contact-icon {
+            width: 20px;
+            color: var(--color-primary-light);
+            flex-shrink: 0;
+            margin-top: 4px;
+        }
+        
+        .footer__contact-text {
+            color: rgba(255, 255, 255, 0.8);
+        }
+        
+        .footer__contact-text a {
+            color: rgba(255, 255, 255, 0.8);
+            transition: color var(--transition-standard);
+        }
+        
+        .footer__contact-text a:hover {
+            color: var(--color-white);
+        }
+        
+        .footer__bottom {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: var(--space-sm);
+        }
+        
+        .footer__copyright {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.9rem;
+        }
+        
+        .footer__legal {
+            display: flex;
+            gap: var(--space-md);
+        }
+        
+        .footer__legal-link {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.9rem;
+            transition: color var(--transition-standard);
+        }
+        
+        .footer__legal-link:hover {
+            color: var(--color-white);
+        }
+        
+        /* Back to Top Button */
+        .back-to-top {
+            position: fixed;
+            bottom: var(--space-md);
+            right: var(--space-md);
+            width: 50px;
+            height: 50px;
+            background-color: var(--color-primary);
+            color: var(--color-white);
+            border-radius: var(--radius-round);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: all var(--transition-standard);
+            box-shadow: var(--shadow-md);
+            z-index: 99;
+        }
+        
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .back-to-top:hover {
+            background-color: var(--color-primary-dark);
+            transform: translateY(-3px);
+        }
+        
+        /* Utility Classes */
+        .text-center {
+            text-align: center;
+        }
+        
+        .mb-sm {
+            margin-bottom: var(--space-sm);
+        }
+        
+        .mb-md {
+            margin-bottom: var(--space-md);
+        }
+        
+        .mb-lg {
+            margin-bottom: var(--space-lg);
+        }
+        
+        .mb-xl {
+            margin-bottom: var(--space-xl);
+        }
+        
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .fade-in {
+            animation: fadeIn var(--transition-slow) ease-out forwards;
+        }
+        
+        .delay-1 {
+            animation-delay: 0.1s;
+        }
+        
+        .delay-2 {
+            animation-delay: 0.2s;
+        }
+        
+        .delay-3 {
+            animation-delay: 0.3s;
+        }
+        
+        .delay-4 {
+            animation-delay: 0.4s;
+        }
+        
+        /* Responsive Styles */
+        @media (min-width: 640px) {
+            .services__grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .approach__steps {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .footer__grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (min-width: 768px) {
+            .about__grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            
+            .contact__grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        
+        @media (min-width: 1024px) {
+            .header__container {
+                padding: 0 var(--space-md);
+            }
+            
+            .mobile-nav-toggle {
+                display: none;
+            }
+            
+            .nav {
+                display: block;
+            }
+            
+            .header__cta {
+                display: block;
+            }
+            
+            .services__grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            
+            .approach__steps {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            
+            .footer__grid {
+                grid-template-columns: 2fr 1fr 1fr 1.5fr;
+            }
+            
+            .footer__bottom {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container header__container">
+            <a href="#" class="logo">
+                <div class="logo__content">
+                    <div class="logo__text">Keefe Clinic</div>
+                    <div class="logo__subtitle">Chiropractic & Nutritional Therapy</div>
+                </div>
+            </a>
+            
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+                    <li class="nav__item"><a href="#services" class="nav__link">Services</a></li>
+                    <li class="nav__item"><a href="#approach" class="nav__link">Our Approach</a></li>
+                    <li class="nav__item"><a href="#testimonials" class="nav__link">Testimonials</a></li>
+                    <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+                </ul>
+            </nav>
+            
+            <a href="#contact" class="btn btn--primary header__cta">Schedule Consultation</a>
+            
+            <button class="mobile-nav-toggle" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+    
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav">
+        <button class="mobile-nav__close" aria-label="Close navigation">
+            <i class="fas fa-times"></i>
+        </button>
+        
+        <ul class="mobile-nav__list">
+            <li class="mobile-nav__item"><a href="#about" class="mobile-nav__link">About</a></li>
+            <li class="mobile-nav__item"><a href="#services" class="mobile-nav__link">Services</a></li>
+            <li class="mobile-nav__item"><a href="#approach" class="mobile-nav__link">Our Approach</a></li>
+            <li class="mobile-nav__item"><a href="#testimonials" class="mobile-nav__link">Testimonials</a></li>
+            <li class="mobile-nav__item"><a href="#contact" class="mobile-nav__link">Contact</a></li>
+        </ul>
+        
+        <a href="#contact" class="btn btn--primary mobile-nav__cta">Schedule Consultation</a>
+    </div>
+    
+    <div class="overlay"></div>
+    
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container hero__container">
+            <div class="hero__content">
+                <h1 class="fade-in">Natural Healing Through Holistic Chiropractic Care</h1>
+                <p class="hero__subtitle fade-in delay-1">Dr. John Keefe - Chiropractor, Nutritional Therapist & VEGA Testing Expert</p>
+                <p class="hero__text fade-in delay-2">Experience a comprehensive, natural approach to healing that addresses the root causes of your condition, not just the symptoms.</p>
+                <div class="hero__cta-group fade-in delay-3">
+                    <a href="#contact" class="btn btn--accent">Schedule Your Consultation</a>
+                    <a href="#services" class="btn btn--secondary">Explore Our Services</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about__grid">
+                <div class="about__image fade-in">
+                    <img src="https://media.licdn.com/dms/image/v2/C5603AQGaE8E42h5wFg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1516968349716?e=1750896000&v=beta&t=9yOwJceGZhk34-RY5HwuQ2_c624eYdeZ-hhZqnFY4HU" alt="Dr. John Keefe, Chiropractor in Tulsa, Oklahoma">
+                </div>
+                
+                <div class="about__content">
+                    <p class="about__subtitle fade-in">MEET YOUR DOCTOR</p>
+                    <h2 class="about__title fade-in delay-1">Dr. John Keefe</h2>
+                    <p class="about__text fade-in delay-2">Dr. Keefe is a dedicated healthcare practitioner committed to integrative healing approaches that address the whole person. With specialized training in chiropractic care, nutritional therapy, and advanced diagnostic techniques, he offers a unique combination of skills rarely found in one practitioner.</p>
+                    <p class="about__text fade-in delay-3">As one of the few U.S. physicians trained in VEGA Testing, Dr. Keefe can detect organ dysfunction and early signs of disease before they manifest as symptoms, allowing for truly preventative care.</p>
+                    
+                    <div class="about__credentials fade-in delay-4">
+                        <span class="credential">Licensed Chiropractor</span>
+                        <span class="credential">VEGA Testing Expert</span>
+                        <span class="credential">Nutritional Therapy</span>
+                        <span class="credential">Holistic Health</span>
+                    </div>
+                    
+                    <a href="#contact" class="btn btn--primary fade-in delay-4">Schedule Your Consultation</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="services__header">
+                <p class="services__subtitle fade-in">OUR SPECIALTIES</p>
+                <h2 class="fade-in delay-1">Comprehensive Services for Total Wellness</h2>
+                <p class="fade-in delay-2">Dr. Keefe offers a unique combination of services designed to address your health concerns at their root cause, providing lasting relief rather than temporary symptom management.</p>
+            </div>
+            
+            <div class="services__grid">
+                <div class="service-card fade-in delay-1">
+                    <div class="service-card__content">
+                        <div class="service-card__icon">
+                            <i class="fas fa-spine"></i>
+                        </div>
+                        <h3 class="service-card__title">Chiropractic Care</h3>
+                        <p class="service-card__text">Government studies confirm that chiropractic adjustments are the top active treatment for back pain. Dr. Keefe uses precise spinal manipulation to restore proper alignment, relieve pain, and improve nervous system function.</p>
+                        <a href="#contact" class="service-card__link">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="service-card fade-in delay-2">
+                    <div class="service-card__content">
+                        <div class="service-card__icon">
+                            <i class="fas fa-heartbeat"></i>
+                        </div>
+                        <h3 class="service-card__title">VEGA Testing</h3>
+                        <p class="service-card__text">As one of the few U.S. physicians trained in this advanced diagnostic method, Dr. Keefe can detect organ dysfunction and early signs of disease before they manifest as symptoms, allowing for truly preventative care.</p>
+                        <a href="#contact" class="service-card__link">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="service-card fade-in delay-3">
+                    <div class="service-card__content">
+                        <div class="service-card__icon">
+                            <i class="fas fa-apple-alt"></i>
+                        </div>
+                        <h3 class="service-card__title">Nutritional Therapy</h3>
+                        <p class="service-card__text">Dr. Keefe specializes in using targeted nutritional products to correct biochemical imbalances and support long-term healing. Your custom nutritional plan addresses your unique needs and health goals.</p>
+                        <a href="#contact" class="service-card__link">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="service-card fade-in delay-2">
+                    <div class="service-card__content">
+                        <div class="service-card__icon">
+                            <i class="fas fa-tachometer-alt"></i>
+                        </div>
+                        <h3 class="service-card__title">Blood Pressure Support</h3>
+                        <p class="service-card__text">The Journal of Human Hypertension found chiropractic as effective as two medications for controlling blood pressure. Dr. Keefe's approach may help you reduce dependence on medication while improving overall health.</p>
+                        <a href="#contact" class="service-card__link">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="service-card fade-in delay-3">
+                    <div class="service-card__content">
+                        <div class="service-card__icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h3 class="service-card__title">Stress Management</h3>
+                        <p class="service-card__text">Chronic stress takes a significant toll on physical health. Dr. Keefe's holistic approach includes techniques to improve nervous system function, reduce stress hormone levels, and enhance your body's resilience.</p>
+                        <a href="#contact" class="service-card__link">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="service-card fade-in delay-4">
+                    <div class="service-card__content">
+                        <div class="service-card__icon">
+                            <i class="fas fa-user-md"></i>
+                        </div>
+                        <h3 class="service-card__title">Preventative Wellness</h3>
+                        <p class="service-card__text">True healthcare focuses on prevention. Dr. Keefe creates personalized wellness plans that combine all his expertise areas to help you achieve optimal health and prevent future problems.</p>
+                        <a href="#contact" class="service-card__link">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Approach Section -->
+    <section class="approach" id="approach">
+        <div class="container">
+            <div class="approach__header">
+                <p class="approach__subtitle fade-in">OUR METHODOLOGY</p>
+                <h2 class="fade-in delay-1">A Comprehensive Approach to Healing</h2>
+                <p class="fade-in delay-2">Dr. Keefe believes in treating the whole person, not just isolated symptoms. His unique approach combines multiple healing modalities to address the root causes of health issues.</p>
+            </div>
+            
+            <div class="approach__steps">
+                <div class="step fade-in delay-1">
+                    <div class="step__number">1</div>
+                    <div class="step__content">
+                        <h3 class="step__title">Thorough Assessment</h3>
+                        <p class="step__description">Your journey begins with a comprehensive evaluation that goes beyond standard medical intake. Dr. Keefe takes time to understand your complete health history, current concerns, and wellness goals.</p>
+                    </div>
+                </div>
+                
+                <div class="step fade-in delay-2">
+                    <div class="step__number">2</div>
+                    <div class="step__content">
+                        <h3 class="step__title">Advanced Diagnostics</h3>
+                        <p class="step__description">Using VEGA Testing and other diagnostic tools, Dr. Keefe can identify imbalances and dysfunctions that conventional testing might miss, allowing for more precise and effective treatment planning.</p>
+                    </div>
+                </div>
+                
+                <div class="step fade-in delay-3">
+                    <div class="step__number">3</div>
+                    <div class="step__content">
+                        <h3 class="step__title">Personalized Treatment</h3>
+                        <p class="step__description">Based on your assessment results, Dr. Keefe creates a customized treatment plan that may include chiropractic adjustments, nutritional therapy, lifestyle modifications, and targeted supplementation.</p>
+                    </div>
+                </div>
+                
+                <div class="step fade-in delay-2">
+                    <div class="step__number">4</div>
+                    <div class="step__content">
+                        <h3 class="step__title">Holistic Support</h3>
+                        <p class="step__description">True healing requires addressing all aspects of health. Dr. Keefe provides guidance on nutrition, sleep, stress management, and other lifestyle factors that impact your wellbeing.</p>
+                    </div>
+                </div>
+                
+                <div class="step fade-in delay-3">
+                    <div class="step__number">5</div>
+                    <div class="step__content">
+                        <h3 class="step__title">Ongoing Optimization</h3>
+                        <p class="step__description">Your health journey doesn't end when symptoms improve. Dr. Keefe works with you to maintain improvements and continuously optimize your health for long-term wellness and vitality.</p>
+                    </div>
+                </div>
+                
+                <div class="step fade-in delay-4">
+                    <div class="step__number">6</div>
+                    <div class="step__content">
+                        <h3 class="step__title">Education & Empowerment</h3>
+                        <p class="step__description">Dr. Keefe believes in empowering patients with knowledge. You'll gain a deeper understanding of your body and the tools needed to take an active role in your health.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <div class="testimonials__header">
+                <p class="testimonials__subtitle fade-in">PATIENT EXPERIENCES</p>
+                <h2 class="fade-in delay-1">What Our Patients Say</h2>
+                <p class="fade-in delay-2">Discover how Dr. Keefe's comprehensive approach has helped patients achieve lasting health improvements and renewed quality of life.</p>
+            </div>
+            
+            <div class="testimonial-slider fade-in delay-3">
+                <div class="testimonial-track">
+                    <div class="testimonial-slide">
+                        <div class="testimonial__stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial__quote">After years of battling chronic back pain and trying multiple treatments with limited success, Dr. Keefe's comprehensive approach has been life-changing. The combination of chiropractic care and nutritional therapy addressed issues I didn't even know were contributing to my pain. For the first time in a decade, I'm living without daily pain medication.</p>
+                        <h4 class="testimonial__author">Michael R.</h4>
+                        <p class="testimonial__location">Tulsa, Oklahoma</p>
+                    </div>
+                    
+                    <div class="testimonial-slide">
+                        <div class="testimonial__stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial__quote">The VEGA testing Dr. Keefe performs detected food sensitivities that my previous doctors had missed for years. Following his nutritional recommendations, my digestive issues and unexplained inflammation cleared up within weeks. His approach is thorough and personalized in a way I've never experienced with other healthcare providers.</p>
+                        <h4 class="testimonial__author">Jennifer T.</h4>
+                        <p class="testimonial__location">Broken Arrow, Oklahoma</p>
+                    </div>
+                    
+                    <div class="testimonial-slide">
+                        <div class="testimonial__stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial__quote">I was skeptical about chiropractic care until I started experiencing debilitating migraines that medication couldn't control. Dr. Keefe identified spinal misalignments that were contributing to my condition and developed a treatment plan that included adjustments and nutritional support. Six months later, my migraines have decreased by 90%.</p>
+                        <h4 class="testimonial__author">David L.</h4>
+                        <p class="testimonial__location">Tulsa, Oklahoma</p>
+                    </div>
+                    
+                    <div class="testimonial-slide">
+                        <div class="testimonial__stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial__quote">I came to Dr. Keefe after being diagnosed with high blood pressure and wanting to avoid lifelong medication. His approach combining chiropractic care with nutritional guidance helped me bring my blood pressure down to normal levels naturally. My primary doctor was amazed at the improvement and has since reduced my medication.</p>
+                        <h4 class="testimonial__author">Patricia M.</h4>
+                        <p class="testimonial__location">Owasso, Oklahoma</p>
+                    </div>
+                </div>
+                
+                <div class="testimonial-nav">
+                    <div class="testimonial-dot active"></div>
+                    <div class="testimonial-dot"></div>
+                    <div class="testimonial-dot"></div>
+                    <div class="testimonial-dot"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="contact__header">
+                <p class="contact__subtitle fade-in">GET IN TOUCH</p>
+                <h2 class="fade-in delay-1">Start Your Healing Journey Today</h2>
+                <p class="fade-in delay-2">Schedule a consultation with Dr. Keefe to discuss your health concerns and discover how his comprehensive approach can help you achieve optimal wellness.</p>
+            </div>
+            
+            <div class="contact__grid">
+                <div class="contact-info fade-in delay-2">
+                    <div class="contact-method">
+                        <div class="contact-method__icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div class="contact-method__content">
+                            <div class="contact-method__label">Phone</div>
+                            <div class="contact-method__value"><a href="tel:9185551234">(918) 555-1234</a></div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-method">
+                        <div class="contact-method__icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-method__content">
+                            <div class="contact-method__label">Email</div>
+                            <div class="contact-method__value"><a href="mailto:info@keefeclinic.com">info@keefeclinic.com</a></div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-method">
+                        <div class="contact-method__icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-method__content">
+                            <div class="contact-method__label">Address</div>
+                            <div class="contact-method__value">
+                                1234 Healing Way<br>
+                                Tulsa, OK 74103<br>
+                                United States
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-hours">
+                        <h4 class="contact-hours__title">Office Hours</h4>
+                        <div class="hours-list">
+                            <div class="hours-list__day">Monday - Friday:</div>
+                            <div class="hours-list__time">9:00 AM - 6:00 PM</div>
+                            <div class="hours-list__day">Saturday:</div>
+                            <div class="hours-list__time">9:00 AM - 1:00 PM</div>
+                            <div class="hours-list__day">Sunday:</div>
+                            <div class="hours-list__time">Closed</div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d104063.11704654096!2d-96.02352087062577!3d36.153996338675346!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87b692b8ddd12e8f%3A0xe76910c81bd96af7!2sTulsa%2C%20OK!5e0!3m2!1sen!2sus!4v1653495193100!5m2!1sen!2sus" allowfullscreen="" loading="lazy" title="Keefe Clinic Location Map"></iframe>
+                    </div>
+                </div>
+                
+                <form class="contact-form fade-in delay-3" id="contactForm">
+                    <div class="form-group">
+                        <label for="name" class="form-label">Full Name *</label>
+                        <input type="text" id="name" name="name" class="form-input" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email" class="form-label">Email Address *</label>
+                        <input type="email" id="email" name="email" class="form-input" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone" class="form-label">Phone Number *</label>
+                        <input type="tel" id="phone" name="phone" class="form-input" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="service" class="form-label">Service of Interest</label>
+                        <select id="service" name="service" class="form-input">
+                            <option value="">Select a Service</option>
+                            <option value="chiropractic">Chiropractic Care</option>
+                            <option value="vega">VEGA Testing</option>
+                            <option value="nutrition">Nutritional Therapy</option>
+                            <option value="wellness">Preventative Wellness</option>
+                            <option value="other">Other Services</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message" class="form-label">Your Health Concerns</label>
+                        <textarea id="message" name="message" class="form-textarea" rows="4"></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn btn--primary">Request Appointment</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Call-to-Action Section -->
+    <section class="cta">
+        <div class="container">
+            <h2 class="cta__title fade-in">Ready to Transform Your Health?</h2>
+            <p class="cta__text fade-in delay-1">Dr. Keefe's comprehensive approach combining chiropractic care, VEGA testing, and nutritional therapy offers a path to improved health and wellness that addresses root causes, not just symptoms.</p>
+            <a href="#contact" class="btn cta__btn fade-in delay-2">Schedule Your Consultation Today</a>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__col">
+                    <div class="footer__logo">Keefe Clinic</div>
+                    <p class="footer__tagline">Comprehensive Natural Healing Through Chiropractic, Nutritional Therapy, and VEGA Testing</p>
+                    <div class="footer__social">
+                        <a href="#" class="social-icon" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer__col">
+                    <h4 class="footer__heading">Quick Links</h4>
+                    <nav class="footer-nav">
+                        <ul class="footer-nav__list">
+                            <li class="footer-nav__item"><a href="#about" class="footer-nav__link">About Dr. Keefe</a></li>
+                            <li class="footer-nav__item"><a href="#services" class="footer-nav__link">Our Services</a></li>
+                            <li class="footer-nav__item"><a href="#approach" class="footer-nav__link">Our Approach</a></li>
+                            <li class="footer-nav__item"><a href="#testimonials" class="footer-nav__link">Testimonials</a></li>
+                            <li class="footer-nav__item"><a href="#contact" class="footer-nav__link">Contact Us</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                
+                <div class="footer__col">
+                    <h4 class="footer__heading">Services</h4>
+                    <nav class="footer-nav">
+                        <ul class="footer-nav__list">
+                            <li class="footer-nav__item"><a href="#" class="footer-nav__link">Chiropractic Care</a></li>
+                            <li class="footer-nav__item"><a href="#" class="footer-nav__link">VEGA Testing</a></li>
+                            <li class="footer-nav__item"><a href="#" class="footer-nav__link">Nutritional Therapy</a></li>
+                            <li class="footer-nav__item"><a href="#" class="footer-nav__link">Blood Pressure Support</a></li>
+                            <li class="footer-nav__item"><a href="#" class="footer-nav__link">Preventative Wellness</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                
+                <div class="footer__col">
+                    <h4 class="footer__heading">Contact Us</h4>
+                    <div class="footer__contact">
+                        <div class="footer__contact-item">
+                            <div class="footer__contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="footer__contact-text">
+                                1234 Healing Way<br>
+                                Tulsa, OK 74103
+                            </div>
+                        </div>
+                        
+                        <div class="footer__contact-item">
+                            <div class="footer__contact-icon">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div class="footer__contact-text">
+                                <a href="tel:9185551234">(918) 555-1234</a>
+                            </div>
+                        </div>
+                        
+                        <div class="footer__contact-item">
+                            <div class="footer__contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="footer__contact-text">
+                                <a href="mailto:info@keefeclinic.com">info@keefeclinic.com</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer__bottom">
+                <p class="footer__copyright">&copy; <span id="year"></span> Keefe Clinic. All Rights Reserved.</p>
+                
+                <div class="footer__legal">
+                    <a href="#" class="footer__legal-link">Privacy Policy</a>
+                    <a href="#" class="footer__legal-link">Terms of Service</a>
+                    <a href="#" class="footer__legal-link">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Back to Top Button -->
+    <button class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    
+    <!-- JavaScript -->
+    <script>
+        // Set current year for copyright
+        document.getElementById('year').textContent = new Date().getFullYear();
+        
+        // Mobile Navigation
+        const mobileNavToggle = document.querySelector('.mobile-nav-toggle');
+        const mobileNavClose = document.querySelector('.mobile-nav__close');
+        const mobileNav = document.querySelector('.mobile-nav');
+        const overlay = document.querySelector('.overlay');
+        const mobileNavLinks = document.querySelectorAll('.mobile-nav__link');
+        
+        mobileNavToggle.addEventListener('click', () => {
+            mobileNav.classList.add('active');
+            overlay.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+        
+        function closeMobileNav() {
+            mobileNav.classList.remove('active');
+            overlay.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+        
+        mobileNavClose.addEventListener('click', closeMobileNav);
+        overlay.addEventListener('click', closeMobileNav);
+        
+        mobileNavLinks.forEach(link => {
+            link.addEventListener('click', closeMobileNav);
+        });
+        
+        // Sticky Header
+        const header = document.querySelector('.header');
+        
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+        
+        // Smooth Scrolling for Navigation Links
+        const navLinks = document.querySelectorAll('.nav__link, .mobile-nav__link, .footer-nav__link, .hero__cta-group a, .btn[href^="#"], .service-card__link[href^="#"]');
+        
+        navLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+                if (this.getAttribute('href').startsWith('#')) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        const headerHeight = document.querySelector('.header').offsetHeight;
+                        const targetPosition = targetElement.offsetTop - headerHeight;
+                        
+                        window.scrollTo({
+                            top: targetPosition,
+                            behavior: 'smooth'
+                        });
+                    }
+                }
+            });
+        });
+        
+        // Back to Top Button
+        const backToTopBtn = document.querySelector('.back-to-top');
+        
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 700) {
+                backToTopBtn.classList.add('visible');
+            } else {
+                backToTopBtn.classList.remove('visible');
+            }
+        });
+        
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // Testimonial Slider
+        const testimonialTrack = document.querySelector('.testimonial-track');
+        const testimonialSlides = document.querySelectorAll('.testimonial-slide');
+        const dots = document.querySelectorAll('.testimonial-dot');
+        let currentSlide = 0;
+        let autoSlideInterval;
+        
+        function goToSlide(index) {
+            testimonialTrack.style.transform = `translateX(-${index * 100}%)`;
+            
+            dots.forEach(dot => dot.classList.remove('active'));
+            dots[index].classList.add('active');
+            
+            currentSlide = index;
+        }
+        
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                goToSlide(index);
+                resetAutoSlide();
+            });
+        });
+        
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % testimonialSlides.length;
+            goToSlide(currentSlide);
+        }
+        
+        function resetAutoSlide() {
+            clearInterval(autoSlideInterval);
+            autoSlideInterval = setInterval(nextSlide, 5000);
+        }
+        
+        // Start auto slide
+        resetAutoSlide();
+        
+        // Contact Form Validation
+        const contactForm = document.getElementById('contactForm');
+        
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Simple form validation
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            
+            if (name === '' || email === '' || phone === '') {
+                alert('Please fill in all required fields.');
+                return;
+            }
+            
+            // Email validation
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailPattern.test(email)) {
+                alert('Please enter a valid email address.');
+                return;
+            }
+            
+            // Phone validation
+            const phonePattern = /^[\d\s\-\(\)]+$/;
+            if (!phonePattern.test(phone)) {
+                alert('Please enter a valid phone number.');
+                return;
+            }
+            
+            // Form submission success - in a real application, this would send the data to a server
+            alert('Thank you for your inquiry! We will contact you soon to schedule your consultation.');
+            contactForm.reset();
+        });
+        
+        // Reveal animations on scroll
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+        
+        function observerCallback(entries, observer) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }
+        
+        const observer = new IntersectionObserver(observerCallback, observerOptions);
+        
+        document.querySelectorAll('.services__subtitle, .services h2, .services p, .approach__subtitle, .approach h2, .approach p, .testimonials__subtitle, .testimonials h2, .testimonials p, .contact__subtitle, .contact h2, .contact p').forEach(element => {
+            element.classList.remove('fade-in');
+            observer.observe(element);
+        });
+    </script>
+</body>
+</html>
