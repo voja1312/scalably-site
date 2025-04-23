@@ -1,0 +1,1638 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indigo Chiropractic | Dr. Iain Simpson | Scottsdale</title>
+    <meta name="description" content="Experience gentle, holistic chiropractic adjustments with Dr. Iain Simpson in Scottsdale. Unlock your body's full potential and live pain-free.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Custom Properties - Healthcare/Wellness Color Palette */
+        :root {
+            /* Color Palette - Calming Blues & Purples */
+            --color-primary: #415f9d; /* Indigo blue - brand color */
+            --color-primary-light: #5a7bc7; /* Lighter indigo for hover states */
+            --color-primary-dark: #2a4173; /* Darker indigo for emphasis */
+            --color-secondary: #7469b9; /* Complementary purple */
+            --color-accent: #64b6ac; /* Healing teal accent */
+            --color-neutral-100: #ffffff; /* Pure white */
+            --color-neutral-200: #f7f9fc; /* Off-white background */
+            --color-neutral-300: #e9f0f9; /* Light blue-gray */
+            --color-neutral-400: #d1dce8; /* Mid blue-gray */
+            --color-neutral-500: #a3afc2; /* Medium blue-gray */
+            --color-neutral-600: #6a758a; /* Dark blue-gray */
+            --color-neutral-700: #3c4354; /* Very dark blue-gray */
+            --color-neutral-800: #1e2533; /* Near black */
+            
+            /* Spacing System (8px grid) */
+            --space-xs: 0.5rem; /* 8px */
+            --space-sm: 1rem;   /* 16px */
+            --space-md: 1.5rem; /* 24px */
+            --space-lg: 2rem;   /* 32px */
+            --space-xl: 3rem;   /* 48px */
+            --space-xxl: 4rem;  /* 64px */
+            
+            /* Typography */
+            --font-heading: 'Playfair Display', serif;
+            --font-body: 'Montserrat', sans-serif;
+            --font-size-xs: 0.75rem;  /* 12px */
+            --font-size-sm: 0.875rem; /* 14px */
+            --font-size-md: 1rem;     /* 16px */
+            --font-size-lg: 1.25rem;  /* 20px */
+            --font-size-xl: 1.5rem;   /* 24px */
+            --font-size-xxl: 2rem;    /* 32px */
+            --font-size-xxxl: 2.5rem; /* 40px */
+            --font-size-xxxxl: 3rem;  /* 48px */
+            
+            /* Animation Timing */
+            --transition-fast: 0.2s ease;
+            --transition-standard: 0.3s ease;
+            --transition-slow: 0.5s ease;
+            
+            /* Shadows */
+            --shadow-sm: 0 2px 8px rgba(30, 37, 51, 0.08);
+            --shadow-md: 0 4px 16px rgba(30, 37, 51, 0.12);
+            --shadow-lg: 0 8px 24px rgba(30, 37, 51, 0.16);
+            
+            /* Border Radius */
+            --radius-sm: 4px;
+            --radius-md: 8px;
+            --radius-lg: 16px;
+            --radius-full: 9999px;
+        }
+        
+        /* Reset & Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 5rem;
+        }
+        
+        body {
+            font-family: var(--font-body);
+            font-size: var(--font-size-md);
+            line-height: 1.6;
+            color: var(--color-neutral-700);
+            background-color: var(--color-neutral-200);
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3, h4, h5 {
+            font-family: var(--font-heading);
+            font-weight: 600;
+            line-height: 1.2;
+            color: var(--color-neutral-800);
+            margin-bottom: var(--space-sm);
+        }
+        
+        h1 {
+            font-size: var(--font-size-xxxl);
+        }
+        
+        h2 {
+            font-size: var(--font-size-xxl);
+            position: relative;
+            margin-bottom: var(--space-lg);
+        }
+        
+        h2::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -12px;
+            width: 60px;
+            height: 3px;
+            background-color: var(--color-accent);
+        }
+        
+        .section-title {
+            text-align: center;
+        }
+        
+        .section-title h2::after {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        h3 {
+            font-size: var(--font-size-xl);
+        }
+        
+        p {
+            margin-bottom: var(--space-md);
+            color: var(--color-neutral-600);
+        }
+        
+        a {
+            color: var(--color-primary);
+            text-decoration: none;
+            transition: color var(--transition-standard);
+        }
+        
+        a:hover {
+            color: var(--color-primary-light);
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        /* Container */
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--space-md);
+        }
+        
+        /* Section Spacing */
+        section {
+            padding: var(--space-xl) 0;
+        }
+        
+        /* Button Styles */
+        .btn {
+            display: inline-block;
+            padding: var(--space-sm) var(--space-lg);
+            font-family: var(--font-body);
+            font-weight: 500;
+            font-size: var(--font-size-md);
+            text-align: center;
+            border-radius: var(--radius-full);
+            transition: all var(--transition-standard);
+            border: none;
+            cursor: pointer;
+        }
+        
+        .btn-primary {
+            background-color: var(--color-primary);
+            color: var(--color-neutral-100);
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .btn-primary:hover {
+            background-color: var(--color-primary-light);
+            color: var(--color-neutral-100);
+            box-shadow: var(--shadow-md);
+            transform: translateY(-2px);
+        }
+        
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--color-primary);
+            border: 2px solid var(--color-primary);
+        }
+        
+        .btn-secondary:hover {
+            background-color: var(--color-primary);
+            color: var(--color-neutral-100);
+            transform: translateY(-2px);
+        }
+        
+        /* Header & Navigation */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.95);
+            box-shadow: var(--shadow-sm);
+            z-index: 1000;
+            transition: all var(--transition-standard);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+        
+        .header.scrolled {
+            box-shadow: var(--shadow-md);
+        }
+        
+        .header__container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: var(--space-sm) var(--space-md);
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+        
+        .logo__text {
+            font-family: var(--font-heading);
+            font-size: var(--font-size-xl);
+            font-weight: 700;
+            color: var(--color-primary);
+            margin-left: var(--space-xs);
+        }
+        
+        .logo__icon {
+            color: var(--color-primary);
+            font-size: 1.75rem;
+            margin-right: var(--space-xs);
+        }
+        
+        .nav {
+            display: none;
+        }
+        
+        .nav__list {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav__item {
+            margin-left: var(--space-md);
+        }
+        
+        .nav__link {
+            font-weight: 500;
+            font-size: var(--font-size-sm);
+            color: var(--color-neutral-700);
+            position: relative;
+            padding: var(--space-xs) 0;
+        }
+        
+        .nav__link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--color-primary);
+            transition: width var(--transition-standard);
+        }
+        
+        .nav__link:hover::after,
+        .nav__link.active::after {
+            width: 100%;
+        }
+        
+        .header__cta {
+            display: none;
+        }
+        
+        .mobile-menu-toggle {
+            border: none;
+            background: transparent;
+            color: var(--color-primary);
+            font-size: var(--font-size-xl);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1001;
+        }
+        
+        /* Mobile Menu */
+        .mobile-menu {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 80%;
+            height: 100vh;
+            background-color: var(--color-neutral-100);
+            z-index: 1000;
+            padding: var(--space-xxl) var(--space-lg);
+            transition: right var(--transition-standard);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .mobile-menu.active {
+            right: 0;
+        }
+        
+        .mobile-nav__list {
+            list-style: none;
+            margin-top: var(--space-xl);
+        }
+        
+        .mobile-nav__item {
+            margin-bottom: var(--space-md);
+        }
+        
+        .mobile-nav__link {
+            font-size: var(--font-size-lg);
+            font-weight: 500;
+            color: var(--color-neutral-700);
+            display: block;
+            padding: var(--space-xs) 0;
+        }
+        
+        .mobile-menu__cta {
+            margin-top: var(--space-lg);
+        }
+        
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+            opacity: 0;
+            visibility: hidden;
+            transition: all var(--transition-standard);
+        }
+        
+        .overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        /* Hero Section */
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(135deg, var(--color-primary-dark), var(--color-primary), var(--color-secondary));
+            overflow: hidden;
+            padding: var(--space-xxl) 0 var(--space-xl);
+            margin-top: 0;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MDAiIGhlaWdodD0iNTAwIiB2aWV3Qm94PSIwIDAgNTAwIDUwMCI+PHBhdGggZmlsbD0iI2ZmZmZmZiIgZmlsbC1vcGFjaXR5PSIwLjA1IiBkPSJNMCAwaDUwMHY1MDBIMHoiLz48cGF0aCBkPSJNNDEgMWw0LjcgNC43QzQ5LjQgOS40IDYzLjcgMjMuNyA3MyA0MmMyLjUgNC45IDQuOSA5LjkgNyAxNSAuNyAxLjcgMS4zIDMuNCAxLjggNS4xLjUgMS43LjkgMy40IDEuMiA1LjIuOSA1LjEuOSAxMC41IDAgMTZsLS42IDIuOS0uOCAyLjljLTEuMSAzLjgtMi41IDcuNC00LjMgMTAuOWwtMS4zIDIuNC0xLjQgMi40Yy0xIDEuNi0yLjEgMy4xLTMuMyA0LjVsLTEuOCAyLjEtMiAyLjFjLTEuMyAxLjQtMi44IDIuNy00LjMgMy45bC0yLjIgMS44LTIuNCAxLjdjLTEuNiAxLjEtMy4zIDIuMS01IDNsLTIuNiAxLjQtMi43IDEuMmMtMy42IDEuNS03LjQgMi43LTExLjMgMy41bC01LjkgMS4xYy00IDAtOC4xLS4zLTEyLjEtMS4xLTQtLjctNy44LTEuOC0xMS41LTMuNC0zLjctMS41LTcuMy0zLjQtMTAuNi01LjYtNi42LTQuNS0xMi4yLTEwLjEtMTYuNy0xNi43LTQuNS02LjYtNy44LTE0LjItOS42LTIyLjItMS44LTgtMi05LjMtLjUtMTQuMUM1LjIgNTYuOSA5LjYgNDYuOCAxNi41IDM4LjVjMy4zLTQgNy4xLTcuNyAxMS4zLTEwLjhzOC45LTUuOCAxMy43LTcuOWM5LjctNC4yIDE0LjUtNi4zIDIyLjEtNi45bDQuOC0uN0w3NS48L3BhdGg+PC9zdmc+');
+            opacity: 0.05;
+        }
+        
+        .hero__content {
+            position: relative;
+            z-index: 2;
+            color: var(--color-neutral-100);
+            max-width: 600px;
+        }
+        
+        .hero h1 {
+            color: var(--color-neutral-100);
+            font-size: var(--font-size-xxxxl);
+            margin-bottom: var(--space-md);
+            font-weight: 700;
+            line-height: 1.1;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.8s var(--transition-standard) forwards;
+        }
+        
+        .hero__tagline {
+            font-size: var(--font-size-lg);
+            margin-bottom: var(--space-lg);
+            color: var(--color-neutral-200);
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.8s var(--transition-standard) 0.2s forwards;
+        }
+        
+        .hero__cta {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-sm);
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.8s var(--transition-standard) 0.4s forwards;
+        }
+        
+        .hero__image {
+            display: none;
+        }
+        
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* Services Section */
+        .services {
+            background-color: var(--color-neutral-100);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .services__grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: var(--space-lg);
+            margin-top: var(--space-xl);
+        }
+        
+        .service-card {
+            background-color: var(--color-neutral-200);
+            border-radius: var(--radius-md);
+            padding: var(--space-lg);
+            box-shadow: var(--shadow-sm);
+            transition: all var(--transition-standard);
+            position: relative;
+            overflow: hidden;
+            border-bottom: 3px solid transparent;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+            border-bottom-color: var(--color-accent);
+        }
+        
+        .service-card__icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 60px;
+            height: 60px;
+            background-color: var(--color-primary-light);
+            color: var(--color-neutral-100);
+            border-radius: var(--radius-full);
+            margin-bottom: var(--space-md);
+            font-size: var(--font-size-xl);
+            transition: all var(--transition-standard);
+        }
+        
+        .service-card:hover .service-card__icon {
+            background-color: var(--color-accent);
+            transform: scale(1.1);
+        }
+        
+        .service-card__title {
+            font-size: var(--font-size-lg);
+            margin-bottom: var(--space-sm);
+        }
+        
+        .service-card__description {
+            font-size: var(--font-size-md);
+            color: var(--color-neutral-600);
+        }
+        
+        /* About Section */
+        .about {
+            background-color: var(--color-neutral-200);
+            position: relative;
+        }
+        
+        .about__container {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-xl);
+        }
+        
+        .about__image-container {
+            flex: 1;
+            position: relative;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+        }
+        
+        .about__image {
+            width: 100%;
+            height: auto;
+            transition: transform var(--transition-standard);
+        }
+        
+        .about__image-container:hover .about__image {
+            transform: scale(1.03);
+        }
+        
+        .about__content {
+            flex: 1;
+        }
+        
+        .about__tagline {
+            color: var(--color-primary);
+            font-weight: 500;
+            font-size: var(--font-size-md);
+            margin-bottom: var(--space-sm);
+        }
+        
+        .about__credentials {
+            margin-top: var(--space-lg);
+            padding: var(--space-md);
+            background-color: var(--color-neutral-100);
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .credentials__list {
+            list-style: none;
+        }
+        
+        .credentials__item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: var(--space-sm);
+        }
+        
+        .credentials__icon {
+            color: var(--color-accent);
+            margin-right: var(--space-sm);
+            font-size: var(--font-size-lg);
+        }
+        
+        /* Testimonials Section */
+        .testimonials {
+            background-color: var(--color-neutral-100);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .testimonials__container {
+            position: relative;
+        }
+        
+        .testimonials__slider {
+            position: relative;
+            overflow: hidden;
+            margin-top: var(--space-xl);
+        }
+        
+        .testimonials__track {
+            display: flex;
+            transition: transform var(--transition-standard);
+        }
+        
+        .testimonial {
+            flex: 0 0 100%;
+            padding: var(--space-md);
+        }
+        
+        .testimonial__content {
+            background-color: var(--color-neutral-200);
+            border-radius: var(--radius-md);
+            padding: var(--space-lg);
+            position: relative;
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .testimonial__content::before {
+            content: '\201C';
+            position: absolute;
+            top: -15px;
+            left: 20px;
+            font-family: var(--font-heading);
+            font-size: 5rem;
+            color: var(--color-primary-light);
+            opacity: 0.2;
+            line-height: 1;
+        }
+        
+        .testimonial__text {
+            position: relative;
+            z-index: 1;
+            font-style: italic;
+            margin-bottom: var(--space-md);
+        }
+        
+        .testimonial__rating {
+            color: #f9a826;
+            margin-bottom: var(--space-sm);
+        }
+        
+        .testimonial__author {
+            display: flex;
+            align-items: center;
+        }
+        
+        .testimonial__avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: var(--radius-full);
+            background-color: var(--color-primary-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--color-neutral-100);
+            font-weight: 600;
+            margin-right: var(--space-sm);
+        }
+        
+        .testimonial__name {
+            font-weight: 600;
+            color: var(--color-neutral-800);
+        }
+        
+        .testimonial__location {
+            font-size: var(--font-size-sm);
+            color: var(--color-neutral-500);
+        }
+        
+        .testimonials__controls {
+            display: flex;
+            justify-content: center;
+            margin-top: var(--space-lg);
+            gap: var(--space-sm);
+        }
+        
+        .testimonials__dot {
+            width: 10px;
+            height: 10px;
+            border-radius: var(--radius-full);
+            background-color: var(--color-neutral-400);
+            border: none;
+            padding: 0;
+            cursor: pointer;
+            transition: all var(--transition-standard);
+        }
+        
+        .testimonials__dot.active {
+            background-color: var(--color-primary);
+            transform: scale(1.3);
+        }
+        
+        /* Contact Section */
+        .contact {
+            background-color: var(--color-neutral-200);
+            position: relative;
+        }
+        
+        .contact__container {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-xl);
+        }
+        
+        .contact__form-container {
+            flex: 1;
+        }
+        
+        .contact__form {
+            background-color: var(--color-neutral-100);
+            padding: var(--space-lg);
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .form__group {
+            margin-bottom: var(--space-md);
+        }
+        
+        .form__label {
+            display: block;
+            margin-bottom: var(--space-xs);
+            font-weight: 500;
+            color: var(--color-neutral-700);
+        }
+        
+        .form__input,
+        .form__textarea {
+            width: 100%;
+            padding: var(--space-sm);
+            border: 1px solid var(--color-neutral-400);
+            border-radius: var(--radius-sm);
+            font-family: var(--font-body);
+            font-size: var(--font-size-md);
+            transition: border-color var(--transition-standard);
+        }
+        
+        .form__input:focus,
+        .form__textarea:focus {
+            outline: none;
+            border-color: var(--color-primary);
+            box-shadow: 0 0 0 2px rgba(65, 95, 157, 0.1);
+        }
+        
+        .form__textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+        
+        .form__input--error,
+        .form__textarea--error {
+            border-color: #e74c3c;
+        }
+        
+        .form__error-message {
+            color: #e74c3c;
+            font-size: var(--font-size-sm);
+            margin-top: var(--space-xs);
+            display: none;
+        }
+        
+        .form__error-message.visible {
+            display: block;
+        }
+        
+        .contact__info {
+            flex: 1;
+        }
+        
+        .contact__info-list {
+            list-style: none;
+            margin-bottom: var(--space-lg);
+        }
+        
+        .contact__info-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: var(--space-md);
+        }
+        
+        .contact__info-icon {
+            flex-shrink: 0;
+            width: 40px;
+            height: 40px;
+            background-color: var(--color-primary-light);
+            color: var(--color-neutral-100);
+            border-radius: var(--radius-full);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: var(--space-sm);
+        }
+        
+        .contact__info-content {
+            flex: 1;
+        }
+        
+        .contact__info-title {
+            font-weight: 600;
+            color: var(--color-neutral-800);
+            margin-bottom: var(--space-xs);
+        }
+        
+        .contact__info-text {
+            color: var(--color-neutral-600);
+            margin-bottom: 0;
+        }
+        
+        .contact__map {
+            width: 100%;
+            height: 250px;
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            margin-top: var(--space-lg);
+        }
+        
+        /* Footer */
+        .footer {
+            background-color: var(--color-primary-dark);
+            color: var(--color-neutral-200);
+            padding: var(--space-xl) 0 var(--space-md);
+        }
+        
+        .footer__container {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: var(--space-lg);
+        }
+        
+        .footer__logo {
+            display: flex;
+            align-items: center;
+            margin-bottom: var(--space-md);
+        }
+        
+        .footer__logo-icon {
+            color: var(--color-neutral-100);
+            font-size: 1.75rem;
+            margin-right: var(--space-xs);
+        }
+        
+        .footer__logo-text {
+            font-family: var(--font-heading);
+            font-size: var(--font-size-xl);
+            font-weight: 600;
+            color: var(--color-neutral-100);
+        }
+        
+        .footer__description {
+            color: var(--color-neutral-300);
+            margin-bottom: var(--space-md);
+        }
+        
+        .footer__heading {
+            color: var(--color-neutral-100);
+            font-size: var(--font-size-lg);
+            margin-bottom: var(--space-md);
+            position: relative;
+            padding-bottom: var(--space-xs);
+        }
+        
+        .footer__heading::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 40px;
+            height: 2px;
+            background-color: var(--color-accent);
+        }
+        
+        .footer__nav-list {
+            list-style: none;
+        }
+        
+        .footer__nav-item {
+            margin-bottom: var(--space-xs);
+        }
+        
+        .footer__nav-link {
+            color: var(--color-neutral-300);
+            transition: color var(--transition-standard);
+        }
+        
+        .footer__nav-link:hover {
+            color: var(--color-neutral-100);
+        }
+        
+        .footer__contact-list {
+            list-style: none;
+        }
+        
+        .footer__contact-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: var(--space-sm);
+        }
+        
+        .footer__contact-icon {
+            color: var(--color-accent);
+            margin-right: var(--space-sm);
+            margin-top: 4px;
+        }
+        
+        .footer__social {
+            display: flex;
+            gap: var(--space-sm);
+            margin-top: var(--space-md);
+        }
+        
+        .footer__social-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: var(--color-neutral-100);
+            border-radius: var(--radius-full);
+            transition: all var(--transition-standard);
+        }
+        
+        .footer__social-link:hover {
+            background-color: var(--color-accent);
+            color: var(--color-neutral-100);
+            transform: translateY(-3px);
+        }
+        
+        .footer__bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: var(--space-md);
+            margin-top: var(--space-lg);
+            text-align: center;
+            color: var(--color-neutral-400);
+            font-size: var(--font-size-sm);
+        }
+        
+        /* Back to Top Button */
+        .back-to-top {
+            position: fixed;
+            bottom: var(--space-md);
+            right: var(--space-md);
+            width: 40px;
+            height: 40px;
+            border-radius: var(--radius-full);
+            background-color: var(--color-primary);
+            color: var(--color-neutral-100);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: var(--shadow-md);
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(10px);
+            transition: all var(--transition-standard);
+            z-index: 99;
+        }
+        
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+        
+        .back-to-top:hover {
+            background-color: var(--color-primary-light);
+            transform: translateY(-3px);
+        }
+        
+        /* Media Queries */
+        @media (min-width: 640px) {
+            h1 {
+                font-size: var(--font-size-xxxxl);
+            }
+            
+            h2 {
+                font-size: var(--font-size-xxxl);
+            }
+            
+            .services__grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .footer__container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .hero__cta {
+                flex-direction: row;
+            }
+        }
+        
+        @media (min-width: 1024px) {
+            h1 {
+                font-size: var(--font-size-xxxxl);
+            }
+            
+            .header__container {
+                padding: var(--space-md) var(--space-lg);
+            }
+            
+            .mobile-menu-toggle {
+                display: none;
+            }
+            
+            .nav {
+                display: block;
+            }
+            
+            .header__cta {
+                display: block;
+            }
+            
+            .hero {
+                min-height: 90vh;
+            }
+            
+            .hero__container {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: var(--space-xl);
+            }
+            
+            .hero__content {
+                flex: 1;
+                max-width: none;
+            }
+            
+            .hero__image {
+                display: block;
+                flex: 1;
+                max-width: 500px;
+                position: relative;
+                z-index: 2;
+                opacity: 0;
+                transform: translateX(20px);
+                animation: fadeInUp 0.8s var(--transition-standard) 0.6s forwards;
+            }
+            
+            .services__grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            
+            .about__container {
+                flex-direction: row;
+            }
+            
+            .testimonial {
+                flex: 0 0 33.333%;
+            }
+            
+            .contact__container {
+                flex-direction: row;
+            }
+            
+            .footer__container {
+                grid-template-columns: 2fr 1fr 1fr 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container header__container">
+            <a href="#" class="logo">
+                <i class="fa-solid fa-spine fa-bounce logo__icon"></i>
+                <span class="logo__text">Indigo Chiropractic</span>
+            </a>
+            
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="#home" class="nav__link active">Home</a></li>
+                    <li class="nav__item"><a href="#services" class="nav__link">Services</a></li>
+                    <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+                    <li class="nav__item"><a href="#testimonials" class="nav__link">Testimonials</a></li>
+                    <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+                </ul>
+            </nav>
+            
+            <a href="#contact" class="btn btn-primary header__cta">Book Appointment</a>
+            
+            <button class="mobile-menu-toggle" aria-label="Toggle Menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </header>
+    
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobile-menu">
+        <ul class="mobile-nav__list">
+            <li class="mobile-nav__item"><a href="#home" class="mobile-nav__link">Home</a></li>
+            <li class="mobile-nav__item"><a href="#services" class="mobile-nav__link">Services</a></li>
+            <li class="mobile-nav__item"><a href="#about" class="mobile-nav__link">About</a></li>
+            <li class="mobile-nav__item"><a href="#testimonials" class="mobile-nav__link">Testimonials</a></li>
+            <li class="mobile-nav__item"><a href="#contact" class="mobile-nav__link">Contact</a></li>
+        </ul>
+        <div class="mobile-menu__cta">
+            <a href="#contact" class="btn btn-primary">Book Appointment</a>
+        </div>
+    </div>
+    
+    <div class="overlay" id="overlay"></div>
+    
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container hero__container">
+            <div class="hero__content">
+                <h1>Restore Balance, Reclaim Wellness</h1>
+                <p class="hero__tagline">Experience gentle, holistic chiropractic care that aligns your body and unlocks your natural healing potential with Dr. Iain Simpson in Scottsdale.</p>
+                <div class="hero__cta">
+                    <a href="#contact" class="btn btn-primary">Schedule Your Visit</a>
+                    <a href="#about" class="btn btn-secondary">Learn About Our Approach</a>
+                </div>
+            </div>
+            <div class="hero__image">
+                <img src="https://media.licdn.com/dms/image/v2/D4E10AQERfOCPPNkPOA/image-shrink_800/image-shrink_800/0/1736691800727?e=2147483647&v=beta&t=frqyfCjWdDgU6yavGpVjRCbxYs9dgt1Z1OnEFcmu1es" alt="Dr. Iain Simpson at Indigo Chiropractic" width="500" height="600">
+            </div>
+        </div>
+    </section>
+    
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Specialized Services</h2>
+                <p>We offer a comprehensive range of gentle chiropractic techniques tailored to your unique needs and goals.</p>
+            </div>
+            <div class="services__grid">
+                <div class="service-card">
+                    <div class="service-card__icon">
+                        <i class="fa-solid fa-spine"></i>
+                    </div>
+                    <h3 class="service-card__title">Structural Adjustments</h3>
+                    <p class="service-card__description">Gentle precision adjustments that restore proper alignment to your spine, reducing pain and improving overall function.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-card__icon">
+                        <i class="fa-solid fa-brain"></i>
+                    </div>
+                    <h3 class="service-card__title">Neurological Integration</h3>
+                    <p class="service-card__description">Advanced techniques that optimize nervous system function, enhancing your body's communication for improved health.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-card__icon">
+                        <i class="fa-solid fa-child"></i>
+                    </div>
+                    <h3 class="service-card__title">Family Wellness Care</h3>
+                    <p class="service-card__description">Specialized, gentle care for all ages—from newborns to seniors—supporting optimal development and wellness.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-card__icon">
+                        <i class="fa-solid fa-dumbbell"></i>
+                    </div>
+                    <h3 class="service-card__title">Sports Performance</h3>
+                    <p class="service-card__description">Targeted adjustments and recovery protocols that help athletes perform at their peak and recover faster.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-card__icon">
+                        <i class="fa-solid fa-head-side-brain"></i>
+                    </div>
+                    <h3 class="service-card__title">Stress Reduction</h3>
+                    <p class="service-card__description">Specialized techniques that calm the nervous system, reducing the physical impact of stress and promoting relaxation.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-card__icon">
+                        <i class="fa-solid fa-user-doctor"></i>
+                    </div>
+                    <h3 class="service-card__title">Wellness Consultations</h3>
+                    <p class="service-card__description">Personalized health assessments and customized care plans to help you achieve your optimal health goals.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container about__container">
+            <div class="about__image-container">
+                <img src="https://media.licdn.com/dms/image/v2/D4E10AQERfOCPPNkPOA/image-shrink_800/image-shrink_800/0/1736691800727?e=2147483647&v=beta&t=frqyfCjWdDgU6yavGpVjRCbxYs9dgt1Z1OnEFcmu1es" alt="Dr. Iain Simpson, founder of Indigo Chiropractic" class="about__image">
+            </div>
+            <div class="about__content">
+                <span class="about__tagline">Meet Your Chiropractor</span>
+                <h2>Dr. Iain Simpson</h2>
+                <p>As the founder of Indigo Chiropractic, Dr. Simpson has dedicated his career to helping patients achieve balanced, vibrant health through gentle, holistic chiropractic care.</p>
+                <p>With a unique blend of structural expertise and neurological focus, Dr. Simpson's approach goes beyond simply treating symptoms—he addresses the root causes of imbalance to help your body heal naturally.</p>
+                <p>His calm, intuitive approach creates a healing environment where patients of all ages feel comfortable and supported on their wellness journey.</p>
+                
+                <div class="about__credentials">
+                    <h3>Expertise & Credentials</h3>
+                    <ul class="credentials__list">
+                        <li class="credentials__item">
+                            <i class="fa-solid fa-graduation-cap credentials__icon"></i>
+                            <div>
+                                <h4>Advanced Certification in Structural Correction</h4>
+                                <p>Specialized training in precise spinal analysis and gentle adjustment techniques</p>
+                            </div>
+                        </li>
+                        <li class="credentials__item">
+                            <i class="fa-solid fa-certificate credentials__icon"></i>
+                            <div>
+                                <h4>Neurological Integration Specialist</h4>
+                                <p>Advanced studies in optimizing nervous system function for whole-body wellness</p>
+                            </div>
+                        </li>
+                        <li class="credentials__item">
+                            <i class="fa-solid fa-users credentials__icon"></i>
+                            <div>
+                                <h4>Family Wellness Practitioner</h4>
+                                <p>Specialized in gentle techniques safe for patients of all ages and conditions</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+        <div class="container testimonials__container">
+            <div class="section-title">
+                <h2>Patient Experiences</h2>
+                <p>Discover how our unique approach to chiropractic care has helped transform the lives of our patients.</p>
+            </div>
+            
+            <div class="testimonials__slider">
+                <div class="testimonials__track" id="testimonialsTrack">
+                    <div class="testimonial">
+                        <div class="testimonial__content">
+                            <div class="testimonial__rating">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <p class="testimonial__text">After years of back pain that limited my activities, Dr. Simpson's approach has been life-changing. His gentle adjustments and whole-body perspective have helped me return to an active lifestyle without pain medication.</p>
+                            <div class="testimonial__author">
+                                <div class="testimonial__avatar">MB</div>
+                                <div>
+                                    <div class="testimonial__name">Michael B.</div>
+                                    <div class="testimonial__location">Scottsdale, AZ</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial">
+                        <div class="testimonial__content">
+                            <div class="testimonial__rating">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <p class="testimonial__text">I was nervous about chiropractic care until I met Dr. Iain. His calm approach and thorough explanations put me at ease immediately. After just a few sessions, my chronic headaches have significantly reduced in frequency and intensity.</p>
+                            <div class="testimonial__author">
+                                <div class="testimonial__avatar">SL</div>
+                                <div>
+                                    <div class="testimonial__name">Sarah L.</div>
+                                    <div class="testimonial__location">Paradise Valley, AZ</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial">
+                        <div class="testimonial__content">
+                            <div class="testimonial__rating">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <p class="testimonial__text">Our entire family sees Dr. Simpson, including our 10-year-old who had recurring ear infections. His gentle approach works wonders for all of us. The atmosphere at Indigo Chiropractic is welcoming and healing from the moment you walk in.</p>
+                            <div class="testimonial__author">
+                                <div class="testimonial__avatar">JR</div>
+                                <div>
+                                    <div class="testimonial__name">Jennifer R.</div>
+                                    <div class="testimonial__location">Scottsdale, AZ</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonials__controls">
+                    <button class="testimonials__dot active" data-index="0" aria-label="View first testimonial"></button>
+                    <button class="testimonials__dot" data-index="1" aria-label="View second testimonial"></button>
+                    <button class="testimonials__dot" data-index="2" aria-label="View third testimonial"></button>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container contact__container">
+            <div class="contact__form-container">
+                <div class="section-title">
+                    <h2>Schedule Your Visit</h2>
+                    <p>Take the first step toward balanced, vibrant health by scheduling your consultation with Dr. Simpson.</p>
+                </div>
+                
+                <form class="contact__form" id="contactForm">
+                    <div class="form__group">
+                        <label for="name" class="form__label">Full Name *</label>
+                        <input type="text" id="name" name="name" class="form__input" required>
+                        <div class="form__error-message" id="nameError">Please enter your full name</div>
+                    </div>
+                    
+                    <div class="form__group">
+                        <label for="email" class="form__label">Email Address *</label>
+                        <input type="email" id="email" name="email" class="form__input" required>
+                        <div class="form__error-message" id="emailError">Please enter a valid email address</div>
+                    </div>
+                    
+                    <div class="form__group">
+                        <label for="phone" class="form__label">Phone Number *</label>
+                        <input type="tel" id="phone" name="phone" class="form__input" required>
+                        <div class="form__error-message" id="phoneError">Please enter a valid phone number</div>
+                    </div>
+                    
+                    <div class="form__group">
+                        <label for="service" class="form__label">Service of Interest</label>
+                        <select id="service" name="service" class="form__input">
+                            <option value="">Select a service...</option>
+                            <option value="Initial Consultation">Initial Consultation</option>
+                            <option value="Structural Adjustments">Structural Adjustments</option>
+                            <option value="Neurological Integration">Neurological Integration</option>
+                            <option value="Family Wellness Care">Family Wellness Care</option>
+                            <option value="Sports Performance">Sports Performance</option>
+                            <option value="Stress Reduction">Stress Reduction</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form__group">
+                        <label for="message" class="form__label">Your Health Concerns</label>
+                        <textarea id="message" name="message" class="form__textarea" rows="4" placeholder="Please share any specific health concerns or questions you have..."></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary">Request Appointment</button>
+                </form>
+            </div>
+            
+            <div class="contact__info">
+                <h3>Get in Touch</h3>
+                <ul class="contact__info-list">
+                    <li class="contact__info-item">
+                        <div class="contact__info-icon">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+                        <div class="contact__info-content">
+                            <h4 class="contact__info-title">Our Location</h4>
+                            <p class="contact__info-text">123 Wellness Way, Scottsdale, AZ 85251</p>
+                        </div>
+                    </li>
+                    
+                    <li class="contact__info-item">
+                        <div class="contact__info-icon">
+                            <i class="fa-solid fa-phone"></i>
+                        </div>
+                        <div class="contact__info-content">
+                            <h4 class="contact__info-title">Phone</h4>
+                            <p class="contact__info-text">(480) 555-1234</p>
+                        </div>
+                    </li>
+                    
+                    <li class="contact__info-item">
+                        <div class="contact__info-icon">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+                        <div class="contact__info-content">
+                            <h4 class="contact__info-title">Email</h4>
+                            <p class="contact__info-text">info@indigochiropractic.com</p>
+                        </div>
+                    </li>
+                    
+                    <li class="contact__info-item">
+                        <div class="contact__info-icon">
+                            <i class="fa-solid fa-clock"></i>
+                        </div>
+                        <div class="contact__info-content">
+                            <h4 class="contact__info-title">Office Hours</h4>
+                            <p class="contact__info-text">Monday - Friday: 9:00 AM - 6:00 PM<br>Saturday: 9:00 AM - 1:00 PM<br>Sunday: Closed</p>
+                        </div>
+                    </li>
+                </ul>
+                
+                <div class="contact__map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d106172.91662090357!2d-111.95299371640626!3d33.494170199999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872b0898a6aa80e3%3A0xa2dd4aad392cb41f!2sScottsdale%2C%20AZ%2C%20USA!5e0!3m2!1sen!2s!4v1680000000000!5m2!1sen!2s" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer__container">
+            <div class="footer__about">
+                <div class="footer__logo">
+                    <i class="fa-solid fa-spine footer__logo-icon"></i>
+                    <span class="footer__logo-text">Indigo Chiropractic</span>
+                </div>
+                <p class="footer__description">Experience the difference with our gentle, holistic approach to chiropractic care. We help patients of all ages achieve optimal health and wellness naturally.</p>
+                <div class="footer__social">
+                    <a href="#" class="footer__social-link" aria-label="Facebook">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="footer__social-link" aria-label="Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="#" class="footer__social-link" aria-label="Twitter">
+                        <i class="fa-brands fa-twitter"></i>
+                    </a>
+                    <a href="#" class="footer__social-link" aria-label="LinkedIn">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="footer__nav">
+                <h3 class="footer__heading">Quick Links</h3>
+                <ul class="footer__nav-list">
+                    <li class="footer__nav-item"><a href="#home" class="footer__nav-link">Home</a></li>
+                    <li class="footer__nav-item"><a href="#services" class="footer__nav-link">Services</a></li>
+                    <li class="footer__nav-item"><a href="#about" class="footer__nav-link">About Dr. Simpson</a></li>
+                    <li class="footer__nav-item"><a href="#testimonials" class="footer__nav-link">Testimonials</a></li>
+                    <li class="footer__nav-item"><a href="#contact" class="footer__nav-link">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer__services">
+                <h3 class="footer__heading">Our Services</h3>
+                <ul class="footer__nav-list">
+                    <li class="footer__nav-item"><a href="#services" class="footer__nav-link">Structural Adjustments</a></li>
+                    <li class="footer__nav-item"><a href="#services" class="footer__nav-link">Neurological Integration</a></li>
+                    <li class="footer__nav-item"><a href="#services" class="footer__nav-link">Family Wellness Care</a></li>
+                    <li class="footer__nav-item"><a href="#services" class="footer__nav-link">Sports Performance</a></li>
+                    <li class="footer__nav-item"><a href="#services" class="footer__nav-link">Stress Reduction</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer__contact">
+                <h3 class="footer__heading">Contact Us</h3>
+                <ul class="footer__contact-list">
+                    <li class="footer__contact-item">
+                        <i class="fa-solid fa-location-dot footer__contact-icon"></i>
+                        <span>123 Wellness Way, Scottsdale, AZ 85251</span>
+                    </li>
+                    <li class="footer__contact-item">
+                        <i class="fa-solid fa-phone footer__contact-icon"></i>
+                        <span>(480) 555-1234</span>
+                    </li>
+                    <li class="footer__contact-item">
+                        <i class="fa-solid fa-envelope footer__contact-icon"></i>
+                        <span>info@indigochiropractic.com</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="container footer__bottom">
+            <p>&copy; <span id="currentYear">2023</span> Indigo Chiropractic. All rights reserved. | Designed with care for optimal health and wellness.</p>
+        </div>
+    </footer>
+    
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+    
+    <!-- Scripts -->
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const overlay = document.getElementById('overlay');
+        const body = document.body;
+        
+        mobileMenuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
+            overlay.classList.toggle('active');
+            body.classList.toggle('no-scroll');
+            
+            if (mobileMenu.classList.contains('active')) {
+                mobileMenuToggle.innerHTML = '<i class="fa-solid fa-xmark"></i>';
+            } else {
+                mobileMenuToggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
+            }
+        });
+        
+        overlay.addEventListener('click', () => {
+            mobileMenu.classList.remove('active');
+            overlay.classList.remove('active');
+            body.classList.remove('no-scroll');
+            mobileMenuToggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
+        });
+        
+        // Mobile Menu Links - Close Menu When Clicked
+        const mobileNavLinks = document.querySelectorAll('.mobile-nav__link');
+        mobileNavLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('active');
+                overlay.classList.remove('active');
+                body.classList.remove('no-scroll');
+                mobileMenuToggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
+            });
+        });
+        
+        // Header Scroll Effect
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+        
+        // Active Navigation Link
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('.nav__link');
+        
+        window.addEventListener('scroll', () => {
+            let current = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                
+                if (pageYOffset >= (sectionTop - sectionHeight / 3)) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').substring(1) === current) {
+                    link.classList.add('active');
+                }
+            });
+        });
+        
+        // Testimonials Slider
+        const testimonialsTrack = document.getElementById('testimonialsTrack');
+        const testimonialDots = document.querySelectorAll('.testimonials__dot');
+        
+        let testimonialIndex = 0;
+        
+        testimonialDots.forEach(dot => {
+            dot.addEventListener('click', () => {
+                testimonialIndex = parseInt(dot.getAttribute('data-index'));
+                updateTestimonialSlider();
+            });
+        });
+        
+        function updateTestimonialSlider() {
+            // Update slider position
+            const slideWidth = document.querySelector('.testimonial').offsetWidth;
+            testimonialsTrack.style.transform = `translateX(-${testimonialIndex * slideWidth}px)`;
+            
+            // Update active dot
+            testimonialDots.forEach(dot => {
+                dot.classList.remove('active');
+            });
+            testimonialDots[testimonialIndex].classList.add('active');
+        }
+        
+        // Auto-advance testimonials
+        setInterval(() => {
+            testimonialIndex = (testimonialIndex + 1) % testimonialDots.length;
+            updateTestimonialSlider();
+        }, 5000);
+        
+        // Form Validation
+        const contactForm = document.getElementById('contactForm');
+        
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            let isValid = true;
+            
+            // Name validation
+            const nameInput = document.getElementById('name');
+            const nameError = document.getElementById('nameError');
+            
+            if (nameInput.value.trim() === '') {
+                nameInput.classList.add('form__input--error');
+                nameError.classList.add('visible');
+                isValid = false;
+            } else {
+                nameInput.classList.remove('form__input--error');
+                nameError.classList.remove('visible');
+            }
+            
+            // Email validation
+            const emailInput = document.getElementById('email');
+            const emailError = document.getElementById('emailError');
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            
+            if (!emailPattern.test(emailInput.value)) {
+                emailInput.classList.add('form__input--error');
+                emailError.classList.add('visible');
+                isValid = false;
+            } else {
+                emailInput.classList.remove('form__input--error');
+                emailError.classList.remove('visible');
+            }
+            
+            // Phone validation
+            const phoneInput = document.getElementById('phone');
+            const phoneError = document.getElementById('phoneError');
+            const phonePattern = /^[\d\s\-\(\)]{10,15}$/;
+            
+            if (!phonePattern.test(phoneInput.value.replace(/\D/g, ''))) {
+                phoneInput.classList.add('form__input--error');
+                phoneError.classList.add('visible');
+                isValid = false;
+            } else {
+                phoneInput.classList.remove('form__input--error');
+                phoneError.classList.remove('visible');
+            }
+            
+            if (isValid) {
+                // Form submission would go here in a real implementation
+                alert('Thank you! Your appointment request has been submitted. We will contact you shortly to confirm your visit.');
+                contactForm.reset();
+            }
+        });
+        
+        // Back to Top Button
+        const backToTopButton = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTopButton.classList.add('visible');
+            } else {
+                backToTopButton.classList.remove('visible');
+            }
+        });
+        
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // Dynamic Current Year
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+        
+        // Resize event handler for testimonials
+        window.addEventListener('resize', updateTestimonialSlider);
+        
+        // Initialize testimonial slider
+        updateTestimonialSlider();
+    </script>
+</body>
+</html>
